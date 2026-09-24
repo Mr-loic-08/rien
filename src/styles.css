@@ -2622,3 +2622,15 @@ html.dark-theme .m-language-row{border-color:rgba(255,255,255,.08);color:#e8eef2
 @media (hover:none) and (pointer:coarse){
   .sol-card:hover .sol-media,.client-card:hover::after,.impact-card:hover::after{opacity:0!important}
 }
+
+/* Angular Etape 1.1 — fidélité Header V17.20.4 */
+@media (min-width:1121px){
+  .header .container{max-width:1200px;padding-left:24px;padding-right:24px;gap:26px}
+  .nav{gap:4px;margin-left:auto}
+  .nav>li>a,.nav>li>button{font-size:13px;font-weight:500;padding:9px 11px;gap:5px;line-height:1.55}
+  .nav-section-ic,.nav-home-ic{width:15px;height:15px;flex:0 0 15px}
+  .nav .chev{width:12px;height:12px;transform:rotate(90deg);transition:transform .3s ease}
+  .nav>li.open>a .chev,.nav>li.open>button .chev{transform:rotate(-90deg)}
+  .header>.container>.btn-primary{font-size:13.5px;padding:12px 20px;white-space:nowrap}
+  .language-toggle{flex:none}
+}
