@@ -1,0 +1,20 @@
+<section class="trust reveal trust-fold" id="partenaires-accueil">
+ <div class="trust-deco" aria-hidden="true"><span class="td-ring a"></span><span class="td-ring b"></span><span class="td-blob"></span></div>
+ <div class="trust-fold-glow" aria-hidden="true"></div>
+ <div class="container">
+  <div class="trust-head"><div class="trust-head-l">
+   <span class="sec-kicker">{{ l.t('Nos partenaires') }}</span>
+   <h2 class="sec-title left">{{ l.t('Ils nous font confiance') }}</h2>
+   <p class="sec-sub left">{{ l.t('Rejoignez plus de') }} <strong>{{ l.t('250 institutions') }}</strong> {{ l.t('qui ont choisi I-TECH pour leur transformation digitale.') }}</p>
+   <div class="trust-proof-strip" aria-label="Repères I-TECH"><span><svg class="ic"><use href="#i-bank"></use></svg></span><span><svg class="ic"><use href="#i-link"></use></svg></span><span><svg class="ic"><use href="#i-users"></use></svg></span></div>
+  </div></div>
+  <div class="trust-stage">
+   <a class="trust-spotlight" [href]="active.href" target="_blank" rel="noopener noreferrer">
+    <div class="ts-glow"></div><div class="ts-logo"><img [src]="active.img" [alt]="active.alt" (error)="imageError($event)"><span class="partner-fallback" [style.--c1]="active.c1" [style.--c2]="active.c2">{{active.initials}}</span></div>
+    <div class="ts-meta"><h3>{{active.name}}</h3><p>{{ l.t('Partenaire I-TECH · institution financière') }}</p><span class="ts-cta">{{ l.t('Visiter le site') }} <svg class="ic"><use href="#i-arrow"></use></svg></span></div><div class="ts-num">0{{focused+1}}</div>
+   </a>
+   <div class="trust-rail">@for (p of partners; track p.name; let i=$index) {<a [href]="p.href" target="_blank" rel="noopener noreferrer" class="client-card" [class.is-on]="i===focused" (mouseenter)="setFocused(i)" (focus)="setFocused(i)"><div class="client-logo"><img [src]="p.img" [alt]="p.alt" (error)="imageError($event)"><span class="partner-fallback" [style.--c1]="p.c1" [style.--c2]="p.c2">{{p.initials}}</span></div><div class="client-info"><h4>{{p.name}}</h4></div><span class="visit-badge">{{ l.t('Visiter') }}</span></a>}</div>
+  </div>
+  <div class="trust-cta"><p>{{ l.t('Et plus de') }} <strong>{{ l.t('250 autres institutions') }}</strong> {{ l.t("à travers l'Afrique") }}</p><a href="#/contact" class="btn btn-outline" style="margin-top:16px">{{ l.t('Voir tous nos partenaires') }} <svg class="ic"><use href="#i-arrow"></use></svg></a></div>
+ </div>
+</section>

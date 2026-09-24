@@ -1,0 +1,11 @@
+<section class="stats reveal impact-fold" id="impact">
+  <div class="stats-aurora" aria-hidden="true"></div><div class="impact-fold-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="stats-head"><span class="sec-kicker light">Impact</span><h3>{{ l.t('Des résultats qui parlent') }}</h3><p>{{ l.t("Des indicateurs concrets qui reflètent notre accompagnement des institutions financières en Afrique.") }}</p></div>
+    <div class="impact-grid">
+      @for (item of items; track item.label; let i = $index) {
+        <div #card class="impact-card" [attr.data-index]="i" [style.transition-delay.ms]="i * 100"><span class="impact-ico" aria-hidden="true"><svg class="ic"><use [attr.href]="'#' + item.icon"></use></svg></span><b data-impact-value>{{ initial(item.value) }}</b><span>{{ l.t(item.label) }}</span></div>
+      }
+    </div>
+  </div>
+</section>

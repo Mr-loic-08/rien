@@ -15,6 +15,10 @@ const EN: Record<string,string> = {
   'Modernisez vos systèmes et réinventez vos services digitaux.':'Modernize your systems and reinvent your digital services.',
   'Automatisez vos processus financiers et de gestion.':'Automate your financial and management processes.',
   'Focus métier':'Business focus','Diagnostic SI':'IT assessment','Déploiement':'Deployment','Accompagnement':'Support',
+  'Nos partenaires':'Our partners','Ils nous font confiance':'They trust us','Rejoignez plus de':'Join more than','250 institutions':'250 institutions','qui ont choisi I-TECH pour leur transformation digitale.':'that chose I-TECH for their digital transformation.','Partenaire I-TECH · institution financière':'I-TECH partner · financial institution','Visiter le site':'Visit website','Visiter':'Visit','Et plus de':'And more than','250 autres institutions':'250 other institutions',"à travers l'Afrique":'across Africa','Voir tous nos partenaires':'See all our partners',
+  'Des résultats qui parlent':'Results that speak for themselves',
+  "Des indicateurs concrets qui reflètent notre accompagnement des institutions financières en Afrique.":'Concrete indicators that reflect our support for financial institutions across Africa.',
+  "Années d'expérience":'Years of experience','Institutions accompagnées':'Institutions supported','Pays en Afrique':'Countries in Africa','Utilisateurs finaux':'End users','Transactions par an':'Transactions per year',
   'À propos':'About us' ,'Carrières':'Careers','Partenaires':'Partners','Contact / Démo':'Contact / Demo','Support Client':'Customer Support','Politique de confidentialité':'Privacy Policy'
 };
 @Injectable({providedIn:'root'})
