@@ -1,0 +1,34 @@
+LOGOS DES CLIENTS — « Ils nous font confiance »
+================================================
+
+Déposez ici les logos EXACTS avec ces noms de fichiers :
+
+  camccul.png      -> CAMCCUL      (https://camccul.cm)
+  contabo.png      -> CONTABO      (https://my.contabo.com/account/login)
+  desjardins.png   -> DESJARDINS   (https://www.desjardins.com/qc/fr.html)
+  omoa.png         -> OMOA         (https://www.omoa-group.com)
+
+CONSEILS
+--------
+- Format PNG (ou SVG) avec fond TRANSPARENT de préférence.
+- Hauteur minimum conseillée : 240 px (les logos sont affichés
+  jusqu'à ~150 px de haut dans la grande carte).
+- .jpg accepté aussi si le logo est sur fond blanc.
+
+ALTERNATIVE : URL DIRECTE
+-------------------------
+Vous pouvez aussi pointer vers le fichier image du site du client.
+Dans  src/components/Trust.tsx , remplacez simplement la valeur de `img` :
+
+  img: "https://camccul.cm/assets/logo.png",
+
+IMPORTANT : la page d'accueil d'un site ne contient généralement PAS
+le logo en tant que fichier image séparé — il faut l'URL exacte du
+fichier (clic droit sur le logo -> « Copier l'adresse de l'image »).
+
+REPLI AUTOMATIQUE
+-----------------
+Si un fichier est absent, un MONOGRAMME élégant aux couleurs du
+client s'affiche automatiquement (aucune image cassée, aucun
+rectangle vide). Dès que vous déposez le fichier, le vrai logo
+s'affiche sans toucher au code.

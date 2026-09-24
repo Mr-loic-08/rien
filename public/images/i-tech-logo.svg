@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="I-TECH Innovative Technology">
+  <defs>
+    <linearGradient id="orangeArc" x1="70" y1="60" x2="330" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7a2f"/>
+      <stop offset="1" stop-color="#e85a12"/>
+    </linearGradient>
+    <linearGradient id="blueArc" x1="120" y1="40" x2="360" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2f6dff"/>
+      <stop offset="1" stop-color="#1a4fd6"/>
+    </linearGradient>
+  </defs>
+  <!-- arcs -->
+  <path d="M88 248c-18-48-10-106 28-148 34-38 84-56 134-52" fill="none" stroke="url(#orangeArc)" stroke-width="28" stroke-linecap="round"/>
+  <path d="M318 56c48 8 90 36 114 82 28 52 24 114-8 160" fill="none" stroke="url(#blueArc)" stroke-width="28" stroke-linecap="round"/>
+  <!-- brand mark + wordmark -->
+  <g fill="#1e5de8">
+    <circle cx="132" cy="150" r="16"/>
+    <rect x="124" y="176" width="16" height="78" rx="8"/>
+    <path d="M156 176h34c10 0 18 8 18 18s-8 18-18 18h-18v42h-16z"/>
+    <path d="M238 176h92v24h-34v72h-24v-72h-34z"/>
+    <path d="M348 176h24v50c0 18 10 28 26 28s26-10 26-28v-50h24v52c0 34-22 54-50 54s-50-20-50-54z"/>
+    <path d="M466 176h24v50c0 18 10 28 26 28s26-10 26-28v-50h24v52c0 34-22 54-50 54s-50-20-50-54z"/>
+    <path d="M572 176h24v102h-24z"/>
+  </g>
+  <text x="132" y="308" fill="#f26a21" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">Innovative Technology</text>
+</svg>

@@ -1,0 +1,25 @@
+<div class="head-wrap" [class.scrolled]="scrolled()">
+  <div class="scroll-progress"><i [style.transform]="'scaleX('+progress()+')'"></i></div>
+  <header class="header" id="header"><div class="container">
+    <a class="logo" href="#accueil" aria-label="I-TECH"><span class="brand-logo"><img src="images/i-tech-logo.png" alt="I-TECH"></span></a>
+    <ul class="nav">
+      <li><a href="#accueil" class="active">{{l.t('Accueil')}}</a></li>
+      <li (mouseenter)="open.set('Solutions')" (mouseleave)="open.set(null)" [class.open]="open()==='Solutions'"><a href="#solutions">{{l.t('Solutions')}} <span>›</span></a><div class="dropdown"><a *ngFor="let x of solutions" href="#solutions">{{x}}</a></div></li>
+      <li (mouseenter)="open.set('Secteurs')" (mouseleave)="open.set(null)" [class.open]="open()==='Secteurs'"><a href="#secteurs">{{l.t('Secteurs')}} <span>›</span></a><div class="dropdown"><a *ngFor="let x of secteurs" href="#secteurs">{{x}}</a></div></li>
+      <li><a href="#ressources">{{l.t('Ressources')}}</a></li>
+      <li (mouseenter)="open.set('Entreprise')" (mouseleave)="open.set(null)" [class.open]="open()==='Entreprise'"><a href="#entreprise">{{l.t("L'Entreprise")}} <span>›</span></a><div class="dropdown"><a *ngFor="let x of entreprise" href="#entreprise">{{l.t(x)}}</a></div></li>
+      <li class="drop-end" (mouseenter)="open.set('Contact')" (mouseleave)="open.set(null)" [class.open]="open()==='Contact'"><a href="#contact">{{l.t('Contact & Support')}} <span>›</span></a><div class="dropdown"><a *ngFor="let x of contact" href="#contact">{{l.t(x)}}</a></div></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+    <button type="button" class="language-toggle language-energy-toggle" (click)="toggleLang()"><span [class.active]="l.lang()==='fr'">FR</span><i>/</i><span [class.active]="l.lang()==='en'">EN</span></button>
+    <button class="burger" aria-label="Menu" (click)="menuOpen.set(!menuOpen())"><svg class="ic"><use [attr.href]="menuOpen() ? '#i-close' : '#i-menu'"></use></svg></button>
+  </div></header>
+</div>
+<nav class="mobile-menu" [class.open]="menuOpen()" [attr.aria-hidden]="!menuOpen()">
+  <div class="m-item"><a href="#accueil" (click)="menuOpen.set(false)">{{l.t('Accueil')}}</a></div>
+  <div class="m-item"><a href="#solutions" (click)="menuOpen.set(false)">{{l.t('Solutions')}}</a></div>
+  <div class="m-item"><a href="#secteurs" (click)="menuOpen.set(false)">{{l.t('Secteurs')}}</a></div>
+  <div class="m-item"><a href="#ressources" (click)="menuOpen.set(false)">{{l.t('Ressources')}}</a></div>
+  <div class="m-item"><a href="#entreprise" (click)="menuOpen.set(false)">{{l.t("L'Entreprise")}}</a></div>
+  <div class="m-item"><a href="#contact" (click)="menuOpen.set(false)">{{l.t('Contact & Support')}}</a></div>
+</nav>

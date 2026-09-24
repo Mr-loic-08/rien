@@ -1,0 +1,12 @@
+IMAGES DES SECTEURS
+===================
+
+Déposez ici vos 3 images exactes avec CES noms précis :
+
+  microfinances.jpg        -> concept "MICROFINANCE" (homme + hexagones)
+  banques.jpg              -> bâtiment brun aux vitrages orange/or
+  grandes-entreprises.jpg  -> tour blanche à ailettes verticales
+
+Dès qu'un fichier est présent, il remplace automatiquement la photo
+de secours en ligne, partout : carte "Choisissez votre secteur",
+fond flou des pages détail et hero.
