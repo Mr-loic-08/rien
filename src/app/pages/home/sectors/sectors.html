@@ -1,0 +1,46 @@
+<section class="sectors reveal" id="secteurs">
+  <div class="container">
+    <div class="sec-head-row">
+      <div>
+        <span class="sec-kicker">{{ l.t('Secteurs') }}</span>
+        <h2 class="sec-title left">{{ l.t('Une expertise adaptée à chaque secteur') }}</h2>
+      </div>
+      <div class="sec-tabs" role="tablist" aria-label="Secteurs">
+        @for (card of cards; track card.key; let i = $index) {
+          <button type="button" role="tab" [attr.aria-selected]="i === active" [class.on]="i === active" (click)="select(i)">
+            <svg class="ic" aria-hidden="true"><use [attr.href]="'#' + card.icon"></use></svg>
+            {{ l.t(card.title) }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="sec-stage" [attr.data-animation-key]="animationKey">
+      <div class="sec-visual" [ngClass]="current.tone">
+        <div class="sv-grid"></div>
+        <div class="sv-glow"></div>
+        <div class="sv-orbit"></div>
+        <div class="sv-badge">
+          <svg class="ic" aria-hidden="true"><use [attr.href]="'#' + current.icon"></use></svg>
+          <span>0{{ active + 1 }} / 03</span>
+        </div>
+        <h3 class="sv-title">{{ l.t(current.title) }}</h3>
+      </div>
+
+      <div class="sec-panel">
+        <span class="sp-label">{{ l.t('Focus métier') }}</span>
+        <h4>{{ l.t(current.title) }}</h4>
+        <p>{{ l.t(current.text) }}</p>
+        <div class="sp-steps">
+          <div><b>01</b><span>{{ l.t('Diagnostic SI') }}</span></div>
+          <div><b>02</b><span>{{ l.t('Déploiement') }}</span></div>
+          <div><b>03</b><span>{{ l.t('Accompagnement') }}</span></div>
+        </div>
+        <a [href]="'#/secteurs/' + current.key" class="btn btn-primary">
+          {{ l.t('En savoir plus') }}
+          <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -9,6 +9,12 @@ const EN: Record<string,string> = {
   'Des solutions conçues pour les institutions financières modernes':'Solutions designed for modern financial institutions',
   "Une suite logicielle complète pour digitaliser vos opérations, renforcer votre conformité et améliorer l'expérience client.":'A complete software suite to digitize operations, strengthen compliance and improve customer experience.',
   'En savoir plus':'Learn more',
+  'Une expertise adaptée à chaque secteur':'Expertise tailored to every sector',
+  'Microfinance':'Microfinance','Banques':'Banks','Grandes entreprises':'Large enterprises',
+  "Maîtrisez les coûts opérationnels et améliorez l'expérience client.":'Control operating costs and improve the customer experience.',
+  'Modernisez vos systèmes et réinventez vos services digitaux.':'Modernize your systems and reinvent your digital services.',
+  'Automatisez vos processus financiers et de gestion.':'Automate your financial and management processes.',
+  'Focus métier':'Business focus','Diagnostic SI':'IT assessment','Déploiement':'Deployment','Accompagnement':'Support',
   'À propos':'About us' ,'Carrières':'Careers','Partenaires':'Partners','Contact / Démo':'Contact / Demo','Support Client':'Customer Support','Politique de confidentialité':'Privacy Policy'
 };
 @Injectable({providedIn:'root'})

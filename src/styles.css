@@ -2649,3 +2649,8 @@ app-home-solutions .solutions.itech-scene{
 }
 app-home-solutions .solutions.itech-scene>.container{position:relative;z-index:2}
 @media(max-width:900px){app-home-solutions .solutions.itech-scene{margin-top:-14px;border-radius:22px 22px 0 0}}
+
+/* ===== Angular Étape 3 — Secteurs ===== */
+.sectors .sec-tabs button .ic{color:var(--itech-orange);transition:color .3s var(--ease),transform .3s var(--ease)}
+.sectors .sec-tabs button:hover .ic,.sectors .sec-tabs button:focus-visible .ic,.sectors .sec-tabs button.on .ic{color:var(--itech-blue)}
+.sectors .sec-tabs button:hover .ic{transform:scale(1.08)}
