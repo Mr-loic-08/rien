@@ -1,0 +1,66 @@
+<section class="clients-showcase client-wall reveal itech-scene clients-fold" id="nos-clients">
+  <div class="clients-photo-bg" aria-hidden="true"></div>
+  <div class="clients-showcase-bg" aria-hidden="true">
+    <span class="clients-orb clients-orb-a"></span><span class="clients-orb clients-orb-b"></span>
+    <span class="clients-lines"></span><span class="client-wall-focus"></span><span class="client-world-dots"></span>
+  </div>
+  <div class="container clients-showcase-inner client-premium-head">
+    <div class="client-side-note"><b>DES<br>PARTENARIATS<br>DURABLES</b><span>POUR UN AVENIR<br>INNOVANT</span></div>
+    <div class="clients-showcase-head">
+      <span class="sec-kicker light">— {{ l.t('Nos clients') }} —</span>
+      <h2>{{ l.t('Ils nous font') }} <em>{{ l.t('confiance') }}</em></h2>
+      <p>{{ l.t('Des institutions financières, entreprises et organisations qui avancent avec nous depuis plus de 19 ans.') }}</p>
+    </div>
+    <div class="client-count"><strong>50+</strong><span>{{ l.t('Clients de confiance') }}</span></div>
+  </div>
+
+  <div class="client-wall-stage" [attr.aria-label]="l.t('Nos clients')">
+    @for (row of [first,second]; track $index; let r = $index) {
+      <div class="client-wall-row-wrap">
+        <button class="client-wall-arrow" type="button" [attr.aria-label]="l.t('Précédent')" (click)="step(r,-1)">‹</button>
+        <div class="client-wall-viewport" (mouseenter)="paused[r]=true" (mouseleave)="resume(r)">
+          <div class="client-wall-track" [class.is-reverse]="r===1" [class.is-paused]="paused[r]"
+            [style.--client-speed]="r===0?'38s':'43s'" [style.--manual-shift.px]="shift[r]">
+            @for (logo of row; track $index; let i = $index) {
+              <div class="client-wall-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
+                <img [src]="logo.src" [alt]="i<logos.length?logo.alt:''" [attr.aria-hidden]="i>=logos.length" loading="lazy">
+                <span class="client-logo-name">{{ logo.alt }}</span>
+              </div>
+            }
+          </div>
+        </div>
+        <button class="client-wall-arrow" type="button" [attr.aria-label]="l.t('Suivant')" (click)="step(r,1)">›</button>
+      </div>
+    }
+  </div>
+
+  <div class="client-wall-cta">
+    <button type="button" class="client-all-btn" (click)="open()">{{ l.t('Voir tous nos clients') }} <span>→</span></button>
+  </div>
+  <div class="container client-values">
+    <div><b>♢ {{ l.t('Confiance') }}</b><span>{{ l.t('Des partenariats solides') }}</span></div>
+    <div><b>▥ {{ l.t('Performance') }}</b><span>{{ l.t('Des résultats concrets') }}</span></div>
+    <div><b>♙ {{ l.t('Croissance') }}</b><span>{{ l.t('Un développement partagé') }}</span></div>
+    <div><b>☆ {{ l.t('Innovation') }}</b><span>{{ l.t('Toujours plus loin ensemble') }}</span></div>
+  </div>
+</section>
+
+@if (showAll) {
+  <div class="clients-gallery-overlay" role="presentation" (mousedown)="$event.target===$event.currentTarget && close()">
+    <div class="clients-gallery-panel" role="dialog" aria-modal="true" [attr.aria-label]="l.t('Tous nos clients')">
+      <button type="button" class="clients-gallery-close" [attr.aria-label]="l.t('Fermer')" (click)="close()">×</button>
+      <div class="clients-gallery-title">
+        <span>— {{ l.t('NOS CLIENTS') }} —</span>
+        <h3>{{ l.t('Tous ceux qui nous font') }} <em>{{ l.t('confiance') }}</em></h3>
+        <p>{{ l.t('Découvrez les institutions et organisations qui accompagnent l’écosystème I-TECH.') }}</p>
+      </div>
+      <div class="clients-gallery-grid">
+        @for (logo of logos; track logo.src) {
+          <div class="clients-gallery-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
+            <img [src]="logo.src" [alt]="logo.alt" loading="lazy"><strong>{{ logo.alt }}</strong>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}

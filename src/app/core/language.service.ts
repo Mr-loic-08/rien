@@ -19,6 +19,15 @@ const EN: Record<string,string> = {
   'Des résultats qui parlent':'Results that speak for themselves',
   "Des indicateurs concrets qui reflètent notre accompagnement des institutions financières en Afrique.":'Concrete indicators that reflect our support for financial institutions across Africa.',
   "Années d'expérience":'Years of experience','Institutions accompagnées':'Institutions supported','Pays en Afrique':'Countries in Africa','Utilisateurs finaux':'End users','Transactions par an':'Transactions per year',
+  'Nos clients':'Our clients','Ils nous font':'They put their','confiance':'trust in us',
+  'Des institutions financières, entreprises et organisations qui avancent avec nous depuis plus de 19 ans.':'Financial institutions, companies and organizations moving forward with us for over 19 years.',
+  'Clients de confiance':'Trusted clients','Précédent':'Previous','Suivant':'Next',
+  'Voir tous nos clients':'View all our clients','Confiance':'Trust','Des partenariats solides':'Strong partnerships',
+  'Performance':'Performance','Des résultats concrets':'Tangible results','Croissance':'Growth','Un développement partagé':'Shared development',
+  'Innovation':'Innovation','Toujours plus loin ensemble':'Going further together','Tous nos clients':'All our clients',
+  'NOS CLIENTS':'OUR CLIENTS','Tous ceux qui nous font':'Everyone who puts their',
+  'Découvrez les institutions et organisations qui accompagnent l’écosystème I-TECH.':'Discover the institutions and organizations in the I-TECH ecosystem.',
+  'Fermer':'Close',
   'À propos':'About us' ,'Carrières':'Careers','Partenaires':'Partners','Contact / Démo':'Contact / Demo','Support Client':'Customer Support','Politique de confidentialité':'Privacy Policy'
 };
 @Injectable({providedIn:'root'})
