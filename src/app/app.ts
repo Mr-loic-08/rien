@@ -7,10 +7,12 @@ import { HomeImpactComponent } from './pages/home/impact/impact';
 import { HomeTrustComponent } from './pages/home/trust/trust';
 import { HomeClientsComponent } from './pages/home/clients/clients';
 import { HomeWhyComponent } from './pages/home/why/why';
+import { HomeCtaComponent } from './pages/home/cta/cta';
+import { FooterComponent } from './layout/footer/footer';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements AfterViewInit, OnDestroy {

@@ -2834,3 +2834,131 @@ app-home-why .pw-open{color:#ff9a55!important}
 app-home-why .pw-ico{background:rgba(255,255,255,.10)!important;color:#ff8a3d!important;border-color:rgba(255,255,255,.12)!important}
 app-home-why .why-fold-light{background:radial-gradient(ellipse,rgba(242,106,33,.25),transparent 68%)!important}
 app-home-why .why-fold::after{background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.035) 50%,transparent)!important}
+
+/* ===== Étape 8 — CTA final : pli + charte I-TECH ===== */
+app-home-cta{display:block;position:relative;z-index:11}
+app-home-cta .home-final-cta.cta-fold{
+  position:relative;margin-top:-28px;border-radius:44px 44px 0 0;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(5,39,70,.94),rgba(7,69,115,.86)),
+    radial-gradient(circle at 82% 40%,rgba(242,106,33,.24),transparent 32%);
+  box-shadow:0 -24px 55px rgba(2,25,47,.30);
+}
+app-home-cta .home-final-cta.cta-fold::before{
+  content:"";position:absolute;z-index:2;top:0;left:12%;right:12%;height:28px;
+  border-radius:0 0 55% 55%;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.03),transparent);
+}
+app-home-cta .cta-depth{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(115deg,transparent 0 52%,rgba(255,255,255,.045) 52.2% 52.8%,transparent 53%),
+    radial-gradient(circle at 15% 100%,rgba(28,133,205,.20),transparent 35%);
+}
+app-home-cta .home-final-cta>.container{position:relative;z-index:3}
+app-home-cta .cta-ico{box-shadow:0 12px 30px rgba(242,106,33,.22)}
+@media(max-width:900px){app-home-cta .home-final-cta.cta-fold{margin-top:-17px;border-radius:31px 31px 0 0}}
+@media(max-width:520px){app-home-cta .home-final-cta.cta-fold{margin-top:-11px;border-radius:24px 24px 0 0}}
+
+/* ===== Étape 8.1 — profondeur globale de l'accueil =====
+   On conserve les plis, mais on évite l'effet "blocs collés".
+   Chaque grande section respire davantage et se détache du fond. */
+app-home-solutions,
+app-home-sectors,
+app-home-impact,
+app-home-trust,
+app-home-clients,
+app-home-why,
+app-home-cta{
+  display:block;
+  position:relative;
+  isolation:isolate;
+}
+
+/* respiration entre les étages */
+app-home-sectors,
+app-home-impact,
+app-home-trust,
+app-home-clients,
+app-home-why,
+app-home-cta{
+  padding-top:clamp(22px,3.2vw,48px);
+  margin-top:clamp(-12px,-.8vw,-4px);
+}
+
+/* ombre de séparation douce sous chaque étage */
+app-home-solutions::after,
+app-home-sectors::after,
+app-home-impact::after,
+app-home-trust::after,
+app-home-clients::after,
+app-home-why::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:6%;
+  right:6%;
+  bottom:-24px;
+  height:54px;
+  border-radius:50%;
+  background:rgba(3,31,55,.18);
+  filter:blur(25px);
+  pointer-events:none;
+}
+
+/* Les plis restent visibles, sans que les sections se chevauchent trop. */
+app-home-clients .clients-showcase,
+app-home-why .partner.why-fold,
+app-home-cta .home-final-cta.cta-fold{
+  margin-top:0!important;
+}
+
+/* profondeur au survol des grands blocs interactifs */
+app-home-sectors section,
+app-home-impact section,
+app-home-trust section,
+app-home-clients section,
+app-home-why section{
+  transform:translateZ(0);
+  transition:box-shadow .45s ease,transform .45s ease;
+}
+@media (hover:hover) and (min-width:901px){
+  app-home-sectors section:hover,
+  app-home-impact section:hover,
+  app-home-trust section:hover,
+  app-home-clients section:hover,
+  app-home-why section:hover{
+    transform:translateY(-3px);
+  }
+}
+
+/* Mobile : respiration plus compacte, sans revenir à l'effet plat. */
+@media(max-width:700px){
+  app-home-sectors,
+  app-home-impact,
+  app-home-trust,
+  app-home-clients,
+  app-home-why,
+  app-home-cta{
+    padding-top:18px;
+    margin-top:0;
+  }
+  app-home-solutions::after,
+  app-home-sectors::after,
+  app-home-impact::after,
+  app-home-trust::after,
+  app-home-clients::after,
+  app-home-why::after{
+    left:10%;right:10%;bottom:-14px;height:34px;filter:blur(18px);
+  }
+}
+
+/* ===== Étape 9 — Footer ===== */
+app-footer{display:block;position:relative;z-index:12}
+app-footer .home-footer{position:relative;overflow:hidden;border-radius:38px 38px 0 0;margin-top:34px}
+app-footer .f-brand .logo img{display:block;max-width:150px;height:auto;filter:none!important;opacity:1}
+app-footer .footer-video-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+app-footer .footer-video-bg video{width:100%;height:100%;object-fit:cover;opacity:.18}
+app-footer .footer-video-bg>span{position:absolute;inset:0;background:linear-gradient(115deg,rgba(3,29,52,.94),rgba(5,56,94,.90))}
+app-footer .home-footer>.container{position:relative;z-index:2}
+@media(max-width:700px){app-footer .home-footer{border-radius:25px 25px 0 0;margin-top:22px}}
