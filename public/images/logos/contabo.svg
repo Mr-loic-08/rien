@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210">
+<g fill="none" stroke-linecap="round" stroke-width="24">
+<path d="M190 87c0-37 30-67 67-67s67 30 67 67" stroke="#1fa2db"/>
+<path d="M260 88c19-31 60-41 91-22 31 19 41 60 22 91-19 31-60 41-91 22" stroke="#1fa2db"/>
+<path d="M264 179c-31 19-72 9-91-22-19-31-9-72 22-91 31-19 72-9 91 22" stroke="#f5a623"/>
+</g>
+<text x="55" y="205" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="600" fill="#169bd5" letter-spacing="4">CONTABO</text>
+</svg>

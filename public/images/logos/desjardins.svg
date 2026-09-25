@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 170">
+<g transform="translate(15 25)" fill="none" stroke="#00874e" stroke-width="10">
+<path d="M58 0 110 30v60l-52 30L6 90V30z"/>
+<path d="M58 18 94 39v42l-36 21-36-21V39z" stroke-width="5"/>
+</g>
+<text x="145" y="112" font-family="Arial,Helvetica,sans-serif" font-size="84" font-weight="700" fill="#00874e">Desjardins</text>
+</svg>
