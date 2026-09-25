@@ -1,0 +1,1 @@
+Étape 7 — Pourquoi I-TECH / Un partenaire technologique de confiance. Six fenêtres interactives + modale, FR/EN, responsive, border-radius et effet de pli.\n

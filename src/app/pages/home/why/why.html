@@ -1,0 +1,33 @@
+<section class="partner reveal why-fold">
+ <div class="partner-deco" aria-hidden="true"></div><div class="why-fold-light" aria-hidden="true"></div>
+ <div class="container">
+  <div class="partner-head"><span class="sec-kicker light">{{l.t('Pourquoi I-TECH')}}</span>
+   <h3>{{l.t('Un partenaire technologique de confiance')}}</h3>
+   <p>{{l.t('Cliquez sur une fenêtre pour découvrir chaque engagement.')}}</p>
+  </div>
+  <div class="p-windows">
+   @for(i of items;track i.b;let idx=$index){
+    <button type="button" class="p-win" (click)="show(idx)" [style.animation-delay.ms]="idx*70">
+     <div class="pw-chrome"><span></span><span></span><span></span><em>{{l.t(i.b)}}</em></div>
+     <div class="pw-body"><div class="pw-ico"><svg class="ic"><use [attr.href]="'#'+i.icon"></use></svg></div>
+      <b>{{l.t(i.b)}}</b><span>{{l.t(i.s)}}</span><i class="pw-open">{{l.t('Ouvrir')}}</i></div>
+    </button>
+   }
+  </div>
+ </div>
+ @if(current){
+  <div class="p-modal" role="dialog" aria-modal="true" (mousedown)="$event.target===$event.currentTarget&&close()">
+   <div class="p-modal-win">
+    <div class="pw-chrome"><span></span><span></span><span></span><em>{{l.t(current.b)}}</em>
+     <button type="button" class="pw-x" [attr.aria-label]="l.t('Fermer')" (click)="close()"><svg class="ic"><use href="#i-close"></use></svg></button>
+    </div>
+    <div class="p-modal-body"><div class="pw-ico lg"><svg class="ic"><use [attr.href]="'#'+current.icon"></use></svg></div>
+     <h4>{{l.t(current.b)}}</h4><p>{{l.t(current.s)}}</p>
+     <div class="p-modal-nav"><button type="button" (click)="prev()"><svg class="ic"><use href="#i-chev-l"></use></svg> {{l.t('Précédent')}}</button>
+      <span>{{(open??0)+1}} / {{items.length}}</span>
+      <button type="button" (click)="next()">{{l.t('Suivant')}} <svg class="ic"><use href="#i-chev-r"></use></svg></button></div>
+    </div>
+   </div>
+  </div>
+ }
+</section>

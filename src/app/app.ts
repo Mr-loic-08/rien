@@ -6,10 +6,11 @@ import { HomeSectorsComponent } from './pages/home/sectors/sectors';
 import { HomeImpactComponent } from './pages/home/impact/impact';
 import { HomeTrustComponent } from './pages/home/trust/trust';
 import { HomeClientsComponent } from './pages/home/clients/clients';
+import { HomeWhyComponent } from './pages/home/why/why';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements AfterViewInit, OnDestroy {

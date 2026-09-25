@@ -2757,3 +2757,80 @@ app-home-clients .client-wall-track.is-paused{animation-play-state:paused!import
 app-home-clients .client-wall-track{translate:var(--manual-shift,0px) 0;transition:translate .38s ease}
 @media(max-width:900px){app-home-clients .clients-showcase.clients-fold{margin-top:-19px;border-radius:32px}}
 @media(max-width:520px){app-home-clients .clients-showcase.clients-fold{margin-top:-12px;border-radius:24px}}
+
+/* ===== Étape 7 — Pourquoi I-TECH : radius + pli ===== */
+app-home-why{display:block;position:relative;z-index:10}
+app-home-why .partner.why-fold{position:relative;margin-top:-32px;border-radius:44px 44px 36px 36px;overflow:hidden;box-shadow:0 -24px 54px rgba(3,25,47,.28),0 24px 52px rgba(3,25,47,.18)}
+app-home-why .why-fold-light{position:absolute;z-index:1;top:-90px;left:50%;width:min(78vw,940px);height:190px;transform:translateX(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(ellipse,rgba(242,106,33,.20),transparent 68%);filter:blur(18px)}
+app-home-why .why-fold::after{content:"";position:absolute;z-index:2;top:0;left:11%;right:11%;height:28px;border-radius:0 0 55% 55%;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 48%,transparent)}
+app-home-why .partner>.container{position:relative;z-index:3}
+@media(max-width:900px){app-home-why .partner.why-fold{margin-top:-18px;border-radius:31px 31px 27px 27px}}
+@media(max-width:520px){app-home-why .partner.why-fold{margin-top:-12px;border-radius:24px}}
+
+/* ===== Étape 7.2 — différenciation visuelle Pourquoi I-TECH =====
+   Nos Clients conserve son fond bleu tech.
+   Pourquoi I-TECH passe sur un fond ivoire / sable très clair. */
+app-home-why .partner.why-fold{
+  background:
+    radial-gradient(circle at 84% 15%, rgba(242,106,33,.12), transparent 27%),
+    radial-gradient(circle at 12% 88%, rgba(22,94,154,.10), transparent 31%),
+    linear-gradient(135deg,#fffaf3 0%,#f6eadb 52%,#f1dfca 100%)!important;
+  color:#102b46;
+  box-shadow:0 -25px 58px rgba(3,25,47,.22),0 24px 50px rgba(70,45,20,.14);
+}
+app-home-why .partner-deco{
+  opacity:.34!important;
+  mix-blend-mode:multiply;
+}
+app-home-why .partner-head .sec-kicker{color:#e86f24!important}
+app-home-why .partner-head h3{color:#0b3153!important}
+app-home-why .partner-head p{color:#53677a!important}
+app-home-why .p-win{
+  background:rgba(255,255,255,.78)!important;
+  border-color:rgba(16,65,102,.14)!important;
+  box-shadow:0 15px 36px rgba(26,55,78,.11)!important;
+}
+app-home-why .p-win:hover{
+  background:#fff!important;
+  box-shadow:0 22px 48px rgba(26,55,78,.18)!important;
+}
+app-home-why .pw-body b{color:#103957!important}
+app-home-why .pw-body>span{color:#607286!important}
+app-home-why .why-fold-light{
+  background:radial-gradient(ellipse,rgba(242,106,33,.26),transparent 68%)!important;
+}
+
+/* ===== Étape 7.3 — correction charte I-TECH =====
+   Remplace l'essai ivoire de 7.2 : bleu I-TECH plus lumineux,
+   distinct du bloc Nos Clients mais cohérent avec orange/bleu/blanc. */
+app-home-why .partner.why-fold{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(242,106,33,.18),transparent 25%),
+    radial-gradient(circle at 9% 82%,rgba(31,132,207,.24),transparent 31%),
+    linear-gradient(132deg,#0f5f9c 0%,#176fac 44%,#0c4f86 100%)!important;
+  color:#fff!important;
+  box-shadow:0 -25px 58px rgba(3,25,47,.30),0 24px 52px rgba(3,25,47,.22)!important;
+}
+app-home-why .partner-deco{opacity:.22!important;mix-blend-mode:screen!important}
+app-home-why .partner-head .sec-kicker{color:#ff9a55!important}
+app-home-why .partner-head h3{color:#fff!important;text-shadow:0 2px 18px rgba(2,25,46,.22)}
+app-home-why .partner-head p{color:rgba(255,255,255,.86)!important}
+app-home-why .p-win{
+  background:rgba(5,44,76,.38)!important;
+  border:1px solid rgba(255,255,255,.20)!important;
+  box-shadow:0 16px 38px rgba(1,27,49,.22)!important;
+  backdrop-filter:blur(8px);
+}
+app-home-why .p-win:hover{
+  background:rgba(255,255,255,.13)!important;
+  border-color:rgba(255,154,85,.56)!important;
+  box-shadow:0 23px 48px rgba(1,27,49,.30)!important;
+}
+app-home-why .pw-chrome{background:rgba(3,39,69,.48)!important;border-color:rgba(255,255,255,.13)!important}
+app-home-why .pw-chrome em{color:rgba(255,255,255,.82)!important}
+app-home-why .pw-body b{color:#fff!important}
+app-home-why .pw-body>span{color:rgba(255,255,255,.76)!important}
+app-home-why .pw-open{color:#ff9a55!important}
+app-home-why .pw-ico{background:rgba(255,255,255,.10)!important;color:#ff8a3d!important;border-color:rgba(255,255,255,.12)!important}
+app-home-why .why-fold-light{background:radial-gradient(ellipse,rgba(242,106,33,.25),transparent 68%)!important}
+app-home-why .why-fold::after{background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.035) 50%,transparent)!important}
