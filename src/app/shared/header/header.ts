@@ -42,4 +42,34 @@ export class HeaderComponent{
   toggleLang(){this.l.toggle()}
   toggleSub(name:string){ this.sub.set(this.sub()===name?null:name); }
   closeMobile(){this.menuOpen.set(false); this.sub.set(null)}
+
+  navigateTop(event: Event, href: string){
+    event.preventDefault();
+    this.open.set(null);
+    this.menuOpen.set(false);
+    if(href === '#accueil'){
+      if(location.hash) history.pushState(null,'',location.pathname + location.search);
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+      window.scrollTo({top:0,behavior:'smooth'});
+      return;
+    }
+    if(location.hash === href){
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }else{
+      location.hash = href;
+    }
+    setTimeout(()=>window.scrollTo({top:0,behavior:'auto'}),0);
+  }
+
+  isHome(){
+    const h=location.hash;
+    return !h || h==='#accueil' || h==='#/';
+  }
+
+  isActive(href:string){
+    const current=location.hash.replace(/\/$/,'');
+    const target=href.replace(/\/$/,'');
+    if(target==='#/solutions') return current==='#/solutions' || current.startsWith('#/solutions/');
+    return current===target;
+  }
 }

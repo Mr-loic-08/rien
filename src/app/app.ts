@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { OnInit, AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { HeaderComponent } from './shared/header/header';
 import { HeroComponent } from './pages/home/hero/hero';
 import { HomeSolutionsComponent } from './pages/home/solutions/solutions';
@@ -18,7 +18,7 @@ import { SolutionsPageComponent } from './pages/solutions/solutions';
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
   isSolutions=false;
-  private onHash=()=>{ this.isSolutions=location.hash==='#/solutions'; };
+  private onHash=()=>{ const h=location.hash.replace(/\/$/,''); this.isSolutions=h==='#/solutions'; };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;
 

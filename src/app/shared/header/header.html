@@ -28,11 +28,11 @@
 <div class="head-wrap" [class.scrolled]="scrolled()">
   <div class="scroll-progress"><i [style.transform]="'scaleX('+progress()+')'"></i></div>
   <header class="header" id="header"><div class="container">
-    <a class="logo" href="#accueil" aria-label="I-TECH"><span class="brand-logo"><img src="images/i-tech-logo.png" alt="I-TECH"></span></a>
+    <a class="logo" href="#accueil" (click)="navigateTop($event,'#accueil')" aria-label="I-TECH"><span class="brand-logo"><img src="images/i-tech-logo.png" alt="I-TECH"></span></a>
     <ul class="nav" id="nav">
-      <li><a href="#accueil" class="active"><svg class="ic nav-home-ic"><use href="#i-home"></use></svg>{{l.t('Accueil')}}</a></li>
+      <li><a href="#accueil" [class.active]="isHome()" (click)="navigateTop($event,'#accueil')"><svg class="ic nav-home-ic"><use href="#i-home"></use></svg>{{l.t('Accueil')}}</a></li>
       <li *ngFor="let m of menus" (mouseenter)="open.set(m.label)" (mouseleave)="open.set(null)" [class.open]="open()===m.label">
-        <a [href]="m.href"><svg class="ic nav-section-ic"><use [attr.href]="'#'+m.icon"></use></svg>{{l.t(m.label)}}<svg class="ic chev"><use href="#i-chev-r"></use></svg></a>
+        <a [href]="m.href" [class.active]="isActive(m.href)" (click)="navigateTop($event,m.href)"><svg class="ic nav-section-ic"><use [attr.href]="'#'+m.icon"></use></svg>{{l.t(m.label)}}<svg class="ic chev"><use href="#i-chev-r"></use></svg></a>
         <div class="dropdown"><a *ngFor="let it of m.items" [href]="it.href"><svg class="ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
       </li>
       <li><a href="#/ressources"><svg class="ic nav-section-ic"><use href="#i-news"></use></svg>{{l.t('Ressources')}}</a></li>
