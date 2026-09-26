@@ -1,0 +1,36 @@
+<main class="pg pg-solutions">
+  <section class="pg-hero on-photo solutions-first-hero">
+    <div class="pg-hero-bg" aria-hidden="true">
+      @for(img of images; track img; let i=$index){
+        <span class="pg-hero-slide" [class.on]="i===active" [style.background-image]="'url('+img+')'"></span>
+      }
+      <span class="pg-hero-veil"></span>
+      <span class="pg-hero-mesh"></span>
+      <div class="pg-hero-dots">
+        @for(img of images; track img; let i=$index){
+          <button type="button" [class.on]="i===active" (click)="setSlide(i)" [attr.aria-label]="'Image '+(i+1)"></button>
+        }
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="crumbs">
+        <span class="crumb"><a href="#accueil">{{l.t('Accueil')}}</a><svg class="ic"><use href="#i-chev-r"></use></svg></span>
+        <span class="crumb"><em>{{l.t('Solutions')}}</em></span>
+      </div>
+
+      <div class="pg-hero-grid solo">
+        <div class="pg-hero-copy reveal visible">
+          <span class="pg-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Gamme ALPHA · Solutions I-TECH')}}</span>
+          <h1>{{l.t("Des solutions innovantes au service de l'accélération de votre transformation digitale")}}</h1>
+          <p>{{l.t("Découvrez la suite ALPHA et les solutions I-TECH : des outils performants dédiés aux banques, aux institutions de microfinance et aux entreprises en quête d'efficacité.")}}</p>
+          <div class="hero-actions">
+            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démonstration')}}</a>
+            <a href="#/contact" class="btn btn-glass">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pg-hero-wave" aria-hidden="true"></div>
+  </section>
+</main>

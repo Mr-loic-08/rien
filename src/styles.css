@@ -2962,3 +2962,114 @@ app-footer .footer-video-bg video{width:100%;height:100%;object-fit:cover;opacit
 app-footer .footer-video-bg>span{position:absolute;inset:0;background:linear-gradient(115deg,rgba(3,29,52,.94),rgba(5,56,94,.90))}
 app-footer .home-footer>.container{position:relative;z-index:2}
 @media(max-width:700px){app-footer .home-footer{border-radius:25px 25px 0 0;margin-top:22px}}
+
+/* ===== Solutions Étape 1 — Hero, porté de React V17.20.4 ===== */
+/* ---------- tons ---------- */
+.tone-blue{--tone:#2563eb}
+.tone-green{--tone:#16a34a}
+.tone-purple{--tone:#7c3aed}
+.tone-orange{--tone:#f26a21}
+.tone-red{--tone:#c92a2a}
+
+/* ---------- header en mode page claire ---------- */
+/* Header identique à l'accueil sur toutes les pages : transparent en haut,
+   verre blanc uniquement au scroll. `.solid` ne sert plus qu'aux rares
+   pages à hero clair (Contact / Démo). */
+.head-wrap.solid .header{color:var(--navy);box-shadow:0 10px 40px rgba(13,43,74,.13);border-bottom-color:var(--line)}
+.head-wrap.solid .header::before,.head-wrap.solid .header::after{opacity:1}
+.head-wrap.solid .nav > li > a,.head-wrap.solid .nav > li > button{color:#33475c}
+.head-wrap.solid .nav > li > a:hover,.head-wrap.solid .nav > li > button:hover,.head-wrap.solid .nav > li.open > button{color:var(--orange)}
+.nav > li > a .chev{width:12px;height:12px;transition:transform .3s ease;transform:rotate(90deg)}
+.nav > li.open > a .chev{transform:rotate(-90deg)}
+.mobile-menu .m-all{color:var(--orange)!important;font-weight:700!important}
+
+/* ---------- coquille de page ----------
+   Pas de padding-top : chaque hero (sombre) monte jusqu'en haut,
+   sous le header transparent — comme sur la page d'accueil. */
+.pg{padding-top:0;background:#fff;min-height:60vh}
+.pg-solutions{--tone:var(--orange)}
+.pg .container{position:relative;z-index:1}
+
+/* ---------- fil d'Ariane ---------- */
+.crumbs{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.crumb{display:inline-flex;align-items:center;gap:10px}
+.crumb .ic{width:13px;height:13px;color:#b6c2d1}
+.crumb a{transition:color .25s}
+.crumb a:hover{color:var(--orange)}
+.crumb em{font-style:normal;color:var(--navy);font-weight:600}
+
+/* ---------- hero des pages (fond photo carrousel) ---------- */
+.pg-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#f4f8fc 0%,#fff 90%);padding-bottom:26px}
+.pg-blob{position:absolute;border-radius:50%;pointer-events:none;filter:blur(70px)}
+.pg-blob.b1{width:480px;height:480px;right:-140px;top:-120px;background:radial-gradient(circle,rgba(26,86,176,.16),transparent 70%)}
+.pg-blob.b2{width:380px;height:380px;left:-120px;bottom:-140px;background:radial-gradient(circle,rgba(242,106,33,.14),transparent 70%)}
+
+/* hero sur photo — compense lui-même le header fixe */
+.pg-hero.on-photo{background:var(--navy3);padding:150px 0 70px;isolation:isolate;min-height:76vh;display:flex;flex-direction:column;justify-content:center}
+.pg-hero.on-photo .container{padding-top:0}
+.pg-hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.pg-hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.12);transition:opacity 1.4s ease}
+.pg-hero-slide.on{opacity:1;animation:heroKen 7s ease-out both}
+@keyframes heroKen{from{transform:scale(1.04)}to{transform:scale(1.14)}}
+.pg-hero-veil{position:absolute;inset:0;
+  background:
+    linear-gradient(100deg, rgba(5,18,35,.94) 0%, rgba(5,18,35,.82) 34%, rgba(5,18,35,.55) 64%, rgba(5,18,35,.32) 100%),
+    linear-gradient(0deg, rgba(5,18,35,.85) 0%, transparent 42%)}
+.pg-hero.detail.on-photo .pg-hero-veil{
+  background:
+    linear-gradient(100deg, color-mix(in srgb,var(--tone) 30%, rgba(5,18,35,.95)) 0%, rgba(5,18,35,.82) 40%, rgba(5,18,35,.5) 70%, rgba(5,18,35,.3) 100%),
+    linear-gradient(0deg, rgba(5,18,35,.85) 0%, transparent 42%)}
+.pg-hero-mesh{position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;
+  background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:52px 52px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 30% 40%,#000 25%,transparent 78%);
+  mask-image:radial-gradient(ellipse 80% 70% at 30% 40%,#000 25%,transparent 78%)}
+.pg-hero-dots{position:absolute;left:24px;bottom:96px;z-index:3;display:flex;gap:9px}
+.pg-hero-dots button{width:26px;height:4px;border-radius:99px;border:none;cursor:pointer;padding:0;
+  background:rgba(255,255,255,.3);transition:all .3s var(--ease)}
+.pg-hero-dots button.on{background:var(--orange);width:40px;box-shadow:0 0 14px rgba(242,106,33,.7)}
+.pg-hero-wave{position:absolute;left:0;right:0;bottom:-1px;height:70px;z-index:2;pointer-events:none;
+  background:#fff;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0 70V28C240 4 480 4 720 24S1200 60 1440 30V70Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0 70V28C240 4 480 4 720 24S1200 60 1440 30V70Z' fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-size:100% 100%;mask-size:100% 100%}
+
+.pg-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;margin-top:30px}
+.pg-hero-grid.solo{grid-template-columns:1fr;max-width:760px}
+.pg-hero.on-photo .pg-hero-grid{position:relative;z-index:2;padding:64px 0 86px}
+.pg-hero.on-photo .pg-hero-grid.solo{padding:60px 0 100px}
+
+.pg-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:#fff;padding:8px 15px;border-radius:99px;margin-bottom:18px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px)}
+.pg-eyebrow .ic{width:15px;height:15px;color:var(--orange-l,#ff8a4c)}
+
+.pg-hero-copy h1{font-size:clamp(28px,3.2vw,42px);line-height:1.14;font-weight:800;letter-spacing:-.7px;color:var(--navy)}
+.pg-hero-copy > p{color:var(--muted);font-size:15.5px;margin-top:16px;max-width:56ch}
+.pg-hero-copy .hero-actions{margin-top:26px}
+.pg-hero-copy .ico.lg{width:64px;height:64px;border-radius:18px;margin-bottom:18px}
+.pg-hero-copy .ico.lg .ic{width:28px;height:28px}
+.pg-tagline{color:var(--orange)!important;font-weight:700!important;font-size:17px!important}
+.pg-detail-text{margin-top:10px!important}
+.pg-visual{display:flex;align-items:center;justify-content:center;min-height:400px}
+
+/* texte clair + entrée animée sur hero photo */
+.pg-hero.on-photo .pg-hero-copy h1{color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.5)}
+.pg-hero.on-photo .pg-hero-copy > p,.pg-hero.on-photo .pg-detail-text{color:rgba(255,255,255,.82)}
+.pg-hero.on-photo .crumb em{color:#fff}
+.pg-hero.on-photo .crumb a{color:rgba(255,255,255,.65)}
+.pg-hero.on-photo .crumb a:hover{color:var(--orange-l,#ff8a4c)}
+.pg-hero.on-photo .crumb .ic{color:rgba(255,255,255,.4)}
+.pg-hero.on-photo .pg-hero-copy > *{opacity:0;transform:translateY(26px);animation:heroUp .8s var(--ease) forwards}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(1){animation-delay:.06s}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(2){animation-delay:.16s}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(3){animation-delay:.26s}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(4){animation-delay:.36s}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(5){animation-delay:.46s}
+.pg-hero.on-photo .pg-hero-copy > *:nth-child(6){animation-delay:.56s}
+@keyframes heroUp{to{opacity:1;transform:none}}
+
+
+.solutions-first-hero{border-radius:0 0 42px 42px;box-shadow:0 28px 65px rgba(3,25,47,.18)}
+@media(max-width:700px){.solutions-first-hero{border-radius:0 0 26px 26px}}
