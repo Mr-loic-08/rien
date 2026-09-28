@@ -1,0 +1,87 @@
+<main class="pg pg-detail core-banking-page">
+  <section class="pg-hero detail on-photo core-banking-first-hero">
+    <div class="hero-bg" aria-hidden="true">
+      @for(img of sol.heroBg; track img; let i=$index){
+        <div class="hero-bg-slide" [class.active]="i===active" [style.background-image]="'url('+img+')'"></div>
+      }
+      <div class="hero-bg-tint dark"></div>
+    </div>
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d’Ariane">
+        <a href="#accueil">{{l.t('Accueil')}}</a><span>›</span>
+        <a href="#/solutions">{{l.t('Solutions')}}</a><span>›</span>
+        <b>{{l.t(sol.name)}}</b>
+      </nav>
+
+      <div class="pg-hero-grid solo">
+        <div class="pg-hero-copy reveal visible">
+          <span class="detail-art" aria-hidden="true">
+            <svg class="ic detail-art-svg"><use href="#i-bank"></use></svg>
+          </span>
+          <span class="pg-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Solution ALPHA')}}</span>
+          <h1>{{l.t(sol.name)}}</h1>
+          <p class="pg-tagline">{{l.t(sol.tagline)}}</p>
+          <p class="pg-detail-text">{{l.t(sol.detail)}}</p>
+          <div class="hero-actions">
+            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+            <a href="#/contact" class="btn btn-glass">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @if((sol.heroBg?.length || 0)>1){
+      <div class="hero-dots" aria-label="Images du hero">
+        @for(img of sol.heroBg; track img; let i=$index){
+          <button type="button" [class.active]="i===active" (click)="setSlide(i)" [attr.aria-label]="'Image '+(i+1)"></button>
+        }
+      </div>
+    }
+    <div class="pg-hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- Core Banking Étape 2 — Une architecture complète et intégrée -->
+  <section #architecture class="core-arch" [attr.aria-label]="l.t(band.title)">
+    <div class="core-arch-backdrop" aria-hidden="true">
+      <img class="core-arch-bg" src="/images/core-banking-phone.jpg" alt="">
+      <span class="core-arch-bg-cover"></span>
+      <span class="core-arch-grid"></span>
+      <span class="core-arch-glow core-arch-glow-a"></span>
+      <span class="core-arch-glow core-arch-glow-b"></span>
+    </div>
+
+    <div class="container core-arch-inner">
+      <header class="core-arch-head">
+        <h2>{{l.t(band.title)}}</h2>
+      </header>
+
+      <div class="core-arch-scene">
+        <div class="core-arch-lines" aria-hidden="true">
+          <span class="core-line core-line-1"></span><span class="core-line core-line-2"></span>
+          <span class="core-line core-line-3"></span><span class="core-line core-line-4"></span>
+        </div>
+
+        <div class="core-arch-hub" aria-hidden="true">
+          <span class="core-arch-hub-ring"></span>
+          <img class="core-arch-logo" src="/images/i-tech-logo.png" alt="">
+        </div>
+
+        <div class="core-arch-cards">
+          @for(item of band.items; track item.name; let i=$index){
+            <article class="core-arch-card core-arch-card-{{i+1}}" [style.--card-accent]="i<2 ? '#2f6bff' : '#f26722'">
+              <span class="core-arch-card-num">0{{i+1}}</span>
+              <span class="core-arch-card-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+              <div class="core-arch-card-copy">
+                <strong>{{l.t(item.name)}}</strong>
+                @if(item.desc){<p>{{l.t(item.desc)}}</p>}
+              </div>
+              <span class="core-arch-card-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"></use></svg></span>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

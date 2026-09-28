@@ -33,4 +33,124 @@
     </div>
     <div class="pg-hero-wave" aria-hidden="true"></div>
   </section>
+
+  <!-- Solutions Étape 2 — statistiques V17.20.4 -->
+  <section class="ov-stats solutions-stats-fold reveal visible">
+    <div class="ov-stats-deco" aria-hidden="true"></div>
+    <div class="container">
+      <div class="ov-stats-row">
+        @for(s of stats; track s.label; let i=$index){
+          <div class="ov-stat" [style.transition-delay.ms]="i*90">
+            <span class="ov-stat-ic"><svg class="ic"><use [attr.href]="'#'+s.icon"></use></svg></span>
+            <b>{{s.value}}</b>
+            <span>{{l.t(s.label)}}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Étape 3 — Écosystème V17.20.4 -->
+  <section class="eco solutions-eco-fold reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t(ecosystemTitle)}}</h2>
+      <div class="eco-grid">
+        <div class="eco-col">
+          @for(item of ecosystemLeft; track item.key){
+            <a class="eco-item tone-{{item.tone}}" [href]="'#/solutions/'+item.key">
+              <span class="eco-art" aria-hidden="true"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+              <span class="eco-txt"><b>{{l.t(item.name)}}</b><span>{{l.t(item.desc)}}</span></span>
+              <svg class="ic"><use href="#i-chev-r"></use></svg>
+            </a>
+          }
+        </div>
+        <div class="eco-core">
+          <span class="eco-ring r1"></span><span class="eco-ring r2"></span>
+          <div class="eco-circle"><b>{{l.t(suiteTitle)}}</b><span>{{l.t(suiteText)}}</span></div>
+        </div>
+        <div class="eco-col">
+          @for(item of ecosystemRight; track item.key){
+            <a class="eco-item tone-{{item.tone}}" [href]="'#/solutions/'+item.key">
+              <span class="eco-art" aria-hidden="true"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+              <span class="eco-txt"><b>{{l.t(item.name)}}</b><span>{{l.t(item.desc)}}</span></span>
+              <svg class="ic"><use href="#i-chev-r"></use></svg>
+            </a>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Solutions Étape 4 — Nos solutions / Gamme ALPHA V17.20.4 -->
+  <section class="nossol sol-focus-section solutions-alpha-fold">
+    <div class="sol-focus-sticky">
+      <div class="container sol-focus-heading">
+        <span class="sec-kicker center">{{l.t('Gamme ALPHA')}}</span>
+        <h2 class="sec-title center">{{l.t(nosSolutions)}}</h2>
+        <p class="sol-intro" style="text-align:center;margin:14px auto 0">
+          {{l.t("Une suite logicielle complète pour digitaliser vos opérations, renforcer votre conformité et améliorer l'expérience client.")}}
+        </p>
+      </div>
+
+      <div class="sol-focus-stage" [class.is-switching]="solutionMotion" [class.is-switching-next]="solutionMotion==='next'" [class.is-switching-prev]="solutionMotion==='prev'" aria-live="polite">
+        @for(c of solutionCards; track c.key; let i=$index){
+          <article class="sol-card tone-{{c.tone}} sol-focus-card"
+            [class.is-active]="i===solutionActive" [class.is-entering]="i===solutionActive"
+            [class.is-exiting]="i===solutionFrom && !!solutionMotion"
+            [class.is-past]="solutionDelta(i)<0" [class.is-future]="solutionDelta(i)>=0 && i!==solutionActive"
+            [style.--sol-delta]="solutionDelta(i)" [style.--sol-abs]="solutionAbs(i)"
+            [attr.aria-hidden]="solutionAbs(i)>2">
+            <span class="sol-media" [style.background-image]="'url('+c.img+')'" aria-hidden="true"></span>
+            <span class="sol-veil" aria-hidden="true"></span>
+            <div class="sol-card-top">
+              <span class="sol-art"><svg class="ic sol-art-svg"><use [attr.href]="'#'+c.icon"></use></svg></span>
+              <span class="sol-index">{{'0'+(i+1)}}</span>
+            </div>
+            @if(c.tagline){<span class="st-tagline">{{l.t(c.tagline)}}</span>}
+            <h4>{{l.t(c.name)}}</h4>
+            <p>{{l.t(c.description)}}</p>
+            @if(c.points?.length){
+              <ul class="sol-points">
+                @for(point of c.points.slice(0,3); track point){
+                  <li><svg class="ic"><use href="#i-check"></use></svg>{{l.t(point)}}</li>
+                }
+              </ul>
+            }
+            <a [href]="'#/solutions/'+c.key" class="link sol-more">{{l.t('En savoir plus')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          </article>
+        }
+      </div>
+
+      <div class="container sol-focus-controls">
+        <div class="sol-story-nav">
+          <button class="ssn-btn" [attr.aria-label]="l.t('Précédent')" (click)="goSolution(solutionActive-1,'prev')"><svg class="ic"><use href="#i-chev-l"></use></svg></button>
+          <span class="ssn-count"><b>{{'0'+(solutionActive+1)}}</b> / {{'0'+solutionCards.length}}</span>
+          <button class="ssn-btn" [attr.aria-label]="l.t('Suivant')" (click)="goSolution(solutionActive+1,'next')"><svg class="ic"><use href="#i-chev-r"></use></svg></button>
+        </div>
+        <div class="sol-focus-progress" aria-hidden="true"><span [style.width.%]="((solutionActive+1)/solutionCards.length)*100"></span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Solutions Étape 5 — CTA final V17.20.4 -->
+  <section class="ov-cta solutions-cta-fold reveal visible">
+    <div class="container">
+      <div class="ov-cta-panel">
+        <div class="ov-cta-copy">
+          <h2>{{l.t(ctaTitle)}}</h2>
+          <p>{{l.t(ctaText)}}</p>
+          <div class="cta-actions">
+            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démonstration')}}</a>
+            <a href="#/contact" class="btn btn-ghost-w">{{l.t('Parler à un expert')}}</a>
+          </div>
+        </div>
+        <div class="ov-cta-photo">
+          <img [src]="ctaPhoto" [alt]="l.t('Échange avec nos experts')" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>

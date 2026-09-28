@@ -10,15 +10,21 @@ import { HomeWhyComponent } from './pages/home/why/why';
 import { HomeCtaComponent } from './pages/home/cta/cta';
 import { FooterComponent } from './layout/footer/footer';
 import { SolutionsPageComponent } from './pages/solutions/solutions';
+import { CoreBankingPageComponent } from './pages/solutions/core-banking/core-banking';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
   isSolutions=false;
-  private onHash=()=>{ const h=location.hash.replace(/\/$/,''); this.isSolutions=h==='#/solutions'; };
+  isCoreBanking=false;
+  private onHash=()=>{
+    const h=location.hash.replace(/\/$/,'');
+    this.isSolutions=h==='#/solutions';
+    this.isCoreBanking=h==='#/solutions/core-banking';
+  };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;
 

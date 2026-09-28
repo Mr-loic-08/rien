@@ -3073,3 +3073,361 @@ app-footer .home-footer>.container{position:relative;z-index:2}
 
 .solutions-first-hero{border-radius:0 0 42px 42px;box-shadow:0 28px 65px rgba(3,25,47,.18)}
 @media(max-width:700px){.solutions-first-hero{border-radius:0 0 26px 26px}}
+
+/* ===== Solutions Étape 2 — Stats V17.20.4 + séparation de bloc ===== */
+.ov-stats{position:relative;overflow:hidden;isolation:isolate;padding:60px 0;background:linear-gradient(160deg,#eef4fb 0%,#f7fafd 55%,#eef3fb 100%)}
+.ov-stats-deco{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(560px 240px at 12% 10%,rgba(242,106,33,.14),transparent 60%),radial-gradient(620px 260px at 88% 90%,rgba(26,86,176,.16),transparent 62%)}
+.ov-stats .container{position:relative;z-index:1}
+.ov-stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;max-width:960px;margin:0 auto}
+.ov-stat{flex:0 0 calc(25% - 14px);min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:26px 18px 22px;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,255,255,.5));border:1px solid rgba(255,255,255,.9);box-shadow:0 22px 50px -30px rgba(13,43,74,.4),inset 0 1px 0 rgba(255,255,255,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transform:translateY(26px);transition:opacity .6s var(--ease),transform .6s var(--ease),box-shadow .35s ease,border-color .35s ease}
+.reveal.visible .ov-stat{opacity:1;transform:none}
+.ov-stat::before{content:'';position:absolute;top:0;left:22px;right:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--orange),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.ov-stat:hover{transform:translateY(-6px);border-color:rgba(242,106,33,.4);box-shadow:0 30px 64px -28px rgba(13,43,74,.5)}
+.ov-stat:hover::before{transform:scaleX(1)}
+.ov-stat-ic{width:62px;height:62px;border-radius:18px;background:#fdeee3;color:var(--orange);display:grid;place-items:center;flex:none;overflow:hidden}
+.ov-stat-ic .ic{width:28px;height:28px}
+.ov-stat b{display:block;font-size:26px;font-weight:800;color:var(--navy);line-height:1.05}
+.ov-stat span{font-size:12px;color:var(--muted);line-height:1.35}
+.solutions-stats-fold{margin-top:34px;border-radius:42px;box-shadow:0 24px 60px rgba(8,38,68,.13);z-index:3}
+.solutions-stats-fold::after{content:'';position:absolute;left:9%;right:9%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);pointer-events:none}
+@media(max-width:900px){.ov-stat{flex:0 0 calc(50% - 12px)}}
+@media(max-width:520px){.ov-stats{padding:44px 0}.solutions-stats-fold{margin-top:22px;border-radius:28px}.ov-stats-row{gap:12px}.ov-stat{min-width:0;flex:0 0 calc(50% - 6px);padding:20px 10px 18px}.ov-stat-ic{width:52px;height:52px;border-radius:15px}.ov-stat b{font-size:22px}.ov-stat span{font-size:11px}}
+
+/* ===== Solutions Étape 3 — Écosystème, V17.20.4 ===== */
+.eco{padding:72px 0 20px}
+.eco-grid{display:grid;grid-template-columns:1fr 300px 1fr;gap:26px;align-items:center;margin-top:42px}
+.eco-col{display:flex;flex-direction:column;gap:16px}
+.eco-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:17px 18px;transition:all .35s var(--ease);position:relative;overflow:hidden}
+.eco-item::after{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;
+  background:var(--tone);transform:scaleY(0);transition:transform .35s var(--ease)}
+.eco-item:hover{transform:translateY(-4px);border-color:var(--tone);box-shadow:0 20px 44px -22px rgba(13,43,74,.35)}
+.eco-item:hover::after{transform:scaleY(1)}
+.eco-item .ico{width:48px;height:48px;border-radius:14px;flex:none}
+/* Écosystème Solutions : pictogrammes lisibles et synchronisés avec la charte I-TECH */
+.eco-art{width:58px;height:58px;min-width:58px;border-radius:17px;display:grid;place-items:center;
+  color:var(--orange);background:linear-gradient(145deg,#fff7f1,#ffe5d4);border:1px solid rgba(242,106,33,.22);
+  box-shadow:0 12px 28px -18px rgba(242,106,33,.7);position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease)}
+.eco-art::before{content:'';position:absolute;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.72);filter:blur(1px)}
+.eco-art .ic{position:relative;z-index:1;width:27px;height:27px;color:var(--orange);stroke-width:1.9}
+.eco-item:hover .eco-art{transform:translateY(-2px) scale(1.045);background:linear-gradient(145deg,#fff,#fff0e6);box-shadow:0 16px 32px -17px rgba(242,106,33,.85)}
+.eco-item:nth-child(even) .eco-art{color:var(--blue,#1f5fae);background:linear-gradient(145deg,#f7fbff,#e7f1ff);border-color:rgba(31,95,174,.18)}
+.eco-item:nth-child(even) .eco-art .ic{color:var(--blue,#1f5fae)}
+.eco-txt{flex:1;min-width:0}
+.eco-txt b{display:block;font-size:14.5px;color:var(--navy)}
+.eco-txt span{display:block;font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5}
+.eco-item > .ic{width:17px;height:17px;color:var(--tone);flex:none;transition:transform .3s var(--ease)}
+.eco-item:hover > .ic{transform:translateX(4px)}
+.eco-core{position:relative;display:grid;place-items:center;min-height:300px}
+.eco-ring{position:absolute;border-radius:50%;border:1px dashed rgba(242,106,33,.3)}
+.eco-ring.r1{width:270px;height:270px;animation:auraSpin 30s linear infinite}
+.eco-ring.r2{width:212px;height:212px;border-color:rgba(13,43,74,.14);animation:auraSpin 22s linear infinite reverse}
+.eco-circle{width:196px;height:196px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#1a4a7e,var(--navy2) 70%);
+  color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;
+  padding:30px;box-shadow:0 30px 70px -28px rgba(13,43,74,.6);z-index:1}
+.eco-circle b{font-size:19px;font-weight:800;letter-spacing:.06em}
+.eco-circle span{font-size:11.5px;color:rgba(255,255,255,.72);line-height:1.5}
+
+.solutions-eco-fold{
+  position:relative;
+  margin:34px 18px 0;
+  padding:72px 0 62px;
+  border-radius:42px;
+  background:linear-gradient(180deg,#fff,#f8fbfe);
+  box-shadow:0 24px 60px rgba(8,38,68,.12);
+  z-index:4;
+}
+.solutions-eco-fold::before{
+  content:'';position:absolute;left:8%;right:8%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.35),transparent);
+}
+@media(max-width:700px){
+ .solutions-eco-fold{margin:22px 10px 0;padding:52px 0 44px;border-radius:28px}
+}
+
+/* ===== Solutions Étape 4 — Gamme ALPHA / stories V17.20.4 ===== */
+.nossol{padding:56px 0 80px;background:linear-gradient(180deg,#fff,#f5f9fd)}
+.sec-kicker.center{display:flex;justify-content:center}
+.nossol-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:38px}
+.nossol-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;
+  display:flex;flex-direction:column;overflow:hidden;transition:all .35s var(--ease)}
+.nossol-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--tone);
+  transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nossol-card:hover{transform:translateY(-8px);box-shadow:0 26px 60px -26px rgba(13,43,74,.35);border-color:var(--tone)}
+.nossol-card:hover::before{transform:scaleX(1)}
+.nossol-card .ico{width:52px;height:52px;border-radius:15px;margin-bottom:18px}
+.nossol-card h3{font-size:14.5px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.nossol-card > p{font-size:12.5px;color:var(--muted);line-height:1.6;margin:10px 0 16px}
+.nossol-card ul{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.nossol-card li{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#33475c;font-weight:500}
+.nossol-card li .ic{width:15px;height:15px;color:var(--tone);margin-top:1px;flex:none}
+.nossol-card .link{margin-top:auto}
+
+
+.solutions-alpha-fold{
+  position:relative;margin:38px 18px 0;border-radius:42px;
+  overflow:hidden;box-shadow:0 28px 68px rgba(5,31,58,.14);z-index:5;
+}
+.solutions-alpha-fold::before{
+  content:'';position:absolute;z-index:8;left:9%;right:9%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.42),transparent);
+}
+@media(max-width:700px){.solutions-alpha-fold{margin:26px 10px 0;border-radius:28px}}
+
+/* ===== Solutions Étape 4.1 — alternance visuelle des étages ===== */
+
+/* Écosystème : bleu I-TECH très pâle, cartes blanches */
+.solutions-eco-fold{
+  background:
+    radial-gradient(circle at 12% 14%, rgba(242,106,33,.10), transparent 27%),
+    radial-gradient(circle at 88% 78%, rgba(0,105,180,.12), transparent 30%),
+    linear-gradient(145deg,#eef7fc 0%,#f7fbfe 46%,#e8f3fa 100%) !important;
+  border:1px solid rgba(0,105,180,.10);
+  box-shadow:0 26px 64px rgba(5,47,82,.14);
+}
+.solutions-eco-fold .eco-item{
+  background:rgba(255,255,255,.94);
+  border-color:rgba(7,58,96,.10);
+  box-shadow:0 12px 30px rgba(8,48,78,.08);
+}
+.solutions-eco-fold .eco-core{
+  filter:drop-shadow(0 16px 28px rgba(0,80,140,.13));
+}
+
+/* Gamme ALPHA : véritable étage bleu profond I-TECH */
+.solutions-alpha-fold{
+  background:
+    radial-gradient(circle at 16% 18%,rgba(242,106,33,.18),transparent 25%),
+    radial-gradient(circle at 84% 24%,rgba(45,151,220,.24),transparent 30%),
+    linear-gradient(145deg,#06365c 0%,#074d7d 48%,#052b4b 100%) !important;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 32px 76px rgba(3,25,47,.28);
+}
+.solutions-alpha-fold .sol-focus-sticky{
+  background:transparent !important;
+}
+.solutions-alpha-fold .sol-focus-heading .sec-kicker{
+  color:#f26a21;
+}
+.solutions-alpha-fold .sol-focus-heading .sec-title,
+.solutions-alpha-fold .sol-focus-heading h2{
+  color:#fff;
+}
+.solutions-alpha-fold .sol-intro{
+  color:rgba(255,255,255,.80) !important;
+}
+.solutions-alpha-fold .ssn-btn{
+  background:rgba(255,255,255,.10);
+  border-color:rgba(255,255,255,.24);
+  color:#fff;
+}
+.solutions-alpha-fold .ssn-btn:hover{
+  background:#fff;
+  color:#0767a5;
+}
+.solutions-alpha-fold .ssn-count{
+  color:rgba(255,255,255,.72);
+}
+.solutions-alpha-fold .ssn-count b{
+  color:#fff;
+}
+.solutions-alpha-fold .sol-focus-progress{
+  background:rgba(255,255,255,.18);
+}
+.solutions-alpha-fold .sol-focus-progress span{
+  background:linear-gradient(90deg,#f26a21,#ff9a58);
+}
+
+/* Renforce la lecture "étage par étage" sans resserrer les blocs */
+.solutions-eco-fold + .solutions-alpha-fold{
+  margin-top:52px;
+}
+@media(max-width:700px){
+  .solutions-eco-fold + .solutions-alpha-fold{margin-top:34px}
+}
+
+/* ===== Solutions Étape 5 — CTA final V17.20.4 ===== */
+.ov-cta{padding:0 0 90px;background:linear-gradient(180deg,#f5f9fd,#fff)}
+.ov-cta-panel{display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#123a5e 100%);
+  box-shadow:0 40px 90px -40px rgba(5,18,35,.6);position:relative}
+.ov-cta-panel::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(500px 260px at 12% 20%,rgba(242,106,33,.22),transparent 65%)}
+.ov-cta-copy{position:relative;z-index:1;padding:52px 48px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.ov-cta-copy h2{font-size:clamp(24px,2.4vw,32px);font-weight:800;letter-spacing:-.4px}
+.ov-cta-copy p{color:rgba(255,255,255,.72);margin:14px 0 26px;max-width:44ch}
+.ov-cta-photo{min-height:320px;position:relative}
+.ov-cta-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ov-cta-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--navy2) 0%,transparent 32%)}
+
+
+.solutions-cta-fold{
+  position:relative;
+  margin:54px 18px 34px;
+  border-radius:42px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 20%,rgba(242,106,33,.13),transparent 27%),
+    linear-gradient(145deg,#f7fbfe,#eef6fb);
+  box-shadow:0 26px 64px rgba(5,39,68,.14);
+  z-index:6;
+}
+.solutions-cta-fold::before{
+  content:'';position:absolute;z-index:3;left:10%;right:10%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.48),transparent);
+}
+@media(max-width:700px){
+  .solutions-cta-fold{margin:36px 10px 24px;border-radius:28px}
+}
+
+/* ===== Core Banking — Étape 1 : Hero ===== */
+.core-banking-first-hero{
+  position:relative;
+  border-radius:0 0 42px 42px;
+  overflow:hidden;
+  box-shadow:0 30px 70px rgba(3,25,47,.20);
+}
+.core-banking-first-hero .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.core-banking-first-hero .hero-bg-slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.035);transition:opacity 1s ease,transform 7s ease;
+}
+.core-banking-first-hero .hero-bg-slide.active{opacity:1;transform:scale(1)}
+.core-banking-first-hero .hero-bg-tint{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,27,49,.86),rgba(3,34,61,.60) 58%,rgba(3,29,51,.46))}
+.core-banking-first-hero>.container{position:relative;z-index:2}
+.core-banking-first-hero .hero-dots{position:absolute;z-index:4;left:50%;bottom:26px;display:flex;gap:8px;transform:translateX(-50%)}
+.core-banking-first-hero .hero-dots button{width:8px;height:8px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.46);transition:.25s}
+.core-banking-first-hero .hero-dots button.active{width:28px;background:#f26a21}
+.core-banking-first-hero .detail-art{color:#f26a21}
+@media(max-width:700px){.core-banking-first-hero{border-radius:0 0 28px 28px}.core-banking-first-hero .hero-dots{bottom:18px}}
+
+/* ===== Core Banking Étape 2 — Architecture V17.20.4 ===== */
+/* =========================================================
+   V4 — Core Banking : scroll naturel + design enrichi
+   Contenu métier, images, logo et palette d'entreprise conservés.
+   ========================================================= */
+.core-arch{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:hidden;
+  isolation:isolate;
+  padding:clamp(84px,8vw,126px) 0 clamp(86px,8vw,132px);
+  background:#071a2b;
+}
+.core-arch-backdrop{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.core-arch-bg{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:23% 68%!important;
+  transform:scale(1.06)!important;
+  filter:saturate(.92) contrast(1.05) brightness(.48)!important;
+  opacity:.78!important;
+}
+/* Le téléphone de la photo source reste hors de l'attention visuelle :
+   la composition recadre la main à gauche et le centre est absorbé par le hub. */
+.core-arch-bg-cover{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(90deg,rgba(5,22,39,.12) 0%,rgba(5,22,39,.34) 36%,rgba(5,22,39,.83) 52%,rgba(5,22,39,.78) 100%),
+    linear-gradient(180deg,rgba(4,17,31,.74) 0%,rgba(4,17,31,.12) 34%,rgba(4,17,31,.18) 66%,rgba(4,17,31,.82) 100%),
+    radial-gradient(circle at 52% 53%,rgba(7,26,43,.98) 0 8%,rgba(7,26,43,.88) 18%,rgba(7,26,43,.30) 38%,transparent 58%);
+}
+.core-arch-grid{
+  position:absolute!important;inset:0!important;z-index:2!important;opacity:.08!important;
+  background-image:radial-gradient(circle,rgba(255,255,255,.65) 1px,transparent 1.2px)!important;
+  background-size:30px 30px!important;
+  mask-image:linear-gradient(90deg,transparent 4%,#000 35%,#000 86%,transparent)!important;
+}
+.core-arch-glow{position:absolute!important;z-index:2!important;border-radius:50%!important;filter:blur(95px)!important;opacity:.72;pointer-events:none}
+.core-arch-glow-a{width:430px!important;height:430px!important;left:28%!important;top:35%!important;background:rgba(47,107,255,.17)!important}
+.core-arch-glow-b{width:420px!important;height:420px!important;right:12%!important;top:32%!important;background:rgba(242,103,34,.13)!important}
+.core-arch-inner{position:relative;z-index:4}
+.core-arch-head{
+  position:relative!important;inset:auto!important;width:auto!important;transform:none!important;
+  text-align:center!important;color:#fff!important;opacity:0;pointer-events:auto!important;
+  margin:0 auto clamp(48px,5vw,72px)!important;
+  transition:opacity .75s ease,transform .75s cubic-bezier(.22,1,.36,1);
+  transform:translateY(18px)!important;
+}
+.core-arch.is-visible .core-arch-head{opacity:1;transform:translateY(0)!important}
+.core-arch-head h2{margin:0!important;color:#fff!important;font-size:clamp(34px,4.4vw,62px)!important;line-height:1.05!important;letter-spacing:-.04em!important;text-shadow:0 18px 60px rgba(0,0,0,.28)!important}
+.core-arch-scene{
+  position:relative!important;inset:auto!important;width:min(1200px,100%)!important;height:clamp(610px,56vw,720px)!important;
+  transform:none!important;opacity:1!important;margin:0 auto;
+}
+.core-arch-hub{
+  position:absolute!important;z-index:8!important;left:50%!important;top:50%!important;
+  width:clamp(178px,17vw,228px)!important;height:clamp(178px,17vw,228px)!important;
+  transform:translate(-50%,-50%)!important;border-radius:50%!important;
+  display:grid!important;place-items:center!important;
+  background:radial-gradient(circle at 34% 26%,rgba(255,255,255,.20),rgba(19,68,115,.96) 40%,rgba(5,24,43,.99) 75%)!important;
+  border:1px solid rgba(171,217,255,.75)!important;
+  box-shadow:0 0 0 13px rgba(47,107,255,.07),0 0 70px rgba(47,107,255,.28),inset 0 1px 0 rgba(255,255,255,.30)!important;
+  backdrop-filter:blur(14px);
+  animation:coreHubFloat 5.5s ease-in-out infinite;
+}
+.core-arch-hub::before{content:"";position:absolute;inset:-24px;border:1px solid rgba(93,164,255,.23);border-radius:50%;animation:coreOrbit 18s linear infinite}
+.core-arch-hub::after{content:"";position:absolute;inset:-46px;border:1px dashed rgba(242,103,34,.18);border-radius:50%;animation:coreOrbit 28s linear infinite reverse}
+.core-arch-hub-ring{position:absolute;inset:11px;border-radius:50%;border:1px solid rgba(255,255,255,.11)}
+.core-arch-logo{position:relative;z-index:2;width:138px!important;height:auto!important;display:block}
+.core-arch-logo svg{width:100%!important;height:auto!important;display:block}
+.core-arch-lines{position:absolute;inset:0;z-index:2;pointer-events:none}
+.core-line{position:absolute;height:1px;transform-origin:0 50%;background:linear-gradient(90deg,transparent,rgba(87,167,255,.72),rgba(255,255,255,.78),transparent);box-shadow:0 0 14px rgba(47,107,255,.34);opacity:.62}
+.core-line::after{content:"";position:absolute;right:16%;top:-3px;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 18px #57a7ff;animation:corePulse 2.8s ease-in-out infinite}
+.core-line-1{left:27%;top:29%;width:25%;transform:rotate(23deg)}
+.core-line-2{left:50%;top:49%;width:25%;transform:rotate(-23deg)}
+.core-line-3{left:28%;top:72%;width:24%;transform:rotate(-24deg)}
+.core-line-4{left:50%;top:52%;width:25%;transform:rotate(25deg)}
+.core-line-2,.core-line-4{background:linear-gradient(90deg,transparent,rgba(242,103,34,.62),rgba(255,255,255,.78),transparent);box-shadow:0 0 14px rgba(242,103,34,.26)}
+.core-line-2::after,.core-line-4::after{box-shadow:0 0 18px #f26722;animation-delay:.8s}
+.core-arch-cards{position:absolute!important;inset:0!important;z-index:6!important}
+.core-arch-card{
+  --mx:50%;--my:50%;--rx:0deg;--ry:0deg;
+  position:absolute!important;width:min(350px,30vw)!important;min-height:150px!important;
+  display:grid!important;grid-template-columns:66px 1fr 38px!important;align-items:center!important;gap:14px!important;
+  padding:22px 20px!important;border-radius:24px!important;color:#fff!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.075))!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+  box-shadow:0 28px 72px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.14)!important;
+  backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;
+  opacity:0;transform:perspective(1100px) translateY(24px) scale(.98)!important;
+  transition:opacity .65s ease,transform .48s cubic-bezier(.22,1,.36,1),border-color .35s ease,box-shadow .35s ease!important;
+  overflow:hidden!important;will-change:transform;
+}
+.core-arch-card.is-visible{opacity:1;transform:perspective(1100px) translateY(0) rotateX(var(--rx)) rotateY(var(--ry))!important}
+.core-arch-card:hover{transform:perspective(1100px) translateY(-8px) rotateX(var(--rx)) rotateY(var(--ry))!important;border-color:color-mix(in srgb,var(--card-accent) 68%,#fff)!important;box-shadow:0 34px 86px rgba(0,0,0,.36),0 0 36px color-mix(in srgb,var(--card-accent) 18%,transparent)!important}
+.core-arch-card::before{content:""!important;position:absolute!important;inset:0!important;background:radial-gradient(330px circle at var(--mx) var(--my),color-mix(in srgb,var(--card-accent) 18%,transparent),transparent 55%)!important;opacity:.55;pointer-events:none!important;transition:opacity .3s ease}
+.core-arch-card:hover::before{opacity:1}
+.core-arch-card::after{content:""!important;position:absolute!important;left:8%!important;right:8%!important;bottom:0!important;height:2px!important;background:linear-gradient(90deg,transparent,var(--card-accent),transparent)!important;opacity:.42!important}
+.core-arch-card-1{left:1%!important;top:4%!important;right:auto!important;bottom:auto!important}
+.core-arch-card-2{right:1%!important;top:4%!important;left:auto!important;bottom:auto!important}
+.core-arch-card-3{left:1%!important;bottom:4%!important;right:auto!important;top:auto!important}
+.core-arch-card-4{right:1%!important;bottom:4%!important;left:auto!important;top:auto!important}
+.core-arch-card-num{position:absolute!important;right:18px!important;top:13px!important;font-size:30px!important;font-weight:900!important;line-height:1!important;color:color-mix(in srgb,var(--card-accent) 70%,#fff)!important;opacity:.72!important}
+.core-arch-card-icon{width:60px!important;height:60px!important;border-radius:18px!important;display:grid!important;place-items:center!important;color:#fff!important;background:color-mix(in srgb,var(--card-accent) 72%,transparent)!important;border:1px solid color-mix(in srgb,var(--card-accent) 76%,#fff)!important;box-shadow:0 13px 30px color-mix(in srgb,var(--card-accent) 24%,transparent)!important;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.core-arch-card:hover .core-arch-card-icon{transform:translateY(-3px) scale(1.04)}
+.core-arch-card-icon .ic{width:28px!important;height:28px!important}
+.core-arch-card-copy{min-width:0!important}.core-arch-card-copy strong{display:block!important;padding-right:32px!important;font-size:18px!important;line-height:1.22!important}.core-arch-card-copy p{margin:6px 0 0!important;font-size:12.5px!important;line-height:1.48!important;color:rgba(240,247,255,.74)!important}
+.core-arch-card-arrow{width:36px!important;height:36px!important;border-radius:50%!important;display:grid!important;place-items:center!important;color:var(--card-accent)!important;background:#fff!important;box-shadow:0 9px 22px rgba(0,0,0,.18)!important;transition:transform .3s ease}
+.core-arch-card:hover .core-arch-card-arrow{transform:translateX(4px)}
+.core-arch-card-arrow .ic{width:16px!important;height:16px!important}
+.core-arch-phone-mask,.core-arch-orbit,.core-arch-side-note,.core-arch-progress,.core-arch-next{display:none!important}
+@keyframes coreHubFloat{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes coreOrbit{to{transform:rotate(360deg)}}
+@keyframes corePulse{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+
+
+/* Séparation d'étage validée pour la migration Angular */
+.core-banking-page .core-arch{
+  margin:42px 18px 0;
+  width:auto;
+  border-radius:44px;
+  box-shadow:0 32px 78px rgba(3,25,47,.24);
+}
+@media(max-width:700px){
+  .core-banking-page .core-arch{margin:28px 10px 0;border-radius:28px}
+}

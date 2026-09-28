@@ -41,7 +41,26 @@ const EN: Record<string,string> = {
   'NOS CLIENTS':'OUR CLIENTS','Tous ceux qui nous font':'Everyone who puts their',
   'Découvrez les institutions et organisations qui accompagnent l’écosystème I-TECH.':'Discover the institutions and organizations in the I-TECH ecosystem.',
   'Fermer':'Close',
-  'À propos':'About us' ,'Carrières':'Careers','Partenaires':'Partners','Contact / Démo':'Contact / Demo','Support Client':'Customer Support','Politique de confidentialité':'Privacy Policy'
+  'À propos':'About us' ,'Carrières':'Careers','Partenaires':'Partners','Contact / Démo':'Contact / Demo','Support Client':'Customer Support','Politique de confidentialité':'Privacy Policy',
+  'Support disponible':'24/7 support','Présence régionale':'Regional presence',
+  'Un écosystème intégré pour couvrir tous vos besoins métier':'An integrated ecosystem covering all your business needs',
+  'Gestion complète des opérations bancaires et financières':'Complete management of banking and financial operations',
+  'Digitalisez vos encaissements et rapprochements terrain':'Digitize your field collections and reconciliations',
+  'Services digitaux & mobiles pour vous démarquer de vos concurrents':'Digital & mobile services to stand out from your competitors',
+  "Gérez efficacement vos talents, la paie et l'administration du personnel":'Efficiently manage your talent, payroll and personnel administration',
+  'Déclarations réglementaires et reporting bancaire':'Regulatory declarations and banking reporting',
+  'Une suite complète et intégrée':'A complete and integrated suite',
+  'Prêt à transformer votre institution ?': 'Ready to transform your institution?',
+  'Échangez avec nos experts et découvrez la solution la plus adaptée à vos besoins.': 'Talk with our experts and discover the solution best suited to your needs.',
+  'Échange avec nos experts': 'Discussion with our experts',
+  'Solution ALPHA': 'ALPHA Solution',
+  'La plateforme bancaire qui centralise toutes vos opérations.': 'The banking platform that centralizes all your operations.',
+  'Gérez les comptes, crédits, épargne, opérations de caisse et reporting depuis une plateforme unique, sécurisée et évolutive.': 'Manage accounts, loans, savings, cash operations and reporting from one secure and scalable platform.',
+  'Une architecture complète et intégrée': 'A complete and integrated architecture',
+  'Gestion bancaire complète': 'Complete banking management',
+  'Solutions adaptées aux EMF': 'Solutions tailored to microfinance institutions',
+  'Comptabilité intégrée et reporting': 'Integrated accounting and reporting',
+  'Émission de cartes et transactions': 'Card issuance and transactions',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
