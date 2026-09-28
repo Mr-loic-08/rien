@@ -61,6 +61,22 @@ const EN: Record<string,string> = {
   'Solutions adaptées aux EMF': 'Solutions tailored to microfinance institutions',
   'Comptabilité intégrée et reporting': 'Integrated accounting and reporting',
   'Émission de cartes et transactions': 'Card issuance and transactions',
+  'Fonctionnalités clés': 'Key features',
+  'Captures d’écran': 'Screenshots',
+  'Tableau de bord': 'Dashboard',
+  'Comptes': 'Accounts',
+  'Reporting': 'Reporting',
+  'Voir plus de captures': 'View more screenshots',
+  'Gestion des comptes': 'Account management',
+  'Gestion du crédit': 'Credit management',
+  "Gestion de l'épargne": 'Savings management',
+  'Gestion des agences': 'Branch management',
+  'Reporting & BI': 'Reporting & BI',
+  'Créez et administrez comptes courants, épargne et comptes professionnels depuis un référentiel client unique.': 'Create and manage current, savings and business accounts from a single customer repository.',
+  'Instruisez, octroyez et suivez les crédits avec échéanciers, garanties et relances automatiques.': 'Process, grant and monitor loans with schedules, guarantees and automated reminders.',
+  "Proposez des produits d'épargne souples, avec intérêts calculés automatiquement et relevés détaillés.": 'Offer flexible savings products with automatically calculated interest and detailed statements.',
+  'Pilotez votre réseau multi-agences : caisses, utilisateurs, habilitations et consolidations.': 'Manage your multi-branch network: cash desks, users, permissions and consolidation.',
+  'Exploitez tableaux de bord et états de pilotage pour décider vite, sur des données fiables.': 'Use dashboards and management reports to make fast decisions based on reliable data.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

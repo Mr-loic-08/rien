@@ -11,6 +11,8 @@ export class CoreBankingPageComponent implements OnInit, AfterViewInit, OnDestro
   readonly l=inject(LanguageService);
   readonly sol=SOLUTIONS.find(s=>s.key==='core-banking')!;
   active=0;
+  acc=0;
+  readonly features=this.sol.features;
   readonly band=this.sol.band!;
   @ViewChild('architecture') architecture?: ElementRef<HTMLElement>;
   private archObserver?: IntersectionObserver;
@@ -55,4 +57,5 @@ export class CoreBankingPageComponent implements OnInit, AfterViewInit, OnDestro
     this.cardCleanups.forEach(fn=>fn());
   }
   setSlide(i:number){ this.active=i; }
+  toggleAcc(i:number){ this.acc=this.acc===i ? -1 : i; }
 }

@@ -84,4 +84,45 @@
     </div>
   </section>
 
+
+  <!-- Core Banking Étape 3 — Fonctionnalités clés + Captures d’écran -->
+  <section class="featshots core-featshots-fold reveal visible">
+    <div class="container">
+      <div class="featshots-grid">
+        <div class="feats">
+          <h2 class="sec-title left">{{l.t('Fonctionnalités clés')}}</h2>
+          <div class="accordion">
+            @for(f of features; track f.title; let i=$index){
+              <div class="acc-item" [class.open]="acc===i">
+                <button type="button" (click)="toggleAcc(i)" [attr.aria-expanded]="acc===i">
+                  {{l.t(f.title)}} <span class="acc-plus"></span>
+                </button>
+                <div class="acc-body"><p>{{f.desc ? l.t(f.desc) : ''}}</p></div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="shots">
+          <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2>
+          <div class="shot-dash core-shot-main">
+            <div class="shot-top"><span></span><span></span><span></span><b>{{l.t('Tableau de bord')}}</b></div>
+            <div class="shot-body">
+              <aside><i></i><i></i><i></i><i></i><i></i></aside>
+              <div class="shot-content">
+                <div class="shot-kpis"><span></span><span></span><span></span></div>
+                <div class="shot-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="shots-row">
+            <div class="shot-dash small"><div class="shot-top"><span></span><span></span><b>{{l.t('Comptes')}}</b></div><div class="mini-lines"><i></i><i></i><i></i><i></i></div></div>
+            <div class="shot-dash small"><div class="shot-top"><span></span><span></span><b>{{l.t('Reporting')}}</b></div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+          </div>
+          <a href="#" class="link shots-more" (click)="$event.preventDefault()">{{l.t('Voir plus de captures')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
