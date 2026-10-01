@@ -4324,3 +4324,34 @@ app-footer .home-footer>.container{position:relative;z-index:2}
   .digital-final-inner{gap:28px}
   .digital-final-actions{flex-direction:column}
 }
+
+/* ===== Gestion RH — Étape 1 : Hero ===== */
+.gestion-rh-page{--tone:#f26a21}
+.gestion-rh-page .gestion-rh-hero{
+  position:relative;border-radius:0 0 44px 44px;overflow:hidden;
+  box-shadow:0 30px 72px rgba(60,34,18,.22);
+}
+.gestion-rh-hero .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.gestion-rh-hero .hero-bg-slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.04);transition:opacity 1s ease,transform 7s ease;
+}
+.gestion-rh-hero .hero-bg-slide.active{opacity:1;transform:scale(1)}
+.gestion-rh-hero .hero-bg-tint{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(31,27,25,.91),rgba(73,48,34,.66) 58%,rgba(111,64,34,.46));
+}
+.gestion-rh-hero>.container{position:relative;z-index:2}
+.gestion-rh-hero .detail-art{color:#f6a36e}
+.gestion-rh-hero .pg-eyebrow{color:#ffd8bd}
+.gestion-rh-hero .hero-dots{
+  position:absolute;z-index:4;left:50%;bottom:26px;display:flex;gap:8px;transform:translateX(-50%);
+}
+.gestion-rh-hero .hero-dots button{
+  width:8px;height:8px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.45);transition:.25s;
+}
+.gestion-rh-hero .hero-dots button.active{width:28px;background:#f26a21}
+@media(max-width:700px){
+  .gestion-rh-page .gestion-rh-hero{border-radius:0 0 28px 28px}
+  .gestion-rh-hero .hero-dots{bottom:18px}
+}

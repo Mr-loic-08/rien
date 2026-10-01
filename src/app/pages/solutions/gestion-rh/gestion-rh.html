@@ -1,0 +1,41 @@
+<main class="pg pg-detail gestion-rh-page">
+  <section class="pg-hero detail on-photo gestion-rh-hero">
+    <div class="hero-bg" aria-hidden="true">
+      @for(img of sol.heroBg; track img; let i=$index){
+        <div class="hero-bg-slide" [class.active]="i===active" [style.background-image]="'url('+img+')'"></div>
+      }
+      <div class="hero-bg-tint dark"></div>
+    </div>
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d’Ariane">
+        <a href="#accueil">{{l.t('Accueil')}}</a><span>›</span>
+        <a href="#/solutions">{{l.t('Solutions')}}</a><span>›</span>
+        <b>{{l.t(sol.name)}}</b>
+      </nav>
+
+      <div class="pg-hero-grid solo">
+        <div class="pg-hero-copy reveal visible">
+          <span class="detail-art" aria-hidden="true"><svg class="ic detail-art-svg"><use href="#i-users"></use></svg></span>
+          <span class="pg-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Solution Alpha RH')}}</span>
+          <h1>{{l.t(sol.name)}}</h1>
+          <p class="pg-tagline">{{l.t(sol.tagline)}}</p>
+          <p class="pg-detail-text">{{l.t(sol.detail)}}</p>
+          <div class="hero-actions">
+            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+            <a href="#/contact" class="btn btn-glass">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @if((sol.heroBg?.length || 0)>1){
+      <div class="hero-dots">
+        @for(img of sol.heroBg; track img; let i=$index){
+          <button type="button" [class.active]="i===active" (click)="setSlide(i)" [attr.aria-label]="'Image '+(i+1)"></button>
+        }
+      </div>
+    }
+    <div class="pg-hero-wave" aria-hidden="true"></div>
+  </section>
+</main>

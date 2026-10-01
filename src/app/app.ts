@@ -13,10 +13,11 @@ import { SolutionsPageComponent } from './pages/solutions/solutions';
 import { CoreBankingPageComponent } from './pages/solutions/core-banking/core-banking';
 import { CollecteJournalierePageComponent } from './pages/solutions/collecte-journaliere/collecte-journaliere';
 import { DigitalMobilePageComponent } from './pages/solutions/digital-mobile/digital-mobile';
+import { GestionRhPageComponent } from './pages/solutions/gestion-rh/gestion-rh';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -24,12 +25,14 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isCoreBanking=false;
   isCollecteJournaliere=false;
   isDigitalMobile=false;
+  isGestionRh=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
     this.isCoreBanking=h==='#/solutions/core-banking';
     this.isCollecteJournaliere=h==='#/solutions/collecte-journaliere';
     this.isDigitalMobile=h==='#/solutions/digital-mobile';
+    this.isGestionRh=h==='#/solutions/gestion-rh';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;
