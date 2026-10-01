@@ -125,4 +125,21 @@
     </div>
   </section>
 
+
+  <!-- Core Banking Étape 4 — Bénéfices V17.20.4 -->
+  <section class="benefits core-benefits-fold reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2>
+      <div class="ben-grid">
+        @for(b of benefits; track b.text; let i=$index){
+          <div class="ben-item" [style.transition-delay.ms]="i*90">
+            <span class="ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
+            <span class="ben-txt">{{l.t(b.text)}}</span>
+            <span class="ben-num">0{{i+1}}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
 </main>

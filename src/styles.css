@@ -3488,3 +3488,119 @@ app-footer .home-footer>.container{position:relative;z-index:2}
 .shots-more{display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:#0a68a3;font-weight:750}
 @media(max-width:850px){.core-featshots-fold .featshots-grid{grid-template-columns:1fr}.core-featshots-fold{margin:34px 10px 0;border-radius:28px;padding:62px 0}.shot-body{min-height:220px}}
 @media(max-width:520px){.shots-row{grid-template-columns:1fr}.shot-kpis{grid-template-columns:1fr 1fr}.shot-body{grid-template-columns:52px 1fr}.shot-content{padding:15px}}
+
+/* ===== Core Banking Étape 4 — Les bénéfices pour votre institution ===== */
+.core-banking-page .core-benefits-fold{
+  position:relative;
+  margin:48px 18px 0;
+  width:auto;
+  padding:clamp(72px,7vw,108px) 0;
+  border-radius:44px;
+  background:
+    radial-gradient(420px 300px at 0% 15%,rgba(47,107,255,.07),transparent 72%),
+    linear-gradient(180deg,#f8fbff,#eef5fc 55%,#fff)!important;
+  box-shadow:0 28px 68px rgba(5,39,68,.13);
+  overflow:hidden;
+  z-index:7;
+}
+.core-banking-page .core-benefits-fold::after{
+  content:"";position:absolute;left:9%;right:9%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,103,34,.45),transparent);
+}
+.core-banking-page .ben-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:18px;
+  max-width:1180px;margin:36px auto 0;
+}
+.core-banking-page .ben-item{
+  position:relative;display:flex;flex-direction:column;align-items:center;gap:13px;text-align:center;
+  min-height:188px;padding:34px 18px 25px;border-radius:22px;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(248,251,255,.92));
+  border:1px solid #dfe8f2;box-shadow:0 18px 48px -38px rgba(13,43,74,.42);
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease;
+  overflow:hidden;
+}
+.core-banking-page .ben-item::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(220px circle at 50% 0%,rgba(47,107,255,.09),transparent 68%);
+  opacity:0;transition:opacity .35s ease;pointer-events:none;
+}
+.core-banking-page .ben-item:hover{transform:translateY(-8px);border-color:rgba(47,107,255,.30);box-shadow:0 26px 60px -30px rgba(13,43,74,.36)}
+.core-banking-page .ben-item:hover::before{opacity:1}
+.core-banking-page .ben-ic{
+  width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+  background:rgba(47,107,255,.10);color:#2f6bff;position:relative;z-index:1;
+}
+.core-banking-page .ben-ic .ic{width:24px;height:24px}
+.core-banking-page .ben-txt{font-size:13px;font-weight:700;color:#0d2b4a;line-height:1.45;position:relative;z-index:1}
+.core-banking-page .ben-num{position:absolute;top:15px;right:17px;font-size:22px;font-weight:800;color:rgba(13,43,74,.08)}
+.core-banking-page .ben-item:hover .ben-num{color:rgba(47,107,255,.22)}
+@media(max-width:1000px){.core-banking-page .ben-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){
+  .core-banking-page .core-benefits-fold{margin:34px 10px 0;border-radius:28px;padding:62px 0}
+  .core-banking-page .ben-grid{grid-template-columns:1fr 1fr;gap:13px}
+  .core-banking-page .ben-item{min-height:160px;padding:28px 14px 22px}
+}
+@media(max-width:430px){.core-banking-page .ben-grid{grid-template-columns:1fr}}
+
+/* ===== Core Banking Étape 4.1 — alternance des fonds ===== */
+
+/* Architecture : étage bleu profond */
+.core-banking-page .core-arch{
+  background:
+    radial-gradient(circle at 16% 15%,rgba(242,106,33,.15),transparent 27%),
+    radial-gradient(circle at 86% 75%,rgba(47,107,255,.18),transparent 30%),
+    linear-gradient(145deg,#052e50 0%,#074d7d 50%,#042944 100%) !important;
+}
+
+/* Fonctionnalités + captures : blanc cassé neutre */
+.core-banking-page .core-featshots-fold{
+  background:
+    radial-gradient(circle at 90% 8%,rgba(47,107,255,.055),transparent 26%),
+    linear-gradient(145deg,#ffffff 0%,#f8fafc 52%,#f3f6f8 100%) !important;
+  border:1px solid rgba(7,58,96,.08);
+}
+
+/* Bénéfices : étage orange I-TECH doux demandé */
+.core-banking-page .core-benefits-fold{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(255,255,255,.19),transparent 26%),
+    radial-gradient(circle at 88% 82%,rgba(7,71,116,.13),transparent 31%),
+    linear-gradient(145deg,#d4955b 0%,#d99c64 52%,#ca8950 100%) !important;
+  border:1px solid rgba(113,66,28,.10);
+  box-shadow:0 30px 72px rgba(91,54,25,.20);
+}
+.core-banking-page .core-benefits-fold .sec-title{
+  color:#17344d !important;
+  text-shadow:0 1px 0 rgba(255,255,255,.16);
+}
+.core-banking-page .core-benefits-fold .ben-grid{
+  position:relative;z-index:2;
+}
+.core-banking-page .core-benefits-fold .ben-item{
+  background:rgba(255,255,255,.94);
+  border-color:rgba(100,62,31,.12);
+  box-shadow:0 18px 42px rgba(87,51,23,.13);
+}
+.core-banking-page .core-benefits-fold .ben-item:hover{
+  border-color:rgba(7,91,148,.26);
+  box-shadow:0 26px 56px rgba(82,49,23,.18);
+}
+.core-banking-page .core-benefits-fold .ben-txt{
+  color:#153650;
+}
+.core-banking-page .core-benefits-fold .ben-ic{
+  background:#edf6fc;
+  color:#0b6fae;
+}
+.core-banking-page .core-benefits-fold .ben-num{
+  color:rgba(212,149,91,.32);
+}
+
+/* Plus de respiration entre les étages */
+.core-banking-page .core-arch + .core-featshots-fold{margin-top:54px}
+.core-banking-page .core-featshots-fold + .core-benefits-fold{margin-top:54px}
+
+@media(max-width:700px){
+  .core-banking-page .core-arch + .core-featshots-fold,
+  .core-banking-page .core-featshots-fold + .core-benefits-fold{margin-top:36px}
+}

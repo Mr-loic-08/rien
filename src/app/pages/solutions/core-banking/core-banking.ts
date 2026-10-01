@@ -13,6 +13,7 @@ export class CoreBankingPageComponent implements OnInit, AfterViewInit, OnDestro
   active=0;
   acc=0;
   readonly features=this.sol.features;
+  readonly benefits=this.sol.benefits;
   readonly band=this.sol.band!;
   @ViewChild('architecture') architecture?: ElementRef<HTMLElement>;
   private archObserver?: IntersectionObserver;

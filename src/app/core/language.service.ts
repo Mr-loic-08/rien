@@ -77,6 +77,12 @@ const EN: Record<string,string> = {
   "Proposez des produits d'épargne souples, avec intérêts calculés automatiquement et relevés détaillés.": 'Offer flexible savings products with automatically calculated interest and detailed statements.',
   'Pilotez votre réseau multi-agences : caisses, utilisateurs, habilitations et consolidations.': 'Manage your multi-branch network: cash desks, users, permissions and consolidation.',
   'Exploitez tableaux de bord et états de pilotage pour décider vite, sur des données fiables.': 'Use dashboards and management reports to make fast decisions based on reliable data.',
+  'Les bénéfices pour votre institution': 'Benefits for your institution',
+  'Centralisation des opérations': 'Centralized operations',
+  'Fiabilité et sécurité': 'Reliability and security',
+  'Conformité réglementaire': 'Regulatory compliance',
+  'Gain de temps et productivité': 'Time savings and productivity',
+  'Meilleure prise de décision': 'Better decision-making',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
