@@ -113,6 +113,17 @@ const EN: Record<string,string> = {
   'Meilleur contrôle des équipes': 'Better team control',
   'Expérience client améliorée': 'Improved customer experience',
   'Augmentation de la rentabilité': 'Increased profitability',
+  'Digitalisez votre collecte journalière dès aujourd’hui.': 'Digitize your daily collection today.',
+  'Échangez avec nos experts et découvrez comment I-COLLECT peut sécuriser et simplifier vos opérations de collecte.': 'Talk with our experts and discover how I-COLLECT can secure and simplify your collection operations.',
+  'Solution Digital & Mobile': 'Digital & Mobile Solution',
+  'Offrez une expérience bancaire digitale fluide et sécurisée.': 'Deliver a seamless and secure digital banking experience.',
+  "Alpha Mobile Banking et les services digitaux I-TECH permettent à vos clients d'accéder à leurs services 24h/24 et 7j/7.": 'Alpha Mobile Banking and I-TECH digital services allow your customers to access their services 24/7.',
+  'Une expérience digitale complète': 'A complete digital experience',
+  'Mobile Banking': 'Mobile Banking',
+  'Portails Clients': 'Customer Portals',
+  'Paiements Digitaux': 'Digital Payments',
+  'Notifications & Alertes': 'Notifications & Alerts',
+  'Sécurité Avancée': 'Advanced Security',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

@@ -1,0 +1,63 @@
+<main class="pg pg-detail digital-mobile-page">
+  <section class="pg-hero detail on-photo digital-mobile-hero">
+    <div class="hero-bg" aria-hidden="true">
+      @for(img of sol.heroBg; track img; let i=$index){
+        <div class="hero-bg-slide" [class.active]="i===active" [style.background-image]="'url('+img+')'"></div>
+      }
+      <div class="hero-bg-tint dark"></div>
+    </div>
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d’Ariane">
+        <a href="#accueil">{{l.t('Accueil')}}</a><span>›</span>
+        <a href="#/solutions">{{l.t('Solutions')}}</a><span>›</span>
+        <b>{{l.t(sol.name)}}</b>
+      </nav>
+
+      <div class="pg-hero-grid solo">
+        <div class="pg-hero-copy reveal visible">
+          <span class="detail-art" aria-hidden="true"><svg class="ic detail-art-svg"><use href="#i-phone"></use></svg></span>
+          <span class="pg-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Solution Digital & Mobile')}}</span>
+          <h1>{{l.t(sol.name)}}</h1>
+          <p class="pg-tagline">{{l.t(sol.tagline)}}</p>
+          <p class="pg-detail-text">{{l.t(sol.detail)}}</p>
+          <div class="hero-actions">
+            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+            <a href="#/contact" class="btn btn-glass">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @if((sol.heroBg?.length || 0)>1){
+      <div class="hero-dots">
+        @for(img of sol.heroBg; track img; let i=$index){
+          <button type="button" [class.active]="i===active" (click)="setSlide(i)" [attr.aria-label]="'Image '+(i+1)"></button>
+        }
+      </div>
+    }
+    <div class="pg-hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- Digital & Mobile Étape 2 — Une expérience digitale complète -->
+  <section class="digital-band reveal visible">
+    <div class="container">
+      <header class="digital-band-head">
+        <span class="digital-band-kicker">{{l.t('DIGITAL & MOBILE')}}</span>
+        <h2>{{l.t(band.title)}}</h2>
+      </header>
+
+      <div class="digital-band-items">
+        @for(item of band.items; track item.name; let i=$index){
+          <article class="digital-band-item">
+            <span class="digital-band-icon">
+              <svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg>
+            </span>
+            <strong>{{l.t(item.name)}}</strong>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+</main>
