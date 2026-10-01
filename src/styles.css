@@ -4355,3 +4355,104 @@ app-footer .home-footer>.container{position:relative;z-index:2}
   .gestion-rh-page .gestion-rh-hero{border-radius:0 0 28px 28px}
   .gestion-rh-hero .hero-dots{bottom:18px}
 }
+
+/* ===== Gestion RH — Étape 2 : Fonctionnalités + Captures ===== */
+.gestion-rh-page .rh-featshots{
+  position:relative;
+  margin:38px 18px 0;
+  padding:64px 0;
+  border-radius:44px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 94% 5%,rgba(242,106,33,.09),transparent 27%),
+    linear-gradient(145deg,#fff 0%,#fdfaf8 58%,#f8f1ec 100%);
+  box-shadow:0 28px 68px rgba(75,42,22,.12);
+}
+.rh-featshots::after{
+  content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.38),transparent);
+}
+.rh-featshots-grid{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start;
+}
+.rh-featshots .sec-title{margin-bottom:24px}
+.rh-feat-select{display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.rh-feat-select li{list-style:none}
+.rh-feat-chip{
+  width:100%;display:flex;align-items:center;gap:14px;
+  padding:15px 18px;border-radius:14px;border:1px solid #eadfd7;
+  background:#fff;text-align:left;font:inherit;cursor:pointer;
+  transition:.34s cubic-bezier(.22,1,.36,1);
+}
+.rh-feat-chip:hover{border-color:rgba(242,106,33,.42)}
+.rh-feat-chip.sel{
+  transform:scale(1.04);
+  border-color:#f26a21;
+  background:linear-gradient(100deg,rgba(242,106,33,.11),#fff);
+  box-shadow:0 22px 48px -25px rgba(192,80,23,.45);
+}
+.rh-feat-num{width:22px;flex:none;font-size:11px;font-weight:850;color:rgba(64,44,34,.26)}
+.rh-feat-chip.sel .rh-feat-num{color:#f26a21}
+.rh-feat-check{
+  width:30px;height:30px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:#f5eee9;color:#b6a59a;transition:.34s;
+}
+.rh-feat-chip.sel .rh-feat-check{background:#f26a21;color:#fff;transform:rotate(360deg)}
+.rh-feat-check .ic{width:14px;height:14px}
+.rh-feat-text{font-size:14px;font-weight:650;color:#24384c}
+
+.rh-laptop-card{
+  min-height:330px;padding:34px 24px 20px;border-radius:20px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid #eadfd7;
+  background:linear-gradient(155deg,#f4eee9,#e8ddd5);
+  box-shadow:0 24px 60px -34px rgba(69,43,28,.48);
+}
+.rh-laptop{width:min(100%,520px)}
+.rh-laptop-screen{
+  padding:9px;border-radius:14px 14px 8px 8px;background:#25282e;
+  box-shadow:0 24px 50px -24px rgba(28,22,19,.55);
+}
+.rh-appbar{
+  height:34px;padding:0 13px;border-radius:8px 8px 0 0;
+  display:flex;align-items:center;justify-content:space-between;background:#fff;
+}
+.rh-appbar b{font-size:10px;letter-spacing:.12em;color:#3c3b42}
+.rh-avatar{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#f26a21,#8d4925)}
+.rh-dashboard{display:grid;grid-template-columns:42px 1fr;min-height:235px;background:#f7f8fa}
+.rh-sidebar{padding:13px 9px;display:flex;flex-direction:column;gap:12px;background:#293747}
+.rh-sidebar i{display:block;width:22px;height:7px;border-radius:5px;background:rgba(255,255,255,.25)}
+.rh-sidebar i.active{background:#f26a21}
+.rh-dashboard-main{padding:16px}
+.rh-welcome{display:flex;align-items:center;justify-content:space-between}
+.rh-welcome small{display:block;font-size:7px;color:#8895a2}
+.rh-welcome strong{display:block;margin-top:2px;font-size:11px;color:#24384c}
+.rh-welcome>span{width:50px;height:18px;border-radius:6px;background:#f26a21}
+.rh-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:13px}
+.rh-stats article{padding:10px;border-radius:8px;background:#fff;border:1px solid #e6e9ed}
+.rh-stats b{display:block;font-size:15px;color:#f26a21}
+.rh-stats small{font-size:6px;color:#71808d}
+.rh-panels{display:grid;grid-template-columns:1.35fr .65fr;gap:8px;margin-top:10px}
+.rh-chart{
+  height:90px;padding:12px 12px 8px;border-radius:8px;background:#fff;border:1px solid #e6e9ed;
+  display:flex;align-items:flex-end;gap:7px;
+}
+.rh-chart span{flex:1;border-radius:4px 4px 1px 1px;background:linear-gradient(#f7a16f,#f26a21)}
+.rh-people{padding:10px;border-radius:8px;background:#fff;border:1px solid #e6e9ed;display:flex;flex-direction:column;gap:7px}
+.rh-people i{display:block;height:11px;border-radius:6px;background:#e8ebef}
+.rh-laptop-base{
+  width:112%;height:13px;margin-left:-6%;border-radius:2px 2px 14px 14px;
+  background:linear-gradient(#c6c8cb,#92969b);box-shadow:0 9px 16px rgba(40,32,28,.18);
+}
+.rh-shots-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px}
+.rh-shots-more .ic{width:16px;height:16px}
+@media(max-width:800px){
+  .rh-featshots-grid{grid-template-columns:1fr;gap:36px}
+}
+@media(max-width:700px){
+  .gestion-rh-page .rh-featshots{margin:30px 10px 0;padding:50px 0;border-radius:28px}
+}
+@media(max-width:480px){
+  .rh-feat-chip.sel{transform:scale(1.02)}
+  .rh-laptop-card{min-height:260px;padding:24px 12px 15px}
+}

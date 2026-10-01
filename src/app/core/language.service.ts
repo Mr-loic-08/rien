@@ -140,6 +140,16 @@ const EN: Record<string,string> = {
   'Gestion RH': 'HR Management',
   "Gérez vos talents, la paie et l'administration du personnel.": 'Manage your talent, payroll and personnel administration.',
   'Alpha RH centralise la gestion des ressources humaines pour gagner en efficacité et rester conforme.': 'Alpha HR centralizes human resources management to improve efficiency and maintain compliance.',
+  'Gestion du personnel': 'Personnel management',
+  'Paie & déclarations sociales': 'Payroll & social declarations',
+  'Gestion des congés & absences': 'Leave & absence management',
+  'Évaluations & entretiens': 'Evaluations & interviews',
+  'Reporting RH': 'HR reporting',
+  'Tableau de bord RH': 'HR dashboard',
+  'Vue d’ensemble': 'Overview',
+  'Collaborateurs': 'Employees',
+  'En congé': 'On leave',
+  'Évaluations': 'Evaluations',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

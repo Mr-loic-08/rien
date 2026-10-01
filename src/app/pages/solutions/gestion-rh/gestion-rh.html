@@ -38,4 +38,91 @@
     }
     <div class="pg-hero-wave" aria-hidden="true"></div>
   </section>
+
+  <!-- Gestion RH Étape 2 — Fonctionnalités + Captures, structure V17.20.4 -->
+  <section class="rh-featshots reveal visible">
+    <div class="container">
+      <div class="rh-featshots-grid">
+        <div class="rh-feats">
+          <h2 class="sec-title left">{{l.t('Fonctionnalités clés')}}</h2>
+
+          <ul class="rh-feat-select">
+            @for(f of features; track f.title; let i=$index){
+              <li>
+                <button type="button"
+                        class="rh-feat-chip"
+                        [class.sel]="feat===i"
+                        (click)="setFeat(i)"
+                        (mouseenter)="setFeat(i)">
+                  <span class="rh-feat-num">0{{i+1}}</span>
+                  <span class="rh-feat-check">
+                    <svg class="ic"><use href="#i-check"></use></svg>
+                  </span>
+                  <span class="rh-feat-text">{{l.t(f.title)}}</span>
+                </button>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <div class="rh-shots">
+          <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2>
+
+          <div class="rh-laptop-card">
+            <div class="rh-laptop">
+              <div class="rh-laptop-screen">
+                <div class="rh-appbar">
+                  <b>ALPHA RH</b>
+                  <span class="rh-avatar"></span>
+                </div>
+
+                <div class="rh-dashboard">
+                  <aside class="rh-sidebar">
+                    <i class="active"></i><i></i><i></i><i></i><i></i>
+                  </aside>
+
+                  <div class="rh-dashboard-main">
+                    <div class="rh-welcome">
+                      <div>
+                        <small>{{l.t('Tableau de bord RH')}}</small>
+                        <strong>{{l.t('Vue d’ensemble')}}</strong>
+                      </div>
+                      <span></span>
+                    </div>
+
+                    <div class="rh-stats">
+                      <article><b>248</b><small>{{l.t('Collaborateurs')}}</small></article>
+                      <article><b>12</b><small>{{l.t('En congé')}}</small></article>
+                      <article><b>06</b><small>{{l.t('Évaluations')}}</small></article>
+                    </div>
+
+                    <div class="rh-panels">
+                      <div class="rh-chart">
+                        <span style="height:38%"></span>
+                        <span style="height:62%"></span>
+                        <span style="height:48%"></span>
+                        <span style="height:78%"></span>
+                        <span style="height:58%"></span>
+                        <span style="height:88%"></span>
+                      </div>
+                      <div class="rh-people">
+                        <i></i><i></i><i></i><i></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rh-laptop-base"></div>
+            </div>
+          </div>
+
+          <a href="#" class="link rh-shots-more" (click)="$event.preventDefault()">
+            {{l.t('Voir plus de captures')}}
+            <svg class="ic"><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
