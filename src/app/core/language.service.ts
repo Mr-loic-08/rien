@@ -134,6 +134,8 @@ const EN: Record<string,string> = {
   'Solde disponible': 'Available balance',
   'Transfert rapide': 'Quick transfer',
   'Effectuer un transfert': 'Make a transfer',
+  'Passez au digital avec une expérience bancaire moderne.': 'Go digital with a modern banking experience.',
+  'Échangez avec nos experts et découvrez comment nos solutions digitales peuvent rapprocher votre institution de ses clients.': 'Talk with our experts and discover how our digital solutions can bring your institution closer to its customers.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
