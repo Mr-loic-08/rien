@@ -3604,3 +3604,410 @@ app-footer .home-footer>.container{position:relative;z-index:2}
   .core-banking-page .core-arch + .core-featshots-fold,
   .core-banking-page .core-featshots-fold + .core-benefits-fold{margin-top:36px}
 }
+
+/* ===== Core Banking Étape 5 — CTA final ===== */
+.core-banking-page .core-final-cta{
+  position:relative;margin:54px 18px 34px;padding:74px 0;
+  border-radius:44px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(125deg,#052e50 0%,#07527f 54%,#073c63 100%);
+  box-shadow:0 32px 78px rgba(3,25,47,.24);z-index:8;
+}
+.core-final-cta-bg,.core-final-grid,.core-final-orb{position:absolute;inset:0;pointer-events:none}
+.core-final-grid{
+  opacity:.13;
+  background-image:linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.18) 1px,transparent 1px);
+  background-size:42px 42px;
+  -webkit-mask-image:linear-gradient(90deg,#000,transparent 75%);
+  mask-image:linear-gradient(90deg,#000,transparent 75%);
+}
+.core-final-orb{width:360px;height:360px;border-radius:50%;filter:blur(4px);opacity:.32}
+.core-final-orb.orb-a{left:-120px;top:-170px;background:radial-gradient(circle,#f26a21,transparent 68%)}
+.core-final-orb.orb-b{left:auto;right:-110px;top:auto;bottom:-210px;background:radial-gradient(circle,#2f6bff,transparent 68%)}
+.core-final-cta .container{position:relative;z-index:2}
+.core-final-panel{
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;
+  gap:clamp(22px,4vw,48px);padding:0 clamp(12px,2vw,24px);
+}
+.core-final-icon{
+  width:74px;height:74px;border-radius:23px;display:grid;place-items:center;
+  color:#fff;background:linear-gradient(145deg,#f26a21,#d98a49);
+  box-shadow:0 18px 38px rgba(242,106,33,.28);transform:rotate(-4deg);
+}
+.core-final-icon .ic{width:32px;height:32px}
+.core-final-kicker{
+  display:block;margin-bottom:10px;color:#ffb47d;font-size:12px;font-weight:850;
+  letter-spacing:.13em;text-transform:uppercase;
+}
+.core-final-copy h2{margin:0;color:#fff;font-size:clamp(28px,3.2vw,46px);line-height:1.08;max-width:760px}
+.core-final-copy p{margin:14px 0 0;color:rgba(255,255,255,.78);line-height:1.65;max-width:720px}
+.core-final-actions{display:flex;flex-direction:column;gap:11px;min-width:220px}
+.core-final-actions .btn{justify-content:center;white-space:nowrap}
+.core-final-secondary{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.28);color:#fff}
+.core-final-secondary:hover{background:#fff;color:#07527f}
+@media(max-width:900px){
+  .core-final-panel{grid-template-columns:auto 1fr}
+  .core-final-actions{grid-column:1/-1;flex-direction:row;padding-left:0}
+  .core-final-actions .btn{flex:1}
+}
+@media(max-width:700px){
+  .core-banking-page .core-final-cta{margin:36px 10px 24px;padding:58px 0;border-radius:28px}
+  .core-final-panel{grid-template-columns:1fr;text-align:left}
+  .core-final-icon{width:62px;height:62px;border-radius:19px}
+  .core-final-actions{grid-column:auto;flex-direction:column;width:100%}
+}
+
+/* ===== Collecte Journalière — Étape 1 : Hero ===== */
+.collecte-first-hero{
+  position:relative;border-radius:0 0 42px 42px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(3,25,47,.20);
+}
+.collecte-first-hero .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.collecte-first-hero .hero-bg-slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.035);transition:opacity 1s ease,transform 7s ease;
+}
+.collecte-first-hero .hero-bg-slide.active{opacity:1;transform:scale(1)}
+.collecte-first-hero .hero-bg-tint{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(3,27,49,.88),rgba(3,45,67,.64) 58%,rgba(4,49,60,.48));
+}
+.collecte-first-hero>.container{position:relative;z-index:2}
+.collecte-first-hero .detail-art{color:#f26a21}
+.collecte-first-hero .hero-dots{
+  position:absolute;z-index:4;left:50%;bottom:26px;display:flex;gap:8px;transform:translateX(-50%);
+}
+.collecte-first-hero .hero-dots button{
+  width:8px;height:8px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.46);transition:.25s;
+}
+.collecte-first-hero .hero-dots button.active{width:28px;background:#f26a21}
+@media(max-width:700px){
+  .collecte-first-hero{border-radius:0 0 28px 28px}
+  .collecte-first-hero .hero-dots{bottom:18px}
+}
+
+/* ===== Collecte Journalière — Étape 2 : solution complète ===== */
+.collecte-journaliere-page .collect-band{
+  position:relative;margin:44px 18px 0;padding:clamp(76px,8vw,118px) 0;
+  border-radius:44px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(145deg,#063552 0%,#075b70 48%,#06445e 100%);
+  box-shadow:0 32px 76px rgba(3,35,52,.24);
+}
+.collect-band-bg,.collect-band-grid,.collect-band-orb{position:absolute;inset:0;pointer-events:none}
+.collect-band-grid{
+  opacity:.10;
+  background-image:linear-gradient(rgba(255,255,255,.20) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.20) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.collect-band-orb{width:420px;height:420px;border-radius:50%;filter:blur(8px);opacity:.25}
+.collect-band-orb.orb-one{left:-180px;top:-180px;background:radial-gradient(circle,#f26a21,transparent 67%)}
+.collect-band-orb.orb-two{left:auto;top:auto;right:-180px;bottom:-220px;background:radial-gradient(circle,#2f8cff,transparent 67%)}
+.collect-band .container{position:relative;z-index:2}
+.collect-band-head{text-align:center;max-width:800px;margin:0 auto}
+.collect-band-kicker{display:inline-block;color:#ffad74;font-size:12px;font-weight:850;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.collect-band-head h2{margin:0;color:#fff;font-size:clamp(30px,4vw,52px);line-height:1.08}
+.collect-band-head p{max-width:690px;margin:18px auto 0;color:rgba(255,255,255,.76);line-height:1.7}
+.collect-band-flow{
+  position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:15px;
+  margin-top:clamp(42px,6vw,72px);
+}
+.collect-band-flow::before{
+  content:"";position:absolute;left:9%;right:9%;top:57px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.32),transparent);
+}
+.collect-band-card{
+  position:relative;min-height:190px;padding:30px 18px 24px;
+  border:1px solid rgba(255,255,255,.14);border-radius:23px;
+  background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.07));
+  backdrop-filter:blur(8px);text-align:center;color:#fff;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  box-shadow:0 18px 42px rgba(1,25,37,.14);
+  transition:transform .32s cubic-bezier(.22,1,.36,1),background .3s,border-color .3s;
+  animation:collectCardIn .65s both;animation-delay:var(--delay);
+}
+.collect-band-card:hover{transform:translateY(-9px);background:rgba(255,255,255,.17);border-color:rgba(242,106,33,.52)}
+.collect-band-icon{
+  width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+  background:#fff;color:#08708c;box-shadow:0 14px 30px rgba(0,24,39,.18);position:relative;z-index:2;
+}
+.collect-band-icon .ic{width:26px;height:26px}
+.collect-band-card strong{font-size:14px;line-height:1.4;max-width:170px}
+.collect-band-num{position:absolute;right:15px;top:13px;color:rgba(255,255,255,.16);font-size:22px;font-weight:850}
+.collect-band-line{position:absolute;top:56px;right:-16px;width:16px;height:2px;background:rgba(255,255,255,.26)}
+.collect-band-card:last-child .collect-band-line{display:none}
+@keyframes collectCardIn{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:950px){
+ .collect-band-flow{grid-template-columns:repeat(3,1fr)}
+ .collect-band-flow::before,.collect-band-line{display:none}
+}
+@media(max-width:700px){
+ .collecte-journaliere-page .collect-band{margin:30px 10px 0;padding:62px 0;border-radius:28px}
+ .collect-band-flow{grid-template-columns:1fr 1fr;gap:12px}
+ .collect-band-card{min-height:165px;padding:25px 12px 20px}
+}
+@media(max-width:430px){.collect-band-flow{grid-template-columns:1fr}.collect-band-card{min-height:145px}}
+
+/* ===== Collecte Étape 2.1 — proportions compactes comme la référence ===== */
+.collecte-journaliere-page .collect-band{
+  padding:clamp(48px,5vw,68px) 0 !important;
+}
+.collecte-journaliere-page .collect-band-head{
+  max-width:720px;
+}
+.collecte-journaliere-page .collect-band-head h2{
+  font-size:clamp(27px,3.2vw,42px);
+}
+.collecte-journaliere-page .collect-band-head p{
+  margin-top:12px;
+  line-height:1.55;
+  font-size:14px;
+}
+.collecte-journaliere-page .collect-band-flow{
+  margin-top:34px;
+  gap:12px;
+}
+.collecte-journaliere-page .collect-band-card{
+  min-height:145px;
+  padding:22px 14px 18px;
+  gap:11px;
+  border-radius:19px;
+}
+.collecte-journaliere-page .collect-band-icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+}
+.collecte-journaliere-page .collect-band-icon .ic{
+  width:22px;
+  height:22px;
+}
+.collecte-journaliere-page .collect-band-card strong{
+  font-size:12.5px;
+}
+.collecte-journaliere-page .collect-band-flow::before{
+  top:47px;
+}
+.collecte-journaliere-page .collect-band-line{
+  top:46px;
+}
+@media(max-width:700px){
+  .collecte-journaliere-page .collect-band{
+    padding:46px 0 !important;
+  }
+  .collecte-journaliere-page .collect-band-flow{
+    margin-top:28px;
+  }
+  .collecte-journaliere-page .collect-band-card{
+    min-height:138px;
+  }
+}
+
+/* ===== Collecte Étape 2.2 — bloc encore plus compact ===== */
+.collecte-journaliere-page .collect-band{
+  padding:34px 0 38px !important;
+}
+.collecte-journaliere-page .collect-band-head{
+  max-width:680px;
+}
+.collecte-journaliere-page .collect-band-kicker{
+  margin-bottom:7px;
+  font-size:10px;
+}
+.collecte-journaliere-page .collect-band-head h2{
+  font-size:clamp(24px,2.7vw,35px);
+}
+.collecte-journaliere-page .collect-band-head p{
+  max-width:620px;
+  margin-top:8px;
+  font-size:12.5px;
+  line-height:1.45;
+}
+.collecte-journaliere-page .collect-band-flow{
+  margin-top:22px;
+  gap:10px;
+}
+.collecte-journaliere-page .collect-band-card{
+  min-height:112px;
+  padding:16px 10px 13px;
+  gap:7px;
+  border-radius:16px;
+}
+.collecte-journaliere-page .collect-band-icon{
+  width:39px;
+  height:39px;
+  border-radius:11px;
+}
+.collecte-journaliere-page .collect-band-icon .ic{
+  width:18px;
+  height:18px;
+}
+.collecte-journaliere-page .collect-band-card strong{
+  font-size:11px;
+  line-height:1.25;
+}
+.collecte-journaliere-page .collect-band-num{
+  top:9px;
+  right:10px;
+  font-size:16px;
+}
+.collecte-journaliere-page .collect-band-flow::before{
+  top:38px;
+}
+.collecte-journaliere-page .collect-band-line{
+  top:37px;
+}
+@media(max-width:700px){
+  .collecte-journaliere-page .collect-band{
+    padding:32px 0 35px !important;
+  }
+  .collecte-journaliere-page .collect-band-flow{
+    margin-top:20px;
+  }
+  .collecte-journaliere-page .collect-band-card{
+    min-height:108px;
+  }
+}
+
+/* ===== Collecte Étape 3 — fidèle à V17.20.4 ===== */
+.collecte-journaliere-page{--tone:#16a34a}
+.collecte-featshots{position:relative;overflow:hidden;padding:72px 0;background:#fff}
+.collecte-featshots::before{content:"";position:absolute;right:-160px;top:40px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(22,163,74,.10),transparent 70%);pointer-events:none}
+.collecte-featshots .featshots-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:start}
+.collecte-featshots .feats .sec-title,.collecte-featshots .shots .sec-title{margin-bottom:24px}
+.collecte-featshots .feat-select{display:flex;flex-direction:column;gap:11px;margin:0;padding:0}
+.collecte-featshots .feat-select li{list-style:none}
+.collecte-featshots .feat-chip{width:100%;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:left;padding:15px 18px;border-radius:14px;background:#fff;border:1px solid var(--line,#dfe7f0);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .3s ease,background .3s ease;transform-origin:left center;font:inherit}
+.collecte-featshots .feat-chip:hover{border-color:rgba(22,163,74,.40)}
+.collecte-featshots .feat-chip.sel{transform:scale(1.045);border-color:var(--tone);background:linear-gradient(100deg,rgba(22,163,74,.12),#fff);box-shadow:0 22px 48px -24px rgba(22,163,74,.55)}
+.collecte-featshots .feat-num{font-size:12px;font-weight:800;letter-spacing:1px;color:rgba(13,43,74,.28);flex:none;width:22px}
+.collecte-featshots .feat-chip.sel .feat-num{color:var(--tone)}
+.collecte-featshots .feat-chk{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;background:#eef2f7;color:#9fb0c4;transition:all .35s cubic-bezier(.22,1,.36,1)}
+.collecte-featshots .feat-chip.sel .feat-chk{background:var(--tone);color:#fff;transform:rotate(360deg) scale(1.05)}
+.collecte-featshots .feat-chk .ic{width:15px;height:15px}
+.collecte-featshots .feat-txt{font-size:14.5px;font-weight:600;color:var(--navy,#0d2b4a)}
+.collecte-featshots .shots-row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.collecte-featshots .shot{background:#fff;border:1px solid var(--line,#dfe7f0);border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -32px rgba(13,43,74,.4);transition:transform .35s ease,box-shadow .35s ease}
+.collecte-featshots .shot:hover{transform:translateY(-5px);box-shadow:0 30px 70px -30px rgba(13,43,74,.45)}
+.collecte-featshots .sh-phone{background:linear-gradient(160deg,#eef3f9,#dfe7f2);padding:20px 14px 0;display:flex;justify-content:center}
+.collecte-featshots .mk-phone{width:158px;background:#0b1526;border-radius:30px;padding:9px;box-shadow:0 30px 60px -24px rgba(5,18,35,.6);position:relative}
+.collecte-featshots .mk-notch{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:64px;height:9px;border-radius:99px;background:#0b1526;z-index:2}
+.collecte-featshots .mk-app{background:#f4f7fb;border-radius:22px;padding:22px 12px 14px;min-height:250px;display:flex;flex-direction:column;gap:11px;overflow:hidden}
+.collecte-featshots .mk-atop{display:flex;align-items:center;justify-content:space-between}
+.collecte-featshots .mk-atop b{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--navy,#0d2b4a)}
+.collecte-featshots .mk-ava{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--tone),#0d2b4a);flex:none}
+.collecte-featshots .mk-ava.sm{width:22px;height:22px}
+.collecte-featshots .mk-tour{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line,#dfe7f0);border-radius:14px;padding:10px 12px}
+.collecte-featshots .mk-tour span{font-size:10px;font-weight:700;color:var(--navy,#0d2b4a)}
+.collecte-featshots .mk-ring{width:44px;height:44px;border-radius:50%;background:conic-gradient(var(--tone) 0 68%,#e4eaf1 68% 100%);display:grid;place-items:center}
+.collecte-featshots .mk-ring b{font-size:9px;color:var(--navy,#0d2b4a);background:#fff;border-radius:50%;width:32px;height:32px;display:grid;place-items:center}
+.collecte-featshots .mk-clist{display:flex;flex-direction:column;gap:7px}
+.collecte-featshots .mk-crow{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line,#dfe7f0);border-radius:10px;padding:7px 9px}
+.collecte-featshots .mk-crow i{display:block;height:8px;border-radius:5px;background:#dfe6ef;flex:1}
+.collecte-featshots .mk-cta{background:var(--tone);color:#fff;text-align:center;font-size:11px;font-weight:700;border-radius:11px;padding:9px;margin-top:auto}
+.collecte-featshots .mk-bal{background:linear-gradient(135deg,var(--tone),#0d2b4a);border-radius:14px;padding:12px;color:#fff}
+.collecte-featshots .mk-bal span{display:block;font-size:9px;opacity:.75}.collecte-featshots .mk-bal b{display:block;font-size:17px;font-weight:800;margin:2px 0}.collecte-featshots .mk-bal em{font-style:normal;font-size:9px;opacity:.75}
+.collecte-featshots .mk-ops{display:flex;gap:8px}.collecte-featshots .mk-ops i{flex:1;height:30px;border-radius:10px;background:#fff;border:1px solid var(--line,#dfe7f0)}
+.collecte-featshots .mk-list{display:flex;flex-direction:column;gap:7px}.collecte-featshots .mk-list i{display:block;height:26px;border-radius:9px;background:#fff;border:1px solid var(--line,#dfe7f0)}
+.collecte-featshots .shots-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px}
+.collecte-featshots .shots-more .ic{width:16px;height:16px}
+@media(max-width:760px){.collecte-featshots .featshots-grid{grid-template-columns:1fr;gap:36px}.collecte-featshots .shots-row2{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.collecte-featshots{padding:52px 0}.collecte-featshots .shots-row2{grid-template-columns:1fr}.collecte-featshots .feat-chip.sel{transform:scale(1.02)}}
+
+/* ===== Collecte Étape 4 — Bénéfices V17.20.4 ===== */
+.collecte-journaliere-page .collecte-benefits{
+  --tone:#16a34a;
+  padding:56px 0 70px;
+  position:relative;
+  background:
+    radial-gradient(600px 260px at 50% 0%,rgba(22,163,74,.08),transparent 70%),
+    linear-gradient(180deg,#fff,#f4f8fc);
+}
+.collecte-journaliere-page .collecte-benefits .ben-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:16px;
+  margin:36px auto 0;max-width:1000px;
+}
+.collecte-journaliere-page .collecte-benefits .ben-item{
+  flex:0 0 calc(20% - 13px);min-width:170px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;
+  background:#fff;border:1px solid var(--line,#dfe7f0);border-radius:18px;
+  padding:30px 16px 24px;transition:all .4s cubic-bezier(.22,1,.36,1);
+}
+.collecte-journaliere-page .collecte-benefits .ben-item:hover{
+  transform:translateY(-7px) scale(1.02);border-color:var(--tone);
+  box-shadow:0 26px 56px -26px rgba(13,43,74,.45);
+}
+.collecte-journaliere-page .collecte-benefits .ben-ic{
+  width:60px;height:60px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#c9f1d6,#e8f8ed);
+  color:var(--tone);border:1px solid #bce8ca;transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.collecte-journaliere-page .collecte-benefits .ben-item:hover .ben-ic{transform:scale(1.12) rotate(-6deg)}
+.collecte-journaliere-page .collecte-benefits .ben-ic .ic{width:26px;height:26px}
+.collecte-journaliere-page .collecte-benefits .ben-txt{font-size:13px;font-weight:600;color:var(--navy,#0d2b4a);line-height:1.45}
+.collecte-journaliere-page .collecte-benefits .ben-num{
+  position:absolute;top:10px;right:14px;font-size:15px;font-weight:800;color:rgba(13,43,74,.08)
+}
+.collecte-journaliere-page .collecte-benefits .ben-item:hover .ben-num{color:rgba(22,163,74,.35)}
+@media(max-width:1100px){.collecte-journaliere-page .collecte-benefits .ben-item{flex-basis:calc(33.333% - 11px)}}
+@media(max-width:700px){.collecte-journaliere-page .collecte-benefits .ben-item{flex-basis:calc(50% - 8px)}}
+@media(max-width:430px){.collecte-journaliere-page .collecte-benefits .ben-item{flex-basis:100%}}
+
+/* ===== Collecte Étape 4.1 — cohérence border-radius / effet d'étage ===== */
+
+/* Bloc 2 — Une solution complète pour la collecte terrain */
+.collecte-journaliere-page .collect-band{
+  margin-left:18px !important;
+  margin-right:18px !important;
+  width:auto !important;
+  border-radius:44px !important;
+  overflow:hidden;
+  box-shadow:0 28px 68px rgba(3,35,52,.20);
+}
+
+/* Bloc 3 — Fonctionnalités + Captures */
+.collecte-journaliere-page .collecte-featshots{
+  margin:42px 18px 0 !important;
+  width:auto !important;
+  border-radius:44px !important;
+  overflow:hidden;
+  box-shadow:0 28px 68px rgba(5,39,68,.12);
+  position:relative;
+  z-index:5;
+}
+
+/* Bloc 4 — Bénéfices */
+.collecte-journaliere-page .collecte-benefits{
+  margin:42px 18px 0 !important;
+  width:auto !important;
+  border-radius:44px !important;
+  overflow:hidden;
+  box-shadow:0 28px 68px rgba(5,39,68,.13);
+  position:relative;
+  z-index:6;
+}
+
+/* Petite ligne de séparation pour renforcer l'effet d'étage */
+.collecte-journaliere-page .collecte-featshots::after,
+.collecte-journaliere-page .collecte-benefits::after{
+  content:"";
+  position:absolute;
+  left:10%;
+  right:10%;
+  top:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.38),transparent);
+  pointer-events:none;
+}
+
+@media(max-width:700px){
+  .collecte-journaliere-page .collect-band,
+  .collecte-journaliere-page .collecte-featshots,
+  .collecte-journaliere-page .collecte-benefits{
+    margin-left:10px !important;
+    margin-right:10px !important;
+    border-radius:28px !important;
+  }
+  .collecte-journaliere-page .collecte-featshots,
+  .collecte-journaliere-page .collecte-benefits{
+    margin-top:30px !important;
+  }
+}
