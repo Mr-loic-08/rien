@@ -4166,3 +4166,108 @@ app-footer .home-footer>.container{position:relative;z-index:2}
   .digital-band-item{min-height:108px}
 }
 @media(max-width:430px){.digital-band-items{grid-template-columns:1fr}}
+
+/* ===== Digital & Mobile — Étape 3 : Fonctionnalités + Captures ===== */
+.digital-mobile-page .digital-featshots{
+  position:relative;margin:38px 18px 0;padding:66px 0;
+  border-radius:44px;overflow:hidden;
+  background:
+    radial-gradient(circle at 92% 4%,rgba(118,86,216,.09),transparent 27%),
+    linear-gradient(145deg,#fff 0%,#faf9fe 55%,#f2f0fa 100%);
+  box-shadow:0 28px 68px rgba(36,28,77,.12);
+}
+.digital-featshots::after{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(118,86,216,.35),transparent)}
+.digital-featshots-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:start}
+.digital-featshots .sec-title{margin-bottom:24px}
+.digital-feat-select{display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.digital-feat-select li{list-style:none}
+.digital-feat-chip{
+  width:100%;display:flex;align-items:center;gap:14px;padding:14px 17px;
+  border-radius:14px;border:1px solid #e2e2ec;background:#fff;text-align:left;
+  font:inherit;cursor:pointer;transition:.32s cubic-bezier(.22,1,.36,1);
+}
+.digital-feat-chip:hover{border-color:rgba(118,86,216,.38)}
+.digital-feat-chip.sel{
+  transform:scale(1.04);border-color:#7656d8;
+  background:linear-gradient(100deg,rgba(118,86,216,.11),#fff);
+  box-shadow:0 22px 48px -25px rgba(82,55,166,.50);
+}
+.digital-feat-num{width:22px;flex:none;color:rgba(34,35,65,.27);font-size:11px;font-weight:850}
+.digital-feat-chip.sel .digital-feat-num{color:#7656d8}
+.digital-feat-check{
+  width:29px;height:29px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:#f0eef6;color:#a7a0bb;transition:.32s;
+}
+.digital-feat-chip.sel .digital-feat-check{background:#7656d8;color:#fff;transform:rotate(360deg)}
+.digital-feat-check .ic{width:14px;height:14px}
+.digital-feat-text{color:#172f4b;font-size:14px;font-weight:650}
+.digital-phone-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.digital-phone-card{
+  margin:0;padding:20px 14px 0;border-radius:18px;overflow:hidden;
+  display:flex;justify-content:center;background:linear-gradient(155deg,#eeecf7,#ded9ef);
+  border:1px solid #e1ddec;box-shadow:0 24px 60px -34px rgba(42,28,92,.45);
+  transition:.32s;
+}
+.digital-phone-card:hover{transform:translateY(-5px)}
+.dm-phone{width:158px;background:#111425;border-radius:30px;padding:9px;position:relative;box-shadow:0 30px 60px -24px rgba(13,12,32,.55)}
+.dm-notch{position:absolute;z-index:2;top:16px;left:50%;transform:translateX(-50%);width:64px;height:9px;border-radius:99px;background:#111425}
+.dm-screen{min-height:250px;padding:22px 12px 14px;border-radius:22px;background:#f6f5fa;display:flex;flex-direction:column;gap:11px;overflow:hidden}
+.dm-top{display:flex;align-items:center;justify-content:space-between}.dm-top b{font-size:10px;letter-spacing:.09em;color:#262244}
+.dm-avatar{width:25px;height:25px;border-radius:50%;background:linear-gradient(135deg,#7656d8,#f26a21)}
+.dm-balance{padding:12px;border-radius:14px;color:#fff;background:linear-gradient(135deg,#7656d8,#46317f)}
+.dm-balance small{display:block;font-size:8px;opacity:.75}.dm-balance b{display:block;font-size:17px;margin:2px 0}.dm-balance em{font-style:normal;font-size:8px;opacity:.75}
+.dm-actions{display:flex;gap:7px}.dm-actions i{height:31px;flex:1;border-radius:9px;background:#fff;border:1px solid #e2deec}
+.dm-list{display:flex;flex-direction:column;gap:7px}.dm-list i{height:25px;border-radius:9px;background:#fff;border:1px solid #e2deec}
+.dm-transfer{padding:11px;border-radius:14px;background:#fff;border:1px solid #e2deec}.dm-transfer>span{font-size:9px;font-weight:750;color:#292447}
+.dm-users{display:flex;margin-top:9px}.dm-users i{width:26px;height:26px;margin-right:-5px;border-radius:50%;border:2px solid #fff;background:linear-gradient(135deg,#7656d8,#c1b2ef)}
+.dm-pay{display:grid;grid-template-columns:1fr 1fr;gap:7px}.dm-pay span{height:42px;border-radius:10px;background:#fff;border:1px solid #e2deec}
+.dm-cta{margin-top:auto;padding:9px;text-align:center;border-radius:11px;background:#7656d8;color:#fff;font-size:9px;font-weight:750}
+.digital-shots-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px}.digital-shots-more .ic{width:16px;height:16px}
+@media(max-width:760px){.digital-featshots-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:700px){.digital-mobile-page .digital-featshots{margin:30px 10px 0;padding:52px 0;border-radius:28px}}
+@media(max-width:520px){.digital-phone-row{grid-template-columns:1fr}.digital-feat-chip.sel{transform:scale(1.02)}}
+
+/* ===== Digital & Mobile — Étape 4 : Bénéfices ===== */
+.digital-mobile-page .digital-benefits{
+  position:relative;margin:38px 18px 0;padding:56px 0 68px;
+  border-radius:44px;overflow:hidden;
+  background:
+    radial-gradient(480px 220px at 50% 0%,rgba(118,86,216,.10),transparent 72%),
+    linear-gradient(180deg,#fff,#f5f3fb);
+  box-shadow:0 28px 68px rgba(36,28,77,.12);
+}
+.digital-benefits::after{
+  content:"";position:absolute;left:10%;right:10%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,106,33,.38),transparent);
+}
+.digital-ben-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:16px;
+  max-width:1000px;margin:34px auto 0;
+}
+.digital-ben-item{
+  position:relative;overflow:hidden;flex:0 0 calc(20% - 13px);min-width:170px;
+  min-height:170px;padding:28px 16px 22px;border-radius:18px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center;
+  background:#fff;border:1px solid #e2dff0;
+  transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s,border-color .3s;
+}
+.digital-ben-item:hover{
+  transform:translateY(-7px) scale(1.02);
+  border-color:#7656d8;box-shadow:0 26px 56px -27px rgba(82,55,166,.48);
+}
+.digital-ben-icon{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  color:#7656d8;background:radial-gradient(circle at 35% 30%,#e1d9ff,#f1edff);
+  border:1px solid #d7cdf7;transition:transform .38s cubic-bezier(.22,1,.36,1);
+}
+.digital-ben-item:hover .digital-ben-icon{transform:scale(1.11) rotate(-6deg)}
+.digital-ben-icon .ic{width:25px;height:25px}
+.digital-ben-text{font-size:13px;font-weight:650;line-height:1.45;color:#172f4b}
+.digital-ben-num{position:absolute;top:10px;right:14px;font-size:15px;font-weight:850;color:rgba(54,42,98,.09)}
+.digital-ben-item:hover .digital-ben-num{color:rgba(118,86,216,.34)}
+@media(max-width:1100px){.digital-ben-item{flex-basis:calc(33.333% - 11px)}}
+@media(max-width:700px){
+ .digital-mobile-page .digital-benefits{margin:30px 10px 0;padding:50px 0 58px;border-radius:28px}
+ .digital-ben-item{flex-basis:calc(50% - 8px)}
+}
+@media(max-width:430px){.digital-ben-item{flex-basis:100%}}

@@ -124,6 +124,16 @@ const EN: Record<string,string> = {
   'Paiements Digitaux': 'Digital Payments',
   'Notifications & Alertes': 'Notifications & Alerts',
   'Sécurité Avancée': 'Advanced Security',
+  'Consultation de comptes': 'Account consultation',
+  'Virements & transferts': 'Transfers & remittances',
+  'Paiement de factures & marchands': 'Bill & merchant payments',
+  'Historique des opérations': 'Transaction history',
+  'Géolocalisation des agences': 'Branch geolocation',
+  'Notifications push & SMS': 'Push & SMS notifications',
+  'Authentification forte': 'Strong authentication',
+  'Solde disponible': 'Available balance',
+  'Transfert rapide': 'Quick transfer',
+  'Effectuer un transfert': 'Make a transfer',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
