@@ -150,6 +150,20 @@ const EN: Record<string,string> = {
   'Collaborateurs': 'Employees',
   'En congé': 'On leave',
   'Évaluations': 'Evaluations',
+  'Modernisez la gestion de vos ressources humaines.': 'Modernize your human resources management.',
+  'Échangez avec nos experts et découvrez comment Alpha RH peut centraliser, simplifier et fiabiliser la gestion de votre personnel.': 'Talk with our experts and discover how Alpha HR can centralize, simplify and improve the reliability of your personnel management.',
+  'Solution Alpha Déclaration Bancaire': 'Alpha Regulatory Reporting Solution',
+  'Automatisez vos déclarations réglementaires et assurez votre conformité.': 'Automate your regulatory reporting and ensure compliance.',
+  'Alpha Déclaration Bancaire génère automatiquement vos états réglementaires et vos reportings dans les formats exigés par les régulateurs.': 'Alpha Regulatory Reporting automatically generates regulatory statements and reports in the formats required by regulators.',
+  'Déclarations COBAC': 'COBAC declarations',
+  'Reporting réglementaire': 'Regulatory reporting',
+  'Contrôles & validations': 'Controls & validations',
+  'Génération automatique des états': 'Automatic statement generation',
+  'Archivage sécurisé': 'Secure archiving',
+  'Conforme': 'Compliant',
+  'Déclarations': 'Declarations',
+  'Validées': 'Validated',
+  'À contrôler': 'To review',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

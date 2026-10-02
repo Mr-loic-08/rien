@@ -3,19 +3,18 @@ import { LanguageService } from '../../../core/language.service';
 import { SOLUTIONS } from '../../../data/solutions';
 
 @Component({
-  selector:'app-gestion-rh-page',
+  selector:'app-declaration-bancaire-page',
   standalone:true,
-  templateUrl:'./gestion-rh.html'
+  templateUrl:'./declaration-bancaire.html'
 })
-export class GestionRhPageComponent implements OnInit, OnDestroy {
+export class DeclarationBancairePageComponent implements OnInit, OnDestroy {
   readonly l=inject(LanguageService);
-  readonly sol=SOLUTIONS.find(s=>s.key==='gestion-rh')!;
+  readonly sol=SOLUTIONS.find(s=>s.key==='declaration-bancaire')!;
   active=0;
   readonly features=this.sol.features;
   readonly benefits=this.sol.benefits;
   feat=0;
   private timer?: ReturnType<typeof setInterval>;
-
   ngOnInit(){ this.timer=setInterval(()=>this.active=(this.active+1)%(this.sol.heroBg?.length||1),7000); }
   ngOnDestroy(){ if(this.timer) clearInterval(this.timer); }
   setSlide(i:number){ this.active=i; }

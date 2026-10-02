@@ -14,10 +14,11 @@ import { CoreBankingPageComponent } from './pages/solutions/core-banking/core-ba
 import { CollecteJournalierePageComponent } from './pages/solutions/collecte-journaliere/collecte-journaliere';
 import { DigitalMobilePageComponent } from './pages/solutions/digital-mobile/digital-mobile';
 import { GestionRhPageComponent } from './pages/solutions/gestion-rh/gestion-rh';
+import { DeclarationBancairePageComponent } from './pages/solutions/declaration-bancaire/declaration-bancaire';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -26,6 +27,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isCollecteJournaliere=false;
   isDigitalMobile=false;
   isGestionRh=false;
+  isDeclarationBancaire=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
@@ -33,6 +35,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
     this.isCollecteJournaliere=h==='#/solutions/collecte-journaliere';
     this.isDigitalMobile=h==='#/solutions/digital-mobile';
     this.isGestionRh=h==='#/solutions/gestion-rh';
+    this.isDeclarationBancaire=h==='#/solutions/declaration-bancaire';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;

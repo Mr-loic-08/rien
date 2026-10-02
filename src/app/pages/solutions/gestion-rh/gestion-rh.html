@@ -125,4 +125,42 @@
     </div>
   </section>
 
+
+  <!-- Gestion RH Étape 3 — Bénéfices -->
+  <section class="rh-benefits reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2>
+
+      <div class="rh-ben-grid">
+        @for(b of benefits; track b.text; let i=$index){
+          <article class="rh-ben-item">
+            <span class="rh-ben-num">0{{i+1}}</span>
+            <span class="rh-ben-icon">
+              <svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg>
+            </span>
+            <span class="rh-ben-text">{{l.t(b.text)}}</span>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Gestion RH Étape 4 — CTA final -->
+  <section class="rh-final-cta reveal visible">
+    <div class="container">
+      <div class="rh-final-inner">
+        <div class="rh-final-copy">
+          <span class="rh-final-kicker">{{l.t('ALPHA RH')}}</span>
+          <h2>{{l.t('Modernisez la gestion de vos ressources humaines.')}}</h2>
+          <p>{{l.t("Échangez avec nos experts et découvrez comment Alpha RH peut centraliser, simplifier et fiabiliser la gestion de votre personnel.")}}</p>
+        </div>
+        <div class="rh-final-actions">
+          <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+          <a href="#/contact" class="rh-final-link">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
