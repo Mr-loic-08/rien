@@ -52,7 +52,11 @@
         <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 7h.01"/></symbol>
         <symbol id="i-office" viewBox="0 0 24 24"><path d="M4 21V5h12v16M16 10h4v11M8 9h4M8 13h4M8 17h4M2 21h20"/></symbol>
       </defs></svg>
-@if(isDeclarationBancaire){
+@if(isGenieLogiciel){
+<app-header></app-header>
+<app-genie-logiciel-page></app-genie-logiciel-page>
+<app-footer></app-footer>
+}@else if(isDeclarationBancaire){
 <app-header></app-header>
 <app-declaration-bancaire-page></app-declaration-bancaire-page>
 <app-footer></app-footer>

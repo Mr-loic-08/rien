@@ -4947,3 +4947,41 @@ app-footer .home-footer>.container{position:relative;z-index:2}
   .db-final-inner{gap:28px}
   .db-final-actions{flex-direction:column}
 }
+
+/* ===== Génie Logiciel — Étape 1 : Hero ===== */
+.genie-logiciel-page{--tone:#2475c7}
+.genie-logiciel-page .genie-logiciel-hero{
+  position:relative;
+  border-radius:0 0 44px 44px;
+  overflow:hidden;
+  box-shadow:0 30px 72px rgba(19,48,80,.24);
+}
+.genie-logiciel-hero .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.genie-logiciel-hero .hero-bg-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transform:scale(1.04);
+  transition:opacity 1s ease,transform 7s ease;
+}
+.genie-logiciel-hero .hero-bg-slide.active{opacity:1;transform:scale(1)}
+.genie-logiciel-hero .hero-bg-tint{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(13,30,51,.94),rgba(23,67,109,.72) 58%,rgba(34,93,146,.48));
+}
+.genie-logiciel-hero>.container{position:relative;z-index:2}
+.genie-logiciel-hero .detail-art{color:#76b9f4}
+.genie-logiciel-hero .pg-eyebrow{color:#c8e7ff}
+.genie-logiciel-hero .hero-dots{
+  position:absolute;z-index:4;left:50%;bottom:26px;
+  display:flex;gap:8px;transform:translateX(-50%);
+}
+.genie-logiciel-hero .hero-dots button{
+  width:8px;height:8px;padding:0;border:0;border-radius:99px;
+  background:rgba(255,255,255,.45);transition:.25s;
+}
+.genie-logiciel-hero .hero-dots button.active{width:28px;background:#2475c7}
+@media(max-width:700px){
+  .genie-logiciel-page .genie-logiciel-hero{border-radius:0 0 28px 28px}
+  .genie-logiciel-hero .hero-dots{bottom:18px}
+}

@@ -167,6 +167,10 @@ const EN: Record<string,string> = {
   'Simplifiez vos obligations réglementaires.': 'Simplify your regulatory obligations.',
   'Échangez avec nos experts et découvrez comment Alpha Déclaration Bancaire peut automatiser vos reportings, renforcer vos contrôles et sécuriser votre conformité.': 'Talk with our experts and discover how Alpha Regulatory Reporting can automate your reporting, strengthen controls and secure compliance.',
   'ALPHA DÉCLARATION BANCAIRE': 'ALPHA REGULATORY REPORTING',
+  'Expertise en Génie Logiciel': 'Software Engineering Expertise',
+  'Génie Logiciel': 'Software Engineering',
+  'Concevez des solutions logicielles adaptées à votre métier': 'Design software solutions tailored to your business',
+  'Nous développons des plateformes web, mobiles et métiers robustes, évolutives et sécurisées pour accompagner la croissance de votre organisation.': "We develop robust, scalable and secure web, mobile and business platforms to support your organization's growth.",
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
