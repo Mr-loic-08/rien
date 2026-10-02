@@ -46,4 +46,98 @@
     </div>
     <div class="pg-hero-wave" aria-hidden="true"></div>
   </section>
+
+  <!-- Génie Logiciel — Bloc 2 : Fonctionnalités + Captures -->
+  <section class="gl-featshots reveal visible">
+    <div class="container">
+      <div class="gl-featshots-grid">
+        <div class="gl-feats">
+          <h2 class="sec-title left">{{l.t('Fonctionnalités clés')}}</h2>
+          <ul class="gl-feat-select">
+            @for(f of features; track f.title; let i=$index){
+              <li>
+                <button type="button" class="gl-feat-chip" [class.sel]="feat===i"
+                        (click)="setFeat(i)" (mouseenter)="setFeat(i)">
+                  <span class="gl-feat-num">0{{i+1}}</span>
+                  <span class="gl-feat-check"><svg class="ic"><use href="#i-check"></use></svg></span>
+                  <span class="gl-feat-text">{{l.t(f.title)}}</span>
+                </button>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <div class="gl-shots">
+          <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2>
+          <div class="gl-laptop-card">
+            <div class="gl-laptop">
+              <div class="gl-laptop-screen">
+                <div class="gl-appbar">
+                  <div class="gl-brand"><span></span><b>I-TECH SOFTWARE</b></div>
+                  <span class="gl-user"></span>
+                </div>
+                <div class="gl-appbody">
+                  <aside class="gl-sidebar"><i class="active"></i><i></i><i></i><i></i><i></i></aside>
+                  <div class="gl-main">
+                    <div class="gl-heading">
+                      <div><small>{{l.t('Tableau de bord')}}</small><strong>{{l.t('Vue d’ensemble')}}</strong></div>
+                      <span></span>
+                    </div>
+                    <div class="gl-stats"><article><b>24</b><small>API</small></article><article><b>12</b><small>Apps</small></article><article><b>99.9%</b><small>Uptime</small></article></div>
+                    <div class="gl-panels">
+                      <div class="gl-code"><i></i><i></i><i></i><i></i><i></i></div>
+                      <div class="gl-chart"><i style="height:42%"></i><i style="height:65%"></i><i style="height:53%"></i><i style="height:82%"></i><i style="height:70%"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gl-laptop-base"></div>
+            </div>
+          </div>
+          <a href="#" class="link gl-shots-more" (click)="$event.preventDefault()">
+            {{l.t('Voir plus de captures')}} <svg class="ic"><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Génie Logiciel — Bloc 3 : Pourquoi choisir I-TECH ? -->
+  <section class="gl-benefits reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2>
+      <div class="gl-ben-grid">
+        @for(b of benefits; track b.text; let i=$index){
+          <article class="gl-ben-item">
+            <span class="gl-ben-num">0{{i+1}}</span>
+            <span class="gl-ben-icon"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
+            <span class="gl-ben-text">{{l.t(b.text)}}</span>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Génie Logiciel — Bloc 4 : CTA final -->
+  <section class="gl-final-cta reveal visible">
+    <div class="container">
+      <div class="gl-final-inner">
+        <div class="gl-final-copy">
+          <span class="gl-final-kicker">{{l.t('GÉNIE LOGICIEL')}}</span>
+          <h2>{{l.t(sol.cta)}}</h2>
+          <p>{{l.t("Échangez avec nos experts pour concevoir une solution robuste, évolutive et parfaitement adaptée aux besoins de votre organisation.")}}</p>
+        </div>
+
+        <div class="gl-final-actions">
+          <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
+          <a href="#/contact" class="gl-final-link">
+            {{l.t('Parler à un expert')}}
+            <svg class="ic"><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>

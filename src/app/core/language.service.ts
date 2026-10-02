@@ -171,6 +171,19 @@ const EN: Record<string,string> = {
   'Génie Logiciel': 'Software Engineering',
   'Concevez des solutions logicielles adaptées à votre métier': 'Design software solutions tailored to your business',
   'Nous développons des plateformes web, mobiles et métiers robustes, évolutives et sécurisées pour accompagner la croissance de votre organisation.': "We develop robust, scalable and secure web, mobile and business platforms to support your organization's growth.",
+  'Applications Web': 'Web Applications',
+  'Applications Mobiles': 'Mobile Applications',
+  'Core Banking': 'Core Banking',
+  'API & Intégrations': 'APIs & Integrations',
+  'Gestion Documentaire': 'Document Management',
+  'Solutions Sur Mesure': 'Custom Solutions',
+  'Pourquoi choisir I-TECH ?': 'Why choose I-TECH?',
+  'Expertise Métier': 'Business Expertise',
+  'Équipe Locale': 'Local Team',
+  'Évolutivité': 'Scalability',
+  'GÉNIE LOGICIEL': 'SOFTWARE ENGINEERING',
+  'Concevez une solution logicielle adaptée à votre métier.': 'Design a software solution tailored to your business.',
+  'Échangez avec nos experts pour concevoir une solution robuste, évolutive et parfaitement adaptée aux besoins de votre organisation.': "Talk with our experts to design a robust, scalable solution perfectly tailored to your organization's needs.",
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
