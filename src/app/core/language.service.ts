@@ -164,6 +164,9 @@ const EN: Record<string,string> = {
   'Déclarations': 'Declarations',
   'Validées': 'Validated',
   'À contrôler': 'To review',
+  'Simplifiez vos obligations réglementaires.': 'Simplify your regulatory obligations.',
+  'Échangez avec nos experts et découvrez comment Alpha Déclaration Bancaire peut automatiser vos reportings, renforcer vos contrôles et sécuriser votre conformité.': 'Talk with our experts and discover how Alpha Regulatory Reporting can automate your reporting, strengthen controls and secure compliance.',
+  'ALPHA DÉCLARATION BANCAIRE': 'ALPHA REGULATORY REPORTING',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
