@@ -5148,3 +5148,62 @@ app-footer .home-footer>.container{position:relative;z-index:2}
 .sx-page-angular .sx-card{display:block!important}
 .sx-page-angular .sx-pick{display:block!important;background:#fff!important}
 @media(max-width:900px){.sx-page-angular .sx-grid{grid-template-columns:1fr!important}}
+
+/* ===== SECTEURS — RADIUS + ICONES ===== */
+.sx-page-angular .sx-hero{border-radius:0 0 44px 44px!important}
+.sx-page-angular .sx-card{overflow:hidden!important;border-radius:24px!important}
+.sx-page-angular .sx-frames{border-radius:24px 24px 0 0!important}
+.sx-page-angular .sx-thumbs button{overflow:hidden!important;border-radius:12px!important}
+
+.sx-page-angular .sx-pick{
+  margin:38px 18px 0!important;
+  overflow:hidden!important;
+  border-radius:44px!important;
+}
+.sx-page-angular .sx-secteur-card{overflow:hidden!important;border-radius:22px!important}
+.sx-page-angular .sx-sc-photo{overflow:hidden!important;border-radius:22px 22px 0 0!important}
+
+/* Harmonisation stricte des pictogrammes des 3 cartes */
+.sx-page-angular .sx-sc-ico,
+.sx-page-angular .sx-sc-ico.green,
+.sx-page-angular .sx-sc-ico.blue,
+.sx-page-angular .sx-sc-ico.purple{
+  width:58px!important;height:58px!important;
+  min-width:58px!important;min-height:58px!important;
+  padding:0!important;border-radius:17px!important;
+  display:grid!important;place-items:center!important;
+  box-sizing:border-box!important;overflow:hidden!important;
+}
+.sx-page-angular .sx-sc-ico .ic{
+  display:block!important;width:27px!important;height:27px!important;
+  min-width:27px!important;margin:0!important;flex:none!important;
+}
+.sx-page-angular .sx-eyebrow .ic{display:block!important;width:16px!important;height:16px!important;min-width:16px!important}
+.sx-page-angular .hero-actions .ic,
+.sx-page-angular .sx-sc-body .link .ic{display:block!important;width:15px!important;height:15px!important;min-width:15px!important}
+
+@media(max-width:700px){
+ .sx-page-angular .sx-hero{border-radius:0 0 28px 28px!important}
+ .sx-page-angular .sx-pick{margin:30px 10px 0!important;border-radius:28px!important}
+ .sx-page-angular .sx-card{border-radius:20px!important}
+ .sx-page-angular .sx-secteur-card{border-radius:20px!important}
+ .sx-page-angular .sx-sc-photo{border-radius:20px 20px 0 0!important}
+}
+
+
+/* ===== SECTEURS — ESPACE ENTRE LES BLOCS ===== */
+/* Séparation visuelle nette entre Hero et bloc suivant, sans changer le contenu */
+.sx-page-angular .sx-pick{
+  margin:56px 18px 0!important;
+}
+
+/* Le fond général reste visible dans l'espace pour renforcer l'effet d'étage */
+.sx-page-angular{
+  background:#eef3f7;
+}
+
+@media(max-width:700px){
+  .sx-page-angular .sx-pick{
+    margin:38px 10px 0!important;
+  }
+}
