@@ -1,0 +1,461 @@
+/* =========================================================
+   V10 — OPTIMISATION MOBILE GLOBALE
+   Objectif : lisibilite, rythme, 2x2 pour la Gamme ALPHA,
+   cartes confortables et navigation fluide sur telephone.
+   ========================================================= */
+
+@media (max-width: 768px){
+  :root{--mobile-pad:16px;--mobile-gap:12px}
+  html,body,#root{max-width:100%;overflow-x:hidden}
+  body{font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
+  .container{width:100%;padding-left:var(--mobile-pad)!important;padding-right:var(--mobile-pad)!important}
+
+  /* Titres / textes : eviter les lignes trop serrees */
+  .sec-title,.pg-hero-copy h1,.sx-copy h1,.ent-detail-copy h1,.resources-copy h1,.genie-copy h1{letter-spacing:-.02em!important;line-height:1.16!important}
+  .sec-title{font-size:clamp(25px,7vw,32px)!important}
+  .sec-kicker{font-size:10px!important;letter-spacing:.15em!important}
+  p{overflow-wrap:anywhere}
+
+  /* Header */
+  .header .container,.head-wrap{min-height:70px!important}
+  .brand-logo img{max-height:52px!important;width:auto!important;object-fit:contain!important}
+  .burger{width:44px;height:44px;display:grid!important;place-items:center}
+  .mobile-menu{max-height:calc(100svh - 70px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+
+  /* Hero */
+  .hero{min-height:auto!important}
+  .hero .container{padding-top:calc(var(--header-h) + 34px)!important;padding-bottom:72px!important;gap:24px!important}
+  .hero h1{font-size:clamp(29px,8.2vw,38px)!important;line-height:1.12!important}
+  .hero .lead{font-size:14.5px!important;line-height:1.7!important;margin:16px 0 22px!important}
+  .hero-actions{display:grid!important;grid-template-columns:1fr;gap:10px!important;width:100%}
+  .hero-actions .btn{width:100%;justify-content:center;min-height:46px}
+  .hero-feats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;width:100%}
+  .hfeat{min-width:0!important;padding:10px 11px!important;font-size:11.5px!important}
+
+  /* Gamme ALPHA accueil : 2 cartes par ligne, toujours */
+  .solutions{padding-top:64px!important;padding-bottom:68px!important}
+  .sol-head{margin-bottom:24px!important}
+  .sol-intro{font-size:13.5px!important;line-height:1.65!important}
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;align-items:stretch!important}
+  .sol-card{padding:16px 11px 15px!important;border-radius:18px!important;min-width:0!important;min-height:100%!important}
+  .sol-card .sol-art{width:58px!important;height:58px!important;border-radius:16px!important;margin-bottom:2px!important}
+  .sol-card .sol-art svg{width:30px!important;height:30px!important}
+  .sol-card-top{margin-bottom:12px!important}
+  .sol-index{font-size:16px!important;top:10px!important;right:10px!important}
+  .st-tagline{font-size:7.5px!important;letter-spacing:.09em!important;line-height:1.25!important;text-align:center!important;min-height:19px}
+  .sol-card h4{font-size:13px!important;line-height:1.25!important;margin:5px 0 7px!important;min-height:33px;display:flex;align-items:center;justify-content:center}
+  .sol-card > p{display:block!important;font-size:10.8px!important;line-height:1.5!important;margin-bottom:10px!important;min-height:48px}
+  .sol-points{display:none!important}
+  .sol-more{font-size:10.5px!important;margin-top:auto!important;white-space:nowrap}
+
+  /* Impact : 2 par ligne, dernier centre si impair */
+  .stats{padding:64px 0!important}
+  .stats-head{margin-bottom:28px!important}
+  .stats-head p{font-size:13.5px!important}
+  .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .impact-card{min-width:0!important;padding:17px 10px!important}
+  .impact-card > .impact-ico{width:58px!important;height:58px!important;border-radius:16px!important;margin-bottom:12px!important}
+  .impact-card > .impact-ico .ic{width:28px!important;height:28px!important}
+  .impact-card b{font-size:25px!important}
+  .impact-card span:last-child{font-size:10.5px!important;line-height:1.35!important}
+
+  /* Secteurs */
+  .sec-head-row{align-items:flex-start!important;margin-bottom:20px!important}
+  .sec-tabs{display:flex!important;width:100%!important;overflow-x:auto!important;flex-wrap:nowrap!important;scroll-snap-type:x proximity;padding:5px!important;border-radius:14px!important;scrollbar-width:none}
+  .sec-tabs::-webkit-scrollbar{display:none}
+  .sec-tabs button{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start;padding:10px 13px!important}
+  .sec-stage{border-radius:20px!important;overflow:hidden}
+  .sec-visual{min-height:220px!important}
+
+  /* Nos partenaires */
+  .trust{padding:64px 0!important}
+  .trust-head{padding:20px!important;border-radius:18px!important}
+  .trust-categories{gap:7px!important}
+  .trust-stage{gap:14px!important;min-height:0!important}
+  .trust-spotlight{padding:20px!important;border-radius:18px!important}
+  .trust-rail{gap:10px!important}
+  .client-card{grid-template-columns:82px minmax(0,1fr)!important;gap:10px!important;padding:10px 11px!important;min-height:72px!important}
+  .client-logo{width:82px!important;height:50px!important}
+  .client-info h4{font-size:13px!important}
+  .client-info p{font-size:10.5px!important;line-height:1.4!important}
+  .trust-proof-strip{overflow-x:auto!important;flex-wrap:nowrap!important;padding-bottom:6px;scrollbar-width:none}
+  .trust-proof-strip::-webkit-scrollbar{display:none}
+  .trust-proof-strip span{flex:0 0 54px;width:54px!important;height:54px!important}
+
+  /* Nos Clients : grille lisible 2 par 2 */
+  .clients-showcase{padding:64px 0!important}
+  .clients-showcase-head{text-align:center!important;margin-bottom:22px!important}
+  .clients-showcase-head h2{font-size:30px!important;line-height:1.12!important}
+  .clients-showcase-head p{font-size:13.5px!important}
+  .clients-logo-panel{padding:14px!important;border-radius:20px!important}
+  .clients-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .clients-logo-cell{min-width:0!important;padding:7px!important}
+  .clients-logo-frame{height:82px!important;padding:8px!important;border-radius:14px!important}
+  .clients-logo-frame img{max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+
+  /* Pourquoi I-TECH */
+  .p-windows{grid-template-columns:1fr!important;gap:12px!important}
+  .p-window{min-height:0!important}
+
+  /* CTA */
+  .cta .container,.career-cta .container,.partner-join .container{flex-direction:column!important;align-items:stretch!important;gap:18px!important}
+  .cta .btn,.career-cta .btn,.partner-join .btn{width:100%;justify-content:center}
+
+  /* Footer */
+  .footer{padding-top:54px!important}
+  .f-grid{grid-template-columns:1fr 1fr!important;gap:28px 16px!important}
+  .f-brand{grid-column:1/-1!important;text-align:center!important;align-items:center!important}
+  .f-brand .logo{display:flex;justify-content:center}
+  .f-brand .brand-logo img{max-height:86px!important}
+  .socials{justify-content:center!important}
+  .f-col h5{font-size:12px!important;margin-bottom:12px!important}
+  .footer .f-link-icon{gap:7px!important;min-height:30px!important;font-size:11px!important;align-items:flex-start!important}
+  .footer .f-icon{width:25px!important;height:25px!important;flex-basis:25px!important;border-radius:7px!important}
+  .footer .f-icon .ic{width:14px!important;height:14px!important}
+  .f-contact{font-size:10.5px!important;line-height:1.45!important}
+  .f-bottom{margin-top:32px!important;padding:18px 0!important;display:block!important;text-align:center!important;line-height:1.8!important}
+  .f-bottom span:last-child{display:flex;flex-wrap:wrap;justify-content:center;gap:5px 12px;margin-top:8px}
+  .f-bottom a{margin-left:0!important}
+
+  /* Pages Solutions / details */
+  .pg-hero.on-photo{padding-top:92px!important}
+  .pg-hero-copy h1{font-size:clamp(28px,8vw,35px)!important}
+  .pg-hero-copy p{font-size:13.5px!important;line-height:1.65!important}
+  .pg-actions{display:grid!important;grid-template-columns:1fr;gap:10px!important}
+  .pg-actions .btn{width:100%;justify-content:center}
+  .ov-stats-row{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .ov-stat{min-width:0!important;padding:14px 10px!important}
+  .eco-grid{gap:20px!important}
+  .eco-col{gap:10px!important}
+  .eco-item{padding:12px!important}
+  .nossol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .nossol-card{padding:14px 10px!important;min-width:0!important}
+  .nossol-card h3{font-size:12px!important}
+  .nossol-card p{font-size:10.5px!important}
+  .band-cards{gap:10px!important}
+  .band-card{flex-basis:calc(50% - 5px)!important;min-width:0!important;padding:14px 10px!important}
+  .band-mini{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .featshots-grid{gap:26px!important}
+  .acc-item button{padding:14px 12px!important;font-size:12.5px!important}
+  .ben-grid{gap:10px!important}
+  .ben-item{flex-basis:calc(50% - 5px)!important;min-width:0!important;padding:14px 10px!important}
+  .ov-cta-copy{padding:28px 18px!important}
+  .ov-cta-copy h2{font-size:24px!important;line-height:1.18!important}
+  .ov-cta-copy p{font-size:13px!important;line-height:1.6!important}
+
+  /* Entreprise */
+  .ent-stat-row{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .ent-stat{border-right:0!important;border-bottom:1px solid var(--line);padding:18px 12px!important;grid-template-columns:42px 1fr!important}
+  .ent-stat span:first-child{width:40px!important;height:40px!important}
+  .ent-card-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .about-timeline{grid-template-columns:1fr!important;gap:16px!important;margin-top:28px!important}
+  .about-timeline::before{display:none!important}
+  .about-time{text-align:left!important;display:grid;grid-template-columns:34px 1fr;column-gap:12px;padding:0!important}
+  .about-dot{grid-row:1/4;margin:0!important}
+  .about-value-grid{grid-template-columns:1fr!important}
+  .about-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .ent-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .career-highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .career-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .partner-logo-grid,.partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  /* Secteurs / cibles */
+  .sx-issues-grid.n4,.sx-issues-grid.n5{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .sx-ben-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .sx-pillars{grid-template-columns:1fr!important}
+  .sx-proofs-grid{grid-template-columns:1fr!important}
+  .mf-issues-track{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  /* Ressources / Genie logiciel */
+  .genie-domain-grid{grid-template-columns:1fr!important}
+  .genie-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .genie-project-grid{grid-template-columns:1fr!important}
+  .genie-timeline{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  /* Contact */
+  .ct-cards,.ct-info-grid,.ct-cb-panel,.dm-grid,.dm-row,.dm-bottom-grid{grid-template-columns:1fr!important}
+  .cb-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dm-experts{grid-template-columns:1fr!important}
+
+  /* Le scroll mobile doit rester naturel */
+  .core-arch{height:auto!important;min-height:0!important}
+  .core-arch-sticky{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;overflow:visible!important}
+  .core-arch-bg{position:absolute!important}
+  .core-arch-progress,.core-arch-next{display:none!important}
+  .core-arch-scene{min-height:650px!important}
+}
+
+@media (max-width: 520px){
+  :root{--mobile-pad:14px}
+  .hero-feats{grid-template-columns:1fr!important}
+  .hero h1{font-size:28px!important}
+
+  /* On conserve 2 colonnes pour ALPHA, mais avec un gabarit plus compact */
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .sol-card{padding:14px 8px 13px!important}
+  .sol-card .sol-art{width:52px!important;height:52px!important}
+  .sol-card .sol-art svg{width:27px!important;height:27px!important}
+  .sol-card h4{font-size:11.8px!important;min-height:31px!important}
+  .sol-card > p{font-size:9.8px!important;line-height:1.45!important;min-height:43px!important}
+  .sol-more{font-size:9.8px!important}
+
+  .impact-grid,.clients-logo-grid,.nossol-grid,.band-mini,.ent-stat-row,.ent-reason-grid,.career-highlight-grid,.career-reason-grid,.partner-logo-grid,.partner-inst-grid,.sx-issues-grid.n4,.sx-issues-grid.n5,.mf-issues-track,.genie-reason-grid,.cb-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  .clients-logo-frame{height:72px!important;padding:7px!important}
+  .f-grid{grid-template-columns:1fr!important}
+  .f-brand{grid-column:auto!important}
+  .f-col{padding-bottom:6px}
+
+  .ov-stats-row{grid-template-columns:1fr 1fr!important}
+  .ben-item,.band-card{flex-basis:100%!important}
+  .about-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  .core-arch-scene{min-height:720px!important}
+}
+
+@media (max-width: 360px){
+  .sol-card > p{display:none!important}
+  .sol-card h4{font-size:11px!important}
+  .clients-logo-frame{height:64px!important}
+  .impact-card b{font-size:22px!important}
+}
+
+/* =========================================================
+   V11 — HERO MOBILE : CADRAGE DES PHOTOS
+   Sur telephone, les photos de hero sont recadrees dans une zone stable
+   et recentrees pour eviter les sujets coupes sur les bords.
+   ========================================================= */
+@media (max-width: 768px){
+  /* Accueil : centrage uniforme des slides image/video poster */
+  .hero-bg .slide,
+  .hero-bg .slide[data-type="video"]{
+    background-position:50% 50%!important;
+    background-size:cover!important;
+  }
+
+  /* Heros generiques (Solutions + details + Ressources + Genie) */
+  .pg-hero-slide{
+    background-position:50% 50%!important;
+    background-size:cover!important;
+  }
+
+  /* Cibles / secteurs */
+  .sx-slide,
+  .sx-frame{
+    background-position:50% 50%!important;
+    background-size:cover!important;
+  }
+
+  /* Entreprise + sous-pages */
+  .ent-hero-photo,
+  .ent-detail-photo{
+    background-position:50% 50%!important;
+    background-size:cover!important;
+  }
+
+  /* Laisser plus de hauteur visible aux images des heros internes */
+  .pg-hero.on-photo,
+  .sx-hero,
+  .ent-hero,
+  .ent-detail-hero,
+  .resources-hero,
+  .genie-hero,
+  .ct-hero{
+    min-height:72svh!important;
+  }
+}
+
+/* Petits telephones : le point focal reste au centre, avec une hauteur
+   suffisante pour que le fond ne ressemble pas a une bande recadree. */
+@media (max-width: 480px){
+  .hero-bg .slide,
+  .hero-bg .slide[data-type="video"],
+  .pg-hero-slide,
+  .sx-slide,
+  .sx-frame,
+  .ent-hero-photo,
+  .ent-detail-photo{
+    background-position:center center!important;
+  }
+}
+
+/* =========================================================
+   V12 — MOBILE : GAMME ALPHA 2x2 PLUS GRANDE + LISIBILITE
+   ========================================================= */
+@media (max-width: 600px){
+  .solutions{padding:62px 0!important}
+  .solutions .container{padding-left:12px!important;padding-right:12px!important}
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .sol-card{padding:18px 12px 16px!important;min-height:270px!important;border-radius:18px!important}
+  .sol-card-top{min-height:64px!important;margin-bottom:12px!important}
+  .sol-art{width:58px!important;height:58px!important;border-radius:16px!important}
+  .sol-art svg{width:34px!important;height:34px!important}
+  .sol-card h4{font-size:14px!important;line-height:1.3!important;min-height:38px!important;margin:7px 0 8px!important}
+  .sol-card>p{font-size:11.5px!important;line-height:1.55!important;min-height:72px!important;margin-bottom:12px!important}
+  .st-tagline{font-size:8px!important;min-height:21px!important}
+  .sol-more{font-size:11px!important;white-space:normal!important}
+
+  .trust-head{grid-template-columns:1fr!important;padding:18px!important}
+  .trust-spotlight{grid-template-columns:1fr!important;text-align:center!important}
+  .ts-logo{margin-left:auto!important;margin-right:auto!important;width:min(240px,100%)!important;height:112px!important}
+  .ts-meta{text-align:center!important}
+  .ts-cta{margin-inline:auto!important}
+
+  .stats,.clients-showcase,.cta{background-attachment:scroll!important;background-position:center!important}
+  .cta-left{align-items:flex-start!important}.cta-ico{flex:0 0 48px!important;width:48px!important;height:48px!important}
+}
+
+@media (max-width: 380px){
+  .sol-grid{gap:8px!important}
+  .sol-card{padding:16px 9px 14px!important;min-height:262px!important}
+  .sol-card h4{font-size:13px!important}
+  .sol-card>p{font-size:10.7px!important}
+}
+
+/* =========================================================
+   V17 — RESPONSIVE ACCUEIL VALIDÉ
+   Mobile/tablette : cadrage hero, ALPHA 2x2 confortable,
+   interactions tactiles, partenaires/clients, CTA et footer.
+   Desktop > 1024px reste inchangé.
+   ========================================================= */
+@media (max-width:1024px){
+  /* HERO ACCUEIL : le média reste réellement centré */
+  .hero-bg .slide{background-position:center center!important}
+  .hero-bg .slide video{object-fit:cover!important;object-position:50% 50%!important}
+  .hero .container{width:100%!important;grid-template-columns:minmax(0,1fr)!important}
+  .hero-copy{max-width:720px!important}
+  .hero-feats{width:100%!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .hfeat{min-width:0!important}
+
+  /* Les blocs de l'accueil ne débordent jamais horizontalement */
+  .solutions,.sectors,.stats,.trust,.clients-showcase,.partner,.cta,.footer{max-width:100%;overflow-x:clip}
+}
+
+@media (max-width:768px){
+  /* Header mobile : zone tactile plus nette */
+  .header{max-width:100vw}
+  .header .container,.head-wrap{padding-left:16px!important;padding-right:16px!important}
+  .burger{min-width:44px!important;min-height:44px!important;border-radius:12px!important}
+  .mobile-menu{width:100%!important;overscroll-behavior:contain}
+
+  /* HERO : composition mobile dédiée et non simple réduction desktop */
+  .hero{min-height:100svh!important;align-items:stretch!important}
+  .hero-bg .slide,.hero-bg .slide[data-type="video"]{background-position:center center!important;transform:none!important}
+  .hero-bg .slide video{object-position:center center!important;transform:none!important}
+  .hero-ov{background:linear-gradient(180deg,rgba(5,18,35,.82) 0%,rgba(5,18,35,.58) 35%,rgba(5,18,35,.72) 68%,rgba(5,18,35,.96) 100%)!important}
+  .hero-ov::after{background:radial-gradient(ellipse 90% 55% at 50% 45%,rgba(242,106,33,.12),transparent 68%)!important}
+  .hero .container{display:flex!important;flex-direction:column!important;justify-content:center!important;gap:24px!important;padding-top:calc(var(--header-h) + 42px)!important;padding-bottom:48px!important}
+  .hero-copy{width:100%!important;max-width:640px!important;margin-inline:auto!important;text-align:center!important}
+  .hero-rule{margin-left:auto!important;margin-right:auto!important}
+  .hero h1,.hero .lead{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+  .hero .lead{max-width:560px!important}
+  .hero-actions{grid-template-columns:1fr 1fr!important;max-width:560px!important;margin-inline:auto!important}
+  .hero-actions .btn{min-width:0!important;padding-left:12px!important;padding-right:12px!important}
+  .hero-feats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;max-width:600px!important;margin-inline:auto!important}
+  .hfeat{min-height:68px!important;padding:11px 12px!important;transform:none!important}
+  .hfeat.active{transform:none!important;background:rgba(242,106,33,.18)!important}
+
+  /* GAMME ALPHA : 2 x 2/3, cartes réellement plus grandes */
+  .solutions{padding:68px 0!important}
+  .sol-head{max-width:100%!important;text-align:center!important;margin-bottom:28px!important}
+  .sol-head .sec-kicker{justify-content:center!important}
+  .sol-head .sec-title{text-align:center!important;font-size:clamp(27px,7vw,34px)!important}
+  .sol-intro{margin-left:auto!important;margin-right:auto!important;font-size:14px!important}
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+  .sol-card{min-height:310px!important;padding:22px 14px 18px!important;border-radius:20px!important;justify-content:flex-start!important}
+  .sol-card .sol-art{width:68px!important;height:68px!important;border-radius:18px!important}
+  .sol-card .sol-art svg{width:38px!important;height:38px!important}
+  .sol-card-top{min-height:72px!important;margin-bottom:10px!important}
+  .sol-card h4{font-size:15px!important;line-height:1.3!important;min-height:40px!important}
+  .sol-card>p{display:block!important;font-size:12px!important;line-height:1.55!important;min-height:76px!important;margin-bottom:12px!important}
+  .sol-points{display:none!important}
+  .sol-more{font-size:11.5px!important;margin-top:auto!important}
+  .st-tagline{font-size:8.5px!important;line-height:1.3!important;min-height:22px!important}
+  /* Pas de faux hover persistant sur écran tactile */
+  .sol-card:hover{transform:none!important}
+  .sol-card:hover .sol-media{opacity:0!important;transform:scale(1.22)!important;filter:blur(16px) saturate(.75) brightness(1.06)!important}
+  .sol-card:hover .sol-veil{opacity:0!important}
+
+  /* Secteurs : tabs glissables, panneau sans hauteur desktop forcée */
+  .sectors{padding-left:0!important;padding-right:0!important}
+  .sec-head-row{gap:16px!important}
+  .sec-stage{min-height:0!important}
+  .sec-visual{min-height:240px!important;background-position:center!important}
+
+  /* Impact */
+  .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .impact-card{min-height:178px!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+
+  /* Partenaires : une seule colonne, logos plus visibles */
+  .trust-head{grid-template-columns:1fr!important;text-align:center!important}
+  .trust-head .sec-kicker{justify-content:center!important}
+  .trust-categories{justify-content:center!important;overflow-x:auto!important;flex-wrap:nowrap!important;padding-bottom:4px!important;scrollbar-width:none}
+  .trust-categories::-webkit-scrollbar{display:none}
+  .trust-categories>*{flex:0 0 auto}
+  .trust-stage{grid-template-columns:1fr!important}
+  .trust-spotlight{min-height:0!important}
+  .trust-rail{width:100%!important}
+  .client-card{width:100%!important}
+  .trust-proof-strip{justify-content:flex-start!important}
+
+  /* Clients : logos lisibles et surfaces tactiles */
+  .clients-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .clients-logo-cell{min-height:100px!important}
+  .clients-logo-frame{height:88px!important}
+
+  /* Pourquoi I-TECH et CTA */
+  .p-windows{grid-template-columns:1fr!important}
+  .p-window{min-height:0!important}
+  .cta .container{align-items:stretch!important;text-align:left!important}
+  .cta-left{width:100%!important}
+  .cta-actions{width:100%!important;display:grid!important;grid-template-columns:1fr!important}
+  .cta-actions .btn{width:100%!important;justify-content:center!important}
+
+  /* Footer accueil : lisible sans colonnes trop étroites */
+  .f-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .f-brand{grid-column:1/-1!important}
+  .f-bottom{gap:8px!important}
+
+  /* Les effets desktop de perspective ne doivent pas gêner le tactile */
+  :is(.sol-card,.impact-card,.client-card,.benefit-card,.p-window):hover{transform:none!important}
+}
+
+@media (max-width:520px){
+  .hero .container{padding-left:16px!important;padding-right:16px!important;padding-bottom:38px!important}
+  .hero h1{font-size:clamp(28px,8.4vw,36px)!important}
+  .hero .lead{font-size:14px!important;line-height:1.62!important}
+  .hero-actions{grid-template-columns:1fr!important;width:100%!important}
+  .hero-feats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  .hfeat{padding:10px!important;gap:8px!important;min-height:64px!important}
+  .hfeat .ic{width:19px!important;height:19px!important}
+  .hfeat b{font-size:11.5px!important}.hfeat span{font-size:10px!important}
+
+  /* ALPHA reste volontairement en 2 colonnes */
+  .solutions .container{padding-left:12px!important;padding-right:12px!important}
+  .sol-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .sol-card{min-height:292px!important;padding:18px 10px 16px!important}
+  .sol-card .sol-art{width:62px!important;height:62px!important}
+  .sol-card .sol-art svg{width:35px!important;height:35px!important}
+  .sol-card h4{font-size:13.5px!important;min-height:36px!important}
+  .sol-card>p{display:block!important;font-size:10.8px!important;line-height:1.5!important;min-height:70px!important}
+  .sol-more{font-size:10.5px!important}
+
+  .impact-card{min-height:164px!important}
+  .clients-logo-frame{height:82px!important}
+  .f-grid{grid-template-columns:1fr!important}
+  .f-brand{grid-column:auto!important}
+}
+
+@media (max-width:360px){
+  /* 320–360px : garder 2 cartes ALPHA sans supprimer leur présentation */
+  .sol-grid{gap:8px!important}
+  .sol-card{min-height:280px!important;padding:16px 8px 14px!important}
+  .sol-card>p{display:block!important;font-size:10px!important;min-height:68px!important}
+  .sol-card h4{font-size:12.5px!important}
+  .sol-card .sol-art{width:56px!important;height:56px!important}
+  .hero-feats{grid-template-columns:1fr 1fr!important}
+}
+
+@media (hover:none) and (pointer:coarse){
+  .sol-card:hover .sol-media,.client-card:hover::after,.impact-card:hover::after{opacity:0!important}
+}

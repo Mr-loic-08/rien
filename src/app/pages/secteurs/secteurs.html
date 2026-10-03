@@ -1,0 +1,97 @@
+<main class="pg sx sx-page-angular">
+
+  <!-- BLOC 1 — reproduction Angular fidèle du SecteurHero React V17.20.4 -->
+  <section class="sx-hero">
+    <div class="sx-bg" aria-hidden="true">
+      @if(videoOk){
+        <video class="sx-video" autoplay muted loop playsinline preload="auto"
+               [poster]="media.video.poster" (error)="videoError()">
+          <source [src]="media.video.hd" type="video/mp4">
+        </video>
+      } @else {
+        @for(src of media.heroBg; track src; let i=$index){
+          <div class="sx-slide" [class.on]="i===img"
+               [style.background-image]="'url('+src+'), url(images/about.jpg)'"></div>
+        }
+      }
+      <div class="sx-veil"></div>
+      <div class="sx-grain"></div>
+    </div>
+
+    <div class="container">
+      <nav class="crumb" aria-label="Fil d’Ariane">
+        <a href="#accueil">{{l.t('Accueil')}}</a>
+        <svg class="ic"><use href="#i-arrow"></use></svg>
+        <em>{{l.t('Secteurs / Cibles')}}</em>
+      </nav>
+
+      <div class="sx-grid">
+        <div class="sx-copy">
+          <span class="sx-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Secteurs · Cibles')}}</span>
+          <h1>{{l.t("Des solutions adaptées à votre secteur d'activité")}}</h1>
+          <p>{{l.t("Découvrez comment I-TECH accompagne les institutions financières et les entreprises grâce à des solutions spécialisées.")}}</p>
+          <div class="hero-actions">
+            <a href="#sx-pick" class="btn btn-primary">{{l.t('Trouver ma solution')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+            <a href="#sx-approche" class="btn btn-glass">{{l.t('Notre approche')}}</a>
+          </div>
+        </div>
+
+        <div class="sx-card">
+          <div class="sx-frames">
+            @for(src of media.heroBg; track src; let i=$index){
+              <div class="sx-frame" [class.on]="i===img"
+                   [style.background-image]="'url('+src+'), url(images/about.jpg)'"></div>
+            }
+            <span class="sx-live"><i></i>{{l.t('En direct du terrain')}}</span>
+          </div>
+          <div class="sx-cardbar">
+            <div class="sx-thumbs">
+              @for(src of media.heroBg; track src; let i=$index){
+                <button type="button" [class.on]="i===img" (click)="go(i)" [attr.aria-label]="'Photo '+(i+1)">
+                  <img [src]="src" alt="" loading="lazy" (error)="imageError($event,'images/about.jpg')">
+                </button>
+              }
+            </div>
+            <div class="sx-prog"><i [style.width.%]="progress*100"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sx-cut" aria-hidden="true"></div>
+  </section>
+
+  <!-- BLOC 2 — Choisissez votre secteur : reproduction React -->
+  <section class="sx-pick reveal visible" id="sx-pick">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t('Choisissez votre secteur')}}</h2>
+      <p class="sec-sub center">{{l.t('Nous comprenons vos enjeux métier et proposons des solutions adaptées à vos défis quotidiens.')}}</p>
+
+      <div class="sx-cards">
+        @for(s of sectors; track s.key){
+          <a [href]="'#/secteurs/'+s.key" class="sx-secteur-card"
+             [class.sx-tone-green]="s.tone==='green'"
+             [class.sx-tone-blue]="s.tone==='blue'"
+             [class.sx-tone-purple]="s.tone==='purple'">
+            <span class="sx-sc-photo">
+              <img [src]="s.cardImg" [alt]="l.t(s.label)" loading="lazy"
+                   (error)="imageError($event,s.photoFallback)">
+              <span class="ico sx-sc-ico"
+                    [class.green]="s.tone==='green'"
+                    [class.blue]="s.tone==='blue'"
+                    [class.purple]="s.tone==='purple'">
+                <svg class="ic"><use [attr.href]="'#'+s.icon"></use></svg>
+              </span>
+            </span>
+            <span class="sx-sc-body">
+              <b>{{l.t(s.label)}}</b>
+              <span>{{l.t(s.cardDesc)}}</span>
+              <em class="link">{{l.t('Découvrir')}} <svg class="ic"><use href="#i-arrow"></use></svg></em>
+            </span>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+
+</main>

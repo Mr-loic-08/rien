@@ -184,6 +184,22 @@ const EN: Record<string,string> = {
   'GÉNIE LOGICIEL': 'SOFTWARE ENGINEERING',
   'Concevez une solution logicielle adaptée à votre métier.': 'Design a software solution tailored to your business.',
   'Échangez avec nos experts pour concevoir une solution robuste, évolutive et parfaitement adaptée aux besoins de votre organisation.': "Talk with our experts to design a robust, scalable solution perfectly tailored to your organization's needs.",
+  'Secteurs / Cibles': 'Sectors / Targets',
+  'Secteurs · Cibles': 'Sectors · Targets',
+  "Des solutions adaptées à votre secteur d'activité": 'Solutions tailored to your industry',
+  'Découvrez comment I-TECH accompagne les institutions financières et les entreprises grâce à des solutions spécialisées.': 'Discover how I-TECH supports financial institutions and companies with specialized solutions.',
+  'Trouver ma solution': 'Find my solution',
+  'Notre approche': 'Our approach',
+  'En direct du terrain': 'Live from the field',
+  'Choisissez votre secteur': 'Choose your sector',
+  'Nous comprenons vos enjeux métier et proposons des solutions adaptées à vos défis quotidiens.': 'We understand your business challenges and offer solutions tailored to your daily needs.',
+  'Microfinances': 'Microfinance',
+  'Banques Commerciales': 'Commercial Banks',
+  'Grandes Entreprises': 'Large Enterprises',
+  'Gestion des opérations, conformité COBAC, collecte terrain et digitalisation.': 'Operations management, COBAC compliance, field collection and digitalization.',
+  'Core Banking, monétique, digital banking et intégration.': 'Core Banking, card systems, digital banking and integration.',
+  'RH, comptabilité, GED et développement spécifique.': 'HR, accounting, document management and custom development.',
+  'Découvrir': 'Discover',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

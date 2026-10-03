@@ -110,7 +110,7 @@
             @if(c.tagline){<span class="st-tagline">{{l.t(c.tagline)}}</span>}
             <h4>{{l.t(c.name)}}</h4>
             <p>{{l.t(c.description)}}</p>
-            @if(c.points?.length){
+            @if(c.points.length){
               <ul class="sol-points">
                 @for(point of c.points.slice(0,3); track point){
                   <li><svg class="ic"><use href="#i-check"></use></svg>{{l.t(point)}}</li>

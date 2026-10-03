@@ -16,10 +16,11 @@ import { DigitalMobilePageComponent } from './pages/solutions/digital-mobile/dig
 import { GestionRhPageComponent } from './pages/solutions/gestion-rh/gestion-rh';
 import { DeclarationBancairePageComponent } from './pages/solutions/declaration-bancaire/declaration-bancaire';
 import { GenieLogicielPageComponent } from './pages/solutions/genie-logiciel/genie-logiciel';
+import { SecteursPageComponent } from './pages/secteurs/secteurs';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -30,6 +31,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isGestionRh=false;
   isDeclarationBancaire=false;
   isGenieLogiciel=false;
+  isSecteurs=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
@@ -39,6 +41,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
     this.isGestionRh=h==='#/solutions/gestion-rh';
     this.isDeclarationBancaire=h==='#/solutions/declaration-bancaire';
     this.isGenieLogiciel=h==='#/solutions/genie-logiciel';
+    this.isSecteurs=h==='#/secteurs';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;

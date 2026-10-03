@@ -1,4 +1,16 @@
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+/* Définition des icônes SVG intégrées (identiques à l'original) */
+export function Ic({ id, className = "ic" }: { id: string; className?: string }) {
+  return (
+    <svg className={className} aria-hidden="true">
+      <use href={`#${id}`} />
+    </svg>
+  );
+}
+
+export default function Sprite() {
+  return (
+    <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
+      <defs>
         <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></symbol>
         <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M4 10v10M20 10v10M9 10v10M15 10v10M2 21h20" /></symbol>
         <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18" /></symbol>
@@ -25,7 +37,7 @@
         <symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z" /></symbol>
         <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 10h18M7 15h4" /></symbol>
         <symbol id="i-conf" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-3 7.4-7 9-4-1.6-7-4.8-7-9V6z" /></symbol>
-        
+        {/* icônes dédiées Solutions (menu + footer) */}
         <symbol id="s-core" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5" /><rect x="3" y="10.5" width="18" height="5" rx="1.5" /><path d="M6.5 6.5h.01M6.5 13h.01M17.5 20.5v-3M13.5 20.5v-3M10 20.5c4-1 4-2 4-5" /></symbol>
         <symbol id="s-collecte" viewBox="0 0 24 24"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6H18a2 2 0 0 1 2 2v1" /><rect x="3" y="8.5" width="18" height="11" rx="2.5" /><circle cx="16.5" cy="14" r="1.6" /></symbol>
         <symbol id="s-mobile" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" /><path d="M11 18.5h2" /><path d="M9.5 9a3.5 3.5 0 0 1 5 0M8 6.8a6.5 6.5 0 0 1 8 0" /></symbol>
@@ -51,50 +63,12 @@
         <symbol id="i-corporate" viewBox="0 0 24 24"><path d="M3 21V8h7v13M10 4h11v17M6 12h1M6 16h1M14 8h1M18 8h1M14 12h1M18 12h1M14 16h1M18 16h1M2 21h20"/></symbol>
         <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 7h.01"/></symbol>
         <symbol id="i-office" viewBox="0 0 24 24"><path d="M4 21V5h12v16M16 10h4v11M8 9h4M8 13h4M8 17h4M2 21h20"/></symbol>
-      </defs></svg>
-@if(isSecteurs){
-<app-header></app-header>
-<app-secteurs-page></app-secteurs-page>
-<app-footer></app-footer>
-}@else if(isGenieLogiciel){
-<app-header></app-header>
-<app-genie-logiciel-page></app-genie-logiciel-page>
-<app-footer></app-footer>
-}@else if(isDeclarationBancaire){
-<app-header></app-header>
-<app-declaration-bancaire-page></app-declaration-bancaire-page>
-<app-footer></app-footer>
-}@else if(isGestionRh){
-<app-header></app-header>
-<app-gestion-rh-page></app-gestion-rh-page>
-<app-footer></app-footer>
-}@else if(isDigitalMobile){
-<app-header></app-header>
-<app-digital-mobile-page></app-digital-mobile-page>
-<app-footer></app-footer>
-}@else if(isCollecteJournaliere){
-<app-header></app-header>
-<app-collecte-journaliere-page></app-collecte-journaliere-page>
-<app-footer></app-footer>
-}@else if(isCoreBanking){
-<app-header></app-header>
-<app-core-banking-page></app-core-banking-page>
-<app-footer></app-footer>
-}@else if(isSolutions){
-<app-header></app-header>
-<app-solutions-page></app-solutions-page>
-<app-footer></app-footer>
-}@else{
-<app-header></app-header>
-<app-hero></app-hero>
-
-<app-home-solutions></app-home-solutions>
-<app-home-sectors></app-home-sectors>
-<app-home-impact></app-home-impact>
-<app-home-trust></app-home-trust>
-<app-home-clients></app-home-clients>
-<app-home-why></app-home-why>
-<app-home-cta></app-home-cta>
-<app-footer></app-footer>
-
+      </defs>
+    </svg>
+  );
 }
+
+export const SOCIALS = [
+  { id: "s-li", label: "LinkedIn", href: "https://www.linkedin.com/company/i-techsarl/home/" },
+  { id: "s-fb", label: "Facebook", href: "#" },
+];
