@@ -214,6 +214,20 @@ const EN: Record<string,string> = {
   'Nos experts vous aident à identifier les solutions les plus adaptées à votre secteur et à vos priorités.': 'Our experts help you identify the solutions best suited to your sector and priorities.',
   'Échanger avec un expert': 'Talk to an expert',
   'Décrivez-nous votre activité, nous vous orientons vers le secteur et les solutions adaptés.': 'Tell us about your activity and we will guide you toward the right sector and solutions.',
+  'Secteur · Microfinances': 'Sector · Microfinance',
+  'Les solutions conçues pour les établissements de microfinance': 'Solutions designed for microfinance institutions',
+  'Optimisez la gestion de votre institution grâce à des outils conformes aux exigences réglementaires et adaptés aux réalités du terrain.': "Optimize your institution's management with tools compliant with regulatory requirements and adapted to field realities.",
+  'NOS SOLUTIONS': 'OUR SOLUTIONS',
+  'Vos problématiques au quotidien': 'Your daily challenges',
+  'Des solutions adaptées pour simplifier la gestion de vos activités financières.': 'Tailored solutions to simplify the management of your financial activities.',
+  'Solutions aux problématiques de microfinance': 'Solutions to microfinance challenges',
+  'Gestion des crédits': 'Credit management',
+  'Gérez vos crédits, échéances et suivis en toute simplicité.': 'Manage your loans, schedules and monitoring with ease.',
+  "Optimisez la collecte et la gestion de l'épargne de vos clients.": "Optimize the collection and management of your clients' savings.",
+  'Collecte journalière': 'Daily collection',
+  'Simplifiez la collecte et le suivi des opérations quotidiennes.': 'Simplify collection and monitoring of daily operations.',
+  'Conformité COBAC': 'COBAC compliance',
+  'Assurez la conformité de vos opérations avec les normes COBAC.': 'Ensure your operations comply with COBAC standards.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

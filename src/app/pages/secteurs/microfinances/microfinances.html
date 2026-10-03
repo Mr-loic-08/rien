@@ -1,0 +1,44 @@
+<main class="pg sx pg-secteur secteur-microfinances mf-page-angular" style="--tone:#16a34a">
+ <!-- BLOC 1 — Hero exact de la référence React -->
+ <section class="sx-hero">
+  <div class="sx-bg" aria-hidden="true">
+   @if(videoOk){<video class="sx-video" autoplay muted loop playsinline preload="auto" [poster]="media.video.poster" (error)="videoError()"><source [src]="media.video.hd" type="video/mp4"></video>}
+   @else {@for(src of media.heroBg;track src;let i=$index){<div class="sx-slide" [class.on]="i===img" [style.background-image]="'url('+src+')'"></div>}}
+   <div class="sx-veil"></div><div class="sx-grain"></div>
+  </div>
+  <div class="container">
+   <nav class="crumb" aria-label="Fil d’Ariane"><a href="#accueil">{{l.t('Accueil')}}</a><svg class="ic"><use href="#i-arrow"></use></svg><a href="#/secteurs">{{l.t('Secteurs / Cibles')}}</a><svg class="ic"><use href="#i-arrow"></use></svg><em>{{l.t('Microfinances')}}</em></nav>
+   <div class="sx-grid">
+    <div class="sx-copy">
+     <span class="sx-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Secteur · Microfinances')}}</span>
+     <h1>{{l.t('Les solutions conçues pour les établissements de microfinance')}}</h1>
+     <p>{{l.t('Optimisez la gestion de votre institution grâce à des outils conformes aux exigences réglementaires et adaptés aux réalités du terrain.')}}</p>
+     <div class="hero-actions"><a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démonstration')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a href="#sx-approche" class="btn btn-glass">{{l.t('Notre approche')}}</a></div>
+    </div>
+    <div class="sx-card">
+     <div class="sx-frames">@for(src of media.heroBg;track src;let i=$index){<div class="sx-frame" [class.on]="i===img" [style.background-image]="'url('+src+')'"></div>}<span class="sx-live"><i></i>{{l.t('En direct du terrain')}}</span></div>
+     <div class="sx-cardbar"><div class="sx-thumbs">@for(src of media.heroBg;track src;let i=$index){<button type="button" [class.on]="i===img" (click)="go(i)"><img [src]="src" alt=""></button>}</div><div class="sx-prog"><i [style.width.%]="progress*100"></i></div></div>
+    </div>
+   </div>
+  </div><div class="sx-cut" aria-hidden="true"></div>
+ </section>
+
+ <!-- BLOC 2 — MicrofinanceIssues exact de la référence React -->
+ <div class="sx-body">
+  <div class="sx-bodyfx" aria-hidden="true"><img class="sx-bodyfx-img" src="images/secteurs/microfinances.jpg" alt=""><div class="sx-bodyfx-veil"></div></div>
+  <section class="sx-issues mf-issues reveal visible" aria-labelledby="mf-issues-title">
+   <div class="container">
+    <header class="mf-issues-head"><span class="mf-issues-label"><i></i>{{l.t('NOS SOLUTIONS')}}<i></i></span><h2 id="mf-issues-title">{{l.t('Vos problématiques au quotidien')}}</h2><p>{{l.t('Des solutions adaptées pour simplifier la gestion de vos activités financières.')}}</p></header>
+    <div class="mf-issues-track" #track (scroll)="onTrackScroll(track)" [attr.aria-label]="l.t('Solutions aux problématiques de microfinance')">
+     @for(item of issues;track item.title;let i=$index){
+      <div class="mf-issue-card" style="--mouse-x:50%;--mouse-y:50%" (pointermove)="moveGlow($event)" (pointerleave)="resetGlow($event)">
+       <span class="mf-issue-number">0{{i+1}}</span><span class="mf-issue-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+       <h3>{{l.t(item.title)}}</h3><p>{{l.t(item.description)}}</p><a [href]="item.href" class="mf-issue-link">{{l.t('Découvrir')}} <span>→</span></a>
+      </div>
+     }
+    </div>
+    <div class="mf-issues-dots">@for(item of issues;track item.title;let i=$index){<button type="button" [class.active]="active===i" (click)="scrollToCard(i,track)"></button>}</div>
+   </div>
+  </section>
+ </div>
+</main>
