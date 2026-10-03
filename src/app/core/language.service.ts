@@ -209,6 +209,11 @@ const EN: Record<string,string> = {
   'Résultats concrets': 'Concrete results',
   'Des bénéfices mesurables pour votre organisation.': 'Measurable benefits for your organization.',
   'Un support expert à chaque étape de votre projet.': 'Expert support at every stage of your project.',
+  'Conseil': 'Advice',
+  'Vous ne savez pas par où commencer ?': 'Not sure where to start?',
+  'Nos experts vous aident à identifier les solutions les plus adaptées à votre secteur et à vos priorités.': 'Our experts help you identify the solutions best suited to your sector and priorities.',
+  'Échanger avec un expert': 'Talk to an expert',
+  'Décrivez-nous votre activité, nous vous orientons vers le secteur et les solutions adaptés.': 'Tell us about your activity and we will guide you toward the right sector and solutions.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {
