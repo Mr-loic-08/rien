@@ -6045,3 +6045,131 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
     border-radius:28px;
   }
 }
+
+
+/* =========================================================
+   SECTEURS — CORRECTION CIBLÉE DES ICÔNES
+   Référence : capture utilisateur.
+   Aucun changement de texte, structure, image ou animation.
+   ========================================================= */
+
+.sx-page-angular{
+  --sx-icon-orange:#ff7a33;
+  --sx-icon-orange-border:rgba(255,122,51,.62);
+  --sx-icon-orange-bg:rgba(255,122,51,.075);
+}
+
+/* ---------- STATISTIQUES ---------- */
+.sx-page-angular .sx-stat-ic{
+  width:66px !important;
+  height:66px !important;
+  min-width:66px !important;
+  min-height:66px !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  place-items:center !important;
+  overflow:visible !important;
+  border:1px solid var(--sx-icon-orange-border) !important;
+  border-radius:18px !important;
+  background:var(--sx-icon-orange-bg) !important;
+  color:var(--sx-icon-orange) !important;
+}
+
+.sx-page-angular .sx-stat-ic .ic{
+  display:block !important;
+  width:27px !important;
+  height:27px !important;
+  min-width:27px !important;
+  min-height:27px !important;
+  max-width:27px !important;
+  max-height:27px !important;
+  margin:0 !important;
+  overflow:visible !important;
+  color:var(--sx-icon-orange) !important;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+/* Certains symboles du sprite utilisent fill au lieu de stroke :
+   ils gardent le même orange sans être rognés. */
+.sx-page-angular .sx-stat-ic .ic use{
+  color:var(--sx-icon-orange) !important;
+}
+
+/* ---------- NOTRE APPROCHE ---------- */
+.sx-page-angular .sx-pillar-ic{
+  width:62px !important;
+  height:62px !important;
+  min-width:62px !important;
+  min-height:62px !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  place-items:center !important;
+  overflow:visible !important;
+  border:1px solid rgba(255,122,51,.42) !important;
+  border-radius:17px !important;
+  background:rgba(255,122,51,.045) !important;
+  color:var(--sx-icon-orange) !important;
+}
+
+.sx-page-angular .sx-pillar-ic .ic{
+  display:block !important;
+  width:25px !important;
+  height:25px !important;
+  min-width:25px !important;
+  min-height:25px !important;
+  max-width:25px !important;
+  max-height:25px !important;
+  margin:0 !important;
+  overflow:visible !important;
+  color:var(--sx-icon-orange) !important;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.sx-page-angular .sx-pillar-ic .ic use{
+  color:var(--sx-icon-orange) !important;
+}
+
+/* Le parent ne doit jamais couper les pictogrammes. */
+.sx-page-angular .sx-stat,
+.sx-page-angular .sx-pillar{
+  overflow:visible !important;
+}
+
+@media(max-width:700px){
+  .sx-page-angular .sx-stat-ic{
+    width:58px !important;
+    height:58px !important;
+    min-width:58px !important;
+    min-height:58px !important;
+    border-radius:16px !important;
+  }
+  .sx-page-angular .sx-stat-ic .ic{
+    width:24px !important;
+    height:24px !important;
+    min-width:24px !important;
+    min-height:24px !important;
+  }
+  .sx-page-angular .sx-pillar-ic{
+    width:56px !important;
+    height:56px !important;
+    min-width:56px !important;
+    min-height:56px !important;
+    border-radius:15px !important;
+  }
+  .sx-page-angular .sx-pillar-ic .ic{
+    width:23px !important;
+    height:23px !important;
+    min-width:23px !important;
+    min-height:23px !important;
+  }
+}
