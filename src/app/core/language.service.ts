@@ -200,6 +200,15 @@ const EN: Record<string,string> = {
   'Core Banking, monétique, digital banking et intégration.': 'Core Banking, card systems, digital banking and integration.',
   'RH, comptabilité, GED et développement spécifique.': 'HR, accounting, document management and custom development.',
   'Découvrir': 'Discover',
+  'Méthode': 'Method',
+  "La section « Cibles » permet de parler directement aux besoins des différents types de clients. Contrairement à la section « Solutions » qui présente les produits, cette section présente les problématiques métiers de chaque secteur et les solutions adaptées. Cette approche permet aux visiteurs de s'identifier rapidement et améliore fortement la conversion.": "The “Targets” section speaks directly to the needs of different client types. Unlike the “Solutions” section, which presents products, this section presents each sector's business challenges and the appropriate solutions. This approach helps visitors identify themselves quickly and greatly improves conversion.",
+  'Centré sur vos métiers': 'Focused on your business',
+  'Nous comprenons vos défis et parlons votre langage.': 'We understand your challenges and speak your language.',
+  'Solutions adaptées': 'Tailored solutions',
+  'Des réponses concrètes à vos problématiques.': 'Concrete answers to your challenges.',
+  'Résultats concrets': 'Concrete results',
+  'Des bénéfices mesurables pour votre organisation.': 'Measurable benefits for your organization.',
+  'Un support expert à chaque étape de votre projet.': 'Expert support at every stage of your project.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

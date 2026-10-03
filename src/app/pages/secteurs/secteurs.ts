@@ -41,6 +41,22 @@ export class SecteursPageComponent implements OnInit, OnDestroy {
       cardDesc:'RH, comptabilité, GED et développement spécifique.'}
   ];
 
+
+  readonly stats = [
+    { icon:'i-cal', value:'19+', label:"Années d'expérience" },
+    { icon:'i-bank', value:'250+', label:'Institutions accompagnées' },
+    { icon:'i-globe', value:'10+', label:'Pays en Afrique' },
+    { icon:'i-head', value:'24/7', label:'Support disponible' },
+    { icon:'i-pin', value:'CEMAC', label:'Présence régionale' }
+  ];
+
+  readonly pillars = [
+    { icon:'i-users', title:'Centré sur vos métiers', text:'Nous comprenons vos défis et parlons votre langage.' },
+    { icon:'i-bulb', title:'Solutions adaptées', text:'Des réponses concrètes à vos problématiques.' },
+    { icon:'i-chart', title:'Résultats concrets', text:'Des bénéfices mesurables pour votre organisation.' },
+    { icon:'i-head', title:'Accompagnement', text:'Un support expert à chaque étape de votre projet.' }
+  ];
+
   img=0;
   progress=0;
   videoOk=true;

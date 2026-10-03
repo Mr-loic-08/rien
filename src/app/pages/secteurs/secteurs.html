@@ -94,4 +94,45 @@
     </div>
   </section>
 
+
+  <!-- BLOC 3 — Stats : reproduction React V17.20.4 -->
+  <section class="sx-stats reveal visible">
+    <div class="container">
+      <div class="sx-stats-row">
+        @for(s of stats; track s.label){
+          <div class="sx-stat">
+            <span class="sx-stat-ic"><svg class="ic"><use [attr.href]="'#'+s.icon"></use></svg></span>
+            <b>{{s.value}}</b>
+            <span>{{l.t(s.label)}}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOC 4 — Notre approche : reproduction React V17.20.4 -->
+  <section class="sx-approche reveal visible" id="sx-approche">
+    <div class="container">
+      <div class="sx-approche-grid">
+        <div class="sx-approche-copy">
+          <span class="sec-kicker">{{l.t('Méthode')}}</span>
+          <h2 class="sec-title left">{{l.t('Notre approche')}}</h2>
+          <p>{{l.t("La section « Cibles » permet de parler directement aux besoins des différents types de clients. Contrairement à la section « Solutions » qui présente les produits, cette section présente les problématiques métiers de chaque secteur et les solutions adaptées. Cette approche permet aux visiteurs de s'identifier rapidement et améliore fortement la conversion.")}}</p>
+          <a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="sx-pillars">
+          @for(p of pillars; track p.title; let i=$index){
+            <div class="sx-pillar" [style.transition-delay.ms]="i*90">
+              <span class="sx-pillar-ic"><svg class="ic"><use [attr.href]="'#'+p.icon"></use></svg></span>
+              <div>
+                <b>{{l.t(p.title)}}</b>
+                <span>{{l.t(p.text)}}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
