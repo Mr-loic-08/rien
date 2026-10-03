@@ -7652,3 +7652,57 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
   .mf-page-angular .mapping-fallback-visual{width:48px!important;height:48px!important}
   .mf-page-angular .mapping-chevron{display:none!important}
 }
+
+/* =========================================================
+   MICROFINANCES — MAPPING BESOINS
+   Correction ciblée des numéros 01 / 02 / 03 / 04
+   ========================================================= */
+
+/* Le numéro ne flotte plus dans l'angle supérieur de la carte. */
+.mf-page-angular .mapping-number{
+  position:absolute!important;
+  top:50%!important;
+  left:13px!important;
+  width:24px!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translateY(-50%) rotate(-90deg)!important;
+  transform-origin:center!important;
+  display:block!important;
+  text-align:center!important;
+  line-height:1!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  letter-spacing:.12em!important;
+  z-index:3!important;
+  pointer-events:none!important;
+  opacity:.78!important;
+}
+
+/* Un peu d'air entre le numéro vertical et l'icône. */
+.mf-page-angular .mapping-card{
+  padding-left:42px!important;
+}
+
+.mf-page-angular .mapping-icon{
+  position:relative!important;
+  z-index:2!important;
+}
+
+/* Mobile : numéro horizontal et discret au-dessus de l'icône,
+   pour éviter tout chevauchement dans la carte compacte. */
+@media(max-width:700px){
+  .mf-page-angular .mapping-card{
+    padding-left:20px!important;
+  }
+
+  .mf-page-angular .mapping-number{
+    top:12px!important;
+    left:20px!important;
+    width:auto!important;
+    transform:none!important;
+    font-size:10px!important;
+    letter-spacing:.1em!important;
+  }
+}
