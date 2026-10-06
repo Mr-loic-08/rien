@@ -1,0 +1,42 @@
+<main class="pg sx pg-secteur secteur-banques-commerciales bank-page-angular" style="--tone:#2563eb">
+ <section class="sx-hero">
+  <div class="sx-bg" aria-hidden="true">
+   @if(videoOk){<video class="sx-video" autoplay muted loop playsinline preload="auto" [poster]="media.video.poster" (error)="videoError()"><source [src]="media.video.hd" type="video/mp4"></video>}
+   @else {@for(src of media.heroBg;track src;let i=$index){<div class="sx-slide" [class.on]="i===img" [style.background-image]="'url('+src+')'"></div>}}
+   <div class="sx-veil"></div><div class="sx-grain"></div>
+  </div>
+  <div class="container">
+   <nav class="crumb" aria-label="Fil d’Ariane"><a href="#accueil">{{l.t('Accueil')}}</a><svg class="ic"><use href="#i-arrow"></use></svg><a href="#/secteurs">{{l.t('Secteurs / Cibles')}}</a><svg class="ic"><use href="#i-arrow"></use></svg><em>{{l.t('Banques Commerciales')}}</em></nav>
+   <div class="sx-grid">
+    <div class="sx-copy">
+     <span class="sx-eyebrow"><svg class="ic"><use href="#i-bank"></use></svg>{{l.t('Secteur · Banques Commerciales')}}</span>
+     <h1>{{l.t('Accélérez la transformation digitale de votre banque')}}</h1>
+     <p>{{l.t('Des solutions robustes pour moderniser les opérations bancaires, les paiements et les services digitaux.')}}</p>
+     <div class="hero-actions"><a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a href="#sx-enjeux" class="btn btn-glass">{{l.t('Découvrir nos solutions')}}</a></div>
+    </div>
+    <div class="sx-card">
+     <div class="sx-frames">@for(src of media.heroBg;track src;let i=$index){<div class="sx-frame" [class.on]="i===img" [style.background-image]="'url('+src+')'"></div>}<span class="sx-live"><i></i>{{l.t('En direct du terrain')}}</span></div>
+     <div class="sx-cardbar"><div class="sx-thumbs">@for(src of media.heroBg;track src;let i=$index){<button type="button" [class.on]="i===img" (click)="go(i)"><img [src]="src" alt=""></button>}</div><div class="sx-prog"><i [style.width.%]="progress*100"></i></div></div>
+    </div>
+   </div>
+  </div><div class="sx-cut" aria-hidden="true"></div>
+ </section>
+
+ <div class="sx-body">
+  <div class="sx-bodyfx" aria-hidden="true"><img class="sx-bodyfx-img" src="images/secteurs/banques.jpg" alt=""><div class="sx-bodyfx-veil"></div></div>
+  <section class="sx-issues bank-issues reveal visible" id="sx-enjeux">
+   <div class="container">
+    <span class="sec-kicker">{{l.t('Vos priorités')}}</span>
+    <h2 class="sec-title">{{l.t('Vos enjeux bancaires')}}</h2>
+    <div class="sx-issues-grid">
+     @for(item of issues;track item.text;let i=$index){
+      <div class="sx-issue" [style.transition-delay.ms]="i*70">
+       <span class="sx-issue-ic"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+       <span>{{l.t(item.text)}}</span>
+      </div>
+     }
+    </div>
+   </div>
+  </section>
+ </div>
+</main>

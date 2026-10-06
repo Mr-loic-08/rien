@@ -27,6 +27,12 @@ export class MicrofinancesPageComponent implements OnInit,OnDestroy{
   {tone:'purple',icon:'s-mobile',need:'Digital',needDescription:'Des services digitaux innovants pour une meilleure expérience client.',solution:'Alpha Mobile Banking',solutionDescription:'Votre banque, partout et à tout moment.',href:'#/solutions/digital-mobile',visual:'phone'},
   {tone:'orange',icon:'s-decl',need:'Déclarations',needDescription:'Une gestion simplifiée et conforme de vos déclarations réglementaires.',solution:'Déclaration Bancaire',solutionDescription:'Conformité et sérénité.',href:'#/solutions/declaration-bancaire',visual:'document'}
  ];
+ readonly proofs=[
+  {kind:'project',title:'Projet CEPAC',text:"Déploiement d'Alpha Microfinance"},
+  {kind:'project',title:'Projet EMF',text:'Digitalisation de la collecte terrain'},
+  {kind:'quote',title:'Témoignage client',text:'I-TECH a transformé notre manière de travailler.',author:'Directeur Général'}
+ ];
+
  readonly benefits=[
   {icon:'i-chart',text:'Réduction des tâches manuelles'},
   {icon:'i-shield',text:'Contrôle renforcé'},

@@ -252,7 +252,15 @@ const EN: Record<string,string> = {
   'Contrôle renforcé': 'Enhanced control',
   'Digitalisation du réseau': 'Network digitalization',
   'Sélectionner une recommandation': 'Select a recommendation',
-};
+  'Projet CEPAC': 'CEPAC Project',
+  "Déploiement d'Alpha Microfinance": 'Deployment of Alpha Microfinance',
+  'Projet EMF': 'MFI Project',
+  'Digitalisation de la collecte terrain': 'Digitalization of field collection',
+  'Témoignage client': 'Client testimonial',
+  'I-TECH a transformé notre manière de travailler.': 'I-TECH transformed the way we work.',
+  'Directeur Général': 'Managing Director',
+  'Découvrez comment nos solutions peuvent répondre à vos défis.': 'Discover how our solutions can address your challenges.',
+  'Tous les secteurs': 'All sectors',\n  'Secteur · Banques Commerciales': 'Sector · Commercial Banks',\n  'Accélérez la transformation digitale de votre banque': "Accelerate your bank's digital transformation",\n  'Des solutions robustes pour moderniser les opérations bancaires, les paiements et les services digitaux.': 'Robust solutions to modernize banking operations, payments and digital services.',\n  'Vos priorités': 'Your priorities',\n  'Vos enjeux bancaires': 'Your banking challenges',\n  'Monétique': 'Card payments',\n  'Digital Banking': 'Digital Banking',\n  'Intégration API': 'API integration',\n};
 @Injectable({providedIn:'root'})
 export class LanguageService {
   lang = signal<Language>(this.initial());

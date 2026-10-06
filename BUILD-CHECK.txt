@@ -1,0 +1,6 @@
+npm build exit=127
+
+> react-vite-tailwind@0.0.0 build
+> vite build
+
+sh: 1: vite: Permission denied

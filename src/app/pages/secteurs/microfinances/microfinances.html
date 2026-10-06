@@ -118,5 +118,44 @@
    </div>
   </section>
 
+  <!-- BLOC 5 — Ils nous font confiance : référence React V17.20.4 -->
+  <section class="sx-proofs mf-proofs reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2>
+      <div class="sx-proofs-grid">
+        @for(p of proofs;track p.title;let i=$index){
+          <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">
+            @if(p.kind==='quote'){
+              <span class="sx-quote-mark">“</span>
+              <b>{{l.t(p.title)}}</b>
+              <p>« {{l.t(p.text)}} »</p>
+              @if(p.author){<em>— {{l.t(p.author)}}</em>}
+            } @else {
+              <span class="sx-proof-ic"><svg class="ic"><use href="#i-check"></use></svg></span>
+              <b>{{l.t(p.title)}}</b>
+              <span>{{l.t(p.text)}}</span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOC 6 — CTA final : référence React V17.20.4 -->
+  <section class="sx-cta mf-cta reveal visible">
+    <div class="container">
+      <div class="sx-cta-panel toned">
+        <div>
+          <h2>{{l.t('Prêt à transformer votre institution ?')}}</h2>
+          <p>{{l.t('Découvrez comment nos solutions peuvent répondre à vos défis.')}}</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          <a href="#/secteurs" class="btn btn-ghost-w">{{l.t('Tous les secteurs')}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
  </div>
 </main>

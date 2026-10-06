@@ -18,10 +18,11 @@ import { DeclarationBancairePageComponent } from './pages/solutions/declaration-
 import { GenieLogicielPageComponent } from './pages/solutions/genie-logiciel/genie-logiciel';
 import { SecteursPageComponent } from './pages/secteurs/secteurs';
 import { MicrofinancesPageComponent } from './pages/secteurs/microfinances/microfinances';
+import { BanquesCommercialesPageComponent } from './pages/secteurs/banques-commerciales/banques-commerciales';
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -34,6 +35,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isGenieLogiciel=false;
   isSecteurs=false;
   isMicrofinances=false;
+  isBanquesCommerciales=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
@@ -45,6 +47,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
     this.isGenieLogiciel=h==='#/solutions/genie-logiciel';
     this.isSecteurs=h==='#/secteurs';
     this.isMicrofinances=h==='#/secteurs/microfinances';
+    this.isBanquesCommerciales=h==='#/secteurs/banques-commerciales';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;
