@@ -271,6 +271,19 @@ const EN: Record<string,string> = {
   'Intégration API': 'API integration',
   'Les bénéfices pour votre banque': 'Benefits for your bank',
   'Réduction des coûts': 'Cost reduction',
+  'Architecture bancaire': 'Banking architecture',
+  'Clients': 'Customers',
+  'Migration bancaire': 'Banking migration',
+  'Modernisation du SI bancaire': 'Modernization of the banking information system',
+  'Déploiement monétique': 'Card platform deployment',
+  'Mise en place de la plateforme monétique': 'Implementation of the card payment platform',
+  'Un partenaire fiable pour notre projet stratégique.': 'A reliable partner for our strategic project.',
+  'DSI Banque': 'Bank CIO',
+  'Construisons ensemble votre banque digitale': "Let's build your digital bank together",
+  'Nos experts vous accompagnent à chaque étape de votre transformation.': 'Our experts support you at every stage of your transformation.',
+  'Secteur · Grandes Entreprises': 'Sector · Large Enterprises',
+  'Des solutions sur mesure pour les grandes entreprises': 'Tailored solutions for large enterprises',
+  'Optimisez vos processus, gérez vos talents et sécurisez vos informations.': 'Optimize your processes, manage your talent and secure your information.',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

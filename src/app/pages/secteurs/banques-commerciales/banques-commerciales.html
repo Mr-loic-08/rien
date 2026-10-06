@@ -87,5 +87,64 @@
     </div>
   </section>
 
+  <!-- BLOC 5 — Architecture bancaire : référence React -->
+  <section class="sx-arch bank-arch reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t('Architecture bancaire')}}</h2>
+      <div class="sx-flow">
+        @for(step of architecture;track step;let i=$index){
+          <div class="sx-step" [style.transition-delay.ms]="i*100">
+            <span class="sx-step-dot">
+              <svg class="ic"><use [attr.href]="i===0?'#i-users':i===architecture.length-1?'#i-chart':'#i-bank'"></use></svg>
+            </span>
+            <b>{{l.t(step)}}</b>
+            @if(i < architecture.length-1){
+              <span class="sx-flow-arrow"><svg class="ic"><use href="#i-arrow"></use></svg></span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOC 6 — Ils nous font confiance : référence React -->
+  <section class="sx-proofs bank-proofs reveal visible">
+    <div class="container">
+      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2>
+      <div class="sx-proofs-grid">
+        @for(p of bankProofs;track p.title;let i=$index){
+          <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">
+            @if(p.kind==='quote'){
+              <span class="sx-quote-mark">“</span>
+              <b>{{l.t(p.title)}}</b>
+              <p>« {{l.t(p.text)}} »</p>
+              @if(p.author){<em>— {{l.t(p.author)}}</em>}
+            } @else {
+              <span class="sx-proof-ic"><svg class="ic"><use href="#i-check"></use></svg></span>
+              <b>{{l.t(p.title)}}</b>
+              <span>{{l.t(p.text)}}</span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOC 7 — CTA final Banques Commerciales -->
+  <section class="sx-cta bank-final-cta reveal visible">
+    <div class="container">
+      <div class="sx-cta-panel toned">
+        <div>
+          <h2>{{l.t('Construisons ensemble votre banque digitale')}}</h2>
+          <p>{{l.t('Nos experts vous accompagnent à chaque étape de votre transformation.')}}</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
+          <a href="#/secteurs" class="btn btn-ghost-w">{{l.t('Tous les secteurs')}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
  </div>
 </main>

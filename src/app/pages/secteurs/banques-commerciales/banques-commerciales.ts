@@ -14,6 +14,13 @@ export class BanquesCommercialesPageComponent implements OnInit,OnDestroy{
    'https://images.pexels.com/photos/19107852/pexels-photo-19107852.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'
   ]
  };
+ readonly architecture=['Clients','Mobile Banking','Core Banking','Monétique','Reporting'];
+ readonly bankProofs=[
+  {kind:'project',title:'Migration bancaire',text:'Modernisation du SI bancaire'},
+  {kind:'project',title:'Déploiement monétique',text:'Mise en place de la plateforme monétique'},
+  {kind:'quote',title:'Témoignage client',text:'Un partenaire fiable pour notre projet stratégique.',author:'DSI Banque'}
+ ];
+
  readonly mappings=[
   {tone:'blue',icon:'i-bank',need:'Core Banking',needDescription:'Une plateforme centralisée pour une gestion bancaire complète et sécurisée.',solution:'Alpha Bank',solutionDescription:'La solution au cœur de votre banque.',href:'#/solutions/core-banking',visual:'bank'},
   {tone:'green',icon:'i-card',need:'Paiements',needDescription:'Des paiements rapides, sûrs et adaptés à tous vos canaux.',solution:'Alpha Monétique',solutionDescription:'La fluidité de vos transactions.',href:'#/solutions/core-banking',visual:'card'},
