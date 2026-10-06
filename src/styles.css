@@ -7996,3 +7996,302 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
     height:260px!important;
   }
 }
+
+/* =========================================================
+   BANQUES COMMERCIALES — BLOC 2
+   Icônes + séparation + radius + transition de niveau
+   ========================================================= */
+.bank-page-angular .sx-body{
+  position:relative!important;
+  padding:1px 0 58px!important;
+  background:#eef3f7!important;
+}
+
+/* espace réel entre Hero et bloc 2 */
+.bank-page-angular .bank-issues{
+  position:relative!important;
+  isolation:isolate!important;
+  margin:54px 18px 0!important;
+  padding:74px 0 78px!important;
+  border-radius:38px!important;
+  overflow:hidden!important;
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 24px 70px -52px rgba(8,35,64,.55)!important;
+}
+
+/* effet de superposition / passage du niveau précédent */
+.bank-page-angular .bank-issues::before{
+  content:""!important;
+  position:absolute!important;
+  left:8%!important;
+  right:8%!important;
+  top:-18px!important;
+  height:36px!important;
+  border-radius:28px 28px 0 0!important;
+  background:linear-gradient(90deg,
+    color-mix(in srgb,var(--tone) 9%,#fff),
+    rgba(255,255,255,.96),
+    color-mix(in srgb,var(--tone) 9%,#fff))!important;
+  box-shadow:0 -10px 34px rgba(13,43,74,.08)!important;
+  z-index:-1!important;
+}
+.bank-page-angular .bank-issues::after{
+  content:""!important;
+  position:absolute!important;
+  left:50%!important;
+  bottom:-34px!important;
+  width:76%!important;
+  height:68px!important;
+  transform:translateX(-50%)!important;
+  border-radius:50%!important;
+  background:rgba(37,99,235,.07)!important;
+  filter:blur(22px)!important;
+  pointer-events:none!important;
+}
+
+/* liste */
+.bank-page-angular .bank-issues .sx-issues-grid{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:18px!important;
+  margin-top:34px!important;
+  align-items:stretch!important;
+}
+.bank-page-angular .bank-issues .sx-issue{
+  position:relative!important;
+  min-width:0!important;
+  min-height:154px!important;
+  padding:24px 16px 21px!important;
+  border-radius:22px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:15px!important;
+  text-align:center!important;
+  overflow:hidden!important;
+  transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease!important;
+}
+.bank-page-angular .bank-issues .sx-issue:hover{
+  transform:translateY(-7px)!important;
+  border-color:color-mix(in srgb,var(--tone) 45%,transparent)!important;
+  box-shadow:0 22px 44px -28px rgba(10,43,78,.42)!important;
+}
+
+/* icônes : taille et cadrage uniformes, aucun découpage */
+.bank-page-angular .bank-issues .sx-issue-ic{
+  position:relative!important;
+  width:58px!important;
+  height:58px!important;
+  min-width:58px!important;
+  min-height:58px!important;
+  flex:0 0 58px!important;
+  display:grid!important;
+  place-items:center!important;
+  margin:0!important;
+  padding:0!important;
+  border-radius:17px!important;
+  overflow:visible!important;
+  color:var(--tone)!important;
+  background:color-mix(in srgb,var(--tone) 11%,#fff)!important;
+  border:1px solid color-mix(in srgb,var(--tone) 18%,transparent)!important;
+}
+.bank-page-angular .bank-issues .sx-issue-ic::after{
+  content:""!important;
+  position:absolute!important;
+  inset:7px!important;
+  border-radius:12px!important;
+  border:1px solid color-mix(in srgb,var(--tone) 13%,transparent)!important;
+  pointer-events:none!important;
+}
+.bank-page-angular .bank-issues .sx-issue-ic .ic{
+  display:block!important;
+  width:27px!important;
+  height:27px!important;
+  max-width:none!important;
+  max-height:none!important;
+  overflow:visible!important;
+  color:inherit!important;
+  stroke:currentColor!important;
+  fill:none!important;
+  position:relative!important;
+  z-index:2!important;
+}
+.bank-page-angular .bank-issues .sx-issue>span:last-child{
+  display:block!important;
+  font-size:14px!important;
+  line-height:1.35!important;
+  font-weight:700!important;
+  color:var(--navy)!important;
+}
+
+/* tablette */
+@media(max-width:1050px){
+  .bank-page-angular .bank-issues .sx-issues-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+
+/* mobile */
+@media(max-width:700px){
+  .bank-page-angular .sx-body{padding-bottom:38px!important}
+  .bank-page-angular .bank-issues{
+    margin:38px 10px 0!important;
+    padding:56px 0 60px!important;
+    border-radius:26px!important;
+  }
+  .bank-page-angular .bank-issues::before{
+    left:12%!important;right:12%!important;top:-13px!important;height:26px!important;
+    border-radius:20px 20px 0 0!important;
+  }
+  .bank-page-angular .bank-issues .sx-issues-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:14px!important;
+  }
+  .bank-page-angular .bank-issues .sx-issue{
+    min-height:142px!important;
+    border-radius:19px!important;
+  }
+  .bank-page-angular .bank-issues .sx-issue:last-child{
+    grid-column:1 / -1!important;
+    width:calc(50% - 7px)!important;
+    justify-self:center!important;
+  }
+}
+
+/* =========================================================
+   BANQUES — RÈGLES VISUELLES VALIDÉES
+   orange par défaut -> bleu au survol
+   fonds alternés + séparation + radius + passage de niveau
+   ========================================================= */
+
+/* Bloc 2 : orange par défaut, bleu au hover */
+.bank-page-angular .bank-issues .sx-issue-ic{
+  color:var(--orange)!important;
+  background:color-mix(in srgb,var(--orange) 11%,#fff)!important;
+  border-color:color-mix(in srgb,var(--orange) 24%,transparent)!important;
+  transition:color .3s ease,background .3s ease,border-color .3s ease,transform .3s ease!important;
+}
+.bank-page-angular .bank-issues .sx-issue-ic::after{
+  border-color:color-mix(in srgb,var(--orange) 18%,transparent)!important;
+}
+.bank-page-angular .bank-issues .sx-issue:hover .sx-issue-ic{
+  color:#2563eb!important;
+  background:color-mix(in srgb,#2563eb 10%,#fff)!important;
+  border-color:color-mix(in srgb,#2563eb 30%,transparent)!important;
+  transform:translateY(-2px) scale(1.04)!important;
+}
+
+/* BLOC 3 : fond bleu nuit, distinct du bloc 2 */
+.bank-page-angular .bank-mapping{
+  position:relative!important;
+  isolation:isolate!important;
+  margin:54px 18px 0!important;
+  padding:76px 0 70px!important;
+  border-radius:38px!important;
+  overflow:hidden!important;
+  background:
+    radial-gradient(700px 360px at 92% 5%,rgba(37,99,235,.20),transparent 70%),
+    linear-gradient(145deg,#071a31 0%,#0b294b 55%,#0e3764 100%)!important;
+  color:#fff!important;
+  box-shadow:0 28px 74px -52px rgba(5,18,35,.75)!important;
+}
+.bank-page-angular .bank-mapping::before{
+  content:""!important;position:absolute!important;left:9%!important;right:9%!important;top:-18px!important;height:36px!important;
+  border-radius:28px 28px 0 0!important;background:linear-gradient(90deg,rgba(245,130,32,.18),rgba(255,255,255,.08),rgba(37,99,235,.18))!important;
+  z-index:-1!important;
+}
+.bank-page-angular .bank-mapping .mapping-head h2,
+.bank-page-angular .bank-mapping .mapping-head p{color:#fff!important}
+.bank-page-angular .bank-mapping .mapping-head p{color:rgba(255,255,255,.72)!important}
+.bank-page-angular .bank-mapping .mapping-kicker{color:#ff9a47!important}
+.bank-page-angular .bank-mapping .mapping-column-labels{color:rgba(255,255,255,.56)!important}
+.bank-page-angular .bank-mapping .mapping-track{
+  display:flex!important;flex-direction:column!important;gap:16px!important;overflow:visible!important;padding:0!important;
+}
+.bank-page-angular .bank-mapping .mapping-slide{width:100%!important;min-width:0!important}
+.bank-page-angular .bank-mapping .mapping-card{
+  position:relative!important;display:grid!important;
+  grid-template-columns:76px minmax(220px,1fr) 94px minmax(250px,1.08fr) 110px!important;
+  align-items:center!important;gap:18px!important;width:100%!important;min-height:142px!important;
+  padding:24px 28px 24px 44px!important;border-radius:24px!important;overflow:hidden!important;
+  background:rgba(255,255,255,.94)!important;border:1px solid rgba(255,255,255,.18)!important;
+  box-shadow:0 16px 36px -30px rgba(0,0,0,.7)!important;
+}
+.bank-page-angular .bank-mapping .mapping-number{
+  position:absolute!important;left:12px!important;top:50%!important;transform:translateY(-50%) rotate(-90deg)!important;
+  font-size:10px!important;font-weight:800!important;letter-spacing:.12em!important;color:rgba(7,26,49,.42)!important;
+}
+.bank-page-angular .bank-mapping .mapping-icon{
+  grid-column:1!important;width:60px!important;height:60px!important;display:grid!important;place-items:center!important;
+  border-radius:17px!important;color:var(--orange)!important;background:rgba(245,130,32,.10)!important;border:1px solid rgba(245,130,32,.22)!important;
+  transition:all .3s ease!important;
+}
+.bank-page-angular .bank-mapping .mapping-icon .ic{width:27px!important;height:27px!important;overflow:visible!important}
+.bank-page-angular .bank-mapping .mapping-card:hover .mapping-icon{
+  color:#2563eb!important;background:rgba(37,99,235,.10)!important;border-color:rgba(37,99,235,.28)!important;transform:scale(1.05)!important;
+}
+.bank-page-angular .bank-mapping .mapping-need{grid-column:2!important}
+.bank-page-angular .bank-mapping .mapping-transform{grid-column:3!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.bank-page-angular .bank-mapping .mapping-solution{grid-column:4!important}
+.bank-page-angular .bank-mapping .mapping-visual{grid-column:5!important;display:grid!important;place-items:center!important;color:var(--orange)!important;transition:color .3s ease!important}
+.bank-page-angular .bank-mapping .mapping-card:hover .mapping-visual{color:#2563eb!important}
+.bank-page-angular .bank-mapping .mapping-fallback-visual{width:66px!important;height:66px!important;overflow:visible!important}
+.bank-page-angular .bank-mapping .mapping-copy strong{display:block!important;color:#092746!important;margin-bottom:6px!important}
+.bank-page-angular .bank-mapping .mapping-copy small{display:block!important;color:#607086!important;line-height:1.45!important}
+.bank-page-angular .bank-mapping .mapping-assurance{color:rgba(255,255,255,.72)!important}
+
+/* BLOC 4 : image bancaire en background pour casser la répétition */
+.bank-page-angular .bank-benefits{
+  position:relative!important;isolation:isolate!important;
+  margin:54px 18px 0!important;padding:78px 0 82px!important;border-radius:38px!important;overflow:hidden!important;
+  background:#08233f!important;color:#fff!important;
+}
+.bank-page-angular .bank-benefits-bg{
+  position:absolute!important;inset:0!important;z-index:-2!important;
+  background-image:linear-gradient(135deg,#071a31 0%,#0b3158 55%,#164f86 100%)!important;
+  background-size:cover!important;background-position:center 45%!important;
+  transform:scale(1.03)!important;
+}
+.bank-page-angular .bank-benefits::before{
+  content:""!important;position:absolute!important;inset:0!important;z-index:-1!important;
+  background:linear-gradient(105deg,rgba(4,19,36,.94),rgba(7,35,65,.86) 55%,rgba(10,52,94,.72))!important;
+}
+.bank-page-angular .bank-benefits::after{
+  content:""!important;position:absolute!important;left:8%!important;right:8%!important;top:-18px!important;height:36px!important;
+  border-radius:28px 28px 0 0!important;background:linear-gradient(90deg,rgba(245,130,32,.28),rgba(255,255,255,.12),rgba(37,99,235,.22))!important;
+}
+.bank-page-angular .bank-benefits .sec-title{position:relative!important;z-index:2!important;color:#fff!important}
+.bank-page-angular .bank-benefits .sx-ben-grid{
+  position:relative!important;z-index:2!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px!important;margin-top:34px!important;
+}
+.bank-page-angular .bank-benefits .sx-ben{
+  min-height:150px!important;padding:24px 18px!important;border-radius:22px!important;
+  background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important;
+  backdrop-filter:blur(9px)!important;-webkit-backdrop-filter:blur(9px)!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:14px!important;text-align:center!important;
+  color:#fff!important;transition:transform .3s ease,background .3s ease,border-color .3s ease!important;
+}
+.bank-page-angular .bank-benefits .sx-ben:hover{transform:translateY(-7px)!important;background:rgba(255,255,255,.15)!important;border-color:rgba(37,99,235,.55)!important}
+.bank-page-angular .bank-benefits .sx-ben-ic{
+  width:58px!important;height:58px!important;display:grid!important;place-items:center!important;border-radius:17px!important;
+  color:var(--orange)!important;background:rgba(245,130,32,.13)!important;border:1px solid rgba(245,130,32,.28)!important;transition:all .3s ease!important;
+}
+.bank-page-angular .bank-benefits .sx-ben-ic .ic{width:27px!important;height:27px!important;overflow:visible!important}
+.bank-page-angular .bank-benefits .sx-ben:hover .sx-ben-ic{color:#60a5fa!important;background:rgba(37,99,235,.18)!important;border-color:rgba(96,165,250,.45)!important;transform:scale(1.05)!important}
+
+@media(max-width:950px){
+ .bank-page-angular .bank-mapping .mapping-card{grid-template-columns:68px minmax(180px,1fr) 72px minmax(200px,1fr) 82px!important;gap:12px!important}
+ .bank-page-angular .bank-benefits .sx-ben-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+ .bank-page-angular .bank-mapping,.bank-page-angular .bank-benefits{margin:38px 10px 0!important;border-radius:26px!important;padding:58px 0 62px!important}
+ .bank-page-angular .bank-mapping .mapping-card{display:grid!important;grid-template-columns:60px 1fr!important;gap:12px 14px!important;padding:28px 20px!important}
+ .bank-page-angular .bank-mapping .mapping-number{top:10px!important;left:18px!important;transform:none!important}
+ .bank-page-angular .bank-mapping .mapping-icon{grid-column:1!important}
+ .bank-page-angular .bank-mapping .mapping-need{grid-column:2!important}
+ .bank-page-angular .bank-mapping .mapping-transform{grid-column:1 / -1!important;height:38px!important}
+ .bank-page-angular .bank-mapping .mapping-solution{grid-column:1 / 2!important}
+ .bank-page-angular .bank-mapping .mapping-visual{grid-column:2!important}
+ .bank-page-angular .bank-benefits .sx-ben-grid{grid-template-columns:1fr!important;gap:14px!important}
+}

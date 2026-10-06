@@ -269,6 +269,8 @@ const EN: Record<string,string> = {
   'Monétique': 'Card payments',
   'Digital Banking': 'Digital Banking',
   'Intégration API': 'API integration',
+  'Les bénéfices pour votre banque': 'Benefits for your bank',
+  'Réduction des coûts': 'Cost reduction',
 };
 @Injectable({providedIn:'root'})
 export class LanguageService {

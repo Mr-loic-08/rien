@@ -38,5 +38,54 @@
     </div>
    </div>
   </section>
+  <!-- BLOC 3 — Nos solutions recommandées / React RecommendedMapping -->
+  <section class="sx-recos mapping-section bank-mapping reveal visible" aria-labelledby="bank-mapping-title">
+    <div class="mapping-deco" aria-hidden="true">
+      <span class="mapping-chart"><i></i><i></i><i></i><i></i><svg class="ic"><use href="#i-arrow"></use></svg></span>
+      <span class="mapping-note">{{l.t('Plus de')}}<br><strong>{{l.t('performances')}}</strong><br>{{l.t('ensemble !')}}</span>
+    </div>
+    <div class="container mapping-container">
+      <header class="mapping-head">
+        <span class="mapping-kicker"><i></i>{{l.t('MAPPING BESOINS')}}<i></i></span>
+        <h2 id="bank-mapping-title">{{l.t('Nos solutions recommandées')}}</h2>
+        <p>{{l.t('Des solutions adaptées à chaque besoin pour accélérer')}}<br class="mapping-break">{{l.t(' votre performance financière.')}}</p>
+      </header>
+      <div class="mapping-column-labels" aria-hidden="true"><span>{{l.t('BESOIN')}}</span><span>{{l.t('SOLUTION')}}</span></div>
+      <div class="mapping-track" #mappingTrack (scroll)="onMappingScroll(mappingTrack)">
+        @for(item of mappings;track item.need;let i=$index){
+          <div class="mapping-slide">
+            <a [href]="item.href" [class]="'mapping-card mc-'+item.tone"
+               style="--mouse-x:50%;--mouse-y:50%"
+               (pointermove)="moveGlow($event)" (pointerleave)="resetGlow($event)">
+              <span class="mapping-number">0{{i+1}}</span>
+              <span class="mapping-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+              <span class="mapping-copy mapping-need"><strong>{{l.t(item.need)}}</strong><small>{{l.t(item.needDescription)}}</small></span>
+              <span class="mapping-transform" aria-hidden="true"><i class="mapping-dashes"></i><i class="mapping-arrow"><svg class="ic"><use href="#i-arrow"></use></svg></i></span>
+              <span class="mapping-copy mapping-solution"><strong>{{l.t(item.solution)}}</strong><small>{{l.t(item.solutionDescription)}}</small></span>
+              <span class="mapping-visual" aria-hidden="true"><svg class="ic mapping-fallback-visual"><use [attr.href]="item.visual==='bank'?'#i-bank':item.visual==='phone'?'#i-phone':item.visual==='document'?'#i-book':'#i-card'"></use></svg></span>
+            </a>
+          </div>
+        }
+      </div>
+      <div class="mapping-assurance"><svg class="ic"><use href="#i-shield"></use></svg><span>{{l.t('Des solutions fiables pour un avenir plus solide.')}}</span></div>
+    </div>
+  </section>
+
+  <!-- BLOC 4 — Les bénéfices pour votre banque -->
+  <section class="sx-benefits bank-benefits reveal visible">
+    <div class="bank-benefits-bg" aria-hidden="true"></div>
+    <div class="container">
+      <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre banque')}}</h2>
+      <div class="sx-ben-grid">
+        @for(b of benefits;track b.text;let i=$index){
+          <div class="sx-ben" [style.transition-delay.ms]="i*80">
+            <span class="sx-ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
+            <span>{{l.t(b.text)}}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
  </div>
 </main>
