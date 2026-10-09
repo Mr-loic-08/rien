@@ -2,8 +2,8 @@ import {Component,inject} from '@angular/core';
 import {LanguageService} from '../../core/language.service';
 @Component({selector:'app-ressources-page',standalone:true,templateUrl:'./ressources.html'})
 export class RessourcesPageComponent {
- l=inject(LanguageService);active='Tous les articles';page=1;
- categories=['Tous les articles','Produits','Projets','Innovation','Conseils','Événements'];
+ l=inject(LanguageService);active='Tous les articles';page=1;email='';subscribed=false;subscribe(){if(this.email.trim())this.subscribed=true;}
+ categories=['Tous les articles'];
  heroImages=['https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900','https://images.pexels.com/photos/7691769/pexels-photo-7691769.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900','https://images.pexels.com/photos/19805885/pexels-photo-19805885.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'];
  articles=[
  {title:'I-COLLECT : La solution qui révolutionne la collecte journalière',description:"La collecte journalière constitue l'un des services phares des établissements de microfinance (EMF). Ce dispositif permet aux particuliers, sur leurs lieux d'activité ou de résidence, de constituer une épargne de manière progressive et quotidienne…",date:'Publié le 4 novembre 2021',author:'Par Maguy Laurence MATALA',category:'Produits',image:'https://images.pexels.com/photos/5239806/pexels-photo-5239806.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=640'},
