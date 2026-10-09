@@ -8617,3 +8617,88 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
 
 /* Ressources : newsletter finale, fidèle au composant React */
 .angular-resources .res-newsletter{margin:48px 18px 0;padding:0 0 25px}.angular-resources .res-news-panel{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(260px,390px);gap:24px;align-items:center;padding:42px;border-radius:32px;background:linear-gradient(115deg,#092849,#134777);color:white;box-shadow:0 20px 55px -37px #082747}.angular-resources .res-news-panel h2{color:white;margin:0 0 10px}.angular-resources .res-news-panel p{color:#dbe7f5;margin:0}.angular-resources .res-news-ic{display:grid;place-items:center;width:68px;height:68px;border-radius:20px;background:rgba(245,130,32,.15);color:#f58220}.angular-resources .res-news-ic .ic{width:30px;height:30px;overflow:visible}.angular-resources .res-news-panel form{display:flex;gap:10px;align-items:center}.angular-resources .res-news-panel input{min-width:0;flex:1;padding:14px 16px;border-radius:12px;border:1px solid #adc5dd;background:white;color:#12314d}.angular-resources .res-news-panel .btn{white-space:nowrap;background:#f58220;color:white;border-radius:12px;padding:14px 20px}.angular-resources .res-news-panel .btn:hover{background:#e66b0d}@media(max-width:900px){.angular-resources .res-news-panel{grid-template-columns:auto 1fr}.angular-resources .res-news-panel form{grid-column:1/-1}}@media(max-width:600px){.angular-resources .res-newsletter{margin:30px 10px 0}.angular-resources .res-news-panel{padding:28px 20px;border-radius:24px;grid-template-columns:1fr}.angular-resources .res-news-panel form{grid-column:auto;flex-direction:column;align-items:stretch}.angular-resources .res-news-panel input{width:100%}}
+
+/* ENTREPRISE hero et statistiques */
+.angular-ent{background:#f5f8fc}.angular-ent .ent-hero{position:relative;isolation:isolate;overflow:hidden;color:white;background:#061426;min-height:82vh;padding:150px 0 130px;display:flex;flex-direction:column;justify-content:center;border-radius:0 0 40px 40px}.angular-ent .ent-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}.angular-ent .ent-hero-photo{position:absolute;inset:0;background-size:cover;background-position:center 42%;animation:entPhoto 16s ease-in-out infinite}.angular-ent .ent-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:entVideo 16s ease-in-out infinite}@keyframes entPhoto{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}@keyframes entVideo{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}.angular-ent .ent-hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(98deg,rgba(4,17,36,.96),rgba(4,17,36,.82) 39%,rgba(4,17,36,.4) 78%,rgba(4,17,36,.18))}.angular-ent .ent-hero>.container{position:relative;z-index:3}.angular-ent .ent-crumb{font-size:12px;color:white}.angular-ent .ent-crumb a{color:#cad9e9}.angular-ent .ent-hero-copy{max-width:650px;margin-top:48px}.angular-ent .ent-kicker{display:inline-flex;align-items:center;gap:9px;color:#b8e8ff;font-size:11px;font-weight:800;letter-spacing:.18em;padding:8px 14px;border:1px solid rgba(115,208,255,.3);background:rgba(40,143,255,.14);border-radius:99px}.angular-ent .ent-kicker .ic{width:16px;height:16px;color:#f58220}.angular-ent .ent-hero h1{font-size:clamp(34px,4vw,52px);line-height:1.1;font-weight:800;margin-top:18px;color:white}.angular-ent .ent-hero h2{font-size:20px;line-height:1.35;max-width:32ch;margin-top:13px;color:white}.angular-ent .ent-hero p{color:rgba(255,255,255,.85);font-size:15px;line-height:1.7;max-width:54ch;margin-top:16px}.angular-ent .hero-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}.angular-ent .ent-stats{margin:40px 18px 0;background:#fff;border:1px solid #e3eaf2;border-radius:30px;box-shadow:0 18px 40px -30px #0d2b4a}.angular-ent .ent-stat-row{display:grid;grid-template-columns:repeat(4,1fr)}.angular-ent .ent-stat{display:grid;grid-template-columns:52px 1fr;column-gap:12px;align-items:center;padding:27px 20px;border-right:1px solid #e3eaf2}.angular-ent .ent-stat:last-child{border-right:0}.angular-ent .ent-stat>span{grid-row:span 2;width:50px;height:50px;display:grid;place-items:center;border-radius:13px;background:#edf5fd;color:#f58220}.angular-ent .ent-stat>span .ic{width:24px;height:24px}.angular-ent .ent-stat:hover>span{color:#2563eb}.angular-ent .ent-stat b{font-size:21px;color:#0d2b4a}.angular-ent .ent-stat small{font-size:11.5px;color:#63758b}@media(max-width:1000px){.angular-ent .ent-stat-row{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.angular-ent .ent-hero{padding:110px 0 85px}.angular-ent .ent-stats{margin:25px 10px 0}.angular-ent .ent-stat-row{grid-template-columns:1fr}.angular-ent .ent-stat{border-right:0;border-top:1px solid #e3eaf2}}@media(prefers-reduced-motion:reduce){.angular-ent .ent-hero-photo,.angular-ent .ent-hero-video{animation:none!important}.angular-ent .ent-hero-video{opacity:0!important}}
+
+/* Navigation instantanée : ne pas appliquer le scroll smooth aux changements de page */
+html{scroll-behavior:auto!important}
+.angular-ent .ent-hero-video{pointer-events:none}
+
+/* Entreprise : Notre univers et actualités */
+.angular-ent .ent-universe{position:relative;margin:40px 18px 0;padding:82px 0 92px;border-radius:32px;background:linear-gradient(145deg,#eef5fb,#fff 60%,#eaf2fa);overflow:hidden}
+.angular-ent .ent-universe>.container{position:relative;z-index:1}
+.angular-ent .ent-universe .sec-kicker,.angular-ent .ent-universe .sec-title{text-align:center;display:block}
+.angular-ent .ent-universe .sec-kicker{color:#f58220;font-weight:800;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+.angular-ent .ent-universe .sec-title{margin:10px auto 35px;color:#103657;font-size:clamp(26px,3vw,40px)}
+.angular-ent .ent-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.angular-ent .ent-card{display:block;text-decoration:none;background:#fff;border:1px solid #e2eaf3;border-radius:24px;overflow:hidden;box-shadow:0 16px 35px rgba(12,40,70,.07);transition:transform .25s,box-shadow .25s}
+.angular-ent .ent-card:hover{transform:translateY(-8px);box-shadow:0 24px 45px rgba(12,40,70,.15)}
+.angular-ent .ent-card-img{height:225px;position:relative;overflow:hidden}.angular-ent .ent-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.angular-ent .ent-card:hover img{transform:scale(1.06)}
+.angular-ent .ent-card-ico{position:absolute;bottom:14px;left:16px;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#fff;color:#f58220;box-shadow:0 6px 15px #0002}.angular-ent .ent-card:hover .ent-card-ico{color:#1265ae}.angular-ent .ent-card-ico .ic{width:24px;height:24px;overflow:visible}
+.angular-ent .ent-card-body{padding:25px}.angular-ent .ent-card-body h3{color:#103657;font-size:19px;margin:0 0 12px}.angular-ent .ent-card-body p{color:#60748b;line-height:1.65;min-height:74px;margin:0 0 18px}.angular-ent .ent-card-body .link{display:inline-flex;align-items:center;gap:8px;color:#e66c21;font-weight:700}.angular-ent .ent-card-body .link .ic{width:16px;height:16px}
+.angular-ent .ent-news{margin:40px 18px 65px;padding:35px 0;border-radius:28px;background:linear-gradient(110deg,#0b345d,#1267a6);color:#fff}.angular-ent .ent-news>.container{display:flex;justify-content:space-between;align-items:center;gap:30px}.angular-ent .ent-news-heading{display:flex;align-items:center;gap:18px}.angular-ent .ent-news-heading>.ic{width:42px;height:42px;flex-shrink:0;color:#f58220}.angular-ent .ent-news h2{font-size:22px;color:#fff;margin:0 0 8px}.angular-ent .ent-news p{color:#e1ebf7;margin:0}.angular-ent .ent-news form{display:flex;gap:10px;min-width:350px}.angular-ent .ent-news input{min-width:0;flex:1;padding:13px 16px;border:1px solid #c8d8e9;border-radius:12px}.angular-ent .ent-news button{white-space:nowrap}
+@media(max-width:900px){.angular-ent .ent-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-ent .ent-news>.container{flex-direction:column;align-items:stretch}.angular-ent .ent-news form{min-width:0}}
+@media(max-width:600px){.angular-ent .ent-universe{margin:25px 10px 0;padding:55px 0;border-radius:23px}.angular-ent .ent-card-grid{grid-template-columns:1fr}.angular-ent .ent-card-body p{min-height:0}.angular-ent .ent-news{margin:25px 10px 40px}.angular-ent .ent-news form{flex-direction:column}}
+
+/* À PROPOS — blocs 1 et 2, source React V17.20.4 */
+.angular-about .ent-detail-hero{position:relative;isolation:isolate;overflow:hidden;background:#061426;color:#fff;min-height:70vh;padding:150px 0 120px;display:flex;flex-direction:column;justify-content:center;border-radius:0 0 38px 38px}
+.angular-about .ent-detail-photo{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.angular-about .ent-detail-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,17,36,.96),rgba(4,17,36,.72) 52%,rgba(4,17,36,.32))}
+.angular-about .ent-detail-hero>.container{position:relative;z-index:2;width:100%}
+.angular-about .ent-crumb{font-size:12px;color:#fff}.angular-about .ent-crumb a{color:rgba(255,255,255,.7)}
+.angular-about .ent-detail-copy{max-width:660px;margin-top:35px}
+.angular-about .ent-kicker{display:inline-flex;align-items:center;gap:9px;border-radius:99px;padding:9px 15px;color:#cceaff;background:rgba(20,100,185,.22);border:1px solid rgba(180,220,255,.3);font-size:12px;font-weight:700}
+.angular-about .ent-kicker .ic{width:17px;height:17px;color:#f58220;overflow:visible}
+.angular-about .ent-detail-copy h1{color:#fff;font-size:clamp(32px,4vw,50px);line-height:1.13;margin:18px 0 12px}
+.angular-about .ent-detail-copy p{color:rgba(255,255,255,.87);font-size:clamp(15px,1.5vw,19px);line-height:1.7;max-width:54ch}
+.angular-about .about-path{margin:38px 18px 0;border-radius:30px;padding:76px 0 82px;background:#fff;box-shadow:0 14px 40px rgba(12,37,68,.08)}
+.angular-about .about-path .sec-title{color:#102d4e}
+.angular-about .about-timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:46px;position:relative}
+.angular-about .about-timeline::before{content:'';position:absolute;top:14px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,#f26a21,#1a56b0);opacity:.35}
+.angular-about .about-time{text-align:center;position:relative;padding:0 10px}
+.angular-about .about-dot{position:relative;z-index:1;display:block;width:30px;height:30px;border-radius:50%;background:#fff;border:7px solid #1a56b0;margin:0 auto 16px;box-shadow:0 0 0 4px rgba(26,86,176,.1)}
+.angular-about .about-time:nth-child(-n+2) .about-dot{border-color:#f26a21}
+.angular-about .about-time b{font-size:15px;color:#f26a21}.angular-about .about-time h3{font-size:13.5px;color:#102d4e;margin-top:7px}.angular-about .about-time p{font-size:11.5px;color:#68788c;line-height:1.5;margin-top:4px}
+@media(max-width:850px){.angular-about .about-timeline{grid-template-columns:repeat(2,1fr);gap:30px 10px}.angular-about .about-timeline::before{display:none}}
+@media(max-width:550px){.angular-about .ent-detail-hero{min-height:60vh;padding:110px 0 80px;border-radius:0 0 24px 24px}.angular-about .about-path{margin:24px 10px 0;padding:55px 0;border-radius:22px}.angular-about .about-timeline{grid-template-columns:1fr;gap:26px}}
+
+/* À PROPOS — blocs 3 et 4, alignés sur React V17.20.4 */
+.angular-about .about-mission{position:relative;margin:40px 18px 0;padding:68px 24px;background:#f4f8fd;border-radius:30px;overflow:hidden}
+.angular-about .about-mission .container{display:flex;align-items:center;gap:30px;max-width:920px}
+.angular-about .about-big-ic{display:grid;place-items:center;flex:none;width:76px;height:76px;border-radius:21px;background:#fff0e7;color:#f26a21;box-shadow:0 16px 34px -22px rgba(13,43,74,.34)}
+.angular-about .about-big-ic .ic{width:34px;height:34px;overflow:visible}
+.angular-about .about-mission .sec-title{font-size:clamp(30px,3.2vw,42px);line-height:1.12;margin:8px 0 0;color:#0d2b4a}
+.angular-about .about-mission p{max-width:720px;margin:14px 0 0;font-size:clamp(17px,1.35vw,20px);line-height:1.75;color:#40556c}
+.angular-about .about-values{margin:40px 18px 0;padding:70px 24px;background:#fff;border-radius:30px;border:1px solid #e7edf5}
+.angular-about .about-value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.angular-about .about-value-grid article{min-width:0;border:1px solid #e0e8f2;border-radius:18px;padding:24px;background:#fff;transition:transform .32s ease,border-color .32s ease,box-shadow .32s ease}
+.angular-about .about-value-grid article:hover{transform:translateY(-6px);border-color:#f26a21;box-shadow:0 25px 55px -28px rgba(13,43,74,.35)}
+.angular-about .about-value-grid article>span{width:45px;height:45px;display:grid;place-items:center;border-radius:13px;background:#fdeee3;color:#f26a21;transition:color .2s}
+.angular-about .about-value-grid article:hover>span{color:#1768bf}
+.angular-about .about-value-grid .ic{width:22px;height:22px;overflow:visible}
+.angular-about .about-value-grid h3{font-size:15px;color:#0d2b4a;margin:15px 0 0}
+.angular-about .about-value-grid p{font-size:12.5px;line-height:1.6;color:#60738a;margin:6px 0 0}
+@media(max-width:760px){.angular-about .about-mission,.angular-about .about-values{margin:25px 10px 0;padding:42px 20px;border-radius:22px}.angular-about .about-mission .container{align-items:flex-start;flex-direction:column;gap:18px}.angular-about .about-value-grid{grid-template-columns:1fr}}
+
+/* À PROPOS — blocs 5 et 6, styles conformes à la référence React */
+.angular-about .about-team{padding:72px 0 84px;background:#f6f9fc;text-align:center;margin:36px 16px 0;border-radius:32px}
+.angular-about .about-team-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:35px 0 28px}
+.angular-about .about-member{min-width:0;background:#fff;border:1px solid #e3eaf2;border-radius:16px;padding:10px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.angular-about .about-member:hover{transform:translateY(-5px);border-color:#1a56b0;box-shadow:0 16px 30px rgba(13,43,74,.1)}
+.angular-about .about-member img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:11px}
+.angular-about .about-member b{display:block;font-size:13px;color:#0d2b4a;margin-top:10px}
+.angular-about .about-member span{display:block;font-size:11px;color:#63758b;margin-top:5px}
+.angular-about .ent-reasons{background:linear-gradient(140deg,#0d2b4a,#06172d);color:#fff;padding:70px 0 78px;margin:36px 16px 50px;border-radius:32px}
+.angular-about .ent-reasons .sec-title.light{color:#fff}
+.angular-about .ent-reason-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:34px}
+.angular-about .ent-reason-grid>div{text-align:center;padding:22px 12px;border:1px solid rgba(255,255,255,.13);border-radius:15px;background:rgba(255,255,255,.05);transition:transform .25s ease}
+.angular-about .ent-reason-grid>div:hover{transform:translateY(-4px)}
+.angular-about .ent-reason-grid span{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(242,106,33,.18);color:#f58220;margin:0 auto 12px}
+.angular-about .ent-reason-grid>div:hover span{color:#67a9ff}
+.angular-about .ent-reason-grid .ic{width:21px;height:21px;overflow:visible}
+.angular-about .ent-reason-grid b{font-size:13px;color:#fff}
+.angular-about .ent-reason-grid p{font-size:11px;color:rgba(255,255,255,.75);line-height:1.55;margin-top:7px}
+@media(max-width:1000px){.angular-about .about-team-grid,.angular-about .ent-reason-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.angular-about .about-team-grid,.angular-about .ent-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-about .about-team,.angular-about .ent-reasons{margin-left:10px;margin-right:10px;border-radius:24px}}
+@media(max-width:520px){.angular-about .about-team-grid,.angular-about .ent-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.angular-about .about-team,.angular-about .ent-reasons{padding:50px 0}.angular-about .ent-reason-grid>div{padding:16px 8px}}

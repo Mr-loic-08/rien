@@ -1,0 +1,23 @@
+<main class="pg ent-page angular-ent">
+<section class="ent-hero">
+ <div class="ent-hero-media" aria-hidden="true">
+  <div class="ent-hero-photo ent-hero-media-photo" style="background-image:url('https://images.pexels.com/photos/33719016/pexels-photo-33719016.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=1000')"></div>
+  <video #enterpriseVideo class="ent-hero-video" autoplay muted loop playsinline preload="none" [muted]="true" (volumechange)="ensureMuted(enterpriseVideo)"><source src="/i-tech-enterprise-hero.mp4" type="video/mp4"></video>
+ </div><div class="ent-hero-veil"></div>
+ <div class="container">
+  <nav class="ent-crumb"><a href="#/">{{l.t('Accueil')}}</a><span> / </span><span>{{l.t("L'Entreprise")}}</span></nav>
+  <div class="ent-hero-copy">
+   <span class="ent-kicker"><svg class="ic"><use href="#i-users"></use></svg>I-TECH SARL</span>
+   <h1>{{l.t("L'Entreprise")}}</h1>
+   <h2>{{l.t("Construisons l'avenir de la transformation digitale en Afrique Centrale")}}</h2>
+   <p>{{l.t("Depuis plus de")}} {{experience}} {{l.t("ans, I-TECH accompagne les institutions financières et les entreprises dans leur modernisation grâce à des solutions innovantes et adaptées à leur environnement.")}}</p>
+   <div class="hero-actions"><a href="#/entreprise/apropos" class="btn btn-primary">{{l.t('Découvrir notre histoire')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a href="#/entreprise/carrieres" class="btn btn-glass">{{l.t('Rejoindre notre équipe')}}</a></div>
+  </div>
+ </div><span class="ent-hero-grid" aria-hidden="true"></span>
+</section>
+<section class="ent-stats reveal visible"><span class="ent-stats-night-layer" aria-hidden="true"></span><div class="container"><div class="ent-stat-row">
+ @for(s of stats;track s.label){<div class="ent-stat"><span><svg class="ic"><use [attr.href]="'#'+s.icon"></use></svg></span><b>{{s.value}}</b><small>{{l.t(s.label)}}</small></div>}
+</div></div></section>
+<section class="ent-universe reveal visible"><span class="ent-universe-night-layer" aria-hidden="true"></span><div class="container"><span class="sec-kicker center">{{l.t('Notre univers')}}</span><h2 class="sec-title center">{{l.t("Découvrez l'univers I-TECH")}}</h2><div class="ent-card-grid">@for(card of cards;track card.key){<a class="ent-card" [href]="'#/entreprise/'+card.key"><div class="ent-card-img"><img [src]="card.image" [alt]="l.t(card.title)" loading="lazy"><span class="ent-card-ico"><svg class="ic"><use [attr.href]="'#'+card.icon"></use></svg></span></div><div class="ent-card-body"><h3>{{l.t(card.title)}}</h3><p>{{l.t(card.text)}}</p><span class="link">{{l.t(card.cta)}} <svg class="ic"><use href="#i-arrow"></use></svg></span></div></a>}</div></div></section>
+<section class="ent-news reveal visible"><div class="container"><div class="ent-news-heading"><svg class="ic"><use href="#i-mail"></use></svg><div><h2>{{l.t('Restez informé de nos actualités')}}</h2><p>{{l.t('Recevez nos dernières actualités, événements et ressources.')}}</p></div></div><form (submit)="subscribe($event)"><input type="email" [placeholder]="l.t('Votre adresse e-mail')" [attr.aria-label]="l.t('Votre adresse e-mail')" required><button class="btn btn-primary" type="submit">{{l.t("S'abonner")}}</button></form></div></section>
+</main>
