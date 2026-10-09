@@ -8402,3 +8402,167 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
  .enterprise-page-angular .sx-copy h1{max-width:none;font-size:clamp(31px,9vw,40px);line-height:1.1}
  .enterprise-page-angular .sx-card{max-width:none;justify-self:stretch}.enterprise-page-angular .sx-frames{height:260px}
 }
+
+/* GRANDES ENTREPRISES — BLOCS 2 + 3 */
+.enterprise-page-angular .sx-body{position:relative;padding:1px 0 58px;background:#eef3f7}
+.enterprise-page-angular .ge-issues{position:relative;isolation:isolate;margin:54px 18px 0;padding:74px 0 78px;border-radius:38px;overflow:hidden;background:rgba(255,255,255,.94);box-shadow:0 24px 70px -52px rgba(8,35,64,.55)}
+.enterprise-page-angular .ge-issues::before{content:"";position:absolute;left:8%;right:8%;top:-18px;height:36px;border-radius:28px 28px 0 0;background:linear-gradient(90deg,rgba(245,130,32,.14),rgba(255,255,255,.96),rgba(124,58,237,.13));z-index:-1}
+.enterprise-page-angular .ge-issues .sx-issues-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:34px}
+.enterprise-page-angular .ge-issues .sx-issue{position:relative;min-height:154px;padding:24px 16px 21px;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;text-align:center;overflow:hidden;transition:.32s ease}
+.enterprise-page-angular .ge-issues .sx-issue:hover{transform:translateY(-7px);border-color:rgba(37,99,235,.34);box-shadow:0 22px 44px -28px rgba(10,43,78,.42)}
+.enterprise-page-angular .ge-issues .sx-issue-ic{width:58px;height:58px;display:grid;place-items:center;border-radius:17px;color:var(--orange);background:rgba(245,130,32,.10);border:1px solid rgba(245,130,32,.24);transition:.3s ease;overflow:visible}
+.enterprise-page-angular .ge-issues .sx-issue-ic .ic{width:27px;height:27px;overflow:visible}
+.enterprise-page-angular .ge-issues .sx-issue:hover .sx-issue-ic{color:#2563eb;background:rgba(37,99,235,.10);border-color:rgba(37,99,235,.28);transform:scale(1.05)}
+.enterprise-page-angular .ge-issues .sx-issue em{position:absolute;top:12px;right:14px;font-size:10px;font-weight:800;letter-spacing:.1em;color:rgba(9,39,70,.28)}
+
+.enterprise-page-angular .ge-mapping{position:relative;isolation:isolate;margin:54px 18px 0;padding:76px 0 70px;border-radius:38px;overflow:hidden;background:radial-gradient(700px 360px at 92% 5%,rgba(124,58,237,.24),transparent 70%),linear-gradient(145deg,#11102a 0%,#1d1745 55%,#31206a 100%);color:#fff}
+.enterprise-page-angular .ge-mapping::before{content:"";position:absolute;left:9%;right:9%;top:-18px;height:36px;border-radius:28px 28px 0 0;background:linear-gradient(90deg,rgba(245,130,32,.18),rgba(255,255,255,.08),rgba(124,58,237,.24));z-index:-1}
+.enterprise-page-angular .ge-mapping .mapping-head h2{color:#fff}.enterprise-page-angular .ge-mapping .mapping-head p{color:rgba(255,255,255,.72)}.enterprise-page-angular .ge-mapping .mapping-kicker{color:#ff9a47}.enterprise-page-angular .ge-mapping .mapping-column-labels{color:rgba(255,255,255,.56)}
+.enterprise-page-angular .ge-mapping .mapping-track{display:flex;flex-direction:column;gap:16px;overflow:visible;padding:0}.enterprise-page-angular .ge-mapping .mapping-slide{width:100%;min-width:0}
+.enterprise-page-angular .ge-mapping .mapping-card{position:relative;display:grid;grid-template-columns:76px minmax(220px,1fr) 94px minmax(250px,1.08fr) 110px;align-items:center;gap:18px;width:100%;min-height:142px;padding:24px 28px 24px 44px;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.18);box-shadow:0 16px 36px -30px rgba(0,0,0,.7)}
+.enterprise-page-angular .ge-mapping .mapping-number{position:absolute;left:12px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:10px;font-weight:800;letter-spacing:.12em;color:rgba(7,26,49,.42)}
+.enterprise-page-angular .ge-mapping .mapping-icon{width:60px;height:60px;display:grid;place-items:center;border-radius:17px;color:var(--orange);background:rgba(245,130,32,.10);border:1px solid rgba(245,130,32,.22);transition:.3s ease}
+.enterprise-page-angular .ge-mapping .mapping-icon .ic{width:27px;height:27px;overflow:visible}.enterprise-page-angular .ge-mapping .mapping-card:hover .mapping-icon{color:#2563eb;background:rgba(37,99,235,.10);border-color:rgba(37,99,235,.28);transform:scale(1.05)}
+.enterprise-page-angular .ge-mapping .mapping-transform{display:flex;align-items:center;justify-content:center}.enterprise-page-angular .ge-mapping .mapping-visual{display:grid;place-items:center;color:var(--orange);transition:.3s ease}.enterprise-page-angular .ge-mapping .mapping-card:hover .mapping-visual{color:#2563eb}.enterprise-page-angular .ge-mapping .mapping-fallback-visual{width:66px;height:66px;overflow:visible}
+.enterprise-page-angular .ge-mapping .mapping-copy strong{display:block;color:#092746;margin-bottom:6px}.enterprise-page-angular .ge-mapping .mapping-copy small{display:block;color:#607086;line-height:1.45}.enterprise-page-angular .ge-mapping .mapping-assurance{color:rgba(255,255,255,.72)}
+@media(max-width:950px){.enterprise-page-angular .ge-mapping .mapping-card{grid-template-columns:68px minmax(180px,1fr) 72px minmax(200px,1fr) 82px;gap:12px}}
+@media(max-width:700px){
+ .enterprise-page-angular .ge-issues,.enterprise-page-angular .ge-mapping{margin:38px 10px 0;padding:58px 0 62px;border-radius:26px}
+ .enterprise-page-angular .ge-issues .sx-issues-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .enterprise-page-angular .ge-mapping .mapping-card{grid-template-columns:60px 1fr;gap:12px 14px;padding:28px 20px}
+ .enterprise-page-angular .ge-mapping .mapping-number{top:10px;left:18px;transform:none}
+ .enterprise-page-angular .ge-mapping .mapping-transform{grid-column:1/-1;height:38px}.enterprise-page-angular .ge-mapping .mapping-solution{grid-column:1}.enterprise-page-angular .ge-mapping .mapping-visual{grid-column:2}
+}
+
+/* =========================================================
+   GRANDES ENTREPRISES — MAPPING BESOINS
+   Cartes moins blanches, cohérentes avec orange / bleu / violet
+   ========================================================= */
+.enterprise-page-angular .ge-mapping .mapping-card{
+  background:
+    linear-gradient(118deg,
+      rgba(18,34,61,.96) 0%,
+      rgba(24,43,74,.95) 47%,
+      rgba(31,39,77,.96) 100%)!important;
+  border:1px solid rgba(255,255,255,.13)!important;
+  box-shadow:
+    0 18px 38px -26px rgba(0,0,0,.72),
+    inset 0 1px 0 rgba(255,255,255,.06)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-card::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(260px 120px at 8% 50%,rgba(245,130,32,.10),transparent 72%),
+    radial-gradient(300px 130px at 92% 50%,rgba(37,99,235,.11),transparent 72%)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-card:hover{
+  background:
+    linear-gradient(118deg,
+      rgba(21,40,70,.98) 0%,
+      rgba(27,49,83,.98) 48%,
+      rgba(37,47,91,.98) 100%)!important;
+  border-color:rgba(96,165,250,.30)!important;
+  box-shadow:
+    0 24px 48px -28px rgba(0,0,0,.78),
+    inset 0 1px 0 rgba(255,255,255,.08)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-number{
+  color:rgba(255,255,255,.28)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-copy strong{
+  color:#fff!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-copy small{
+  color:rgba(226,235,247,.68)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-transform{
+  position:relative!important;
+  color:#7fb3ff!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-dashes{
+  opacity:.72!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-icon{
+  position:relative!important;
+  z-index:2!important;
+  color:#f58220!important;
+  background:rgba(245,130,32,.13)!important;
+  border-color:rgba(245,130,32,.34)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-card:hover .mapping-icon{
+  color:#60a5fa!important;
+  background:rgba(37,99,235,.17)!important;
+  border-color:rgba(96,165,250,.46)!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-visual{
+  position:relative!important;
+  z-index:2!important;
+  color:#f58220!important;
+  opacity:.92!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-card:hover .mapping-visual{
+  color:#60a5fa!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-need{
+  position:relative!important;
+  padding-right:12px!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-solution{
+  position:relative!important;
+  padding-left:12px!important;
+}
+.enterprise-page-angular .ge-mapping .mapping-need::after{
+  content:""!important;
+  position:absolute!important;
+  right:-9px!important;
+  top:8%!important;
+  width:1px!important;
+  height:84%!important;
+  background:linear-gradient(to bottom,transparent,rgba(255,255,255,.16),transparent)!important;
+}
+
+/* Une légère variation par ligne évite l'effet répétitif */
+.enterprise-page-angular .ge-mapping .mapping-slide:nth-child(even) .mapping-card{
+  background:
+    linear-gradient(118deg,
+      rgba(22,39,69,.97) 0%,
+      rgba(27,47,80,.96) 47%,
+      rgba(35,42,83,.97) 100%)!important;
+}
+
+@media(max-width:700px){
+  .enterprise-page-angular .ge-mapping .mapping-need::after{display:none!important}
+  .enterprise-page-angular .ge-mapping .mapping-need,
+  .enterprise-page-angular .ge-mapping .mapping-solution{padding-left:0!important;padding-right:0!important}
+}
+
+/* Grandes entreprises — blocs 4 et 5, fond alterné, séparations et relief */
+.enterprise-page-angular .ge-benefits,.enterprise-page-angular .ge-proofs{position:relative;isolation:isolate;margin:52px 18px 0;padding:76px 0 82px;border-radius:38px;overflow:hidden;box-shadow:0 22px 55px -42px rgba(4,27,53,.5)}
+.enterprise-page-angular .ge-benefits{background:radial-gradient(circle at 88% 16%,rgba(242,106,33,.17),transparent 32%),linear-gradient(125deg,#063c67,#07558a 62%,#07365b);color:#fff}
+.enterprise-page-angular .ge-proofs{background:radial-gradient(circle at 8% 85%,rgba(0,103,175,.10),transparent 32%),linear-gradient(140deg,#f0f7fc,#e5f0f9);margin-bottom:36px}
+.enterprise-page-angular .ge-benefits::before,.enterprise-page-angular .ge-proofs::before{content:"";position:absolute;top:0;left:9%;right:9%;height:3px;background:linear-gradient(90deg,transparent,#f26a21,rgba(30,124,190,.55),transparent)}
+.enterprise-page-angular .ge-benefits .sec-title{color:#fff}
+.enterprise-page-angular .ge-benefits .sx-ben-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:34px}
+.enterprise-page-angular .ge-benefits .sx-ben{min-height:166px;padding:26px 18px;border-radius:22px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.19);backdrop-filter:blur(8px);color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;transition:transform .3s,background .3s}
+.enterprise-page-angular .ge-benefits .sx-ben:hover{transform:translateY(-6px);background:rgba(255,255,255,.18)}
+.enterprise-page-angular .ge-benefits .sx-ben-ic,.enterprise-page-angular .ge-proofs .sx-proof-ic{display:grid;place-items:center;width:58px;height:58px;flex:none;border-radius:17px;background:rgba(242,106,33,.14);border:1px solid rgba(242,106,33,.32);color:#f26a21;transition:color .3s,background .3s}
+.enterprise-page-angular .ge-benefits .sx-ben-ic .ic,.enterprise-page-angular .ge-proofs .sx-proof-ic .ic{width:27px;height:27px;overflow:visible}
+.enterprise-page-angular .ge-benefits .sx-ben:hover .sx-ben-ic,.enterprise-page-angular .ge-proofs .sx-proof:hover .sx-proof-ic{color:#60a5fa;background:rgba(37,99,235,.16)}
+.enterprise-page-angular .ge-proofs .sx-proofs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:34px}
+.enterprise-page-angular .ge-proofs .sx-proof{position:relative;min-height:198px;padding:28px 24px;border-radius:23px;background:#fff;border:1px solid rgba(10,70,120,.10);box-shadow:0 15px 38px -28px rgba(5,40,75,.3);transition:transform .3s}
+.enterprise-page-angular .ge-proofs .sx-proof:hover{transform:translateY(-6px)}
+.enterprise-page-angular .ge-proofs .sx-proof b{display:block;margin:12px 0 8px;color:#08375c}
+.enterprise-page-angular .ge-proofs .sx-proof>span:not(.sx-proof-ic):not(.sx-quote-mark),.enterprise-page-angular .ge-proofs .sx-proof p{color:#4d6379;line-height:1.6}
+.enterprise-page-angular .ge-proofs .sx-proof em{display:block;margin-top:14px;color:#657a90}
+.enterprise-page-angular .ge-proofs .sx-quote-mark{position:absolute;right:20px;top:6px;font:64px Georgia,serif;color:rgba(242,106,33,.22)}
+@media(max-width:900px){.enterprise-page-angular .ge-benefits .sx-ben-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.enterprise-page-angular .ge-proofs .sx-proofs-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.enterprise-page-angular .ge-benefits,.enterprise-page-angular .ge-proofs{margin:36px 10px 0;padding:54px 0 60px;border-radius:26px}.enterprise-page-angular .ge-benefits .sx-ben-grid{gap:12px}.enterprise-page-angular .ge-benefits .sx-ben{min-height:146px;padding:18px 12px}.enterprise-page-angular .ge-proofs{margin-bottom:24px}}
+
+/* Grandes entreprises — CTA final */
+.enterprise-page-angular .ge-cta{margin:52px 18px 0;padding:0 0 24px;border-radius:36px;overflow:hidden}.enterprise-page-angular .ge-cta .sx-cta-panel{border-radius:32px;background:linear-gradient(115deg,#092b51,#174f8a 64%,#1e3766);box-shadow:0 24px 50px -35px #071e3d}.enterprise-page-angular .ge-cta h2,.enterprise-page-angular .ge-cta p{color:#fff}.enterprise-page-angular .ge-cta .btn-ghost-w{border:1px solid rgba(255,255,255,.55);color:#fff}@media(max-width:700px){.enterprise-page-angular .ge-cta{margin:38px 10px 0;border-radius:25px}.enterprise-page-angular .ge-cta .sx-cta-panel{border-radius:24px}}
+
+.angular-resources{background:#edf2f8;padding-bottom:55px}.angular-resources .resources-hero{position:relative;isolation:isolate;overflow:hidden;min-height:550px;background:#0b2140;color:#fff;border-radius:0 0 40px 40px}.angular-resources .res-hero-gallery{position:absolute;inset:0;z-index:-2}.angular-resources .res-hero-image{position:absolute;inset:0;background-position:center;background-size:cover;opacity:0;animation:resAngularSlide 18s infinite}@keyframes resAngularSlide{0%,29%{opacity:.42}34%,100%{opacity:0}}.angular-resources .resources-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,19,39,.88),rgba(5,19,39,.38))}.angular-resources .res-breadcrumb{padding-top:42px;color:#d3dfea}.angular-resources .res-breadcrumb a{color:#f58220}.angular-resources .resources-hero-grid{padding:75px 0 90px}.angular-resources .res-content{margin:48px 18px 0;padding:54px 0 68px;border-radius:36px;background:#fff;box-shadow:0 24px 65px -55px #183554}.angular-resources .res-filters button{transition:background .25s,color .25s,transform .25s}.angular-resources .res-filters button:hover{transform:translateY(-2px)}.angular-resources .res-article{border-radius:24px;overflow:hidden}@media(max-width:700px){.angular-resources .resources-hero{border-radius:0 0 26px 26px}.angular-resources .res-content{margin:30px 10px 0;padding:35px 0;border-radius:25px}.angular-resources .resources-hero-grid{padding:45px 0 65px}}

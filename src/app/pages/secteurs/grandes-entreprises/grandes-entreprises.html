@@ -21,5 +21,89 @@
    </div>
   </div><div class="sx-cut" aria-hidden="true"></div>
  </section>
- <div class="sx-body" id="ge-suite"></div>
+
+ <div class="sx-body" id="ge-suite">
+  <!-- BLOC 2 — Vos enjeux métiers -->
+  <section class="sx-issues ge-issues reveal visible">
+   <div class="container">
+    <h2 class="sec-title center">{{l.t('Vos enjeux métiers')}}</h2>
+    <div class="sx-issues-grid n4">
+     @for(item of issues;track item.text;let i=$index){
+      <div class="sx-issue" [style.transition-delay.ms]="i*80">
+       <span class="sx-issue-ic"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+       <span>{{l.t(item.text)}}</span><em>0{{i+1}}</em>
+      </div>
+     }
+    </div>
+   </div>
+  </section>
+
+  <!-- BLOC 3 — Nos solutions recommandées : même composant que la référence React -->
+  <section class="sx-recos mapping-section ge-mapping reveal visible" aria-labelledby="ge-mapping-title">
+   <div class="mapping-deco" aria-hidden="true">
+    <span class="mapping-chart"><i></i><i></i><i></i><i></i><svg class="ic"><use href="#i-arrow"></use></svg></span>
+    <span class="mapping-note">{{l.t('Plus de')}}<br><strong>{{l.t('performances')}}</strong><br>{{l.t('ensemble !')}}</span>
+   </div>
+   <div class="container mapping-container">
+    <header class="mapping-head">
+     <span class="mapping-kicker"><i></i>{{l.t('MAPPING BESOINS')}}<i></i></span>
+     <h2 id="ge-mapping-title">{{l.t('Nos solutions recommandées')}}</h2>
+     <p>{{l.t('Des solutions adaptées à chaque besoin pour accélérer')}}<br class="mapping-break">{{l.t(' votre performance financière.')}}</p>
+    </header>
+    <div class="mapping-column-labels" aria-hidden="true"><span>{{l.t('BESOIN')}}</span><span>{{l.t('SOLUTION')}}</span></div>
+    <div class="mapping-track">
+     @for(item of mappings;track item.need;let i=$index){
+      <div class="mapping-slide">
+       <a [href]="item.href" [class]="'mapping-card mc-'+item.tone">
+        <span class="mapping-number">0{{i+1}}</span>
+        <span class="mapping-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
+        <span class="mapping-copy mapping-need"><strong>{{l.t(item.need)}}</strong><small>{{l.t(item.needDescription)}}</small></span>
+        <span class="mapping-transform" aria-hidden="true"><i class="mapping-dashes"></i><i class="mapping-arrow"><svg class="ic"><use href="#i-arrow"></use></svg></i></span>
+        <span class="mapping-copy mapping-solution"><strong>{{l.t(item.solution)}}</strong><small>{{l.t(item.solutionDescription)}}</small></span>
+        <span class="mapping-visual" aria-hidden="true"><svg class="ic mapping-fallback-visual"><use [attr.href]="item.visual==='bank'?'#i-bank':item.visual==='phone'?'#i-phone':item.visual==='document'?'#i-book':'#i-card'"></use></svg></span>
+       </a>
+      </div>
+     }
+    </div>
+    <div class="mapping-assurance"><svg class="ic"><use href="#i-shield"></use></svg><span>{{l.t('Des solutions fiables pour un avenir plus solide.')}}</span></div>
+   </div>
+  </section>
+  <!-- BLOC 4 : bénéfices, textes et icônes de la référence React -->
+  <section class="sx-benefits ge-benefits reveal visible">
+   <div class="container">
+    <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre entreprise')}}</h2>
+    <div class="sx-ben-grid">
+     @for(b of benefits;track b.text;let i=$index){
+      <div class="sx-ben" [style.transition-delay.ms]="i*80">
+       <span class="sx-ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
+       <span>{{l.t(b.text)}}</span>
+      </div>
+     }
+    </div>
+   </div>
+  </section>
+  <!-- BLOC 5 : preuves clients, contenus exacts de la référence React -->
+  <section class="sx-proofs ge-proofs reveal visible">
+   <div class="container">
+    <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2>
+    <div class="sx-proofs-grid">
+     @for(p of enterpriseProofs;track p.title;let i=$index){
+      <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">
+       @if(p.kind==='quote'){
+        <span class="sx-quote-mark">“</span><b>{{l.t(p.title)}}</b>
+        <p>« {{l.t(p.text)}} »</p><em>— {{l.t(p.author)}}</em>
+       } @else {
+        <span class="sx-proof-ic"><svg class="ic"><use href="#i-check"></use></svg></span>
+        <b>{{l.t(p.title)}}</b><span>{{l.t(p.text)}}</span>
+       }
+      </div>
+     }
+    </div>
+   </div>
+  </section>
+
+  <!-- CTA final — référence React -->
+  <section class="sx-cta ge-cta reveal visible"><div class="container"><div class="sx-cta-panel toned"><div><h2>{{l.t('Digitalisez vos processus, gagnez en performance')}}</h2><p>{{l.t("Nos solutions s'adaptent à votre organisation.")}}</p></div><div class="cta-actions"><a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a href="#/secteurs" class="btn btn-ghost-w">{{l.t('Tous les secteurs')}}</a></div></div></div></section>
+ </div>
+
 </main>
