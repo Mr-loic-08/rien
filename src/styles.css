@@ -8765,3 +8765,12 @@ html{scroll-behavior:auto!important}
 @media(max-width:950px){.angular-partners .partner-inst-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.angular-partners .partner-logo-grid,.angular-partners .partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-partners .partner-directory{padding:55px 0;margin:22px 10px 0;border-radius:22px}}
 @media(max-width:420px){.angular-partners .partner-logo-grid{grid-template-columns:1fr}.angular-partners .partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Partenaires — bloc final issu de la référence React */
+.angular-partners .partner-join{position:relative;margin:32px 18px 48px;border-radius:30px;background:linear-gradient(115deg,#0d2b4a,#06172c);color:#fff;padding:58px 0;overflow:hidden}
+.angular-partners .partner-join .container{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.angular-partners .partner-join h2{font-size:clamp(25px,3vw,33px);color:#fff;margin:10px 0 0}
+.angular-partners .partner-join p{font-size:14px;color:rgba(255,255,255,.78);max-width:50ch;line-height:1.7;margin-top:10px}
+.angular-partners .partner-join .sec-kicker{color:#ffb36e}
+.angular-partners .partner-join .btn{flex-shrink:0}
+@media(max-width:700px){.angular-partners .partner-join{margin:24px 10px 32px;padding:42px 0;border-radius:22px}.angular-partners .partner-join .container{flex-direction:column;align-items:flex-start;gap:24px}.angular-partners .partner-join .btn{width:100%;justify-content:center}}
