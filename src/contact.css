@@ -436,3 +436,54 @@
 @keyframes privacyPhotoB{0%,42%{opacity:0;transform:scale(1.09)}50%,92%{opacity:.62;transform:scale(1.04)}100%{opacity:0;transform:scale(1.09)}}
 @media(max-width:640px){.privacy-hero-photo{background-position:62% center}.privacy-hero-photo-b{background-position:58% center}.privacy-hero::before{background:linear-gradient(90deg,rgba(3,27,52,.92),rgba(5,43,82,.68))!important}}
 @media(prefers-reduced-motion:reduce){.privacy-hero-photo-a{opacity:.68;animation:none!important}.privacy-hero-photo-b{display:none;animation:none!important}}
+
+/* Contact/Démo Angular — alignement des blocs formulaire et sélection avec la référence React */
+.angular-demo .dm-expert-ic{color:var(--orange);background:rgba(242,106,33,.10)}
+.angular-demo .dm-expert:hover .dm-expert-ic{color:var(--blue);background:rgba(26,86,176,.10)}
+.angular-demo .dm-interests{list-style:none;margin:0;padding:0}
+.angular-demo .dm-interests li{list-style:none}
+.angular-demo .dm-quick{list-style:none;margin:0;padding:0}
+.angular-demo .dm-quick a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.angular-demo .dm-quick a:hover{color:var(--orange)}
+.angular-demo .dm-form input.ng-invalid.ng-touched:not([type=checkbox]),
+.angular-demo .dm-form select.ng-invalid.ng-touched{border-color:#d65a41}
+.angular-demo .dm-chips-invalid{border-style:dashed}
+.angular-demo .dm-interests input:focus-visible+.dm-cb{outline:2px solid var(--blue);outline-offset:3px}
+.angular-demo .dm-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.angular-demo .dm-form-card,.angular-demo .dm-box{min-width:0}
+@media(max-width:600px){.angular-demo .dm-form-card{padding:20px 16px}.angular-demo .dm-row{grid-template-columns:1fr}.angular-demo .dm-grid{gap:22px}}
+
+/* Contact/Démo — colonne latérale fidèle à la référence React : typographie, icônes et micro-interactions */
+.angular-demo .dm-side .dm-box{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;animation:dmSideAppear .65s ease both}
+.angular-demo .dm-side .dm-box:nth-child(2){animation-delay:.12s}
+.angular-demo .dm-side .dm-box:hover{transform:translateY(-3px);border-color:rgba(242,106,33,.26);box-shadow:0 12px 28px rgba(10,35,70,.08)}
+.angular-demo .dm-side .dm-box h3{font-size:14.5px;font-weight:800;line-height:1.4;letter-spacing:0;color:var(--navy);text-align:center}
+.angular-demo .dm-interests li label{font-size:12.5px;font-weight:400;line-height:1.5;transition:color .2s ease,transform .2s ease}
+.angular-demo .dm-interests li label:hover{color:var(--blue);transform:translateX(3px)}
+.angular-demo .dm-interests li label:hover .dm-cb{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,176,.08)}
+.angular-demo .dm-interests .dm-interest-name{min-width:0}
+.angular-demo .dm-quick li{font-size:12.5px;font-weight:600;line-height:1.5;align-items:flex-start;transition:transform .2s ease}
+.angular-demo .dm-quick li:hover{transform:translateX(3px)}
+.angular-demo .dm-quick li>a{display:flex;align-items:flex-start;gap:11px;width:100%;color:inherit;text-decoration:none;transition:color .2s ease}
+.angular-demo .dm-quick li>a:hover{color:var(--orange)}
+.angular-demo .dm-quick .ic{display:block;width:20px;height:20px;flex:0 0 20px;color:var(--blue);margin-top:1px;transition:color .2s ease,transform .25s ease}
+.angular-demo .dm-quick li:hover .ic{color:var(--orange);transform:scale(1.12)}
+.angular-demo .dm-quick li span{display:block;min-width:0;overflow-wrap:anywhere;white-space:pre-line}
+@keyframes dmSideAppear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.angular-demo .dm-side .dm-box{animation:none}.angular-demo .dm-side .dm-box,.angular-demo .dm-quick li,.angular-demo .dm-interests li label{transition:none}}
+
+/* Contact/Démo — FAQ : structure et accordéon identiques à React */
+.angular-demo .dm-bottom-grid-faq-only{display:grid;grid-template-columns:minmax(0,820px)!important;justify-content:center;gap:18px}
+.angular-demo .dm-bottom-grid-faq-only .dm-faq{width:100%;min-width:0}
+.angular-demo .dm-faq h2{text-align:left;font-size:15px;font-weight:800;line-height:1.4}
+.angular-demo .dm-faq-item{overflow:hidden;transition:border-color .3s ease}
+.angular-demo .dm-faq-item button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;font-size:12.5px;font-weight:600;text-align:left}
+.angular-demo .dm-faq-item button .ic{display:block;width:14px;height:14px;flex:0 0 14px;transform:rotate(90deg);transition:transform .3s ease;color:var(--muted)}
+.angular-demo .dm-faq-item.open button .ic{transform:rotate(-90deg);color:var(--orange)}
+.angular-demo .dm-faq-body{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .4s var(--ease),visibility .4s}
+.angular-demo .dm-faq-item.open .dm-faq-body{grid-template-rows:1fr;visibility:visible}
+.angular-demo .dm-faq-body p{min-height:0;overflow:hidden;margin:0;padding:0 14px;font-size:12.5px;line-height:1.6;color:var(--muted)}
+.angular-demo .dm-faq-item.open .dm-faq-body p{padding-bottom:12px}
+.angular-demo .dm-faq-item button:focus-visible{outline:2px solid var(--blue);outline-offset:-3px;border-radius:8px}
+@media(max-width:600px){.angular-demo .dm-bottom-grid-faq-only{grid-template-columns:minmax(0,1fr)!important}.angular-demo .dm-faq{padding:18px 16px}}
+@media(prefers-reduced-motion:reduce){.angular-demo .dm-faq-body,.angular-demo .dm-faq-item button .ic{transition:none}}

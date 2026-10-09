@@ -1,0 +1,26 @@
+<div class="pg privacy-page">
+<section class="privacy-hero">
+  <div class="privacy-hero-photo privacy-hero-photo-a" aria-hidden="true"></div>
+  <div class="privacy-hero-photo privacy-hero-photo-b" aria-hidden="true"></div>
+  <div class="privacy-hero-orb privacy-hero-orb-a" aria-hidden="true"></div>
+  <div class="privacy-hero-orb privacy-hero-orb-b" aria-hidden="true"></div>
+  <div class="privacy-hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <nav class="privacy-breadcrumb"><a href="#/">{{l.t('Accueil')}}</a><span> / </span><a href="#/contact">{{l.t('Contact & Support')}}</a><span> / </span>{{l.t('Politique de confidentialité')}}</nav>
+    <div class="privacy-hero-copy">
+      <span class="privacy-hero-icon"><svg class="ic"><use href="#i-shield"></use></svg></span>
+      <div><p class="privacy-kicker">I-TECH SARL</p><h1>{{l.t('Politique de confidentialité')}}</h1><p>{{l.t('Cette page explique comment les informations transmises via le site I-TECH sont utilisées et protégées.')}}</p></div>
+    </div>
+  </div>
+</section>
+<main class="privacy-main">
+  <div class="privacy-main-glow privacy-main-glow-a" aria-hidden="true"></div><div class="privacy-main-glow privacy-main-glow-b" aria-hidden="true"></div>
+  <div class="container privacy-layout">
+    <aside class="privacy-note"><svg class="ic"><use href="#i-info"></use></svg><div><b>{{l.t('Information importante')}}</b><p>{{l.t('Cette politique doit être validée par I-TECH avant sa publication définitive, notamment pour les durées de conservation et les éventuels prestataires traitant des données.')}}</p></div></aside>
+    <div class="privacy-sections">
+      @for(s of sections; track s.title){<section class="privacy-card"><h2>{{l.t(s.title)}}</h2><p>{{l.t(s.text)}}</p></section>}
+      <section class="privacy-contact"><span><svg class="ic"><use href="#i-mail"></use></svg></span><div><h2>{{l.t('Une question sur vos données ?')}}</h2><p>{{l.t("Contactez I-TECH à l'adresse suivante :")}} <a href="mailto:contacts@i-techsarl.com">contacts@i-techsarl.com</a></p></div></section>
+    </div>
+  </div>
+</main>
+</div>
