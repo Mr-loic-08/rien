@@ -8566,3 +8566,35 @@ html.dark-theme .sx-stats .sx-stat > span:not(.sx-stat-ic){color:#dce7ee !import
 .enterprise-page-angular .ge-cta{margin:52px 18px 0;padding:0 0 24px;border-radius:36px;overflow:hidden}.enterprise-page-angular .ge-cta .sx-cta-panel{border-radius:32px;background:linear-gradient(115deg,#092b51,#174f8a 64%,#1e3766);box-shadow:0 24px 50px -35px #071e3d}.enterprise-page-angular .ge-cta h2,.enterprise-page-angular .ge-cta p{color:#fff}.enterprise-page-angular .ge-cta .btn-ghost-w{border:1px solid rgba(255,255,255,.55);color:#fff}@media(max-width:700px){.enterprise-page-angular .ge-cta{margin:38px 10px 0;border-radius:25px}.enterprise-page-angular .ge-cta .sx-cta-panel{border-radius:24px}}
 
 .angular-resources{background:#edf2f8;padding-bottom:55px}.angular-resources .resources-hero{position:relative;isolation:isolate;overflow:hidden;min-height:550px;background:#0b2140;color:#fff;border-radius:0 0 40px 40px}.angular-resources .res-hero-gallery{position:absolute;inset:0;z-index:-2}.angular-resources .res-hero-image{position:absolute;inset:0;background-position:center;background-size:cover;opacity:0;animation:resAngularSlide 18s infinite}@keyframes resAngularSlide{0%,29%{opacity:.42}34%,100%{opacity:0}}.angular-resources .resources-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,19,39,.88),rgba(5,19,39,.38))}.angular-resources .res-breadcrumb{padding-top:42px;color:#d3dfea}.angular-resources .res-breadcrumb a{color:#f58220}.angular-resources .resources-hero-grid{padding:75px 0 90px}.angular-resources .res-content{margin:48px 18px 0;padding:54px 0 68px;border-radius:36px;background:#fff;box-shadow:0 24px 65px -55px #183554}.angular-resources .res-filters button{transition:background .25s,color .25s,transform .25s}.angular-resources .res-filters button:hover{transform:translateY(-2px)}.angular-resources .res-article{border-radius:24px;overflow:hidden}@media(max-width:700px){.angular-resources .resources-hero{border-radius:0 0 26px 26px}.angular-resources .res-content{margin:30px 10px 0;padding:35px 0;border-radius:25px}.angular-resources .resources-hero-grid{padding:45px 0 65px}}
+
+/* RESSOURCES — fidélité React : hero sombre, lecture nette, bloc articles léger */
+.angular-resources.resources-page{background:#f5f8fc!important}
+.angular-resources .resources-hero{min-height:74vh!important;padding:150px 0 96px!important;display:flex!important;flex-direction:column;justify-content:center;border-radius:0!important;background:#061426!important;overflow:hidden!important}
+.angular-resources .resources-hero::before{z-index:1!important;background:linear-gradient(99deg,rgba(3,13,31,.95) 0%,rgba(3,13,31,.84) 43%,rgba(3,13,31,.53) 74%,rgba(3,13,31,.34) 100%),linear-gradient(0deg,#061426,transparent 44%)!important;pointer-events:none}
+.angular-resources .res-hero-gallery{z-index:0!important}
+.angular-resources .res-hero-image{animation:resAngularSlide 18s infinite!important;opacity:0}
+@keyframes resAngularSlide{0%,30%{opacity:1}33%,96%{opacity:0}100%{opacity:0}}
+.angular-resources .resources-hero>.container{position:relative;z-index:3!important;width:100%}
+.angular-resources .resources-hero-grid{display:grid!important;grid-template-columns:.9fr 1.1fr!important;gap:60px!important;align-items:center!important;margin-top:28px!important;padding:0!important}
+.angular-resources .resources-copy{position:relative;z-index:4;min-width:0}
+.angular-resources .resources-copy h1{color:#fff!important;font-size:clamp(31px,3.5vw,45px)!important;line-height:1.12!important;letter-spacing:-.8px!important;margin:18px 0 0!important;text-shadow:0 3px 18px rgba(0,0,0,.45)}
+.angular-resources .resources-copy p{color:rgba(255,255,255,.85)!important;font-size:16px!important;line-height:1.65!important;max-width:48ch!important;margin:15px 0 0!important}
+.angular-resources .res-kicker{color:#a7d7ff!important;background:rgba(27,131,255,.16)!important;border:1px solid rgba(117,206,255,.3)!important}
+.angular-resources .news-board{position:relative;z-index:3;max-width:100%;border-radius:18px!important}
+.angular-resources .res-cut{z-index:4!important;background:#f5f8fc!important}
+.angular-resources .res-content{background:transparent!important;box-shadow:none!important;border-radius:0!important;margin:0!important;padding:36px 0 62px!important}
+.angular-resources .res-filters{display:flex!important;justify-content:center!important;align-items:center;gap:8px!important;flex-wrap:wrap;margin-bottom:28px!important;padding-bottom:14px!important;border-bottom:1px solid #dce5ef}
+.angular-resources .res-filters button{background:transparent;color:#65758b;border:0;border-radius:9px;padding:10px 18px;font-weight:700}
+.angular-resources .res-filters button.on{color:white!important;background:#f26a21!important;box-shadow:0 10px 22px rgba(242,106,33,.25)!important}
+.angular-resources .res-filters button:not(.on):hover{background:#fff!important;color:#f26a21!important}
+.angular-resources .res-list{max-width:1040px!important;margin:auto!important;display:flex!important;flex-direction:column!important;gap:18px!important}
+.angular-resources .res-article{display:grid!important;grid-template-columns:240px minmax(0,1fr)!important;gap:24px!important;padding:14px!important;background:#fff!important;border:1px solid #dce5ef!important;border-radius:19px!important;box-shadow:0 14px 32px -28px rgba(13,43,74,.5)!important}
+.angular-resources .res-article:hover{transform:translateY(-5px);box-shadow:0 24px 52px -26px rgba(13,43,74,.38)!important}
+.angular-resources .res-image{height:154px!important;display:block;overflow:hidden;border-radius:12px}
+.angular-resources .res-image img{display:block;width:100%;height:100%;object-fit:cover}
+.angular-resources .res-article-body h2{color:#0b2949!important;font-size:17px!important;line-height:1.3!important;margin:8px 0!important}
+.angular-resources .res-article-body p{color:#65758b!important;font-size:13px!important;line-height:1.6!important}
+.angular-resources .res-meta{color:#8090a3!important}
+@media(max-width:1024px){.angular-resources .resources-hero-grid{grid-template-columns:1fr!important;gap:30px!important}.angular-resources .news-board{max-width:620px;margin:auto}}
+@media(max-width:768px){.angular-resources .resources-hero{padding:104px 0 96px!important}.angular-resources .resources-hero-grid{gap:26px!important}.angular-resources .res-article{grid-template-columns:180px minmax(0,1fr)!important;gap:17px!important}.angular-resources .res-image{height:138px!important}}
+@media(max-width:530px){.angular-resources .resources-hero{padding:98px 0 75px!important}.angular-resources .resources-copy h1{font-size:28px!important}.angular-resources .res-filters{justify-content:flex-start!important;flex-wrap:nowrap!important;overflow-x:auto}.angular-resources .res-filters button{white-space:nowrap}.angular-resources .res-article{grid-template-columns:1fr!important;padding:12px!important}.angular-resources .res-image{height:185px!important}}
