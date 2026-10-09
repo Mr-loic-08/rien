@@ -1,3 +1,4 @@
+import { CarrieresPageComponent } from './pages/entreprise/carrieres/carrieres';
 import { AproposPageComponent } from './pages/entreprise/apropos/apropos';
 import { EntreprisePageComponent } from './pages/entreprise/entreprise';
 import { RessourcesPageComponent } from './pages/ressources/ressources';
@@ -26,7 +27,7 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, CarrieresPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -44,6 +45,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isRessources=false;
   isEntreprise=false;
   isApropos=false;
+  isCarrieres=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
@@ -60,6 +62,7 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
     this.isRessources=h==='#/ressources'||h==='#ressources';
     this.isEntreprise=h==='#/entreprise'||h==='#entreprise';
     this.isApropos=h==='#/entreprise/apropos';
+    this.isCarrieres=h==='#/entreprise/carrieres';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;

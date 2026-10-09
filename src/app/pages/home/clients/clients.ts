@@ -11,7 +11,7 @@ export class HomeClientsComponent {
   readonly l = inject(LanguageService);
   showAll = false;
   readonly logos: ClientLogo[] = [
-    {src:'images/clients/client-01.png',alt:'Logo client I-TECH'},
+    {src:'images/clients/client-01.png',alt:'!'},
     {src:'images/clients/mupeci.png',alt:'MUPECI'},
     {src:'images/clients/camccul.png',alt:'CamCCUL'},
     {src:'images/clients/safi.png',alt:'SAFI'},
