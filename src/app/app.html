@@ -52,7 +52,9 @@
         <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 7h.01"/></symbol>
         <symbol id="i-office" viewBox="0 0 24 24"><path d="M4 21V5h12v16M16 10h4v11M8 9h4M8 13h4M8 17h4M2 21h20"/></symbol>
       </defs></svg>
-@if(isContact){
+@if(isDemo){
+<app-header></app-header><app-demo-page></app-demo-page><app-footer></app-footer>
+}@else if(isContact){
 <app-header></app-header><app-contact-page></app-contact-page><app-footer></app-footer>
 }@else if(isApropos){
 <app-header></app-header><app-apropos-page></app-apropos-page><app-footer></app-footer>

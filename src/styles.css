@@ -8699,3 +8699,25 @@ html{scroll-behavior:auto!important}
 .angular-contact .ct-info .ct-main{transition:color .25s ease}
 .angular-contact .ct-info a.ct-main:focus-visible{outline:2px solid #1475c6;outline-offset:4px;border-radius:3px}
 @media(prefers-reduced-motion:reduce){.angular-contact .ct-info,.angular-contact .ct-info::before,.angular-contact .ct-info::after,.angular-contact .ct-info-ic{transition:none!important;animation:none!important}.angular-contact .ct-info:hover,.angular-contact .ct-info:focus-within{transform:none}}
+
+/* CONTACT / DEMO — blocs 1 et 2, images et textes React */
+.angular-demo{background:#f4f7fb}
+.angular-demo .dm-hero{position:relative;isolation:isolate;overflow:hidden;min-height:60vh;display:flex;align-items:center;padding:150px 0 85px;background:#061c35;color:white}
+.angular-demo .dm-hero-images,.angular-demo .dm-hero-veil{position:absolute;inset:0;pointer-events:none}
+.angular-demo .dm-hero-images{z-index:-2}
+.angular-demo .dm-hero-image{position:absolute;inset:0;background-position:center;background-size:cover;opacity:0;animation:demoHeroRotate 18s infinite}
+@keyframes demoHeroRotate{0%,29%{opacity:1}34%,95%{opacity:0}100%{opacity:1}}
+.angular-demo .dm-hero-veil{z-index:-1;background:linear-gradient(90deg,rgba(3,17,35,.94),rgba(3,17,35,.76) 48%,rgba(3,17,35,.38))}
+.angular-demo .dm-hero>.container{position:relative;z-index:2;width:100%}
+.angular-demo .dm-breadcrumb{font-size:12px;color:#dce8f7}.angular-demo .dm-breadcrumb a{color:#dce8f7;text-decoration:none}.angular-demo .dm-breadcrumb a:hover{color:#ff9b43}
+.angular-demo .dm-hero-copy{max-width:660px;margin-top:35px}.angular-demo .dm-hero-copy h1{color:white;font-size:clamp(34px,4.1vw,54px);line-height:1.13;font-weight:800}.angular-demo .dm-hero-copy p{color:#e5edf7;font-size:clamp(15px,1.3vw,18px);line-height:1.7;margin-top:20px}
+.angular-demo .dm-main{position:relative;padding:66px 0 85px;background:#f4f7fb}
+.angular-demo .dm-experts{max-width:1100px;margin:auto}.angular-demo .dm-experts h2{color:#0d2b4a;font-size:clamp(25px,3vw,36px);margin:0 0 26px}
+.angular-demo .dm-experts-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.angular-demo .dm-expert{display:flex;align-items:flex-start;gap:15px;position:relative;min-width:0;background:white;border:1px solid #e0e8f2;border-radius:24px;padding:25px 20px;text-decoration:none;box-shadow:0 12px 30px -25px #0d2b4a;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.angular-demo .dm-expert:hover{transform:translateY(-9px);border-color:#f58220;box-shadow:0 20px 40px -22px #0d2b4a}
+.angular-demo .dm-expert-ic{width:50px;height:50px;min-width:50px;display:grid;place-items:center;background:#fff3e9;color:#f58220;border-radius:14px;transition:background .3s,color .3s,transform .3s}
+.angular-demo .dm-expert-ic .ic{width:24px;height:24px;overflow:visible}.angular-demo .dm-expert:hover .dm-expert-ic{color:#1262a4;background:#eaf3ff;transform:rotate(-7deg) scale(1.07)}
+.angular-demo .dm-expert-txt{display:flex;flex-direction:column;gap:10px}.angular-demo .dm-expert-txt b{font-size:17px;color:#0d2b4a}.angular-demo .dm-expert-txt span{font-size:13px;line-height:1.65;color:#60738a}.angular-demo .dm-expert-arrow{width:16px;height:16px;min-width:16px;margin-left:auto;color:#f58220}
+@media(max-width:850px){.angular-demo .dm-experts-list{grid-template-columns:1fr}.angular-demo .dm-hero{min-height:520px;padding:125px 0 75px}}
+@media(prefers-reduced-motion:reduce){.angular-demo .dm-hero-image{animation:none}.angular-demo .dm-hero-image:first-child{opacity:1}}
