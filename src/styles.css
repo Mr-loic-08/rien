@@ -8745,3 +8745,23 @@ html{scroll-behavior:auto!important}
 .angular-partners .ent-kicker{display:inline-flex;align-items:center;gap:10px;color:#fff}
 .angular-partners .ent-kicker .ic{width:18px;height:18px;color:#f58220}
 @media(max-width:600px){.angular-partners .partner-detail-hero{min-height:490px;padding:105px 0 75px}.angular-partners .ent-detail-copy{margin-top:32px}}
+
+/* ENTREPRISE / PARTENAIRES — blocs 2 et 3 (React V17.20.4) */
+.angular-partners .partner-directory{padding:76px 0;background:#fff;margin:36px 16px 0;border-radius:30px;overflow:hidden}
+.angular-partners .partner-directory.institution{background:#f0f5fb}
+.angular-partners .partner-directory .sec-kicker{color:#f26a21;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.angular-partners .partner-directory .sec-title{color:#0d2b4a;font-size:clamp(26px,3vw,38px);margin:10px 0 0}
+.angular-partners .partner-lead{font-size:14px;color:#64748b;margin:9px 0 30px;line-height:1.7}
+.angular-partners .partner-logo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.angular-partners .partner-logo{min-height:105px;padding:16px;border:1px solid #dce6f1;border-radius:16px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.angular-partners .partner-logo:hover{transform:translateY(-5px);border-color:#1a56b0;box-shadow:0 20px 45px -26px rgba(13,43,74,.35)}
+.angular-partners .partner-logo b{font-size:clamp(18px,2.2vw,25px);letter-spacing:-.04em;color:#1c2737}
+.angular-partners .partner-logo span{font-size:10px;color:#8291a3;margin-top:5px;text-align:center}
+.angular-partners .partner-logo.ms b{color:#4d8fce}.angular-partners .partner-logo.oracle b{color:#e31b23}.angular-partners .partner-logo.aws b{color:#26374a}.angular-partners .partner-logo.dell b{color:#2572ab}.angular-partners .partner-logo.fortinet b{color:#d32027}.angular-partners .partner-logo.vmware b{font-weight:500}
+.angular-partners .partner-inst-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.angular-partners .partner-inst{min-height:95px;padding:12px;display:grid;place-items:center;white-space:pre-line;text-align:center;border:1px solid #dce6f1;border-radius:15px;background:#fff;font-weight:800;font-size:14px;color:#566475;transition:transform .25s ease}
+.angular-partners .partner-inst:hover{transform:translateY(-4px)}
+.angular-partners .partner-inst:first-child{color:#a07e35}.angular-partners .partner-inst:nth-child(2){color:#816f49}.angular-partners .partner-inst:nth-child(3){color:#2968ae}.angular-partners .partner-inst:nth-child(4){color:#1a56b0}.angular-partners .partner-inst:nth-child(5){color:#4b5d76}
+@media(max-width:950px){.angular-partners .partner-inst-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.angular-partners .partner-logo-grid,.angular-partners .partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-partners .partner-directory{padding:55px 0;margin:22px 10px 0;border-radius:22px}}
+@media(max-width:420px){.angular-partners .partner-logo-grid{grid-template-columns:1fr}.angular-partners .partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
