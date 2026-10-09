@@ -1,3 +1,5 @@
+import { CarrieresPageComponent } from './pages/entreprise/carrieres/carrieres';
+import { PartenairesPageComponent } from './pages/entreprise/partenaires/partenaires';
 import { ConfidentialitePageComponent } from './pages/contact/confidentialite/confidentialite';
 import { DemoPageComponent } from './pages/contact/demo/demo';
 import { ContactPageComponent } from './pages/contact/contact';
@@ -29,7 +31,7 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent],
+  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent, CarrieresPageComponent, PartenairesPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, AfterViewInit, OnDestroy {
@@ -50,6 +52,8 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   isContact=false;
   isDemo=false;
   isPrivacy=false;
+  isCarrieres=false;
+  isPartenaires=false;
   private onHash=()=>{
     const h=location.hash.replace(/\/$/,'');
     this.isSolutions=h==='#/solutions';
@@ -69,6 +73,8 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
     this.isContact=h==='#/contact'||h==='#/contact-support';
     this.isDemo=h==='#/contact/demo';
     this.isPrivacy=h==='#/contact/confidentialite';
+    this.isCarrieres=h==='#/entreprise/carrieres';
+    this.isPartenaires=h==='#/entreprise/partenaires';
   };
   ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
   private revealObserver?: IntersectionObserver;

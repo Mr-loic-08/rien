@@ -1,7 +1,7 @@
 <section class="hero" id="accueil" (mouseenter)="paused=true" (mouseleave)="paused=false">
  <div class="hero-bg" id="heroBg"><div class="hero-base"></div>
   <ng-container *ngFor="let s of slides; let i=index">
-   <div *ngIf="s.type==='video'" class="slide" [class.active]="i===current()" [style.background-image]="'url('+s.poster+')'"><video autoplay muted loop playsinline preload="metadata" [attr.poster]="s.poster"><source [src]="s.local" type="video/mp4"></video></div>
+   <div *ngIf="s.type==='video'" class="slide" [class.active]="i===current()" [style.background-image]="'url('+s.poster+')'"><video *ngIf="i===current()" autoplay muted loop playsinline preload="none" [attr.poster]="s.poster"><source [src]="s.local" type="video/mp4"></video></div>
    <div *ngIf="s.type==='image'" class="slide" [class.active]="i===current()" [style.background-image]="'url('+s.src+')'"></div>
   </ng-container>
   <div class="hero-ov"></div><div class="hero-grid"></div><div class="hero-scan"></div><span class="hero-orb a"></span><span class="hero-orb b"></span><div class="hero-vig"></div><div class="hero-noise"></div>
