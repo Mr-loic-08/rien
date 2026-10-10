@@ -1,14 +1,16 @@
 import {Component,inject} from '@angular/core';
 import {LanguageService} from '../../../core/language.service';
-@Component({selector:'app-carrieres-page',standalone:true,templateUrl:'./carrieres.html'})
+@Component({selector:'app-carrieres-page',standalone:true,templateUrl:'./carrieres.html',styleUrl:'./carrieres.css'})
 export class CarrieresPageComponent {
  l=inject(LanguageService);
  query='';
+ location='all';
+ contract='all';
  jobs=[
- {icon:'i-layers',title:'Développeur Full Stack',meta:'Yaoundé, Cameroun · CDI',text:'Développer des applications web et mobiles robustes et évolutives.'},
- {icon:'i-book',title:'Consultant Fonctionnel',meta:'Yaoundé, Cameroun · CDI',text:'Recueillir les besoins, analyser les processus métiers et accompagner nos clients.'},
- {icon:'i-lock',title:'Administrateur Systèmes',meta:'Yaoundé, Cameroun · CDI',text:"Assurer l’administration, la disponibilité et la sécurité des infrastructures."},
- {icon:'i-head',title:'Support Technique',meta:'Yaoundé, Cameroun · CDI',text:'Assurer le support de niveau 1 et 2 auprès de nos utilisateurs.'}
+ {icon:'i-layers',title:'Développeur Full Stack',meta:'Yaoundé, Cameroun · CDI',location:'Yaoundé',contract:'CDI',text:'Développer des applications web et mobiles robustes et évolutives.'},
+ {icon:'i-book',title:'Consultant Fonctionnel',meta:'Yaoundé, Cameroun · CDI',location:'Yaoundé',contract:'CDI',text:'Recueillir les besoins, analyser les processus métiers et accompagner nos clients.'},
+ {icon:'i-lock',title:'Administrateur Systèmes',meta:'Yaoundé, Cameroun · CDI',location:'Yaoundé',contract:'CDI',text:"Assurer l’administration, la disponibilité et la sécurité des infrastructures."},
+ {icon:'i-head',title:'Support Technique',meta:'Yaoundé, Cameroun · CDI',location:'Yaoundé',contract:'CDI',text:'Assurer le support de niveau 1 et 2 auprès de nos utilisateurs.'}
  ];
  reasons=[
  {icon:'i-bulb',title:'Apprentissage continu',text:'Formations et montée en compétences régulières.'},
@@ -16,7 +18,7 @@ export class CarrieresPageComponent {
  {icon:'i-link',title:"Culture d'équipe",text:"Esprit d'entraide et bienveillance au quotidien."},
  {icon:'i-chart',title:'Rémunération attractive',text:'Packages compétitifs et avantages sociaux.'}
  ];
- get visibleJobs(){const q=this.query.trim().toLocaleLowerCase();return q?this.jobs.filter(j=>[j.title,j.meta,j.text].some(v=>this.l.t(v).toLocaleLowerCase().includes(q))):this.jobs;}
+ get visibleJobs(){const q=this.query.trim().toLocaleLowerCase();return this.jobs.filter(j=>(!q||[j.title,j.meta,j.text].some(v=>this.l.t(v).toLocaleLowerCase().includes(q)))&&(this.location==='all'||j.location===this.location)&&(this.contract==='all'||j.contract===this.contract));}
  highlights=[
  {icon:'i-users',title:'Environnement collaboratif'},
  {icon:'i-chart',title:'Évolution professionnelle'},
