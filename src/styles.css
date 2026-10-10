@@ -8736,12 +8736,87 @@ html{scroll-behavior:auto!important}
 @media(max-width:1100px){.angular-demo .dm-grid{grid-template-columns:minmax(190px,1fr) minmax(0,2fr)}.angular-demo .dm-side{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.angular-demo .dm-grid{grid-template-columns:1fr}.angular-demo .dm-side{grid-column:auto;grid-template-columns:1fr}.angular-demo .dm-form-card{padding:20px 15px}.angular-demo .dm-row{grid-template-columns:1fr}.angular-demo .dm-cta-panel{flex-direction:column;align-items:flex-start;padding:28px}.angular-demo .dm-bottom{padding:45px 0;margin:12px 8px}.angular-demo .dm-faq h2{font-size:24px}}
 
-/* Harmonisation globale : boutons d'action orange, variantes secondaires lisibles. */
-:root{color-scheme:light}
-.btn-primary{background:var(--orange);border-color:var(--orange);color:#fff}
-.btn-primary:hover{background:var(--orange-d);border-color:var(--orange-d);color:#fff}
-.btn-outline{border-color:var(--orange);color:var(--orange)}
-.btn-outline:hover{border-color:var(--orange-d);color:var(--orange-d)}
-/* Icônes du menu : charte orange par défaut, bleu au survol. */
-.header .nav-section-ic,.header .nav-home-ic,.header .dropdown .ic,.mobile-menu .menu-brand-ic,.mobile-menu .m-art-ic{color:var(--orange)}
-.header .nav a:hover .nav-section-ic,.header .nav a:hover .nav-home-ic,.header .dropdown a:hover .ic,.mobile-menu a:hover .ic,.mobile-menu button:hover .menu-brand-ic{color:var(--blue)}
+
+/* I-TECH Accueil cinematic V2 : classes réelles des composants Angular. */
+section.hero#accueil{min-height:100svh;overflow:hidden;border-radius:0 0 54px 54px;box-shadow:0 28px 65px rgba(3,20,38,.28)}
+section.hero#accueil .hero-bg .slide{transition:opacity 1.2s ease,transform 8s ease!important;transform:scale(1.13)!important}
+section.hero#accueil .hero-bg .slide.active{transform:scale(1.015)!important}
+section.hero#accueil .hero-bg .slide.active video{animation:itechV2Video 12s ease-in-out infinite alternate}
+@keyframes itechV2Video{from{transform:scale(1.01)}to{transform:scale(1.12) translateX(-1.5%)}}
+section.hero#accueil .hero-ov{background:linear-gradient(95deg,rgba(2,14,29,.94) 0%,rgba(4,25,46,.83) 44%,rgba(3,24,46,.33) 100%)!important}
+section.hero#accueil .hero-copy{animation:itechV2Enter 1s ease-out both}
+@keyframes itechV2Enter{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+section.hero#accueil .hero-feats{border:1px solid rgba(255,255,255,.3)!important;border-radius:32px!important;background:rgba(8,36,67,.72)!important;box-shadow:0 30px 70px rgba(0,0,0,.3)!important;backdrop-filter:blur(20px);animation:itechV2Float 7s ease-in-out infinite}
+@keyframes itechV2Float{0%,100%{translate:0 0}50%{translate:0 -12px}}
+section.hero#accueil .itech-hero-accent{position:absolute;z-index:2;right:3%;bottom:10%;display:flex;align-items:flex-end;gap:12px;pointer-events:none;opacity:.65}
+section.hero#accueil .itech-hero-accent span{display:block;width:7px;border-radius:10px;background:#f26a21;box-shadow:0 0 25px rgba(242,106,33,.55);animation:itechV2Bars 2.8s ease-in-out infinite alternate}
+section.hero#accueil .itech-hero-accent span:nth-child(1){height:45px}section.hero#accueil .itech-hero-accent span:nth-child(2){height:80px;animation-delay:.5s}section.hero#accueil .itech-hero-accent span:nth-child(3){height:60px;animation-delay:1s}
+@keyframes itechV2Bars{to{height:22px;opacity:.5}}
+section.stats#impact{position:relative;z-index:2;isolation:isolate;overflow:hidden;margin-top:-32px!important;padding:120px 0 116px!important;border-radius:48px 48px 54px 54px!important;background:#082744!important;box-shadow:0 28px 70px rgba(2,17,34,.25)}
+section.stats#impact .itech-impact-backdrop{position:absolute;inset:-8%;z-index:-1;pointer-events:none;background:linear-gradient(105deg,rgba(4,23,45,.92),rgba(6,38,73,.74)),url('/images/hero-2.jpg') center/cover no-repeat;animation:itechV2Backdrop 20s ease-in-out infinite alternate}
+@keyframes itechV2Backdrop{to{transform:scale(1.09) translateX(-1%)}}
+section.stats#impact .stats-aurora{opacity:.45}
+section.stats#impact .stats-head{max-width:800px;margin-bottom:56px}
+section.stats#impact .stats-head h3{font-size:clamp(28px,3.2vw,46px)!important}
+section.stats#impact .impact-grid{gap:18px}
+section.stats#impact .impact-card{border-radius:28px!important;background:rgba(9,39,71,.74)!important;border:1px solid rgba(255,255,255,.26)!important;backdrop-filter:blur(14px);box-shadow:0 20px 45px rgba(0,0,0,.22)!important;transition:transform .45s ease,background .45s ease,border-color .45s ease!important}
+section.stats#impact .impact-card.on:hover{transform:translateY(-12px) scale(1.03)!important;background:rgba(22,77,119,.85)!important;border-color:#f26a21!important}
+section.stats#impact .impact-card:hover .impact-ico{color:#1765a0!important;transform:scale(1.08) rotate(-4deg)}
+@media(max-width:800px){section.hero#accueil{border-radius:0 0 28px 28px}section.hero#accueil .hero-feats{animation:none}section.hero#accueil .itech-hero-accent{display:none}section.stats#impact{padding:85px 0 75px!important;border-radius:30px!important}}
+@media(prefers-reduced-motion:reduce){section.hero#accueil .hero-copy,section.hero#accueil .hero-feats,section.hero#accueil .hero-bg .slide.active video,section.hero#accueil .itech-hero-accent span,section.stats#impact .itech-impact-backdrop{animation:none!important}}
+
+
+/* I-TECH — À PROPOS : refonte des dispositions, scoped et responsive */
+.angular-about{background:#eaf0f6!important;overflow:clip;padding-bottom:70px}
+.angular-about :is(.about-path,.about-mission,.about-values,.about-team,.ent-reasons){position:relative;isolation:isolate;overflow:hidden;margin:24px clamp(10px,2vw,32px) 0!important;border-radius:clamp(24px,3.6vw,48px)!important;padding:clamp(52px,6vw,94px) clamp(16px,3vw,48px)!important}
+.angular-about :is(.about-path,.about-mission,.about-values,.about-team,.ent-reasons)>.container{width:100%;max-width:1180px;margin-inline:auto;position:relative;z-index:1}
+.angular-about .ent-detail-hero{min-height:min(76vh,730px);border-radius:0 0 54px 54px!important;box-shadow:0 30px 60px rgba(3,23,43,.18)}
+.angular-about .ent-detail-photo{animation:aboutHeroDrift 18s ease-in-out infinite alternate}
+.angular-about .ent-detail-veil{background:linear-gradient(90deg,rgba(3,19,39,.96) 0%,rgba(4,27,50,.86) 47%,rgba(3,25,47,.4) 100%)!important}
+.angular-about .ent-detail-copy{max-width:740px}
+.angular-about .ent-detail-copy h1{font-size:clamp(38px,5.3vw,72px);letter-spacing:-.035em;line-height:1.06}
+.angular-about .ent-detail-copy p{font-size:clamp(17px,1.6vw,21px);max-width:48ch}
+.angular-about .about-path{background:#f8fbff!important;margin-top:-30px!important;z-index:3;box-shadow:0 24px 70px rgba(12,41,70,.14)!important}
+.angular-about .about-path .sec-title,.angular-about .about-values .sec-title,.angular-about .about-team .sec-title{font-size:clamp(29px,3.4vw,46px);line-height:1.13;margin-bottom:26px}
+.angular-about .about-timeline{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin-top:58px!important}
+.angular-about .about-timeline::before{top:19px!important;left:10%!important;right:10%!important;height:3px!important;opacity:.6!important}
+.angular-about .about-time{min-width:0;padding:0 7px 20px!important;text-align:center!important}
+.angular-about .about-time .about-dot{position:relative;z-index:2;box-shadow:0 0 0 7px #f8fbff}
+.angular-about .about-time b{display:block;margin-top:18px;font-size:19px!important;color:#eb7526!important}
+.angular-about .about-time h3{font-size:clamp(15px,1.25vw,18px)!important;line-height:1.35;margin-top:9px!important}
+.angular-about .about-time p{font-size:13px!important;line-height:1.55!important;margin-top:8px!important}
+.angular-about .about-mission{background:linear-gradient(112deg,#082c50 0%,#0b4777 66%,#0b5489 100%)!important;color:#fff!important;box-shadow:0 24px 55px rgba(8,40,72,.15)}
+.angular-about .about-mission::before{content:'';position:absolute;right:-110px;top:-110px;width:430px;height:430px;border:1px solid rgba(255,255,255,.13);border-radius:50%;box-shadow:0 0 0 80px rgba(255,255,255,.035),0 0 0 160px rgba(255,255,255,.025)}
+.angular-about .about-mission .container{max-width:1050px!important;display:grid!important;grid-template-columns:140px minmax(0,1fr);align-items:center;gap:clamp(25px,5vw,90px)!important}
+.angular-about .about-mission .about-big-ic{width:132px!important;height:132px!important;display:grid;place-items:center;background:rgba(255,255,255,.11)!important;color:#f58220!important;border:1px solid rgba(255,255,255,.25);border-radius:35px;box-shadow:0 24px 55px rgba(0,0,0,.12)}
+.angular-about .about-mission .about-big-ic .ic{width:65px;height:65px}
+.angular-about .about-mission .sec-title,.angular-about .about-mission p{color:#fff!important}
+.angular-about .about-mission p{font-size:clamp(19px,2vw,25px)!important;line-height:1.65!important;max-width:700px}
+.angular-about .about-mission .sec-kicker{color:#ffb477!important}
+.angular-about .about-values{background:#dceaf5!important;border:1px solid #c6d9eb!important}
+.angular-about .about-value-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+.angular-about .about-value-grid article{background:#fff!important;padding:clamp(24px,2.8vw,40px)!important;border-radius:26px!important;min-height:240px;box-shadow:0 15px 35px rgba(12,50,85,.08);border:1px solid #d3e2ef!important}
+.angular-about .about-value-grid article>span{width:60px!important;height:60px!important;border-radius:19px!important}
+.angular-about .about-value-grid h3{font-size:20px!important;margin-top:24px!important}
+.angular-about .about-value-grid p{font-size:15px!important;line-height:1.7!important}
+.angular-about .about-team{background:#f8fafc!important}
+.angular-about .about-team-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:17px!important;margin-top:38px!important}
+.angular-about .about-member{min-width:0;overflow:hidden;border-radius:24px!important;background:#fff!important;border:1px solid #dfe8f1;box-shadow:0 16px 40px rgba(12,45,76,.08);transition:transform .35s,box-shadow .35s}
+.angular-about .about-member:hover{transform:translateY(-9px);box-shadow:0 25px 48px rgba(12,45,76,.17)}
+.angular-about .about-member img{width:100%!important;height:190px!important;object-fit:cover!important;display:block;transition:transform .7s ease}
+.angular-about .about-member:hover img{transform:scale(1.08)}
+.angular-about .about-member b{display:block;color:#0c3156;font-size:16px;padding:17px 13px 3px}
+.angular-about .about-member span{display:block;color:#60748a;font-size:13px;padding:0 13px 20px}
+.angular-about .about-team .btn{margin-top:35px}
+.angular-about .ent-reasons{background:linear-gradient(115deg,#071e37,#0c416e)!important;color:white!important}
+.angular-about .ent-reasons .sec-title{color:#fff!important}
+.angular-about .ent-reason-grid{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin-top:36px!important}
+.angular-about .ent-reason-grid>div{min-width:0;border-radius:22px!important;background:rgba(255,255,255,.09)!important;border:1px solid rgba(255,255,255,.19)!important;padding:25px 18px!important;transition:transform .35s,background .35s}
+.angular-about .ent-reason-grid>div:hover{transform:translateY(-7px);background:rgba(255,255,255,.16)!important}
+.angular-about .ent-reason-grid>div span{color:#f58220!important}
+.angular-about .ent-reason-grid>div b{color:#fff!important;font-size:16px}
+.angular-about .ent-reason-grid>div p{color:#dbe8f6!important;font-size:13px;line-height:1.65}
+@keyframes aboutHeroDrift{from{transform:scale(1)}to{transform:scale(1.085) translateX(-1%)}}
+@media(max-width:1050px){.angular-about .about-team-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.angular-about .ent-reason-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.angular-about .about-timeline{grid-template-columns:repeat(3,minmax(0,1fr))!important}.angular-about .about-timeline::before{display:none!important}}
+@media(max-width:700px){.angular-about .ent-detail-hero{min-height:560px;border-radius:0 0 30px 30px!important}.angular-about :is(.about-path,.about-mission,.about-values,.about-team,.ent-reasons){margin:18px 10px 0!important;padding:48px 18px!important;border-radius:25px!important}.angular-about .about-path{margin-top:-20px!important}.angular-about .about-timeline{grid-template-columns:1fr!important;gap:15px!important;margin-top:25px!important}.angular-about .about-time{text-align:left!important;padding:18px 20px!important;background:#fff;border:1px solid #dfebf5;border-radius:18px}.angular-about .about-time .about-dot{display:none}.angular-about .about-time b{margin-top:0!important}.angular-about .about-mission .container{grid-template-columns:1fr!important;gap:24px!important}.angular-about .about-mission .about-big-ic{width:80px!important;height:80px!important;border-radius:24px}.angular-about .about-mission .about-big-ic .ic{width:40px;height:40px}.angular-about .about-value-grid{grid-template-columns:1fr!important}.angular-about .about-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}.angular-about .about-member img{height:150px!important}.angular-about .ent-reason-grid{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){.angular-about .ent-detail-photo{animation:none!important}.angular-about .about-member,.angular-about .about-member img,.angular-about .ent-reason-grid>div{transition:none!important}}

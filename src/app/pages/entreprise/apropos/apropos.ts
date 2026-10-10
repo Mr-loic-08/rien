@@ -1,6 +1,6 @@
 import {Component,inject} from '@angular/core';
 import {LanguageService} from '../../../core/language.service';
-@Component({selector:'app-apropos-page',standalone:true,templateUrl:'./apropos.html'})
+@Component({selector:'app-apropos-page',standalone:true,templateUrl:'./apropos.html',styleUrl:'./apropos.css'})
 export class AproposPageComponent {
  l=inject(LanguageService);
  mission='Accompagner les acteurs économiques dans leur transformation digitale grâce à des solutions fiables, innovantes et adaptées aux réalités africaines.';
@@ -10,11 +10,12 @@ export class AproposPageComponent {
  {icon:'i-chart',title:'Dynamisme',text:"Nous favorisons l’amélioration continue et l’excellence opérationnelle."}
  ];
  team=[
- {title:'Direction',role:'Pilotage stratégique',image:'https://images.pexels.com/photos/7793169/pexels-photo-7793169.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=500&h=500'},
- {title:'Experts métiers',role:'Conseil financier',image:'https://images.pexels.com/photos/1181422/pexels-photo-1181422.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=500&h=500'},
- {title:'Développeurs',role:'Génie logiciel',image:'https://images.pexels.com/photos/19805876/pexels-photo-19805876.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=500&h=500'},
- {title:'Consultants',role:'Accompagnement',image:'https://images.pexels.com/photos/8547282/pexels-photo-8547282.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=500&h=500'},
- {title:'Support',role:'Assistance client',image:'https://images.pexels.com/photos/8867410/pexels-photo-8867410.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=500&h=500'}
+ {title:'Stephane',role:'Responsable du département Core Banking',image:'/images/equipe/stephane.webp'},
+ {title:'Gervais',role:'Responsable monétique',image:'/images/equipe/gervais.webp'},
+ {title:'Danté',role:'Développeur .NET',image:'/images/equipe/dante.webp'},
+ {title:'Wilfried',role:'Développeur Mobile',image:'/images/equipe/wilfried.webp'},
+ {title:'Christine',role:'Développeur web',image:'/images/equipe/christine.webp'},
+ {title:'Liro',role:'Responsable département WEB & mobile',image:'/images/equipe/liro.webp'}
  ];
  reasons=[
  {icon:'i-users',title:'Expertise métier',text:"19 ans d'expérience au service de nos clients."},

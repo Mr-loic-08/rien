@@ -1,0 +1,20 @@
+/* Équipe I-TECH, style isolé de la sous-page À propos */
+.angular-about .team-premium{position:relative;overflow:hidden;padding:90px 0;background:linear-gradient(140deg,#061b30,#0c3d67)!important;border-radius:42px;color:#fff!important;box-shadow:0 28px 65px #092d4b30}
+.angular-about .team-premium:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 92% 4%,#ef7a302e,transparent 40%)}
+.angular-about .team-premium .container{position:relative}
+.angular-about .team-premium .sec-title{color:#fff!important;font-size:clamp(2rem,4vw,3.5rem)}
+.angular-about .team-intro{text-align:center;color:#d6e6f3;margin:0 auto 38px;max-width:600px}
+.angular-about .team-premium .about-team-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important}
+.angular-about .team-premium .about-member{display:flex!important;flex-direction:column!important;overflow:hidden;min-width:0;padding:0!important;border-radius:26px!important;background:#fff!important;text-align:left!important;box-shadow:0 16px 42px #0003!important;transition:transform .5s ease,box-shadow .5s ease!important;animation:teamAppear .75s both}
+.angular-about .team-premium .about-member:nth-child(2){animation-delay:.08s}.angular-about .team-premium .about-member:nth-child(3){animation-delay:.16s}.angular-about .team-premium .about-member:nth-child(4){animation-delay:.24s}.angular-about .team-premium .about-member:nth-child(5){animation-delay:.32s}.angular-about .team-premium .about-member:nth-child(6){animation-delay:.4s}
+@keyframes teamAppear{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.angular-about .team-premium .about-member:hover{transform:translateY(-11px)!important;box-shadow:0 27px 58px #0005!important}
+.angular-about .team-premium .team-photo{width:100%;aspect-ratio:4/4.5;overflow:hidden;background:#d8e5ed;position:relative}
+.angular-about .team-premium .team-photo img{display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center 22%;border-radius:0!important;transition:transform .85s ease!important}
+.angular-about .team-premium .about-member:hover img{transform:scale(1.08)}
+.angular-about .team-premium .team-info{padding:22px 22px 27px;min-height:115px;border-top:4px solid #ed772a}
+.angular-about .team-premium .team-info h3{margin:0 0 8px!important;color:#0a2e50!important;font-size:1.35rem!important;font-weight:800}
+.angular-about .team-premium .team-info p{margin:0!important;color:#43627b!important;font-size:.95rem!important;line-height:1.5}
+@media(max-width:850px){.angular-about .team-premium .about-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:520px){.angular-about .team-premium{padding:60px 0;border-radius:26px}.angular-about .team-premium .about-team-grid{gap:12px!important}.angular-about .team-premium .about-member{border-radius:16px!important}.angular-about .team-premium .team-info{padding:12px;min-height:116px}.angular-about .team-premium .team-info h3{font-size:1.07rem!important}.angular-about .team-premium .team-info p{font-size:.8rem!important}}
+@media(prefers-reduced-motion:reduce){.angular-about .team-premium .about-member{animation:none!important;transition:none!important}.angular-about .team-premium .team-photo img{transition:none!important}}
