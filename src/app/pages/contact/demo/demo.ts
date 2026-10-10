@@ -4,9 +4,9 @@ import {LanguageService} from '../../../core/language.service';
 @Component({selector:'app-demo-page',standalone:true,imports:[FormsModule],templateUrl:'./demo.html'})
 export class DemoPageComponent{
  l=inject(LanguageService);
- sent=false; faqOpen:number|null=0; sector=''; interests:string[]=[];
+ sent=false; sending=false; error=false; faqOpen:number|null=0; sector=''; interests:string[]=[];
  countries=['Cameroun','Gabon','Congo','Tchad','République Centrafricaine','Guinée Équatoriale',"Côte d’Ivoire",'Sénégal','RD Congo','Autre'];
- sectors=['Microfinances','Banques commerciales','Grandes entreprises','Autre'];
+ sectors=['Microfinance','Banques commerciales','Grandes entreprises','Autre'];
  solutions=['Alpha Bank','Alpha Microfinance','Alpha Mobile Banking','Alpha Monétique','Alpha Comptabilité','Alpha RH','I-Collect','Déclaration Bancaire'];
  faqs=[
  {q:'Combien coûte une solution I-TECH ?',a:"Le coût dépend de la solution choisie, du nombre d'agences et d'utilisateurs, ainsi que des modules activés. Nous vous remettons un devis personnalisé après un premier échange."},
@@ -14,7 +14,25 @@ export class DemoPageComponent{
  {q:'Comment se déroule une démonstration ?',a:'Un expert I-TECH vous présente la solution en visioconférence ou dans vos locaux, sur la base de vos cas d’usage, pendant environ 45 minutes.'},
  {q:"Puis-je demander une version d'essai ?",a:'Oui, un environnement de démonstration peut être mis à votre disposition pour tester les principales fonctionnalités.'}];
  toggle(v:string){this.interests=this.interests.includes(v)?this.interests.filter(x=>x!==v):[...this.interests,v]}
- submit(f:any){if(!f.valid||!this.interests.length)return;this.sent=true;}
+ async submit(f:any){
+  if(!f.valid||!this.interests.length||this.sending)return;
+  this.sending=true;this.error=false;
+  const v=f.value;
+  const body=new URLSearchParams({
+   'form-name':'demo-request',
+   nom:v.nom||'',prenom:v.prenom||'',org:v.org||'',fonction:v.fonction||'',
+   email:v.email||'',tel:v.tel||'',pays:v.pays||'',secteur:v.secteur||'',
+   secteurAutre:v.secteurAutre||'',solutions:this.interests.join(', '),
+   message:v.message||'',privacy:v.privacy?'accepted':''
+  });
+  try{
+   const response=await fetch('/',{method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()});
+   if(!response.ok)throw new Error('Form submission failed');
+   this.sent=true;
+  }catch{this.error=true;}
+  finally{this.sending=false;}
+ }
 
  images=[
  'https://images.pexels.com/photos/5439147/pexels-photo-5439147.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900',
