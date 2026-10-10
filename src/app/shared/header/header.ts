@@ -24,7 +24,7 @@ export class HeaderComponent{
     {icon:'i-corporate',label:'Grandes entreprises',href:'#/secteurs/grandes-entreprises'},
   ];
   entreprise: MenuItem[] = [
-    {icon:'i-info',label:'À propos',href:'#/entreprise/apropos'},
+    {icon:'i-compass',label:'À propos',href:'#/entreprise/apropos'},
     {icon:'i-briefcase',label:'Carrières',href:'#/entreprise/carrieres'},
     {icon:'i-handshake',label:'Partenaires',href:'#/entreprise/partenaires'},
   ];
@@ -35,7 +35,7 @@ export class HeaderComponent{
   ];
   menus: MenuDef[] = [
     {label:'Solutions',icon:'i-layers',href:'#/solutions',items:this.solutions},
-    {label:'Secteurs',icon:'i-bank',href:'#/secteurs',items:this.secteurs},
+    {label:'Secteurs',icon:'i-sectors',href:'#/secteurs',items:this.secteurs},
   ];
 
   @HostListener('window:scroll') onScroll(){ const y=window.scrollY; this.scrolled.set(y>20); const h=document.documentElement.scrollHeight-innerHeight; this.progress.set(h>0?Math.min(1,y/h):0); }
