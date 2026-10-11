@@ -5,7 +5,8 @@ import { OVERVIEW, SOLUTIONS } from '../../data/solutions';
 @Component({
   selector:'app-solutions-page',
   standalone:true,
-  templateUrl:'./solutions.html'
+  templateUrl:'./solutions.html',
+  styleUrl:'./solutions-hero.css'
 })
 export class SolutionsPageComponent implements OnInit, OnDestroy {
   readonly l=inject(LanguageService);
@@ -25,16 +26,23 @@ export class SolutionsPageComponent implements OnInit, OnDestroy {
   solutionFrom:number|null=null;
   private solutionTimer?: ReturnType<typeof setInterval>;
   private motionTimer?: ReturnType<typeof setTimeout>;
+  // Photographies documentaires, non générées par IA.
+  // Les photos Wikimedia Commons sont sous CC BY-SA 4.0 : conserver les crédits.
   readonly images=[
-    'https://images.pexels.com/photos/5257196/pexels-photo-5257196.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900',
-    'https://images.pexels.com/photos/8730120/pexels-photo-8730120.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900',
-    'https://images.pexels.com/photos/29069329/pexels-photo-29069329.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'
+    'https://discover-cameroon.com/wp-content/uploads/2018/10/P1010590.jpg',
+    'https://commons.wikimedia.org/wiki/Special:FilePath/Afriland_First_bank.jpg?width=1600',
+    'https://commons.wikimedia.org/wiki/Special:FilePath/SCB_Cameroon_Bonanjo.jpg?width=1600'
   ];
+  readonly scenes=['Yaoundé · Cameroun','Finance au Cameroun','Écosystème bancaire'];
+  // La vidéo YouTube s'ouvre sur demande (pas d'autoplay en fond).
+  videoOpen=false;
+  readonly youtubeVideo='https://www.youtube-nocookie.com/embed/jgDjl2iM1f8?autoplay=1&rel=0';
+  openVideo(){this.videoOpen=true;}
+  closeVideo(){this.videoOpen=false;}
   active=0;
   private timer?: ReturnType<typeof setInterval>;
 
   ngOnInit(){
-    this.timer=setInterval(()=>this.active=(this.active+1)%this.images.length,7000);
     this.startSolutionTimer();
   }
   ngOnDestroy(){

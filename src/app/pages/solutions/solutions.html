@@ -1,16 +1,10 @@
 <main class="pg pg-solutions">
   <section class="pg-hero on-photo solutions-first-hero">
     <div class="pg-hero-bg" aria-hidden="true">
-      @for(img of images; track img; let i=$index){
-        <span class="pg-hero-slide" [class.on]="i===active" [style.background-image]="'url('+img+')'"></span>
-      }
+      <div class="solutions-video-poster"></div>
+      <iframe class="solutions-hero-youtube" title="" tabindex="-1" aria-hidden="true" src="https://www.youtube-nocookie.com/embed/jgDjl2iM1f8?start=10&amp;end=30&amp;autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=jgDjl2iM1f8&amp;playsinline=1&amp;rel=0&amp;modestbranding=1&amp;disablekb=1" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <span class="pg-hero-veil"></span>
       <span class="pg-hero-mesh"></span>
-      <div class="pg-hero-dots">
-        @for(img of images; track img; let i=$index){
-          <button type="button" [class.on]="i===active" (click)="setSlide(i)" [attr.aria-label]="'Image '+(i+1)"></button>
-        }
-      </div>
     </div>
 
     <div class="container">

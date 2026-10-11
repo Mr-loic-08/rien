@@ -1,0 +1,55 @@
+/* Hero Solutions — photographie documentaire réelle, sobre et lisible */
+.pg-solutions .solutions-first-hero{position:relative;isolation:isolate;min-height:clamp(670px,85vh,850px);overflow:hidden;background:#061d33;border-radius:0 0 50px 50px}
+.pg-solutions .solutions-first-hero .pg-hero-bg{position:absolute;inset:0;overflow:hidden}
+.pg-solutions .solutions-first-hero .pg-hero-slide{background-position:center 46%;background-size:cover;filter:saturate(.88) contrast(1.06);transition:opacity 1.35s ease,transform 8s ease;transform:scale(1.035)}
+.pg-solutions .solutions-first-hero .pg-hero-slide.on{transform:scale(1.105);animation:none}
+.pg-solutions .solutions-first-hero .pg-hero-veil{background:linear-gradient(90deg,rgba(3,18,34,.96) 0%,rgba(5,24,43,.89) 37%,rgba(6,28,50,.59) 68%,rgba(4,18,32,.29) 100%),linear-gradient(0deg,rgba(2,17,31,.75),transparent 40%);z-index:1}
+.pg-solutions .solutions-first-hero .pg-hero-mesh{opacity:.17;z-index:2}
+.pg-solutions .solutions-first-hero .container{position:relative;z-index:3}
+.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding:clamp(90px,11vw,155px) 0 clamp(120px,13vw,180px)}
+.pg-solutions .solutions-first-hero .pg-hero-copy{max-width:850px}
+.pg-solutions .solutions-first-hero .pg-hero-copy h1{font-size:clamp(2.6rem,5vw,5.3rem);line-height:1.09;letter-spacing:-.045em;text-wrap:balance;text-shadow:0 3px 30px rgba(0,0,0,.3);color:white}
+.pg-solutions .solutions-first-hero .pg-hero-copy p{max-width:680px;font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.8;color:#e4eef7;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+.pg-solutions .solutions-first-hero .pg-hero-dots{z-index:5;bottom:55px}
+.pg-solutions .solutions-first-hero .pg-hero-dots button{cursor:pointer}
+.pg-solutions .solutions-documentary-footer{position:absolute;z-index:4;bottom:36px;left:max(4vw,25px);right:max(4vw,25px);display:flex;align-items:center;gap:14px;color:#dce8f2;font-size:10px;letter-spacing:.2em;font-weight:800;pointer-events:none}
+.pg-solutions .solutions-doc-line{height:2px;width:36px;background:#ef792b;border-radius:4px}
+.pg-solutions .solutions-doc-count{margin-left:auto;font-size:13px;color:#fff}
+.pg-solutions .solutions-real-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.pg-solutions .solutions-first-hero:has(.solutions-real-video) .pg-hero-slide{opacity:0!important}
+@media(max-width:700px){.pg-solutions .solutions-first-hero{min-height:690px;border-radius:0 0 30px 30px}.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding:85px 0 140px}.pg-solutions .solutions-first-hero .pg-hero-veil{background:linear-gradient(90deg,rgba(3,18,34,.93),rgba(4,22,39,.72)),linear-gradient(0deg,rgba(3,18,34,.8),transparent 55%)}.pg-solutions .solutions-documentary-footer{bottom:20px;font-size:8px;letter-spacing:.11em}.pg-solutions .solutions-first-hero .pg-hero-dots{bottom:70px}}
+@media(prefers-reduced-motion:reduce){.pg-solutions .solutions-first-hero .pg-hero-slide{transition:none!important;transform:none!important}}
+
+/* Photo demandée : Yaoundé ; vidéo réelle ouverte au clic (YouTube). */
+.pg-solutions .solutions-first-hero .solutions-video-action{margin:22px 0 24px}
+.pg-solutions .solutions-first-hero .solutions-video-trigger{display:inline-flex;align-items:center;gap:13px;padding:11px 20px 11px 11px;border:1px solid rgba(255,255,255,.34);border-radius:100px;background:rgba(5,30,51,.57);backdrop-filter:blur(14px);color:#fff;cursor:pointer;font:inherit;font-weight:750;text-align:left;transition:transform .3s,border-color .3s,background .3s}
+.pg-solutions .solutions-first-hero .solutions-video-trigger:hover{transform:translateY(-3px);background:rgba(13,61,98,.83);border-color:#f28a43}
+.pg-solutions .solutions-video-trigger small{display:block;color:#c7dceb;font-size:.7rem;font-weight:500;margin-top:2px}
+.pg-solutions .solutions-video-play{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#ef792b;box-shadow:0 0 0 6px rgba(239,121,43,.16);font-size:14px}
+.solutions-video-overlay{position:fixed;inset:0;z-index:99999;background:rgba(0,11,23,.88);backdrop-filter:blur(12px);display:grid;place-items:center;padding:clamp(12px,4vw,40px);animation:solutionsVidFade .3s ease both}
+.solutions-video-dialog{width:min(1100px,100%);border-radius:22px;overflow:hidden;background:#081f36;box-shadow:0 30px 90px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.16)}
+.solutions-video-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;color:#fff;font-weight:700}
+.solutions-video-head button{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.13);color:#fff;font-size:30px;cursor:pointer}
+.solutions-video-frame{aspect-ratio:16/9;background:#000}
+.solutions-video-frame iframe{display:block;width:100%;height:100%;border:0}
+.solutions-video-external{display:block;padding:12px 20px;color:#b8d7ef;text-align:right;font-size:.85rem}
+@keyframes solutionsVidFade{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding-bottom:140px}.solutions-video-dialog{border-radius:14px}}
+@media(prefers-reduced-motion:reduce){.solutions-video-overlay{animation:none}}
+
+/* V3 : la séquence documentaire YouTube de 10 s à 30 s est directement dans le Hero. */
+.pg-solutions .solutions-first-hero{min-height:clamp(640px,83svh,800px);display:flex;align-items:center}
+.pg-solutions .solutions-first-hero .pg-hero-bg{z-index:0;background:#092c49}
+.pg-solutions .solutions-first-hero .solutions-video-poster{position:absolute;inset:0;background-image:url('https://discover-cameroon.com/wp-content/uploads/2018/10/P1010590.jpg');background-size:cover;background-position:center;filter:saturate(.9)}
+.pg-solutions .solutions-first-hero .solutions-hero-youtube{position:absolute;top:50%;left:50%;width:max(100%,177.78vh);height:max(100%,56.25vw);transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:.94}
+.pg-solutions .solutions-first-hero .pg-hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,17,32,.96) 0%,rgba(3,23,43,.91) 32%,rgba(5,25,44,.65) 62%,rgba(3,19,34,.35) 100%),linear-gradient(0deg,rgba(3,17,32,.52),transparent 42%);z-index:2}
+.pg-solutions .solutions-first-hero .pg-hero-mesh{z-index:3;opacity:.1;pointer-events:none}
+.pg-solutions .solutions-first-hero .container{width:100%;padding-top:55px;padding-bottom:60px}
+.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding:clamp(50px,7vh,85px) 0 clamp(70px,9vh,105px)!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy{max-width:760px!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy h1{font-size:clamp(2.3rem,4.4vw,4.6rem)!important;line-height:1.12!important;max-width:780px!important;letter-spacing:-.035em!important;margin-bottom:22px!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy p{max-width:620px!important;font-size:clamp(1rem,1.2vw,1.13rem)!important;line-height:1.7!important;margin-bottom:28px!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy .hero-actions{display:flex;flex-wrap:wrap;gap:13px}
+.pg-solutions .solutions-first-hero .pg-hero-wave{z-index:4;pointer-events:none}
+@media(max-width:700px){.pg-solutions .solutions-first-hero{min-height:720px}.pg-solutions .solutions-first-hero .container{padding-top:35px;padding-bottom:45px}.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding:65px 0 95px!important}.pg-solutions .solutions-first-hero .pg-hero-copy h1{font-size:clamp(2rem,8vw,3rem)!important}.pg-solutions .solutions-first-hero .pg-hero-veil{background:linear-gradient(90deg,rgba(2,17,32,.94),rgba(3,24,44,.75)),linear-gradient(0deg,rgba(2,17,32,.65),transparent 50%)}.pg-solutions .solutions-first-hero .solutions-hero-youtube{width:max(100%,177.78svh);height:max(100%,56.25vw)}}
+@media(prefers-reduced-motion:reduce){.pg-solutions .solutions-first-hero .solutions-hero-youtube{display:none}}
