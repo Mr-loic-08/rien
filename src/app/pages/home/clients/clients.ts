@@ -17,10 +17,10 @@ export class HomeClientsComponent {
     {src:'images/clients/camccul.png',alt:'CamCCUL',href:''},
     {src:'images/clients/safi.png',alt:'SAFI',href:''},
     {src:'images/clients/figec.png',alt:'FIGEC',href:'https://web.facebook.com/figecgrandissonsensemble/?_rdc=1&_rdr#'},
-    {src:'images/clients/mitaccul.png',alt:'MitaCCUL',href:''},
-    {src:'images/clients/bapccul.png',alt:'BAPCCUL',href:''},
+    {src:'images/clients/mitaccul.png',alt:'MitaCCUL',href:'https://mitaccul.org/'},
+    {src:'images/clients/bapccul.png',alt:'BAPCCUL',href:'https://bapccul.com/'},
     {src:'images/clients/cpcd.png',alt:'CPCD',href:''},
-    {src:'images/clients/cepac.png',alt:'CEPAC',href:''}
+    {src:'images/clients/cepac.png',alt:'CEPAC',href:'https://www.cepac-solidarite.com/'}
   ];
   readonly first = [...this.logos,...this.logos];
   readonly second = [...this.logos.slice(4),...this.logos.slice(0,4),...this.logos.slice(4),...this.logos.slice(0,4)];
