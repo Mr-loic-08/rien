@@ -9146,3 +9146,24 @@ body app-home-impact section.stats#impact .impact-card > span:last-child {
  }
  body app-home-impact section.stats#impact .impact-card > span:last-child{font-size:12px!important;}
 }
+
+
+/* Accueil — CTA final : raccord sans espace avec le bloc précédent et le footer. */
+app-home-cta{display:block!important;position:relative;z-index:7;margin:0!important;padding:0!important;}
+app-home-cta .home-final-cta.cta-fold{
+  margin-block:0!important;
+  margin-inline:0!important;
+  border-radius:36px 36px 0 0!important;
+  position:relative;
+  overflow:hidden;
+}
+/* Le footer suit immédiatement le CTA, sans marge ni bande intermédiaire. */
+app-home-cta + app-footer, app-footer{margin-top:0!important;padding-top:0!important;}
+app-footer .home-footer.footer-video-home{margin-top:0!important;border-radius:0!important;}
+/* Supprimer les marges verticales externes éventuelles du dernier bloc précédent. */
+app-home-why:has(+ app-home-cta),app-home-clients:has(+ app-home-cta){margin-bottom:0!important;padding-bottom:0!important;}
+app-home-why:has(+ app-home-cta) > section,app-home-clients:has(+ app-home-cta) > section{margin-bottom:0!important;}
+@media(max-width:700px){
+  app-home-cta .home-final-cta.cta-fold{margin:0!important;border-radius:24px 24px 0 0!important;}
+  app-footer .home-footer.footer-video-home{margin-top:0!important;border-radius:0!important;}
+}
