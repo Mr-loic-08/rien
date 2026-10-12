@@ -13,7 +13,6 @@ export class AproposPageComponent {
  selectedMember: any=null;
  openMember(m:any){this.selectedMember=m;}
  closeMember(){this.selectedMember=null;}
- memberEmoji(role:string):string{const r=role.toLowerCase();if(r.includes("mobile"))return "📱";if(r.includes("web"))return "💻";if(r.includes("monétique"))return "💳";if(r.includes("banking"))return "🏦";if(r.includes("secrétariat"))return "📋";if(r.includes("général"))return "👔";return "⚙️";}
  team=[
  {title:'Direction générale',role:'Directeur général',image:'',description:'Assure la direction stratégique de I-TECH, coordonne les activités de l’entreprise et veille à la qualité des relations avec les clients et partenaires.'},
  {title:'M. Stephane',role:'Responsable du département Core Banking',image:'/images/equipe/stephane.webp',description:'Pilote les activités Core Banking et coordonne les solutions destinées à la gestion des opérations bancaires et de microfinance.'},
@@ -24,6 +23,7 @@ export class AproposPageComponent {
  {title:'V. ROLAND ',role:'Responsable département WEB & mobile',image:'/images/equipe/liro.webp',description:'Coordonne les projets web et mobile, de la conception à la livraison des solutions.'},
  {title:'M. IRANDE ',role:'Secrétariat et accueil',image:'/images/equipe/secretaire.webp',description:'Assure l’accueil, l’organisation administrative et la coordination des communications et rendez-vous.'}
  ];
+ reasonImages=['images/about.jpg','images/solutions/hero-reunion.webp','images/entreprise/accueil-itech.webp','images/hero-3.jpg','images/hero-1.jpg'];
  reasons=[
  {icon:'i-users',title:'Expertise métier',text:"19 ans d'expérience au service de nos clients."},
  {icon:'i-bulb',title:'Innovation',text:'Des solutions modernes et évolutives.'},
