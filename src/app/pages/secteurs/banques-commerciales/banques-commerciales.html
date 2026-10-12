@@ -27,7 +27,7 @@
   <section class="sx-issues bank-issues reveal visible" id="sx-enjeux">
    <div class="container">
     <span class="sec-kicker">{{l.t('Vos priorités')}}</span>
-    <h2 class="sec-title">{{l.t('Vos enjeux bancaires')}}</h2>
+    <h2 class="sec-title">{{l.t('Vos enjeux bancaires')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
     <div class="sx-issues-grid">
      @for(item of issues;track item.text;let i=$index){
       <div class="sx-issue" [style.transition-delay.ms]="i*70">
@@ -75,7 +75,7 @@
   <section class="sx-benefits bank-benefits reveal visible">
     <div class="bank-benefits-bg" aria-hidden="true"></div>
     <div class="container">
-      <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre banque')}}</h2>
+      <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre banque')}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
       <div class="sx-ben-grid">
         @for(b of benefits;track b.text;let i=$index){
           <div class="sx-ben" [style.transition-delay.ms]="i*80">
@@ -90,7 +90,7 @@
   <!-- BLOC 5 — Architecture bancaire : référence React -->
   <section class="sx-arch bank-arch reveal visible">
     <div class="container">
-      <h2 class="sec-title center">{{l.t('Architecture bancaire')}}</h2>
+      <h2 class="sec-title center">{{l.t('Architecture bancaire')}}</h2><span class="itech-section-signature sig-pulse" aria-hidden="true"><i></i><b></b></span>
       <div class="sx-flow">
         @for(step of architecture;track step;let i=$index){
           <div class="sx-step" [style.transition-delay.ms]="i*100">
@@ -110,7 +110,7 @@
   <!-- BLOC 6 — Ils nous font confiance : référence React -->
   <section class="sx-proofs bank-proofs reveal visible">
     <div class="container">
-      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2>
+      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
       <div class="sx-proofs-grid">
         @for(p of bankProofs;track p.title;let i=$index){
           <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">

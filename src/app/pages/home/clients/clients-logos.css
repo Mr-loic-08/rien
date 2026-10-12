@@ -1,0 +1,7 @@
+/* Logos clients : agrandissement sans déformation ni découpe. */
+:host .client-wall-card{display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;padding:10px 12px!important;box-sizing:border-box!important}
+:host .client-wall-card img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;min-width:0!important;object-fit:contain!important;object-position:center!important;padding:0!important;margin:auto!important;transform:none!important;filter:drop-shadow(0 3px 5px rgba(0,0,0,.12))!important}
+:host .client-wall-card:hover img{transform:scale(1.045)!important}
+:host .clients-gallery-card img{display:block!important;width:100%!important;height:100px!important;max-width:100%!important;max-height:100px!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important;padding:0!important}
+@media(max-width:600px){:host .client-wall-card{padding:7px 8px!important}:host .clients-gallery-card img{height:75px!important;max-height:75px!important}}
+@media(prefers-reduced-motion:reduce){:host .client-wall-card img{transition:none!important}}

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../core/language.service';
 
 type Partner = { name:string; alt:string; href:string; img:string; initials:string; c1:string; c2:string };
-@Component({selector:'app-home-trust',standalone:true,templateUrl:'./trust.html'})
+@Component({selector:'app-home-trust',standalone:true,templateUrl:'./trust.html',styleUrl:'./trust-logos.css'})
 export class HomeTrustComponent {
  readonly l=inject(LanguageService); focused=0;
  readonly partners:Partner[]=[

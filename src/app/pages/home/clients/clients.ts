@@ -5,7 +5,8 @@ type ClientLogo = { src: string; alt: string };
 @Component({
   selector: 'app-home-clients',
   standalone: true,
-  templateUrl: './clients.html'
+  templateUrl: './clients.html',
+  styleUrl: './clients-logos.css'
 })
 export class HomeClientsComponent {
   readonly l = inject(LanguageService);

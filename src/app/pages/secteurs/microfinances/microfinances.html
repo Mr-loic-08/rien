@@ -109,7 +109,7 @@
   <!-- BLOC 4 — Bénéfices -->
   <section class="sx-benefits reveal visible">
    <div class="container">
-    <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre institution')}}</h2>
+    <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre institution')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
     <div class="sx-ben-grid">
      @for(b of benefits;track b.text;let i=$index){
       <div class="sx-ben" [style.transition-delay.ms]="i*80"><span class="sx-ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span><span>{{l.t(b.text)}}</span></div>
@@ -121,7 +121,7 @@
   <!-- BLOC 5 — Ils nous font confiance : référence React V17.20.4 -->
   <section class="sx-proofs mf-proofs reveal visible">
     <div class="container">
-      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2>
+      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
       <div class="sx-proofs-grid">
         @for(p of proofs;track p.title;let i=$index){
           <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">

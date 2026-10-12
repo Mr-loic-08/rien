@@ -1,0 +1,7 @@
+/* Partenaires : logos centrés et proportionnellement agrandis. */
+:host .trust-rail .client-logo{width:112px!important;height:76px!important;min-width:112px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;padding:5px!important;box-sizing:border-box!important}
+:host .trust-rail .client-logo img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;padding:0!important;margin:0!important;transform:none!important}
+:host .trust-rail .client-card{grid-template-columns:112px minmax(0,1fr) auto!important;align-items:center!important}
+:host .trust-spotlight .ts-logo{display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+:host .trust-spotlight .ts-logo img{display:block!important;width:94%!important;height:94%!important;max-width:94%!important;max-height:94%!important;object-fit:contain!important;object-position:center!important;padding:0!important;margin:auto!important;transform:none!important}
+@media(max-width:650px){:host .trust-rail .client-logo{width:76px!important;min-width:76px!important;height:58px!important}:host .trust-rail .client-card{grid-template-columns:76px minmax(0,1fr) auto!important}}

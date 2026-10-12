@@ -1,0 +1,19 @@
+/* I-TECH — signatures animées sous les titres, sans retard de contenu */
+.itech-section-signature{--sig-orange:#ed772a;--sig-blue:#217bb9;position:relative;display:block;width:116px;height:20px;margin:14px 0 23px;pointer-events:none;overflow:hidden;isolation:isolate}
+.sec-title.center + .itech-section-signature,.center + .itech-section-signature,.stats-head > .itech-section-signature,.team-head > .itech-section-signature{margin-left:auto;margin-right:auto}
+.itech-section-signature:before{content:"";position:absolute;left:3px;right:3px;top:9px;height:3px;border-radius:4px;background:linear-gradient(90deg,var(--sig-orange),var(--sig-blue));opacity:.72}
+.itech-section-signature i,.itech-section-signature b{position:absolute;display:block;box-sizing:border-box}
+.itech-section-signature.sig-rail i{top:4px;left:0;width:13px;height:13px;border:3px solid var(--sig-orange);background:#fff;border-radius:50%;animation:itechSigTravel 4.2s ease-in-out infinite alternate}
+.itech-section-signature.sig-rail b{top:7px;right:2px;width:7px;height:7px;background:var(--sig-blue);border-radius:50%}
+.itech-section-signature.sig-twin:before{top:5px;left:5px;right:5px;background:#d1dce6}
+.itech-section-signature.sig-twin i{top:5px;left:4px;width:58px;height:3px;border-radius:4px;background:var(--sig-orange);animation:itechSigSlideA 3.8s ease-in-out infinite alternate}
+.itech-section-signature.sig-twin b{top:13px;right:4px;width:62px;height:3px;border-radius:4px;background:var(--sig-blue);animation:itechSigSlideB 3.8s ease-in-out infinite alternate}
+.itech-section-signature.sig-pulse:before{background:linear-gradient(90deg,var(--sig-blue),var(--sig-orange));opacity:.6}
+.itech-section-signature.sig-pulse i{top:4px;left:9px;width:12px;height:12px;border-radius:50%;background:var(--sig-orange);box-shadow:0 0 0 4px rgba(237,119,42,.17);animation:itechSigTravel 4.6s ease-in-out infinite alternate}
+.itech-section-signature.sig-pulse b{top:6px;right:5px;width:8px;height:8px;border:2px solid var(--sig-blue);border-radius:50%;animation:itechSigBreath 2.4s ease-in-out infinite}
+@keyframes itechSigTravel{from{transform:translateX(0)}to{transform:translateX(93px)}}
+@keyframes itechSigSlideA{from{transform:translateX(0)}to{transform:translateX(46px)}}
+@keyframes itechSigSlideB{from{transform:translateX(0)}to{transform:translateX(-46px)}}
+@keyframes itechSigBreath{50%{transform:scale(1.35);opacity:.55}}
+@media(prefers-reduced-motion:reduce){.itech-section-signature i,.itech-section-signature b{animation:none!important}}
+@media(max-width:600px){.itech-section-signature{width:100px;margin-top:10px;margin-bottom:17px}.itech-section-signature.sig-rail i,.itech-section-signature.sig-pulse i{animation-duration:5s}}

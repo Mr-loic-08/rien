@@ -44,7 +44,7 @@
     <div class="container">
       <div class="rh-featshots-grid">
         <div class="rh-feats">
-          <h2 class="sec-title left">{{l.t('Fonctionnalités clés')}}</h2>
+          <h2 class="sec-title left">{{l.t('Fonctionnalités clés')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
 
           <ul class="rh-feat-select">
             @for(f of features; track f.title; let i=$index){
@@ -66,7 +66,7 @@
         </div>
 
         <div class="rh-shots">
-          <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2>
+          <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
 
           <div class="rh-laptop-card">
             <div class="rh-laptop">
@@ -129,7 +129,7 @@
   <!-- Gestion RH Étape 3 — Bénéfices -->
   <section class="rh-benefits reveal visible">
     <div class="container">
-      <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2>
+      <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2><span class="itech-section-signature sig-pulse" aria-hidden="true"><i></i><b></b></span>
 
       <div class="rh-ben-grid">
         @for(b of benefits; track b.text; let i=$index){
