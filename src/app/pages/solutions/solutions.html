@@ -2,7 +2,6 @@
   <section class="pg-hero on-photo solutions-first-hero">
     <div class="pg-hero-bg" aria-hidden="true">
       <div class="solutions-video-poster"></div>
-      <iframe class="solutions-hero-youtube" title="" tabindex="-1" aria-hidden="true" src="https://www.youtube-nocookie.com/embed/jgDjl2iM1f8?start=10&amp;end=30&amp;autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=jgDjl2iM1f8&amp;playsinline=1&amp;rel=0&amp;modestbranding=1&amp;disablekb=1" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <span class="pg-hero-veil"></span>
       <span class="pg-hero-mesh"></span>
     </div>
@@ -27,6 +26,28 @@
     </div>
     <div class="pg-hero-wave" aria-hidden="true"></div>
   </section>
+
+  <!-- Vidéo réelle à la demande : aucune connexion YouTube avant clic. -->
+  <section class="solutions-film-strip" aria-label="Vidéo du Cameroun">
+    <div class="container solutions-film-inner">
+      <div class="solutions-film-copy">
+        <span class="solutions-film-kicker">CAMEROUN · EN IMAGES</span>
+        <h2>La transformation digitale dans son environnement</h2>
+        <p>Découvrez une séquence vidéo réelle du Cameroun.</p>
+      </div>
+      <button type="button" class="solutions-film-button" (click)="openVideo()" aria-label="Voir la vidéo du Cameroun">
+        <span class="solutions-film-play" aria-hidden="true">▶</span> Voir la vidéo
+      </button>
+    </div>
+  </section>
+  @if(videoOpen){
+    <div class="solutions-video-overlay" (click)="closeVideo()">
+      <div class="solutions-video-dialog" role="dialog" aria-modal="true" aria-label="Vidéo réelle du Cameroun" (click)="$event.stopPropagation()">
+        <div class="solutions-video-head"><span>Vidéo · Cameroun</span><button type="button" (click)="closeVideo()" aria-label="Fermer la vidéo">×</button></div>
+        <div class="solutions-video-frame"><iframe title="Vidéo réelle du Cameroun" src="https://www.youtube-nocookie.com/embed/jgDjl2iM1f8?start=10&amp;end=30&amp;autoplay=1&amp;rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </div>
+    </div>
+  }
 
   <!-- Solutions Étape 2 — statistiques V17.20.4 -->
   <section class="ov-stats solutions-stats-fold reveal visible">

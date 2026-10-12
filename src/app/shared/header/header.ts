@@ -50,7 +50,7 @@ export class HeaderComponent{
     if(href === '#accueil'){
       if(location.hash) history.pushState(null,'',location.pathname + location.search);
       window.dispatchEvent(new HashChangeEvent('hashchange'));
-      window.scrollTo({top:0,behavior:'smooth'});
+      window.scrollTo({top:0,behavior:'instant'});
       return;
     }
     if(location.hash === href){
@@ -58,7 +58,7 @@ export class HeaderComponent{
     }else{
       location.hash = href;
     }
-    setTimeout(()=>window.scrollTo({top:0,behavior:'auto'}),0);
+    window.scrollTo({top:0,behavior:'instant'});
   }
 
   isHome(){
