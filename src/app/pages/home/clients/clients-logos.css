@@ -5,3 +5,14 @@
 :host .clients-gallery-card img{display:block!important;width:100%!important;height:100px!important;max-width:100%!important;max-height:100px!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important;padding:0!important}
 @media(max-width:600px){:host .client-wall-card{padding:7px 8px!important}:host .clients-gallery-card img{height:75px!important;max-height:75px!important}}
 @media(prefers-reduced-motion:reduce){:host .client-wall-card img{transition:none!important}}
+
+/* V2 — logos plus grands, liens clients explicites */
+:host .client-wall-card{padding:3px 5px!important;text-decoration:none!important}
+:host .client-wall-card img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:scale(1.13)!important;transition:transform .3s ease!important}
+:host .client-wall-card:hover img{transform:scale(1.19)!important}
+:host .clients-gallery-card{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;padding:7px!important;text-decoration:none!important}
+:host .clients-gallery-card img{height:132px!important;max-height:132px!important;width:100%!important;object-fit:contain!important}
+:host .client-logo-link{cursor:pointer!important}
+:host .client-logo-link:focus-visible{outline:3px solid #f28a32!important;outline-offset:3px!important}
+@media(max-width:600px){:host .client-wall-card{padding:2px!important}:host .clients-gallery-card img{height:94px!important;max-height:94px!important}}
+@media(prefers-reduced-motion:reduce){:host .client-wall-card img{transition:none!important}}

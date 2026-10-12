@@ -1,7 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { LanguageService } from '../../../core/language.service';
 
-type ClientLogo = { src: string; alt: string };
+type ClientLogo = { src: string; alt: string; href: string };
 @Component({
   selector: 'app-home-clients',
   standalone: true,
@@ -12,15 +12,15 @@ export class HomeClientsComponent {
   readonly l = inject(LanguageService);
   showAll = false;
   readonly logos: ClientLogo[] = [
-    {src:'images/clients/client-01.png',alt:'!'},
-    {src:'images/clients/mupeci.png',alt:'MUPECI'},
-    {src:'images/clients/camccul.png',alt:'CamCCUL'},
-    {src:'images/clients/safi.png',alt:'SAFI'},
-    {src:'images/clients/figec.png',alt:'FIGEC'},
-    {src:'images/clients/mitaccul.png',alt:'MitaCCUL'},
-    {src:'images/clients/bapccul.png',alt:'BAPCCUL'},
-    {src:'images/clients/cpcd.png',alt:'CPCD'},
-    {src:'images/clients/cepac.png',alt:'CEPAC'}
+    {src:'images/clients/client-01.png',alt:'!',href:''},
+    {src:'images/clients/mupeci.png',alt:'MUPECI',href:'https://www.mupeci.cm/'},
+    {src:'images/clients/camccul.png',alt:'CamCCUL',href:''},
+    {src:'images/clients/safi.png',alt:'SAFI',href:''},
+    {src:'images/clients/figec.png',alt:'FIGEC',href:'https://web.facebook.com/figecgrandissonsensemble/?_rdc=1&_rdr#'},
+    {src:'images/clients/mitaccul.png',alt:'MitaCCUL',href:''},
+    {src:'images/clients/bapccul.png',alt:'BAPCCUL',href:''},
+    {src:'images/clients/cpcd.png',alt:'CPCD',href:''},
+    {src:'images/clients/cepac.png',alt:'CEPAC',href:''}
   ];
   readonly first = [...this.logos,...this.logos];
   readonly second = [...this.logos.slice(4),...this.logos.slice(0,4),...this.logos.slice(4),...this.logos.slice(0,4)];

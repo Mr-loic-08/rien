@@ -22,10 +22,17 @@
           <div class="client-wall-track" [class.is-reverse]="r===1" [class.is-paused]="paused[r]"
             [style.--client-speed]="r===0?'38s':'43s'" [style.--manual-shift.px]="shift[r]">
             @for (logo of row; track $index; let i = $index) {
-              <div class="client-wall-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
-                <img [src]="logo.src" [alt]="i<logos.length?logo.alt:''" [attr.aria-hidden]="i>=logos.length" loading="lazy">
-                <span class="client-logo-name">{{ logo.alt }}</span>
-              </div>
+              @if (logo.href) {
+                <a class="client-wall-card client-logo-link" [class.is-bapccul]="logo.alt==='BAPCCUL'" [href]="logo.href" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Visiter le site officiel de ' + logo.alt">
+                  <img [src]="logo.src" [alt]="i<logos.length?logo.alt:''" [attr.aria-hidden]="i>=logos.length" loading="lazy">
+                  <span class="client-logo-name">{{ logo.alt }}</span>
+                </a>
+              } @else {
+                <div class="client-wall-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
+                  <img [src]="logo.src" [alt]="i<logos.length?logo.alt:''" [attr.aria-hidden]="i>=logos.length" loading="lazy">
+                  <span class="client-logo-name">{{ logo.alt }}</span>
+                </div>
+              }
             }
           </div>
         </div>
@@ -56,9 +63,15 @@
       </div>
       <div class="clients-gallery-grid">
         @for (logo of logos; track logo.src) {
-          <div class="clients-gallery-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
-            <img [src]="logo.src" [alt]="logo.alt" loading="lazy"><strong>{{ logo.alt }}</strong>
-          </div>
+          @if (logo.href) {
+            <a class="clients-gallery-card client-logo-link" [class.is-bapccul]="logo.alt==='BAPCCUL'" [href]="logo.href" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Visiter le site officiel de ' + logo.alt">
+              <img [src]="logo.src" [alt]="logo.alt" loading="lazy"><strong>{{ logo.alt }}</strong>
+            </a>
+          } @else {
+            <div class="clients-gallery-card" [class.is-bapccul]="logo.alt==='BAPCCUL'">
+              <img [src]="logo.src" [alt]="logo.alt" loading="lazy"><strong>{{ logo.alt }}</strong>
+            </div>
+          }
         }
       </div>
     </div>
