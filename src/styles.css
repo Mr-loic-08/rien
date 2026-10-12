@@ -9167,3 +9167,209 @@ app-home-why:has(+ app-home-cta) > section,app-home-clients:has(+ app-home-cta) 
   app-home-cta .home-final-cta.cta-fold{margin:0!important;border-radius:24px 24px 0 0!important;}
   app-footer .home-footer.footer-video-home{margin-top:0!important;border-radius:0!important;}
 }
+
+
+/* I-TECH V5 — liaison visuelle continue Pourquoi I-TECH / CTA final.
+   On retire les arrondis des deux faces qui se touchent, sans changer les autres blocs. */
+body app-home-why {display:block!important;margin-bottom:0!important;padding-bottom:0!important;position:relative;}
+body app-home-why > section.partner.why-fold,
+body section.partner.why-fold {
+  border-bottom-left-radius:0!important;
+  border-bottom-right-radius:0!important;
+  margin-bottom:0!important;
+  padding-bottom:max(32px,3.5vw)!important;
+  overflow:hidden;
+}
+body app-home-cta {display:block!important;margin-top:0!important;padding-top:0!important;}
+body app-home-why + app-home-cta {margin-top:0!important;}
+body app-home-cta > section.cta.home-final-cta.cta-fold,
+body section.cta.home-final-cta.cta-fold {
+  border-top-left-radius:0!important;
+  border-top-right-radius:0!important;
+  margin-top:0!important;
+  border-top:0!important;
+}
+/* Raccord discret des deux surfaces : pas de vide, de bande blanche ou d'ombre séparatrice. */
+body app-home-why + app-home-cta > section.cta.home-final-cta.cta-fold {
+  box-shadow:none!important;
+}
+@media(max-width:700px){
+  body section.partner.why-fold{border-radius:24px 24px 0 0!important;}
+  body section.cta.home-final-cta.cta-fold{border-radius:0!important;}
+}
+
+
+/* I-TECH | Accueil : transitions Hero -> Gamme ALPHA -> Secteurs | V6
+   Portee volontairement limitee aux composants de l'accueil.
+   Ne change pas les grilles, le carrousel, ni les animations Angular. */
+@media (min-width: 769px) {
+  app-hero + app-home-solutions { display:block; position:relative; z-index:8; margin-top:-34px; isolation:isolate; }
+  app-hero + app-home-solutions > section.solutions { position:relative; border-radius:42px 42px 0 0 !important; overflow:hidden; padding-top:clamp(66px,7vw,104px) !important; }
+  app-home-solutions + app-home-sectors { display:block; position:relative; z-index:9; margin-top:-1px; }
+  app-home-solutions + app-home-sectors > section.sectors { position:relative; border-radius:34px 34px 0 0 !important; overflow:hidden; }
+}
+/* Fin bande lumineuse du Hero : elle reste derriere le contenu. */
+app-hero + app-home-solutions > section.solutions::before {
+  content:""; pointer-events:none; position:absolute; z-index:0;
+  top:0; left:8%; width:84%; height:2px;
+  background:linear-gradient(90deg,transparent,rgba(255,142,55,.72) 28%,rgba(72,154,224,.65) 70%,transparent);
+  box-shadow:0 0 18px rgba(246,132,45,.24);
+}
+/* Passage ALPHA -> Secteurs : halo discret, sans zone vide. */
+app-home-solutions + app-home-sectors > section.sectors::before {
+  content:""; pointer-events:none; position:absolute; z-index:0;
+  top:0; left:50%; width:min(70vw,760px); height:65px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse at top,rgba(247,132,41,.13),transparent 70%);
+}
+app-home-solutions + app-home-sectors > section.sectors::after {
+  content:""; pointer-events:none; position:absolute; z-index:0;
+  top:0; left:16%; right:16%; height:2px;
+  background:linear-gradient(90deg,transparent,rgba(248,140,58,.60),rgba(63,149,219,.58),transparent);
+  background-size:200% 100%; animation:itech-home-transition-sheen 9s ease-in-out infinite alternate;
+}
+@keyframes itech-home-transition-sheen { from{background-position:0% 50%;opacity:.5} to{background-position:100% 50%;opacity:.9} }
+@media (max-width:768px) {
+  app-hero + app-home-solutions,app-home-solutions + app-home-sectors { display:block;position:relative;z-index:2;margin-top:0; }
+  app-hero + app-home-solutions > section.solutions { border-radius:25px 25px 0 0 !important; }
+  app-home-solutions + app-home-sectors > section.sectors { border-radius:24px 24px 0 0 !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  app-home-solutions + app-home-sectors > section.sectors::after { animation:none !important; }
+}
+
+/* I-TECH V7 — correction des transitions sur les sections réelles.
+   Le V6 visait les hôtes, alors que les marges des sections dominaient le rendu. */
+@media (min-width: 769px) {
+  body app-hero {display:block!important;position:relative!important;z-index:1!important;}
+  body app-home-solutions {display:block!important;position:relative!important;z-index:5!important;margin-top:0!important;}
+  body app-home-solutions > section.solutions {
+    position:relative!important;z-index:5!important;
+    margin-top:-64px!important;margin-bottom:0!important;
+    border-radius:52px 52px 0 0!important;
+    padding-top:clamp(80px,8vw,118px)!important;
+    box-shadow:0 -22px 54px rgba(3,18,40,.25)!important;
+    isolation:isolate;
+  }
+  body app-home-sectors {display:block!important;position:relative!important;z-index:6!important;margin-top:0!important;}
+  body app-home-sectors > section.sectors {
+    position:relative!important;z-index:6!important;
+    margin-top:-26px!important;margin-bottom:0!important;
+    border-radius:44px 44px 0 0!important;
+    padding-top:clamp(70px,6vw,95px)!important;
+    box-shadow:0 -16px 46px rgba(3,18,40,.17)!important;
+    isolation:isolate;
+  }
+}
+body app-home-solutions > section.solutions::after {
+  content:""!important;display:block!important;position:absolute!important;
+  top:0!important;left:12%!important;right:12%!important;height:5px!important;
+  width:auto!important;pointer-events:none!important;z-index:2!important;
+  border-radius:0 0 12px 12px!important;
+  background:linear-gradient(90deg,transparent,rgba(255,139,43,.95) 30%,rgba(60,153,230,.9) 70%,transparent)!important;
+  box-shadow:0 0 22px rgba(255,140,44,.42)!important;
+  animation:itech-v7-edge-glow 5s ease-in-out infinite alternate!important;
+}
+body app-home-sectors > section.sectors::after {
+  content:""!important;display:block!important;position:absolute!important;
+  top:0!important;left:14%!important;right:14%!important;height:5px!important;
+  width:auto!important;pointer-events:none!important;z-index:2!important;
+  border-radius:0 0 12px 12px!important;
+  background:linear-gradient(90deg,transparent,rgba(255,139,43,.9) 35%,rgba(60,153,230,.85) 65%,transparent)!important;
+  box-shadow:0 0 18px rgba(255,140,44,.38)!important;
+  animation:itech-v7-edge-glow 5s ease-in-out infinite alternate-reverse!important;
+}
+@keyframes itech-v7-edge-glow {from{opacity:.45;filter:brightness(.9)}to{opacity:1;filter:brightness(1.4)}}
+@media (max-width:768px) {
+  body app-home-solutions > section.solutions {margin-top:-22px!important;border-radius:28px 28px 0 0!important;padding-top:58px!important;position:relative!important;z-index:5!important;}
+  body app-home-sectors > section.sectors {margin-top:-15px!important;border-radius:26px 26px 0 0!important;padding-top:55px!important;position:relative!important;z-index:6!important;}
+  body app-home-solutions > section.solutions::after,body app-home-sectors > section.sectors::after{height:3px!important;}
+}
+@media (prefers-reduced-motion:reduce) {
+  body app-home-solutions > section.solutions::after,body app-home-sectors > section.sectors::after{animation:none!important;}
+}
+
+
+/* ============================================================
+   I-TECH HOME — SEPARATEURS REELS V8
+   Le HTML Angular fournit une ancre explicite entre CHAQUE bloc.
+   Les séparateurs ne déplacent pas les contenus existants.
+   ============================================================ */
+app-root .itech-home-boundary {
+  --boundary-a:#f26a21;
+  --boundary-b:#2584c7;
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:0!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:visible!important;
+  isolation:isolate;
+  z-index:25!important;
+  pointer-events:none!important;
+}
+app-root .itech-home-boundary::before {
+  content:"";
+  position:absolute;
+  left:50%;top:0;
+  width:min(86vw,940px);
+  height:52px;
+  transform:translate(-50%,-50%);
+  border-radius:999px;
+  background:radial-gradient(ellipse at 50% 50%,rgba(242,106,33,.17),rgba(32,117,193,.09) 44%,transparent 75%);
+  filter:blur(8px);
+  opacity:.95;
+  animation:itechBoundaryBreath 6s ease-in-out infinite alternate;
+}
+app-root .itech-home-boundary .itech-boundary-beam {
+  position:absolute;
+  top:-2px;left:50%;
+  transform:translateX(-50%);
+  width:min(72vw,780px);
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg,transparent 0%,var(--boundary-b) 22%,var(--boundary-a) 50%,var(--boundary-b) 78%,transparent 100%);
+  box-shadow:0 0 13px rgba(242,106,33,.42),0 0 26px rgba(22,110,193,.24);
+  background-size:200% 100%;
+  animation:itechBoundarySweep 7s linear infinite;
+}
+app-root .itech-home-boundary .itech-boundary-core {
+  position:absolute;
+  left:50%;top:0;
+  width:14px;height:14px;
+  transform:translate(-50%,-50%) rotate(45deg);
+  border:2px solid rgba(255,255,255,.86);
+  border-radius:4px;
+  background:linear-gradient(135deg,var(--boundary-a),var(--boundary-b));
+  box-shadow:0 0 0 5px rgba(13,43,74,.17),0 0 20px rgba(242,106,33,.4);
+}
+app-root .itech-boundary-alpha-secteurs,
+app-root .itech-boundary-impact-partenaires,
+app-root .itech-boundary-clients-pourquoi {--boundary-a:#ff944c;--boundary-b:#1968ac}
+app-root .itech-boundary-secteurs-impact,
+app-root .itech-boundary-partenaires-clients {--boundary-a:#e77b31;--boundary-b:#50a8db}
+/* Les deux derniers blocs ont déjà été fusionnés visuellement :
+   on conserve la continuité, avec une jonction très discrète. */
+app-root .itech-boundary-pourquoi-cta::before,
+app-root .itech-boundary-cta-footer::before,
+app-root .itech-boundary-pourquoi-cta .itech-boundary-core,
+app-root .itech-boundary-cta-footer .itech-boundary-core {display:none!important}
+app-root .itech-boundary-pourquoi-cta .itech-boundary-beam,
+app-root .itech-boundary-cta-footer .itech-boundary-beam {
+  height:2px;width:min(62vw,640px);opacity:.52;
+  box-shadow:none;
+}
+@keyframes itechBoundarySweep {0%{background-position:100% 50%}100%{background-position:-100% 50%}}
+@keyframes itechBoundaryBreath {from{opacity:.5;transform:translate(-50%,-50%) scaleX(.85)}to{opacity:1;transform:translate(-50%,-50%) scaleX(1.06)}}
+@media(max-width:767px){
+  app-root .itech-home-boundary::before{width:90vw;height:34px;filter:blur(5px)}
+  app-root .itech-home-boundary .itech-boundary-beam{width:74vw;height:3px}
+  app-root .itech-home-boundary .itech-boundary-core{width:11px;height:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  app-root .itech-home-boundary::before,
+  app-root .itech-home-boundary .itech-boundary-beam {animation:none!important}
+}
