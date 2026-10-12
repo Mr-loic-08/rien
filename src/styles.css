@@ -8985,3 +8985,164 @@ body app-hero section.hero#accueil .itech-hero-keyfact-text span{color:#e1e8f0!i
 .itech-real-capture img {display: block; width: 100%; height: auto; object-fit: contain; transition: transform .4s ease;}
 @media (hover:hover) { .itech-real-capture:hover img {transform: scale(1.025);} }
 @media (prefers-reduced-motion:reduce) {.itech-real-capture img {transition:none;}}
+
+
+/* I-TECH | Phase 1 : harmonisation ciblee Accueil / Hero + Impact.
+   Le panneau Hero conserve ses dimensions V7 deja validees. */
+body app-hero section.hero#accueil {
+  isolation:isolate;
+}
+body app-hero section.hero#accueil .hero-copy {
+  position:relative; z-index:7;
+}
+body app-hero section.hero#accueil .hero-copy h1 {
+  max-width: 18ch; line-height:1.12; letter-spacing:-.025em;
+  color:#fff; text-wrap:balance; text-shadow:0 2px 22px rgba(0,13,30,.38);
+}
+body app-hero section.hero#accueil .hero-copy p.lead {
+  max-width: 650px; color:#f0f5fa; line-height:1.65;
+  text-shadow:0 2px 14px rgba(0,13,30,.46);
+}
+body app-hero section.hero#accueil .hero-actions {
+  display:flex; flex-wrap:wrap; align-items:center; gap:12px;
+}
+body app-hero section.hero#accueil .hero-bg .slide video {
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+body app-hero section.hero#accueil .itech-hero-keyfacts {
+  border-radius:18px!important;
+}
+body app-hero section.hero#accueil .itech-hero-keyfact-text strong,
+body app-hero section.hero#accueil .itech-hero-keyfact-text span {
+  overflow-wrap:break-word;
+}
+body app-home-impact section.stats#impact {
+  isolation:isolate; overflow:hidden;
+}
+body app-home-impact section.stats#impact .container {
+  position:relative; z-index:2;
+}
+body app-home-impact section.stats#impact .stats-head {
+  box-sizing:border-box; max-width:min(100%,650px)!important;
+}
+body app-home-impact section.stats#impact .stats-head h3 {
+  color:#fff!important; text-wrap:balance;
+}
+body app-home-impact section.stats#impact .stats-head p {
+  color:#e8f0f9!important; line-height:1.6!important;
+}
+body app-home-impact section.stats#impact .impact-card {
+  box-sizing:border-box; min-width:0;
+}
+body app-home-impact section.stats#impact .impact-card b {
+  color:#fff!important; line-height:1.15!important; font-variant-numeric:tabular-nums;
+}
+body app-home-impact section.stats#impact .impact-card > span:last-child {
+  color:#e9f0f8!important; overflow-wrap:break-word;
+}
+@media(max-width:900px){
+  body app-hero section.hero#accueil .hero-copy h1{max-width:22ch;}
+  body app-hero section.hero#accueil .hero-copy p.lead{max-width:100%;}
+}
+@media(max-width:520px){
+  body app-hero section.hero#accueil .hero-copy h1{font-size:clamp(30px,8.2vw,44px);line-height:1.13;}
+  body app-hero section.hero#accueil .hero-actions{gap:10px;}
+  body app-home-impact section.stats#impact .stats-head{max-width:100%!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  body app-home-impact section.stats#impact .impact-card,
+  body app-hero section.hero#accueil .itech-hero-keyfact {transition:none!important;}
+}
+
+
+/* I-TECH — Phase 1 : lisibilite globale de l'accueil, 12 octobre 2026.
+   Regles limitees aux sections home ; aucune modification des contenus. */
+:root { --itech-home-ink:#112c47; --itech-home-muted:#38536b; --itech-home-light:#f5f8ff; }
+/* Gamme ALPHA : fond clair, typographie foncee, meme en mode sombre. */
+body #solutions.solutions .sol-head .sec-kicker,
+body #solutions.solutions .sol-head .sec-title {color:#112c47!important;text-shadow:none!important;}
+body #solutions.solutions .sol-head .sol-intro {color:#35516a!important;opacity:1!important;text-shadow:none!important;}
+/* Partenaires : panneau clair opaque pour isoler les textes du decor. */
+body section.trust#partenaires-accueil .trust-head {
+ background:rgba(248,251,255,.95)!important;
+ border:1px solid rgba(35,76,115,.13)!important;
+ box-shadow:0 16px 44px rgba(9,37,66,.10)!important;
+ border-radius:26px!important;
+ padding:clamp(20px,3.5vw,38px)!important;
+ position:relative!important;z-index:2!important;
+}
+body section.trust#partenaires-accueil .trust-head .sec-kicker,
+body section.trust#partenaires-accueil .trust-head .sec-title,
+body section.trust#partenaires-accueil .trust-head h2 {color:#102f50!important;text-shadow:none!important;opacity:1!important;}
+body section.trust#partenaires-accueil .trust-head .sec-sub,
+body section.trust#partenaires-accueil .trust-head p {color:#35536d!important;opacity:1!important;text-shadow:none!important;line-height:1.7!important;}
+body section.trust#partenaires-accueil .trust-head strong {color:#b84d0e!important;}
+body section.trust#partenaires-accueil .trust-cta p {color:#203c55!important;opacity:1!important;}
+body section.trust#partenaires-accueil .trust-cta strong {color:#a9470d!important;}
+/* Cartes de partenaires : le nom et le sous-titre restent lisibles. */
+body section.trust#partenaires-accueil .ts-meta h3 {color:#f9fbff!important;opacity:1!important;}
+body section.trust#partenaires-accueil .ts-meta p {color:#e2eefa!important;opacity:1!important;}
+body section.trust#partenaires-accueil .trust-rail .client-info h4 {color:#102f50!important;opacity:1!important;}
+/* Secteurs : fond orange/ocre, entete bleu nuit. */
+body section.sectors#secteurs .sec-head-row .sec-kicker,
+body section.sectors#secteurs .sec-head-row .sec-title {color:#102b47!important;opacity:1!important;text-shadow:none!important;}
+body section.sectors#secteurs .sec-panel h4 {color:#132f4a!important;opacity:1!important;}
+body section.sectors#secteurs .sec-panel p,
+body section.sectors#secteurs .sp-steps span {color:#36526b!important;opacity:1!important;}
+/* Pourquoi I-TECH : fond bleu nuit, textes clairs. */
+body section.partner.why-fold .partner-head .sec-kicker,
+body section.partner.why-fold .partner-head h3 {color:#fff!important;opacity:1!important;text-shadow:0 2px 16px rgba(0,0,0,.22)!important;}
+body section.partner.why-fold .partner-head p {color:#e4eef9!important;opacity:1!important;}
+body section.partner.why-fold .p-win .pw-body b {color:#fff!important;opacity:1!important;}
+body section.partner.why-fold .p-win .pw-body span {color:#dceafa!important;opacity:1!important;}
+/* Nos clients : fond photographie, assurer le contraste sans changer les logos. */
+body section.clients-showcase#nos-clients .clients-showcase-head .sec-kicker,
+body section.clients-showcase#nos-clients .clients-showcase-head h2 {color:#fff!important;opacity:1!important;text-shadow:0 2px 20px rgba(0,12,26,.45)!important;}
+body section.clients-showcase#nos-clients .clients-showcase-head p {color:#edf5ff!important;opacity:1!important;text-shadow:0 2px 12px rgba(0,12,26,.45)!important;}
+body section.clients-showcase#nos-clients .client-side-note,
+body section.clients-showcase#nos-clients .client-count {color:#fff!important;}
+/* Appel a l'action : texte lisible sur image. */
+body section.cta.home-final-cta h3 {color:#fff!important;opacity:1!important;}
+body section.cta.home-final-cta p {color:#eef5ff!important;opacity:1!important;}
+@media(max-width:640px){
+ body section.trust#partenaires-accueil .trust-head {padding:20px 17px!important;border-radius:20px!important;}
+ body section.trust#partenaires-accueil .trust-head .sec-title {font-size:clamp(26px,7vw,34px)!important;line-height:1.16!important;}
+ body section.trust#partenaires-accueil .trust-head .sec-sub {font-size:14px!important;line-height:1.6!important;}
+}
+
+
+/* I-TECH Phase 1 V3 — Impact : contraste correct sur son fond clair.
+   Les cartes restent bleu nuit, sans changer leur format compact. */
+body app-home-impact section.stats#impact .stats-head {
+  background:rgba(247,250,255,.94)!important;
+  border:1px solid rgba(20,60,95,.12)!important;
+  border-radius:18px!important;
+  box-shadow:0 10px 28px rgba(11,43,75,.09)!important;
+  padding:18px 22px!important;
+}
+body app-home-impact section.stats#impact .stats-head .sec-kicker,
+body app-home-impact section.stats#impact .stats-head .sec-kicker.light {
+  color:#a94a11!important; opacity:1!important; text-shadow:none!important;
+}
+body app-home-impact section.stats#impact .stats-head h3 {
+  color:#0d2e4b!important; opacity:1!important; text-shadow:none!important;
+}
+body app-home-impact section.stats#impact .stats-head p {
+  color:#31506a!important; opacity:1!important; text-shadow:none!important;
+  font-size:clamp(13px,1.15vw,15px)!important; line-height:1.65!important;
+}
+body app-home-impact section.stats#impact .impact-card {
+  background:#0b345c!important; border:1px solid rgba(255,255,255,.16)!important;
+}
+body app-home-impact section.stats#impact .impact-card b {color:#fff!important;opacity:1!important;}
+body app-home-impact section.stats#impact .impact-card > span:last-child {
+  color:#edf5ff!important;opacity:1!important;line-height:1.45!important;
+  font-size:clamp(11px,.95vw,13px)!important;
+}
+@media(max-width:680px){
+ body app-home-impact section.stats#impact .stats-head {
+  padding:16px!important; border-radius:16px!important;
+  background:rgba(247,250,255,.96)!important;
+ }
+ body app-home-impact section.stats#impact .impact-card > span:last-child{font-size:12px!important;}
+}
