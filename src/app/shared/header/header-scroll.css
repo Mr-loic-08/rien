@@ -13,7 +13,7 @@
 .head-wrap.itech-floating-header.itech-header-floating .header{
   border-radius:18px!important;
   overflow:visible;
-  background:rgba(241,247,252,.94)!important;
+  background:rgba(241,247,252,.84)!important;
   box-shadow:0 12px 38px rgba(5,29,54,.19)!important;
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
@@ -21,7 +21,7 @@
 .head-wrap.itech-floating-header .header .container{transition:min-height .38s ease,height .38s ease,padding .38s ease!important}
 .head-wrap.itech-floating-header .scroll-progress{transition:opacity .3s ease}
 html.dark-theme .head-wrap.itech-floating-header.itech-header-floating .header{
-  background:rgba(11,28,45,.95)!important;
+  background:rgba(11,28,45,.86)!important;
   border:1px solid rgba(255,255,255,.12)!important;
 }
 @media(max-width:767px){
@@ -30,4 +30,28 @@ html.dark-theme .head-wrap.itech-floating-header.itech-header-floating .header{
 }
 @media(prefers-reduced-motion:reduce){
   .head-wrap.itech-floating-header,.head-wrap.itech-floating-header .header,.head-wrap.itech-floating-header .header .container{transition:none!important}
+}
+
+/* V4 — la couche ::before de styles.css était presque opaque et cachait la transparence. */
+.head-wrap.itech-floating-header.itech-header-floating{
+  background:transparent!important;
+}
+.head-wrap.itech-floating-header.itech-header-floating .header{
+  background:rgba(237,245,252,.58)!important;
+  -webkit-backdrop-filter:blur(8px) saturate(125%)!important;
+  backdrop-filter:blur(8px) saturate(125%)!important;
+}
+.head-wrap.itech-floating-header.itech-header-floating .header::before{
+  opacity:0!important;
+  background:transparent!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+html.dark-theme .head-wrap.itech-floating-header.itech-header-floating .header{
+  background:rgba(8,26,46,.62)!important;
+}
+/* Les éléments restent opaques et lisibles ; seul le fond devient translucide. */
+.head-wrap.itech-floating-header.itech-header-floating .header>.container{
+  position:relative;
+  z-index:2;
 }
