@@ -5,3 +5,27 @@
 :host .trust-spotlight .ts-logo{display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
 :host .trust-spotlight .ts-logo img{display:block!important;width:94%!important;height:94%!important;max-width:94%!important;max-height:94%!important;object-fit:contain!important;object-position:center!important;padding:0!important;margin:auto!important;transform:none!important}
 @media(max-width:650px){:host .trust-rail .client-logo{width:76px!important;min-width:76px!important;height:58px!important}:host .trust-rail .client-card{grid-template-columns:76px minmax(0,1fr) auto!important}}
+
+/* Bloc Nos partenaires / Ils nous font confiance : composition premium isolée */
+:host .trust{position:relative;isolation:isolate;overflow:hidden;border-radius:clamp(24px,4vw,54px)!important;margin:22px clamp(10px,2vw,30px)!important;padding:clamp(64px,7vw,110px) 0!important;background:linear-gradient(105deg,rgba(3,20,38,.94),rgba(5,35,63,.88) 58%,rgba(3,23,43,.91)),url('/images/about.jpg') center/cover no-repeat!important;color:#f6fbff!important;box-shadow:0 24px 65px rgba(0,22,45,.24)}
+:host .trust:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 92% 16%,rgba(255,133,40,.17),transparent 48%),linear-gradient(180deg,transparent 70%,rgba(2,18,33,.36));z-index:0}
+:host .trust>.container{position:relative;z-index:2}
+:host .trust .trust-head{display:flex!important;justify-content:center!important;margin:0 auto 35px!important;max-width:900px!important;text-align:center!important}
+:host .trust .trust-head-l{max-width:850px!important;width:100%!important;margin:auto!important;text-align:center!important}
+:host .trust .sec-kicker{display:block!important;color:#ff9a48!important;letter-spacing:.14em!important;font-weight:800!important}
+:host .trust .sec-title{color:#fff!important;text-align:center!important;font-size:clamp(2rem,4vw,3.6rem)!important;line-height:1.12!important;margin:14px auto 16px!important;max-width:780px!important;text-wrap:balance}
+:host .trust .sec-sub{color:#e0ebf5!important;text-align:center!important;line-height:1.7!important;font-size:clamp(1rem,1.4vw,1.12rem)!important;max-width:720px!important;margin:0 auto 16px!important}
+:host .trust .sec-sub strong{color:#ffac63!important}
+:host .trust .itech-section-signature{margin-left:auto!important;margin-right:auto!important}
+:host .trust .trust-proof-strip{justify-content:center!important;margin:20px auto 0!important}
+:host .trust .trust-stage{position:relative;z-index:2;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)!important;align-items:stretch!important;gap:clamp(15px,2.5vw,32px)!important}
+:host .trust .trust-spotlight{min-width:0;border-radius:30px!important;overflow:hidden!important;background:linear-gradient(145deg,rgba(11,42,70,.95),rgba(4,21,39,.96))!important;border:1px solid rgba(255,255,255,.18)!important;box-shadow:0 16px 40px #0004!important}
+:host .trust .trust-rail{min-width:0;display:grid!important;gap:12px!important}
+:host .trust .client-card{min-width:0;border-radius:19px!important;background:rgba(9,38,65,.86)!important;border:1px solid rgba(181,211,236,.2)!important;color:#fff!important;box-shadow:0 8px 20px #0002!important;transition:transform .3s ease,background .3s ease,border-color .3s ease!important}
+:host .trust .client-card:hover,:host .trust .client-card.is-on{transform:translateY(-3px)!important;border-color:rgba(255,151,67,.65)!important;background:rgba(18,55,83,.96)!important}
+:host .trust .client-info h4,:host .trust .ts-meta h3{color:#fff!important;overflow-wrap:anywhere}
+:host .trust .ts-meta p,:host .trust .trust-cta p{color:#dceaf5!important;line-height:1.65!important}
+:host .trust .trust-cta{text-align:center!important;margin-top:32px!important}
+@media(max-width:850px){:host .trust .trust-stage{grid-template-columns:minmax(0,1fr)!important}:host .trust .trust-spotlight{min-height:260px}}
+@media(max-width:550px){:host .trust{border-radius:24px!important;margin:12px 8px!important;padding:55px 0!important}:host .trust .trust-spotlight{border-radius:21px!important}:host .trust .client-card{border-radius:15px!important}:host .trust .trust-head{margin-bottom:24px!important}}
+@media(prefers-reduced-motion:reduce){:host .trust .client-card{transition:none!important}}

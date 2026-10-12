@@ -13,6 +13,7 @@ export class AproposPageComponent {
  selectedMember: any=null;
  openMember(m:any){this.selectedMember=m;}
  closeMember(){this.selectedMember=null;}
+ memberEmoji(role:string):string{const r=role.toLowerCase();if(r.includes("mobile"))return "📱";if(r.includes("web"))return "💻";if(r.includes("monétique"))return "💳";if(r.includes("banking"))return "🏦";if(r.includes("secrétariat"))return "📋";if(r.includes("général"))return "👔";return "⚙️";}
  team=[
  {title:'Direction générale',role:'Directeur général',image:'',description:'Assure la direction stratégique de I-TECH, coordonne les activités de l’entreprise et veille à la qualité des relations avec les clients et partenaires.'},
  {title:'M. Stephane',role:'Responsable du département Core Banking',image:'/images/equipe/stephane.webp',description:'Pilote les activités Core Banking et coordonne les solutions destinées à la gestion des opérations bancaires et de microfinance.'},
