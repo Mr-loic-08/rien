@@ -14,7 +14,7 @@ export class HomeClientsComponent {
   readonly logos: ClientLogo[] = [
     {src:'images/clients/client-01.png',alt:'!',href:''},
     {src:'images/clients/mupeci.png',alt:'MUPECI',href:'https://www.mupeci.cm/'},
-    {src:'images/clients/camccul.png',alt:'CamCCUL',href:''},
+    {src:'images/clients/camccul.png',alt:'CamCCUL',href:'https://camccul.cm/'},
     {src:'images/clients/safi.png',alt:'SAFI',href:''},
     {src:'images/clients/figec.png',alt:'FIGEC',href:'https://web.facebook.com/figecgrandissonsensemble/?_rdc=1&_rdr#'},
     {src:'images/clients/mitaccul.png',alt:'MitaCCUL',href:'https://mitaccul.org/'},
