@@ -30,7 +30,7 @@
   <symbol id="s-genie" viewBox="0 0 24 24"><path d="M8.5 9 5 12.5 8.5 16M15.5 9l3.5 3.5-3.5 3.5M13 7l-2 10"/></symbol>
 </defs></svg>
 
-<div class="head-wrap" [class.scrolled]="scrolled()">
+<div class="head-wrap itech-floating-header" [class.scrolled]="scrolled()" [class.itech-header-floating]="scrolled()">
   <div class="scroll-progress"><i [style.transform]="'scaleX('+progress()+')'"></i></div>
   <header class="header" id="header"><div class="container">
     <a class="logo" href="#accueil" (click)="navigateTop($event,'#accueil')" aria-label="I-TECH"><span class="brand-logo"><img src="images/i-tech-logo.png" alt="I-TECH"></span></a>

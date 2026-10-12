@@ -5,7 +5,7 @@ import { LanguageService } from '../../core/language.service';
 type MenuItem = { icon: string; label: string; href: string };
 type MenuDef = { label: string; icon: string; href: string; items: MenuItem[]; alignEnd?: boolean };
 
-@Component({selector:'app-header',standalone:true,imports:[CommonModule],templateUrl:'./header.html'})
+@Component({selector:'app-header',standalone:true,imports:[CommonModule],templateUrl:'./header.html',styleUrl:'./header-scroll.css'})
 export class HeaderComponent{
   l=inject(LanguageService);
   scrolled=signal(false); menuOpen=signal(false); open=signal<string|null>(null); sub=signal<string|null>(null); progress=signal(0);
@@ -38,7 +38,13 @@ export class HeaderComponent{
     {label:'Secteurs',icon:'i-sectors',href:'#/secteurs',items:this.secteurs},
   ];
 
-  @HostListener('window:scroll') onScroll(){ const y=window.scrollY; this.scrolled.set(y>20); const h=document.documentElement.scrollHeight-innerHeight; this.progress.set(h>0?Math.min(1,y/h):0); }
+  @HostListener('window:scroll') onScroll(){
+    const y=Math.max(0,window.scrollY);
+    this.scrolled.set(y>20);
+    const h=document.documentElement.scrollHeight-window.innerHeight;
+    this.progress.set(h>0?Math.min(1,y/h):0);
+
+  }
   toggleLang(){this.l.toggle()}
   toggleSub(name:string){ this.sub.set(this.sub()===name?null:name); }
   closeMobile(){this.menuOpen.set(false); this.sub.set(null)}

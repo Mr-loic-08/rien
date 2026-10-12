@@ -129,3 +129,18 @@
 .solutions-film-play{width:33px;height:33px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.2);font-size:12px}
 @media(max-width:700px){.solutions-film-inner{align-items:flex-start;flex-direction:column}.solutions-film-strip{padding:24px 0}.pg-solutions .solutions-first-hero .solutions-video-poster{background-position:57% center!important}.pg-solutions .solutions-first-hero .pg-hero-veil{background:linear-gradient(90deg,rgba(3,18,34,.92),rgba(3,24,42,.64))!important}}
 @media(prefers-reduced-motion:reduce){.pg-solutions .solutions-first-hero .solutions-video-poster{animation:none!important;transform:none!important}}
+
+/* V6 — Hero Solutions seulement : hauteur réduite, vidéo documentaire sans lecteur externe. */
+.pg-solutions .solutions-first-hero{min-height:510px!important;height:auto!important;max-height:none!important;overflow:hidden!important}
+.pg-solutions .solutions-first-hero .container{position:relative;z-index:3;padding-top:12px!important;padding-bottom:12px!important}
+.pg-solutions .solutions-first-hero .pg-hero-grid.solo{min-height:0!important;padding:34px 0 44px!important;align-items:center!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy{max-width:690px!important;padding:24px 30px!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy h1{font-size:clamp(1.7rem,2.55vw,2.65rem)!important;line-height:1.13!important;margin-bottom:12px!important}
+.pg-solutions .solutions-first-hero .pg-hero-copy p{font-size:clamp(.88rem,.95vw,1rem)!important;line-height:1.5!important;margin-bottom:18px!important}
+.pg-solutions .solutions-first-hero .pg-hero-bg{overflow:hidden!important}
+.pg-solutions .solutions-first-hero .solutions-hero-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;pointer-events:none;background:transparent}
+.pg-solutions .solutions-first-hero .solutions-video-poster{animation:none!important;transform:none!important}
+.pg-solutions .solutions-first-hero .pg-hero-veil{z-index:1!important;position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,34,.92) 0%,rgba(3,22,40,.82) 46%,rgba(3,24,42,.38) 100%)!important}
+.pg-solutions .solutions-first-hero .pg-hero-mesh{z-index:2;pointer-events:none}
+@media(max-width:700px){.pg-solutions .solutions-first-hero{min-height:530px!important}.pg-solutions .solutions-first-hero .pg-hero-grid.solo{padding:24px 0 36px!important}.pg-solutions .solutions-first-hero .pg-hero-copy{padding:19px 17px!important}.pg-solutions .solutions-first-hero .pg-hero-copy h1{font-size:clamp(1.55rem,5.5vw,2.05rem)!important}.pg-solutions .solutions-first-hero .pg-hero-copy p{font-size:.87rem!important}.pg-solutions .solutions-first-hero .solutions-hero-film{object-position:57% center}}
+@media(prefers-reduced-motion:reduce){.pg-solutions .solutions-first-hero .solutions-hero-film{display:none!important}}

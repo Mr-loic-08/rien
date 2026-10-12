@@ -1,0 +1,33 @@
+/* I-TECH — Header toujours visible : transition flottante sans masquage */
+.head-wrap.itech-floating-header{
+  transform:translate3d(0,0,0)!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transition:padding .42s cubic-bezier(.22,1,.36,1),background .35s ease!important;
+}
+.head-wrap.itech-floating-header.itech-header-floating{padding:8px 18px 0!important}
+.head-wrap.itech-floating-header .header{
+  transition:background .38s ease,border-radius .42s cubic-bezier(.22,1,.36,1),box-shadow .38s ease,backdrop-filter .38s ease!important;
+}
+.head-wrap.itech-floating-header.itech-header-floating .header{
+  border-radius:18px!important;
+  overflow:visible;
+  background:rgba(241,247,252,.94)!important;
+  box-shadow:0 12px 38px rgba(5,29,54,.19)!important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.head-wrap.itech-floating-header .header .container{transition:min-height .38s ease,height .38s ease,padding .38s ease!important}
+.head-wrap.itech-floating-header .scroll-progress{transition:opacity .3s ease}
+html.dark-theme .head-wrap.itech-floating-header.itech-header-floating .header{
+  background:rgba(11,28,45,.95)!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+}
+@media(max-width:767px){
+  .head-wrap.itech-floating-header.itech-header-floating{padding:5px 8px 0!important}
+  .head-wrap.itech-floating-header.itech-header-floating .header{border-radius:12px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .head-wrap.itech-floating-header,.head-wrap.itech-floating-header .header,.head-wrap.itech-floating-header .header .container{transition:none!important}
+}
