@@ -14,10 +14,12 @@ app-hero section.hero#accueil .itech-hero-keyfact-text span{color:#e1e8f0!import
 @media(max-width:900px){app-hero section.hero#accueil > .container{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;padding-bottom:35px!important;}app-hero section.hero#accueil .itech-hero-keyfacts{justify-self:center!important;width:min(100%,520px)!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
 @media(max-width:520px){app-hero section.hero#accueil > .container{padding-bottom:25px!important;}app-hero section.hero#accueil .itech-hero-keyfacts{width:min(100%,320px)!important;display:flex!important;gap:0!important;}app-hero section.hero#accueil .itech-hero-keyfact{min-height:53px!important;padding:7px 9px!important;}}
 </style>
-<section class="hero" id="accueil" (mouseenter)="paused=true" (mouseleave)="paused=false">
+<section class="hero" id="accueil" >
  <div class="hero-bg" id="heroBg"><div class="hero-base"></div>
   <ng-container *ngFor="let s of slides; let i=index">
-      <div *ngIf="s.type==='image'" class="slide" [class.active]="i===current()" [style.background-image]="'url('+s.src+')'"></div>
+      <div class="slide" [class.active]="i===current()" [style.background-image]="s.poster ? 'url('+s.poster+')' : 'none'">
+        <video *ngIf="s.type==='video' && i===current()" [src]="s.src" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      </div>
   </ng-container>
   <div class="hero-ov"></div><div class="hero-grid"></div><div class="hero-scan"></div><span class="hero-orb a"></span><span class="hero-orb b"></span><div class="hero-vig"></div><div class="hero-noise"></div>
  </div>

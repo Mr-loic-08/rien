@@ -8925,3 +8925,53 @@ body app-home-impact section.stats#impact .impact-card:hover {
     font-size: 18px !important;
   }
 }
+
+
+/* I-TECH V7 — bloc indicateurs du Hero : restauration compacte, indépendante des vidéos. */
+body app-hero section.hero#accueil > .container {
+  display:grid!important;grid-template-columns:minmax(0,1fr) 270px!important;
+  align-items:center!important;gap:clamp(20px,3vw,44px)!important;
+  width:min(100% - 36px,1200px)!important;max-width:1200px!important;
+  margin-inline:auto!important;position:relative!important;z-index:6!important;
+}
+body app-hero section.hero#accueil .hero-copy {min-width:0!important;max-width:720px!important;}
+body app-hero section.hero#accueil .itech-hero-keyfacts {
+  position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+  inset:auto!important;transform:none!important;display:flex!important;flex-direction:column!important;
+  justify-self:end!important;align-self:center!important;box-sizing:border-box!important;
+  width:270px!important;max-width:100%!important;height:auto!important;min-height:0!important;
+  margin:0!important;padding:9px!important;gap:1px!important;border-radius:18px!important;
+  background:rgba(12,31,54,.38)!important;border:1px solid rgba(255,255,255,.25)!important;
+  box-shadow:0 12px 32px rgba(0,0,0,.18)!important;
+  backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important;
+  animation:none!important;overflow:visible!important;
+}
+body app-hero section.hero#accueil .itech-hero-keyfact {
+  box-sizing:border-box!important;display:flex!important;flex-direction:row!important;
+  align-items:center!important;text-align:left!important;gap:10px!important;width:100%!important;
+  height:auto!important;min-height:57px!important;margin:0!important;padding:8px 9px!important;
+  border-radius:12px!important;border:0!important;background:transparent!important;
+  box-shadow:none!important;transform:none!important;
+}
+body app-hero section.hero#accueil .itech-hero-keyfact:first-child {
+  background:rgba(255,255,255,.14)!important;border-left:3px solid #f58232!important;
+}
+body app-hero section.hero#accueil .itech-hero-keyfact-icon {
+  display:grid!important;place-items:center!important;flex:0 0 25px!important;
+  width:25px!important;height:25px!important;padding:0!important;color:#edf3fa!important;
+  background:transparent!important;border:0!important;
+}
+body app-hero section.hero#accueil .itech-hero-keyfact:first-child .itech-hero-keyfact-icon{color:#f58232!important;}
+body app-hero section.hero#accueil .itech-hero-keyfact-icon svg{width:22px!important;height:22px!important;display:block!important;}
+body app-hero section.hero#accueil .itech-hero-keyfact-text{display:flex!important;flex-direction:column!important;gap:3px!important;min-width:0!important;}
+body app-hero section.hero#accueil .itech-hero-keyfact-text strong{color:#fff!important;font-size:14px!important;line-height:1.2!important;font-weight:750!important;}
+body app-hero section.hero#accueil .itech-hero-keyfact-text span{color:#e1e8f0!important;font-size:12px!important;line-height:1.25!important;}
+@media(max-width:900px){
+ body app-hero section.hero#accueil > .container{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;padding-bottom:35px!important;}
+ body app-hero section.hero#accueil .itech-hero-keyfacts{justify-self:center!important;width:min(100%,520px)!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media(max-width:520px){
+ body app-hero section.hero#accueil > .container{padding-bottom:25px!important;}
+ body app-hero section.hero#accueil .itech-hero-keyfacts{width:min(100%,320px)!important;display:flex!important;flex-direction:column!important;gap:0!important;}
+ body app-hero section.hero#accueil .itech-hero-keyfact{min-height:53px!important;padding:7px 9px!important;}
+}
