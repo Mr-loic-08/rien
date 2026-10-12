@@ -16,7 +16,7 @@
 </button>
 }
 </div>
-<div class="team-more"><button type="button" class="team-more-button" (click)="showAllMembers=!showAllMembers" [attr.aria-expanded]="showAllMembers">{{showAllMembers ? 'Afficher les membres principaux' : 'Voir tous les membres'}} <span aria-hidden="true">{{showAllMembers ? '↑' : '→'}}</span></button></div>
+<div class="team-more"><button type="button" class="team-more-button" (click)="showAllMembers=!showAllMembers" [attr.aria-expanded]="showAllMembers">{{showAllMembers ? 'Retour' : 'Voir tous les membres'}} <span aria-hidden="true">{{showAllMembers ? '↑' : '→'}}</span></button></div>
 </div></section>
 @if(selectedMember){
 <div class="team-dialog-backdrop" (click)="closeMember()">
