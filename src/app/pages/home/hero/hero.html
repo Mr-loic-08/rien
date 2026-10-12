@@ -1,3 +1,23 @@
+<style>
+/* Bloc impact compact, transparent, fidèle à la référence fournie. */
+body app-hero #accueil .itech-home-v3-visual,
+body app-hero #accueil .hero-feats{display:none!important}
+body app-hero #accueil .container{position:relative!important;z-index:3!important;width:100%!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(255px,305px)!important;gap:clamp(22px,4vw,60px)!important;align-items:center!important}
+body app-hero #accueil .hero-copy{min-width:0!important;max-width:680px!important}
+body app-hero #accueil .itech-hero-keyfacts{position:relative!important;inset:auto!important;z-index:4!important;display:flex!important;flex-direction:column!important;justify-self:end!important;align-self:center!important;width:100%!important;max-width:305px!important;min-width:0!important;margin:0!important;padding:12px 10px!important;gap:3px!important;border-radius:22px!important;background:rgba(16,38,66,.26)!important;border:1px solid rgba(255,255,255,.28)!important;box-shadow:0 8px 30px rgba(0,0,0,.12)!important;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+body app-hero #accueil .itech-hero-keyfact{position:relative!important;display:flex!important;flex-direction:row!important;align-items:center!important;text-align:left!important;gap:13px!important;min-height:65px!important;padding:10px 11px!important;border-radius:15px!important;background:transparent!important;border:1px solid transparent!important;box-shadow:none!important;transition:background .2s ease,transform .2s ease!important}
+body app-hero #accueil .itech-hero-keyfact:first-child{background:rgba(255,255,255,.14)!important;border-left:3px solid #f48a37!important}
+body app-hero #accueil .itech-hero-keyfact:hover{background:rgba(255,255,255,.15)!important;transform:translateX(2px)!important}
+body app-hero #accueil .itech-hero-keyfact-icon{display:grid!important;place-items:center!important;flex:0 0 29px!important;width:29px!important;height:29px!important;border-radius:0!important;background:transparent!important;color:rgba(255,255,255,.87)!important}
+body app-hero #accueil .itech-hero-keyfact:first-child .itech-hero-keyfact-icon{color:#f48a37!important}
+body app-hero #accueil .itech-hero-keyfact-icon svg{display:block!important;width:23px!important;height:23px!important}
+body app-hero #accueil .itech-hero-keyfact-text{display:flex!important;flex-direction:column!important;gap:4px!important;min-width:0!important}
+body app-hero #accueil .itech-hero-keyfact-text strong{color:#fff!important;font-size:15px!important;font-weight:750!important;line-height:1.2!important}
+body app-hero #accueil .itech-hero-keyfact-text span{color:#e2e8f0!important;font-size:12px!important;line-height:1.3!important}
+@media(max-width:999px){body app-hero #accueil .container{grid-template-columns:minmax(0,1fr)!important;gap:20px!important}body app-hero #accueil .itech-hero-keyfacts{justify-self:center!important;max-width:540px!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:5px!important}body app-hero #accueil .itech-hero-keyfact{min-height:64px!important;padding:9px!important}}
+@media(max-width:480px){body app-hero #accueil .itech-hero-keyfacts{max-width:320px!important;display:flex!important;gap:0!important;padding:7px!important}body app-hero #accueil .itech-hero-keyfact{width:100%!important;min-height:55px!important;padding:7px 10px!important}body app-hero #accueil .itech-hero-keyfact-text strong{font-size:14px!important}body app-hero #accueil .itech-hero-keyfact-text span{font-size:11px!important}}
+@media(prefers-reduced-motion:reduce){body app-hero #accueil .itech-hero-keyfact{transition:none!important}body app-hero #accueil .itech-hero-keyfact:hover{transform:none!important}}
+</style>
 <section class="hero" id="accueil" (mouseenter)="paused=true" (mouseleave)="paused=false">
  <div class="hero-bg" id="heroBg"><div class="hero-base"></div>
   <ng-container *ngFor="let s of slides; let i=index">
@@ -11,7 +31,14 @@
  <div class="container"><div class="hero-copy"><span class="hero-rule"></span><h1>{{l.t('Accélérez la')}} <span class="grad">{{l.t('transformation digitale')}}</span> {{l.t('de votre institution financière.')}}</h1>
   <p class="lead">{{l.t('I-TECH accompagne les banques, établissements de microfinance et entreprises avec des solutions Core Banking, Mobile Banking, Paiement Digital et Transformation Monétique adaptées aux réalités africaines.')}}</p>
   <div class="hero-actions"><a href="#contact" class="btn btn-primary">{{l.t('Demander une démo')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a href="#solutions" class="btn btn-outline">{{l.t('Découvrir nos solutions')}}</a></div></div>
-  <div class="itech-home-v3-visual" aria-hidden="true"><div class="itech-home-v3-visual-img"></div></div>
-  <div class="hero-feats"><div class="hfeat" *ngFor="let f of feats; let i=index" [class.active]="i===current()"><svg class="ic"><use [attr.href]="'#'+f[0]"></use></svg><div><b>{{ l.lang()==='en' && i===0 ? '+'+experience+' years' : l.t(f[1]) }}</b><span>{{l.t(f[2])}}</span></div></div></div>
+  <div class="itech-hero-keyfacts" aria-label="Chiffres clés I-TECH">
+    <div class="itech-hero-keyfact" *ngFor="let f of feats.slice(0,4); let i=index">
+      <span class="itech-hero-keyfact-icon"><svg class="ic" aria-hidden="true"><use [attr.href]="'#'+f[0]"></use></svg></span>
+      <div class="itech-hero-keyfact-text">
+        <strong>{{ i===0 ? ('+'+experience+(l.lang()==='en' ? ' years' : ' ans')) : l.t(f[1]) }}</strong>
+        <span>{{l.t(f[2])}}</span>
+      </div>
+    </div>
+  </div>
  </div>
 </section>

@@ -32,3 +32,59 @@
     </div>
   </div>
 </section>
+
+<style>
+/* I-TECH — transition Hero → Gamme ALPHA (scoped to the home solutions section) */
+#solutions.solutions {
+  position: relative;
+  isolation: isolate;
+  z-index: 3;
+  margin-top: -54px;
+  padding-top: clamp(82px, 9vw, 128px);
+  padding-bottom: clamp(76px, 8vw, 116px);
+  border-radius: 46px 46px 0 0;
+  background: linear-gradient(142deg, #f5f9ff 0%, #eaf2fb 52%, #fdf8f2 100%);
+  box-shadow: 0 -18px 50px rgba(4, 28, 55, .17);
+  overflow: hidden;
+}
+#solutions.solutions::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 40% 50% at 96% 6%, rgba(238, 119, 38, .12), transparent 80%),
+              radial-gradient(ellipse 45% 55% at 4% 75%, rgba(24, 106, 183, .10), transparent 80%);
+}
+#solutions.solutions::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  width: 84px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ee7829, #2878b8);
+  opacity: .9;
+}
+#solutions .sol-head { position: relative; z-index: 1; }
+#solutions .sol-grid { position: relative; z-index: 1; }
+#solutions .sol-card {
+  transition: transform .45s cubic-bezier(.2,.75,.25,1), box-shadow .45s ease, border-color .3s ease;
+  will-change: auto;
+}
+#solutions .sol-card:hover,
+#solutions .sol-card:focus-within {
+  transform: translateY(-9px);
+  box-shadow: 0 23px 52px rgba(4, 31, 63, .19);
+}
+@media (max-width: 767px) {
+  #solutions.solutions { margin-top: -28px; border-radius: 30px 30px 0 0; padding-top: 75px; }
+  #solutions .sol-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #solutions .sol-card { transition: none; }
+  #solutions .sol-card:hover { transform: none; }
+}
+</style>
