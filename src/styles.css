@@ -9957,3 +9957,350 @@ body .solutions-ref .solutions-ref-scene > section.solutions-ref-impact {
  margin-top:0!important;
 }
 @media(max-width:700px){body .solutions-ref .solutions-ref-scene::after{height:3px;}}
+
+
+/* V19 — Core Banking uniquement : gabarit cohérent, architecture compacte.
+   Aucun changement au hero, au contenu ou aux interactions. */
+@media(min-width:901px){
+ body .pg-detail.core-banking-page > section.core-arch,
+ body .pg-detail.core-banking-page > section.core-featshots-fold,
+ body .pg-detail.core-banking-page > section.core-benefits-fold,
+ body .pg-detail.core-banking-page > section.core-final-cta{
+   box-sizing:border-box!important;
+   width:calc(100% - 48px)!important;
+   max-width:1440px!important;
+   margin:18px auto 0!important;
+   border-radius:30px!important;
+ }
+ body .pg-detail.core-banking-page > section.core-arch{
+   padding:32px 0 24px!important;
+   min-height:0!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-head{
+   margin:0 auto 16px!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-head h2{
+   font-size:clamp(25px,2.8vw,38px)!important;
+   line-height:1.15!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-scene{
+   height:clamp(390px,38vw,475px)!important;
+   min-height:0!important;
+   max-height:475px!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-hub{
+   width:clamp(115px,12vw,155px)!important;
+   height:clamp(115px,12vw,155px)!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-card{
+   width:min(315px,30vw)!important;
+   min-height:115px!important;
+   padding:12px!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-card-1,
+ body .pg-detail.core-banking-page .core-arch-card-2{top:2%!important;}
+ body .pg-detail.core-banking-page .core-arch-card-3,
+ body .pg-detail.core-banking-page .core-arch-card-4{bottom:2%!important;}
+ body .pg-detail.core-banking-page > section.core-featshots-fold,
+ body .pg-detail.core-banking-page > section.core-benefits-fold{padding-top:48px!important;padding-bottom:48px!important;}
+ body .pg-detail.core-banking-page > section.core-final-cta{padding-top:24px!important;padding-bottom:24px!important;}
+}
+@media(min-width:701px) and (max-width:900px){
+ body .pg-detail.core-banking-page > section.core-arch,
+ body .pg-detail.core-banking-page > section.core-featshots-fold,
+ body .pg-detail.core-banking-page > section.core-benefits-fold,
+ body .pg-detail.core-banking-page > section.core-final-cta{
+   width:calc(100% - 28px)!important;margin:14px auto 0!important;border-radius:24px!important;
+ }
+ body .pg-detail.core-banking-page > section.core-arch{padding:34px 0 25px!important;}
+ body .pg-detail.core-banking-page .core-arch-head{margin-bottom:16px!important;}
+ body .pg-detail.core-banking-page .core-arch-head h2{font-size:30px!important;}
+}
+@media(max-width:700px){
+ body .pg-detail.core-banking-page > section.core-arch,
+ body .pg-detail.core-banking-page > section.core-featshots-fold,
+ body .pg-detail.core-banking-page > section.core-benefits-fold,
+ body .pg-detail.core-banking-page > section.core-final-cta{
+   width:calc(100% - 20px)!important;margin:12px auto 0!important;border-radius:20px!important;
+ }
+ body .pg-detail.core-banking-page > section.core-arch{padding:26px 0 20px!important;min-height:0!important;}
+ body .pg-detail.core-banking-page .core-arch-head{margin-bottom:12px!important;}
+ body .pg-detail.core-banking-page .core-arch-head h2{font-size:clamp(22px,6vw,28px)!important;line-height:1.18!important;}
+}
+
+
+/* V20 — Core Banking uniquement. Hero et contenu Angular inchangés. */
+body .pg-detail.core-banking-page {
+  position:relative;
+  isolation:isolate;
+  background:#09243c url('/images/solutions/itech-bureaux-reels.webp') center top/cover fixed no-repeat!important;
+}
+body .pg-detail.core-banking-page::before {
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,21,38,.60),rgba(5,24,44,.76) 55%,rgba(4,19,36,.68));
+}
+body .pg-detail.core-banking-page > section.core-arch,
+body .pg-detail.core-banking-page > section.core-featshots-fold,
+body .pg-detail.core-banking-page > section.core-benefits-fold,
+body .pg-detail.core-banking-page > section.core-final-cta {
+  position:relative!important;isolation:isolate;
+}
+/* Architecture : raccourcie sans cacher les quatre cartes ni le logo. */
+body .pg-detail.core-banking-page > section.core-arch {
+  padding-top:18px!important;padding-bottom:14px!important;
+  min-height:0!important;
+}
+body .pg-detail.core-banking-page .core-arch-head {margin-bottom:5px!important;}
+body .pg-detail.core-banking-page .core-arch-head h2 {
+  font-size:clamp(22px,2.25vw,30px)!important;line-height:1.16!important;
+}
+body .pg-detail.core-banking-page .core-arch-scene {
+  height:325px!important;min-height:0!important;max-height:325px!important;
+}
+body .pg-detail.core-banking-page .core-arch-hub {
+  width:105px!important;height:105px!important;
+}
+body .pg-detail.core-banking-page .core-arch-card {
+  min-height:86px!important;padding:9px 12px!important;
+  width:min(285px,30vw)!important;
+}
+body .pg-detail.core-banking-page .core-arch-card-1,
+body .pg-detail.core-banking-page .core-arch-card-2 {top:1%!important;}
+body .pg-detail.core-banking-page .core-arch-card-3,
+body .pg-detail.core-banking-page .core-arch-card-4 {bottom:1%!important;}
+body .pg-detail.core-banking-page .core-arch-card-icon {
+  width:43px!important;height:43px!important;
+}
+body .pg-detail.core-banking-page .core-arch-card-icon .ic {width:23px!important;height:23px!important;}
+/* Les blocs utilisent la photographie réelle de fond, sous un voile contrôlé. */
+body .pg-detail.core-banking-page > section.core-featshots-fold {
+  background:linear-gradient(125deg,rgba(6,35,63,.88),rgba(10,53,84,.76))!important;
+  border:1px solid rgba(120,188,225,.35)!important;
+  box-shadow:0 15px 38px rgba(0,13,29,.22)!important;
+}
+body .pg-detail.core-banking-page > section.core-featshots-fold .sec-title {
+  color:#fff!important;
+}
+body .pg-detail.core-banking-page > section.core-featshots-fold .acc-item {
+  background:rgba(248,252,255,.95)!important;
+}
+/* Bénéfices : présentation plus lisible et différente (panneau clair + cartes). */
+body .pg-detail.core-banking-page > section.core-benefits-fold {
+  background:linear-gradient(115deg,rgba(230,244,255,.97),rgba(246,250,255,.95))!important;
+  border:1px solid rgba(195,223,242,.75)!important;
+  box-shadow:0 18px 40px rgba(0,20,43,.19)!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .sec-title {
+  color:#0b2d4e!important;text-shadow:none!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-grid {
+  gap:15px!important;align-items:stretch!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-item {
+  background:linear-gradient(155deg,#ffffff,#edf5fc)!important;
+  border:1px solid #cbdfee!important;
+  border-top:3px solid #f26a21!important;
+  border-radius:18px!important;
+  color:#173d5c!important;
+  box-shadow:0 12px 26px rgba(17,59,95,.10)!important;
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-item:hover {
+  transform:translateY(-5px)!important;
+  border-color:#f26a21!important;
+  box-shadow:0 18px 35px rgba(17,59,95,.20)!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-txt {
+  color:#163956!important;text-shadow:none!important;font-weight:650!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-ic {
+  background:linear-gradient(145deg,#f26a21,#e55d13)!important;
+  color:#fff!important;border-color:transparent!important;
+}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-ic .ic {color:#fff!important;stroke:#fff!important;}
+body .pg-detail.core-banking-page > section.core-benefits-fold .ben-num {color:rgba(13,43,74,.13)!important;}
+/* Core Banking · ALPHA : verre translucide, la photo derrière reste visible. */
+body .pg-detail.core-banking-page > section.core-final-cta {
+  background:rgba(6,33,57,.34)!important;
+  backdrop-filter:blur(2px) saturate(1.06)!important;
+  -webkit-backdrop-filter:blur(2px) saturate(1.06)!important;
+  border:1px solid rgba(177,218,245,.48)!important;
+}
+body .pg-detail.core-banking-page > section.core-final-cta .core-final-cta-bg {
+  opacity:.24!important;pointer-events:none!important;
+}
+body .pg-detail.core-banking-page > section.core-final-cta .core-final-panel {
+  background:rgba(5,31,56,.44)!important;
+  border:1px solid rgba(184,224,249,.34)!important;
+  backdrop-filter:blur(3px)!important;-webkit-backdrop-filter:blur(3px)!important;
+  box-shadow:0 15px 32px rgba(0,15,30,.18)!important;
+}
+body .pg-detail.core-banking-page > section.core-final-cta .core-final-copy h2,
+body .pg-detail.core-banking-page > section.core-final-cta .core-final-copy p,
+body .pg-detail.core-banking-page > section.core-final-cta .core-final-kicker {
+  color:#fff!important;text-shadow:0 2px 9px rgba(0,0,0,.6)!important;
+}
+@media(min-width:701px) and (max-width:1000px){
+ body .pg-detail.core-banking-page .core-arch-scene {height:360px!important;max-height:360px!important;}
+ body .pg-detail.core-banking-page .core-arch-card {width:min(245px,32vw)!important;}
+}
+@media(max-width:700px){
+ body .pg-detail.core-banking-page {background-attachment:scroll!important;}
+ body .pg-detail.core-banking-page > section.core-arch {padding:20px 0 15px!important;}
+ body .pg-detail.core-banking-page .core-arch-scene {
+   height:auto!important;min-height:0!important;max-height:none!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-card {
+   width:auto!important;min-height:74px!important;padding:10px!important;
+ }
+ body .pg-detail.core-banking-page .core-arch-hub {width:88px!important;height:88px!important;}
+ body .pg-detail.core-banking-page > section.core-benefits-fold .ben-grid {gap:10px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ body .pg-detail.core-banking-page > section.core-benefits-fold .ben-item {transition:none!important;}
+}
+
+
+/* V21 — Separateurs animes Core Banking : uniquement les grands blocs.
+   Ne modifie pas le Hero, le contenu ni la structure Angular. */
+@keyframes itechCoreDividerSweep {
+  0% {background-position:0% 50%;filter:drop-shadow(0 0 3px rgba(35,150,245,.35));}
+  50% {background-position:100% 50%;filter:drop-shadow(0 0 7px rgba(242,106,33,.65));}
+  100% {background-position:0% 50%;filter:drop-shadow(0 0 3px rgba(35,150,245,.35));}
+}
+/* Choix de pseudo-elements libres : evite d'ecraser les decors existants. */
+body .pg-detail.core-banking-page > section.core-arch::after,
+body .pg-detail.core-banking-page > section.core-featshots-fold::after,
+body .pg-detail.core-banking-page > section.core-benefits-fold::before,
+body .pg-detail.core-banking-page > section.core-final-cta::before {
+  content:""!important;
+  position:absolute!important;
+  display:block!important;
+  left:3%!important;
+  right:3%!important;
+  width:auto!important;
+  height:4px!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:999px!important;
+  opacity:1!important;
+  z-index:15!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,#176ab2 0%,#2bb8ee 22%,#f26a21 50%,#2bb8ee 78%,#176ab2 100%)!important;
+  background-size:230% 100%!important;
+  box-shadow:0 0 12px rgba(40,155,238,.3),0 0 16px rgba(242,106,33,.22)!important;
+  animation:itechCoreDividerSweep 6s ease-in-out infinite!important;
+  transform:none!important;
+}
+body .pg-detail.core-banking-page > section.core-arch::after,
+body .pg-detail.core-banking-page > section.core-featshots-fold::after {top:auto!important;bottom:0!important;}
+body .pg-detail.core-banking-page > section.core-benefits-fold::before,
+body .pg-detail.core-banking-page > section.core-final-cta::before {top:0!important;bottom:auto!important;}
+@media(max-width:700px){
+ body .pg-detail.core-banking-page > section.core-arch::after,
+ body .pg-detail.core-banking-page > section.core-featshots-fold::after,
+ body .pg-detail.core-banking-page > section.core-benefits-fold::before,
+ body .pg-detail.core-banking-page > section.core-final-cta::before {
+   height:3px!important;left:5%!important;right:5%!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body .pg-detail.core-banking-page > section.core-arch::after,
+ body .pg-detail.core-banking-page > section.core-featshots-fold::after,
+ body .pg-detail.core-banking-page > section.core-benefits-fold::before,
+ body .pg-detail.core-banking-page > section.core-final-cta::before {animation:none!important;}
+}
+
+
+/* V22 : Collecte Journalière — palette I-TECH et jonctions resserrées.
+   Styles strictement limités à cette sous-page. */
+body .collecte-journaliere-page {--tone:#f26a21!important;--collecte-orange:#f26a21;--collecte-navy:#0d2b4a;--collecte-blue:#1a56b0;}
+body .collecte-journaliere-page > .collect-band,
+body .collecte-journaliere-page > .collecte-featshots,
+body .collecte-journaliere-page > .collecte-benefits,
+body .collecte-journaliere-page > .collecte-final-cta {
+  margin:0 18px!important;
+  width:calc(100% - 36px)!important;
+  border-radius:34px!important;
+  position:relative;
+}
+/* Le Hero ne change pas ; seule la première jonction est rapprochée. */
+body .collecte-journaliere-page > .collect-band {
+  background:linear-gradient(145deg,#0d2b4a,#123e68 52%,#0a2239)!important;
+}
+body .collecte-journaliere-page > .collecte-final-cta {
+  background:linear-gradient(125deg,#0a2239,#0d2b4a 54%,#163f66)!important;
+  margin-bottom:20px!important;
+}
+body .collecte-journaliere-page > .collecte-benefits {
+  --tone:#f26a21!important;
+  background:radial-gradient(620px 280px at 50% 0%,rgba(242,106,33,.09),transparent 70%),linear-gradient(180deg,#fff,#f4f7fa)!important;
+}
+body .collecte-journaliere-page > .collecte-featshots {
+  background:linear-gradient(180deg,#fff,#f4f7fa)!important;
+}
+body .collecte-journaliere-page .collecte-featshots::before {
+  background:radial-gradient(circle,rgba(242,106,33,.10),transparent 70%)!important;
+}
+body .collecte-journaliere-page .collecte-benefits .ben-num,
+body .collecte-journaliere-page .collecte-benefits .ben-item:hover .ben-num {
+  color:rgba(242,106,33,.32)!important;
+}
+body .collecte-journaliere-page .collecte-benefits .ben-ic {
+  color:#f26a21!important;
+  border-color:rgba(242,106,33,.32)!important;
+  background:radial-gradient(circle,rgba(242,106,33,.16),rgba(242,106,33,.06))!important;
+}
+body .collecte-journaliere-page .collecte-benefits .ben-item:hover {
+  border-color:#f26a21!important;
+}
+body .collecte-journaliere-page .collect-band-kicker,
+body .collecte-journaliere-page .collecte-final-kicker {
+  color:#ff9858!important;
+}
+/* 4 raccords réels dans le HTML, donc indépendants des pseudo-éléments décoratifs existants. */
+body .collecte-journaliere-page > .collecte-v22-divider {
+  display:block!important;
+  position:relative!important;
+  width:calc(100% - 72px)!important;
+  max-width:none!important;
+  height:4px!important;
+  margin:12px auto!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:99px!important;
+  z-index:9!important;
+  overflow:visible!important;
+  background:linear-gradient(90deg,#0d2b4a 0%,#1a56b0 23%,#f26a21 50%,#1a56b0 77%,#0d2b4a 100%)!important;
+  background-size:200% 100%!important;
+  box-shadow:0 0 13px rgba(242,106,33,.34),0 0 9px rgba(26,86,176,.26)!important;
+  animation:collecteV22Flow 5.5s ease-in-out infinite alternate!important;
+}
+body .collecte-journaliere-page > .collecte-v22-divider span {
+  display:block!important;
+  position:absolute!important;
+  left:50%!important;top:50%!important;
+  width:9px!important;height:9px!important;
+  border-radius:50%!important;
+  background:#f26a21!important;
+  box-shadow:0 0 0 4px rgba(242,106,33,.15),0 0 15px rgba(242,106,33,.8)!important;
+  transform:translate(-50%,-50%)!important;
+  animation:collecteV22Pulse 3s ease-in-out infinite!important;
+}
+@keyframes collecteV22Flow {from{background-position:0% 50%;}to{background-position:100% 50%;}}
+@keyframes collecteV22Pulse {0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(.85);}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15);}}
+@media(max-width:700px){
+  body .collecte-journaliere-page > .collect-band,
+  body .collecte-journaliere-page > .collecte-featshots,
+  body .collecte-journaliere-page > .collecte-benefits,
+  body .collecte-journaliere-page > .collecte-final-cta {
+    margin:0 10px!important;width:calc(100% - 20px)!important;border-radius:24px!important;
+  }
+  body .collecte-journaliere-page > .collecte-v22-divider {width:calc(100% - 40px)!important;height:3px!important;margin:9px auto!important;}
+  body .collecte-journaliere-page > .collecte-final-cta {margin-bottom:12px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ body .collecte-journaliere-page > .collecte-v22-divider,
+ body .collecte-journaliere-page > .collecte-v22-divider span {animation:none!important;}
+}
