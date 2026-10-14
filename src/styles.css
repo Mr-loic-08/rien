@@ -9551,3 +9551,79 @@ body app-root app-home-impact section.stats#impact {box-shadow:none!important;}
  body app-root app-hero section.hero#accueil,
  body app-root app-home-impact section.stats#impact {border-radius:0!important;}
 }
+
+
+/* =============================================================
+   I-TECH V12 — PAGE SOLUTIONS UNIQUEMENT
+   Largeur, arrondis et respirations homogènes, sans toucher
+   aux sous-pages ni aux transitions de l'accueil.
+   ============================================================= */
+.pg.pg-solutions {
+  --solutions-gutter: clamp(14px, 2.7vw, 36px);
+  --solutions-radius: 34px;
+  --solutions-gap: 22px;
+  --solutions-block-pad: clamp(46px, 5.5vw, 76px);
+  padding: 0 var(--solutions-gutter) 24px !important;
+  background: #f1f5f9;
+  display: flow-root;
+}
+/* Chaque grande section a le même cadre extérieur et le même écart. */
+.pg.pg-solutions > section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 var(--solutions-gap) !important;
+  border-radius: var(--solutions-radius) !important;
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+}
+.pg.pg-solutions > section:last-child {margin-bottom:0!important;}
+/* Le Hero garde sa photo et son contenu ; seul son cadre est harmonisé. */
+.pg.pg-solutions > .solutions-first-hero.pg-hero {
+  border-radius: 0 0 var(--solutions-radius) var(--solutions-radius) !important;
+  overflow: hidden;
+}
+/* La vague décorative ne doit pas créer de débordement sous le cadre. */
+.pg.pg-solutions > .solutions-first-hero .pg-hero-wave {border-radius:inherit;}
+/* Statistiques, écosystème, ALPHA et CTA : mêmes proportions extérieures. */
+.pg.pg-solutions > .solutions-stats-fold,
+.pg.pg-solutions > .solutions-eco-fold,
+.pg.pg-solutions > .solutions-alpha-fold,
+.pg.pg-solutions > .solutions-cta-fold {
+  border-radius: var(--solutions-radius) !important;
+  margin-top: 0 !important;
+  margin-bottom: var(--solutions-gap) !important;
+  transform: none;
+  box-shadow: 0 14px 36px -28px rgba(6,28,50,.38);
+}
+.pg.pg-solutions > .solutions-cta-fold {margin-bottom:0!important;}
+/* Une respiration verticale cohérente ; le carrousel ALPHA conserve
+   sa hauteur intrinsèque, ses contrôles et sa zone sticky. */
+.pg.pg-solutions > .solutions-stats-fold {padding-top:clamp(30px,3.7vw,52px)!important;padding-bottom:clamp(30px,3.7vw,52px)!important;}
+.pg.pg-solutions > .solutions-eco-fold {padding-top:var(--solutions-block-pad)!important;padding-bottom:var(--solutions-block-pad)!important;}
+.pg.pg-solutions > .solutions-alpha-fold {padding-top:0!important;padding-bottom:0!important;}
+.pg.pg-solutions > .solutions-cta-fold {padding-top:clamp(32px,4vw,56px)!important;padding-bottom:clamp(32px,4vw,56px)!important;}
+/* Liseré dégradé identique, intégré au haut de chaque bloc clair/sombre. */
+.pg.pg-solutions > .solutions-stats-fold::after,
+.pg.pg-solutions > .solutions-eco-fold::after,
+.pg.pg-solutions > .solutions-alpha-fold::after,
+.pg.pg-solutions > .solutions-cta-fold::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:clamp(26px,6%,84px);
+  right:clamp(26px,6%,84px);
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(90deg,transparent 0%,#1a56b0 27%,#f26a21 50%,#1a56b0 73%,transparent 100%);
+  pointer-events:none;
+  z-index:5;
+}
+@media(max-width:700px){
+  .pg.pg-solutions {--solutions-gutter:10px;--solutions-radius:22px;--solutions-gap:12px;--solutions-block-pad:38px;padding-bottom:12px!important;}
+  .pg.pg-solutions > .solutions-first-hero.pg-hero {border-radius:0 0 22px 22px!important;}
+  .pg.pg-solutions > .solutions-stats-fold,
+  .pg.pg-solutions > .solutions-eco-fold,
+  .pg.pg-solutions > .solutions-alpha-fold,
+  .pg.pg-solutions > .solutions-cta-fold {border-radius:22px!important;}
+}
