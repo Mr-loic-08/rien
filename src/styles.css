@@ -11312,3 +11312,88 @@ body .ent42 .ent42-card:first-child>img{object-fit:contain;object-position:cente
 .angular-about .abv-member{overflow:hidden}
 @media(max-width:620px){.angular-about .abv-member-image{height:190px;min-height:190px}}
 @media(max-width:380px){.angular-about .abv-member-image{height:165px;min-height:165px}}
+
+/* V46 - Partenaires: scoped visual redesign; original partner data retained */
+.partners-v46{overflow:hidden;background:#eff7ff;color:#0d2b4a}.partners-v46 .pv-hero{min-height:440px;border-radius:0 0 8% 8%;overflow:hidden;position:relative}.partners-v46 .pv-hero-photo{background-image:url('/images/entreprise/v42/hero.webp');background-size:cover;background-position:center}.partners-v46 .pv-hero .ent-detail-veil{background:linear-gradient(90deg,rgba(4,25,51,.96),rgba(5,36,66,.77) 52%,rgba(4,30,56,.25))}.partners-v46 .pv-hero-pills{display:flex;gap:12px;flex-wrap:wrap;padding:16px 0 32px}.partners-v46 .pv-hero-pills span{border:1px solid #f26a21a0;color:#fff;background:#092c4bb5;padding:12px 18px;border-radius:15px;font-size:.86rem}.partners-v46 .pv-intro{padding:70px 0 65px;border-radius:0 0 65px 65px;background:#f1f8ff}.partners-v46 .pv-intro>.container{display:grid;grid-template-columns:1.05fr 1fr;gap:55px;align-items:center}.partners-v46 .pv-intro h2{font-size:clamp(2rem,3vw,3.1rem);margin:12px 0 20px;color:#0d2b4a}.partners-v46 .pv-intro p{font-size:1.04rem;line-height:1.75;color:#254766}.partners-v46 .pv-intro-photo{height:320px;border-radius:36px;background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Place_Poste_Centrale_Yaound%C3%A9_1.jpg?width=1280') center/cover no-repeat;box-shadow:0 20px 45px #0d2b4a22}.partners-v46 .pv-tech{background:linear-gradient(120deg,#062643,#0d4168);color:#fff;border-radius:60px;margin-top:-12px;padding:75px 0 85px}.partners-v46 .pv-tech .sec-title,.partners-v46 .pv-tech .partner-lead{color:#fff}.partners-v46 .pv-tech .partner-logo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.partners-v46 .pv-tech .partner-logo{background:#fff;color:#0d2b4a;min-height:120px;border-radius:17px;box-shadow:0 9px 24px #0002;transition:transform .3s,box-shadow .3s}.partners-v46 .pv-tech .partner-logo:hover{transform:translateY(-7px);box-shadow:0 12px 35px #f26a2133}.partners-v46 .pv-institution{background:#eff7ff;border-radius:60px;padding:80px 0}.partners-v46 .pv-institution .partner-inst-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:32px}.partners-v46 .pv-institution .partner-inst{background:white;border-radius:17px;min-height:120px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;white-space:pre-line;font-weight:800;box-shadow:0 8px 25px #0d2b4a15;transition:transform .25s,color .25s}.partners-v46 .pv-institution .partner-inst:hover{transform:translateY(-6px);color:#2861aa}.partners-v46 .pv-join{border-radius:60px 60px 0 0;background:linear-gradient(90deg,#062340ed,#0b3556c7),url('/images/entreprise/v42/cta.webp') center/cover;padding:85px 0}.partners-v46 .pv-join .container{align-items:center}.partners-v46 .pv-join h2,.partners-v46 .pv-join p{color:#fff}@media(max-width:800px){.partners-v46 .pv-intro>.container{grid-template-columns:1fr;gap:26px}.partners-v46 .pv-intro-photo{height:240px}.partners-v46 .pv-tech .partner-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partners-v46 .pv-institution .partner-inst-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partners-v46 .pv-tech,.partners-v46 .pv-institution{border-radius:34px;padding:55px 0}.partners-v46 .pv-hero{min-height:400px}.partners-v46 .pv-join{border-radius:35px 35px 0 0}}
+
+/* V47 - Partenaires: texte net, photos locales, hero d'origine intact */
+.partners-v46 .partner-detail-hero{min-height:unset;border-radius:0;overflow:hidden}
+.partners-v46 .partner-detail-hero .ent-detail-photo{background-image:url('https://images.pexels.com/photos/7979601/pexels-photo-7979601.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900')!important;background-position:center;background-size:cover}
+.partners-v46 .partner-detail-hero .ent-detail-veil{background:linear-gradient(90deg,rgba(4,25,51,.9),rgba(5,36,66,.4))}
+.partners-v46 .pv-intro-photo{background-image:url('/images/entreprise/v42/partenaires.webp')!important;background-position:center;background-size:cover;filter:none!important;opacity:1!important}
+.partners-v46 .pv-join{background-image:linear-gradient(90deg,rgba(4,28,53,.94),rgba(4,32,58,.79)),url('/images/entreprise/v42/cta.webp')!important}
+.partners-v46 .pv-intro,.partners-v46 .pv-tech,.partners-v46 .pv-institution,.partners-v46 .pv-join{filter:none!important;backdrop-filter:none!important;opacity:1!important;transform:none}
+.partners-v46 .pv-intro-copy,.partners-v46 .partner-directory .container,.partners-v46 .pv-join .container{filter:none!important;backdrop-filter:none!important;opacity:1!important}
+.partners-v46 .pv-intro h2,.partners-v46 .pv-intro p,.partners-v46 .pv-tech h2,.partners-v46 .pv-institution h2,.partners-v46 .partner-lead,.partners-v46 .pv-join h2,.partners-v46 .pv-join p{filter:none!important;opacity:1!important;text-shadow:none!important;letter-spacing:normal;-webkit-font-smoothing:antialiased}
+.partners-v46 .pv-tech .partner-logo,.partners-v46 .pv-institution .partner-inst{filter:none!important;backdrop-filter:none!important;opacity:1!important;text-shadow:none!important;background:#fff!important;color:#0d2b4a!important}
+.partners-v46 .pv-tech .partner-logo b,.partners-v46 .pv-tech .partner-logo span,.partners-v46 .pv-institution .partner-inst{opacity:1!important;filter:none!important;text-shadow:none!important}
+.partners-v46 .pv-intro p,.partners-v46 .partner-lead{font-size:16px;line-height:1.7;font-weight:500}
+.partners-v46 .pv-tech .partner-lead{color:#eef7ff!important}
+.partners-v46 .pv-institution .partner-lead{color:#244762!important}
+.partners-v46 .pv-join p{color:#fff!important;max-width:690px}
+
+/* V48 — Partenaires: mise en page immersive, hero original préservé */
+.angular-partners .pv48-intro,.angular-partners .pv48-directory,.angular-partners .pv48-join{position:relative;isolation:isolate;overflow:hidden;filter:none!important;backdrop-filter:none!important;opacity:1!important;transform:none!important}
+.angular-partners .pv48-intro{padding:80px 0 98px;background:#eef6ff;border-radius:0 0 65px 65px;z-index:3}
+.angular-partners .pv48-intro-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}
+.angular-partners .pv48-eyebrow{display:inline-flex;align-items:center;gap:10px;color:#f26a21;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:15px}
+.angular-partners .pv48-eyebrow:before{content:'';display:inline-block;width:28px;height:3px;background:#f26a21;border-radius:5px}
+.angular-partners .pv48-intro h2,.angular-partners .pv48-directory h2,.angular-partners .pv48-join h2{font-size:clamp(30px,3.3vw,48px);line-height:1.14;letter-spacing:-.035em;font-weight:800;margin:0 0 20px;color:#0d2b4a;text-shadow:none!important}
+.angular-partners .pv48-intro h2 em{font-style:normal;color:#f26a21}
+.angular-partners .pv48-intro p,.angular-partners .pv48-directory p{color:#294b6d!important;font-size:16px;line-height:1.75;opacity:1!important;text-shadow:none!important;margin:0 0 15px}
+.angular-partners .pv48-intro-image{min-height:390px;background:url('/images/entreprise/v42/partenaires.webp') center/cover no-repeat;border-radius:34px;position:relative;box-shadow:0 26px 65px #0d2b4a28;overflow:hidden}
+.angular-partners .pv48-intro-image:after{content:'';position:absolute;inset:60% 0 0;background:linear-gradient(transparent,#071d35a8)}
+.angular-partners .pv48-image-label{position:absolute;bottom:24px;left:26px;z-index:1;color:white;background:#0d2b4ab8;border:1px solid #ffffff55;border-radius:30px;padding:12px 20px;font-weight:700;backdrop-filter:blur(8px)}
+.angular-partners .pv48-label-dot{display:inline-block;width:9px;height:9px;background:#f26a21;border-radius:50%;margin-right:10px}
+.angular-partners .pv48-intro-pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.angular-partners .pv48-intro-pills span{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #dbe9f5;color:#0d2b4a;border-radius:14px;padding:12px 15px;font-weight:700;font-size:13px;box-shadow:0 8px 22px #0d2b4a0a}
+.angular-partners .pv48-intro-pills .ic{width:19px;height:19px;color:#f26a21}
+.angular-partners .pv48-overlap{position:absolute;bottom:0;left:6%;right:6%;height:5px;border-radius:100%;background:linear-gradient(90deg,#1588d5,#f26a21,#1588d5);box-shadow:0 0 18px #238bdd99}
+.angular-partners .pv48-tech{margin-top:-38px;padding:122px 0 100px;background:linear-gradient(130deg,#061c35,#0d2b4a 65%,#103f68);border-radius:0 0 65px 65px;z-index:2}
+.angular-partners .pv48-tech:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,#1781c222,transparent 40%),radial-gradient(circle at 10% 80%,#f26a2110,transparent 35%);pointer-events:none}
+.angular-partners .pv48-tech h2,.angular-partners .pv48-tech p{color:#fff!important}
+.angular-partners .pv48-tech p{color:#c5d7e9!important;max-width:650px}
+.angular-partners .pv48-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:32px}
+.angular-partners .pv48-heading-art{height:80px;width:80px;border:1px solid #ffffff3d;border-radius:24px;display:grid;place-items:center;background:#ffffff0b;transform:rotate(-8deg)}
+.angular-partners .pv48-heading-art .ic{width:36px;height:36px;color:#f26a21}
+.angular-partners .pv48-tech-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.angular-partners .pv48-tech-card{position:relative;display:flex;align-items:center;gap:18px;min-height:128px;padding:24px;background:#fff;border:1px solid #cfe0ee;border-radius:23px;box-shadow:0 15px 32px #0002;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+.angular-partners .pv48-tech-card:hover{transform:translateY(-7px)!important;box-shadow:0 24px 45px #0004;border-color:#f26a21}
+.angular-partners .pv48-card-mark{width:61px;height:61px;flex:0 0 61px;display:grid;place-items:center;background:#edf5fc;color:#f26a21;font-size:29px;font-weight:800;border-radius:18px;transition:color .25s,background .25s}
+.angular-partners .pv48-tech-card:hover .pv48-card-mark{background:#e3f0ff;color:#1971b8}
+.angular-partners .pv48-card-body{display:flex;flex-direction:column;gap:4px;min-width:0}
+.angular-partners .pv48-card-body strong{color:#0d2b4a;font-size:clamp(17px,1.7vw,23px);line-height:1.2;overflow-wrap:anywhere}
+.angular-partners .pv48-card-body span{color:#52718d;font-size:13px}
+.angular-partners .pv48-card-line{position:absolute;bottom:0;left:25px;right:25px;height:3px;background:linear-gradient(90deg,#f26a21,#2d8ed5);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.angular-partners .pv48-tech-card:hover .pv48-card-line{transform:scaleX(1)}
+.angular-partners .pv48-inst{background:#f2f8ff;padding:115px 0 100px;margin-top:-38px;padding-top:138px;border-radius:0 0 65px 65px;z-index:1}
+.angular-partners .pv48-inst-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:start}
+.angular-partners .pv48-inst-photo{height:270px;margin-top:25px;border-radius:26px;background:url('/images/entreprise/v42/cta.webp') center/cover no-repeat;box-shadow:0 20px 40px #0d2b4a25}
+.angular-partners .pv48-inst-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.angular-partners .pv48-inst-card{position:relative;min-height:134px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:13px;padding:24px;background:#fff;border:1px solid #dbe8f4;border-radius:23px;box-shadow:0 12px 28px #0d2b4a0b;transition:transform .3s,border-color .3s;overflow:hidden}
+.angular-partners .pv48-inst-card:hover{transform:translateY(-5px)!important;border-color:#f26a21}
+.angular-partners .pv48-inst-symbol{display:grid;place-items:center;width:38px;height:38px;background:#fff2e8;border-radius:12px}
+.angular-partners .pv48-inst-symbol .ic{width:21px;height:21px;color:#f26a21}
+.angular-partners .pv48-inst-card:hover .pv48-inst-symbol .ic{color:#1971b8}
+.angular-partners .pv48-inst-card strong{font-size:17px;color:#0d2b4a;line-height:1.35;overflow-wrap:anywhere}
+.angular-partners .pv48-inst-accent{position:absolute;top:0;bottom:0;right:0;width:4px;background:linear-gradient(#f26a21,#1689d1)}
+.angular-partners .pv48-join{margin-top:-35px;min-height:390px;background:linear-gradient(90deg,#061b33ef 0%,#0d2b4add 58%,#0d2b4a44 100%),url('/images/entreprise/v42/mission.webp') center/cover no-repeat;border-radius:65px 65px 0 0;padding:95px 0 90px}
+.angular-partners .pv48-join-content{max-width:650px}
+.angular-partners .pv48-join h2{color:#fff!important}
+.angular-partners .pv48-join p{font-size:17px;line-height:1.7;color:#f0f6ff!important;opacity:1!important;text-shadow:none!important;margin:0 0 26px}
+.angular-partners .pv48-cta{display:inline-flex;align-items:center;gap:14px;background:#f26a21;color:white!important;text-decoration:none;padding:15px 25px;border-radius:40px;font-weight:800;box-shadow:0 12px 26px #f26a2140;transition:background .25s,transform .25s}
+.angular-partners .pv48-cta:hover{background:#d95c15;transform:translateY(-3px)}
+.angular-partners .pv48-cta .ic{width:19px;height:19px}
+@media(max-width:850px){.angular-partners .pv48-intro-layout,.angular-partners .pv48-inst-layout{grid-template-columns:1fr}.angular-partners .pv48-intro-image{min-height:300px}.angular-partners .pv48-tech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-partners .pv48-intro,.angular-partners .pv48-tech,.angular-partners .pv48-inst,.angular-partners .pv48-join{border-radius:0 0 36px 36px}.angular-partners .pv48-join{border-radius:36px 36px 0 0}}
+@media(max-width:560px){.angular-partners .pv48-intro{padding:55px 0 80px}.angular-partners .pv48-intro-layout{gap:26px}.angular-partners .pv48-intro-image{min-height:230px}.angular-partners .pv48-tech{padding:100px 0 70px}.angular-partners .pv48-tech-grid,.angular-partners .pv48-inst-grid{grid-template-columns:1fr}.angular-partners .pv48-tech-card{min-height:100px;padding:18px}.angular-partners .pv48-inst{padding:110px 0 70px}.angular-partners .pv48-heading-art{display:none}.angular-partners .pv48-join{padding:75px 0 65px}.angular-partners .pv48-intro h2,.angular-partners .pv48-directory h2,.angular-partners .pv48-join h2{font-size:30px}}
+
+/* V49 — Partenaires : contraste du header, sans toucher au hero ni aux blocs.
+   Le header global peut passer en mode solid/scrolled ; sur cette page,
+   maintenir un fond marine et des liens clairs pour eviter blanc sur blanc. */
+body:has(main.angular-partners) .head-wrap .header{color:#fff!important;background:#0d2b4a!important;border-bottom-color:rgba(255,255,255,.12)!important}
+body:has(main.angular-partners) .head-wrap .header::before{background:rgba(8,35,63,.97)!important;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+body:has(main.angular-partners) .head-wrap .header .nav>li>a,
+body:has(main.angular-partners) .head-wrap .header .nav>li>button{color:#fff!important;text-shadow:none!important}
+body:has(main.angular-partners) .head-wrap .header .nav>li>a:hover,
+body:has(main.angular-partners) .head-wrap .header .nav>li>button:hover{color:#ffb783!important}
+body:has(main.angular-partners) .head-wrap .header .container{position:relative;z-index:2}
