@@ -11221,3 +11221,12 @@ body .ent42 .ent42-actions{display:flex;gap:12px;flex-wrap:wrap}
 @media(max-width:850px){body .ent42 .ent42-stats{grid-template-columns:repeat(2,1fr)}body .ent42 .ent42-commit-layout{grid-template-columns:1fr}body .ent42 .ent42-hero{background-position:center,right center;background-size:auto,auto 100%}}
 @media(max-width:620px){body .ent42 .container{width:calc(100% - 32px)}body .ent42 .ent42-hero{padding:105px 0 20px!important;min-height:500px;background:linear-gradient(90deg,rgba(2,25,48,.95),rgba(3,30,55,.78)),url('/images/entreprise/v42/hero.webp') center/cover no-repeat!important}body .ent42 .ent42-stats{gap:6px}body .ent42 .ent42-stat{gap:7px;padding:9px 5px}body .ent42 .ent42-stat b{font-size:16px}body .ent42 .ent42-stat small{font-size:10px}body .ent42 .ent42-section{border-radius:24px!important;padding:27px 0!important}body .ent42 .ent42-card-grid{grid-template-columns:1fr}body .ent42 .ent42-card>img{height:190px}body .ent42 .ent42-commit-grid{grid-template-columns:1fr}body .ent42 .ent42-mission,body .ent42 .ent42-cta{background-size:cover!important}}
 @media(prefers-reduced-motion:reduce){body .ent42 .ent42-section:after{animation:none!important}body .ent42 .ent42-card,body .ent42 .ent42-commit-grid article{transition:none!important}}
+
+/* V43 : Hero video fournie par l’utilisateur, sans piste audio. */
+body .ent42 .ent42-hero{position:relative;isolation:isolate;background:#052b4c!important}
+body .ent42 .ent43-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;pointer-events:none}
+body .ent42 .ent43-hero-overlay{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(2,21,43,.94) 0%,rgba(2,28,52,.84) 40%,rgba(3,29,53,.55) 75%,rgba(3,26,47,.49) 100%)}
+body .ent42 .ent42-hero-inner,body .ent42 .ent42-stats{position:relative;z-index:2}
+body .ent42 .ent42-card:first-child>img{object-fit:contain;object-position:center;background:#080808;padding:14px 24px}
+@media(max-width:620px){body .ent42 .ent42-hero{background:#052b4c!important}body .ent42 .ent43-hero-overlay{background:linear-gradient(90deg,rgba(2,21,43,.94),rgba(2,28,52,.74))}}
+@media(prefers-reduced-motion:reduce){body .ent42 .ent43-hero-video{display:none}body .ent42 .ent42-hero{background:linear-gradient(90deg,rgba(2,21,43,.9),rgba(2,28,52,.7)),url('/images/entreprise/v42/hero.webp') center/cover no-repeat!important}}
