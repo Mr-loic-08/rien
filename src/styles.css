@@ -10534,3 +10534,240 @@ body main.pg-detail.digital-mobile-page > section.digital-final-cta::before {ani
  body main.pg-detail.digital-mobile-page > section.digital-benefits::before,
  body main.pg-detail.digital-mobile-page > section.digital-final-cta::before{animation:none!important;opacity:.8!important;}
 }
+
+
+/* V28 — Autres sous-pages Solutions : raccords compacts, contrastes doux, séparateurs sobres. */
+
+body main.pg-detail.gestion-rh-page > section.rh-featshots {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0d2b4a,#164466)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.gestion-rh-page > section.rh-featshots::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.gestion-rh-page > section.rh-featshots .sec-title {color:#fff!important;}
+
+body main.pg-detail.gestion-rh-page > section.rh-benefits {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(145deg,#f0f6fc,#e7f0fa)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.gestion-rh-page > section.rh-benefits::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.gestion-rh-page > section.rh-benefits .sec-title {color:#0d2b4a!important;}
+
+body main.pg-detail.gestion-rh-page > section.rh-final-cta {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0b2845,#123957)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.gestion-rh-page > section.rh-final-cta::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.gestion-rh-page > section.rh-final-cta .sec-title {color:#fff!important;}
+
+body main.pg-detail.declaration-bancaire-page > section.db-featshots {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0d2b4a,#164466)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-featshots::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-featshots .sec-title {color:#fff!important;}
+
+body main.pg-detail.declaration-bancaire-page > section.db-benefits {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(145deg,#f0f6fc,#e7f0fa)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-benefits::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-benefits .sec-title {color:#0d2b4a!important;}
+
+body main.pg-detail.declaration-bancaire-page > section.db-final-cta {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0b2845,#123957)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-final-cta::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.declaration-bancaire-page > section.db-final-cta .sec-title {color:#fff!important;}
+
+body main.pg-detail.genie-logiciel-page > section.gl-featshots {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0d2b4a,#164466)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-featshots::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-featshots .sec-title {color:#fff!important;}
+
+body main.pg-detail.genie-logiciel-page > section.gl-benefits {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(145deg,#f0f6fc,#e7f0fa)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-benefits::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-benefits .sec-title {color:#0d2b4a!important;}
+
+body main.pg-detail.genie-logiciel-page > section.gl-final-cta {
+  box-sizing:border-box!important;
+  margin-top:6px!important;
+  background:linear-gradient(140deg,#0b2845,#123957)!important;
+  position:relative!important;
+  isolation:isolate;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-final-cta::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:0!important;right:0!important;top:0!important;
+  width:100%!important;height:3px!important;
+  z-index:5!important;pointer-events:none!important;
+  border-radius:3px 3px 0 0!important;
+  background:linear-gradient(90deg,#16517a 0%,#3583a7 30%,#f26a21 50%,#3583a7 70%,#16517a 100%)!important;
+  background-size:100% 100%!important;
+  box-shadow:none!important;filter:none!important;
+  animation:itechOtherSolutionsSoftBreathV28 8s ease-in-out infinite!important;
+}
+body main.pg-detail.genie-logiciel-page > section.gl-final-cta .sec-title {color:#fff!important;}
+
+@keyframes itechOtherSolutionsSoftBreathV28 {
+  0%,100% {opacity:.58;}
+  50% {opacity:.86;}
+}
+@media(max-width:700px) {
+ body main.pg-detail.gestion-rh-page > section.rh-featshots {margin-top:4px!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-featshots::before {height:2px!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-benefits {margin-top:4px!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-benefits::before {height:2px!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-final-cta {margin-top:4px!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-final-cta::before {height:2px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-featshots {margin-top:4px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-featshots::before {height:2px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-benefits {margin-top:4px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-benefits::before {height:2px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-final-cta {margin-top:4px!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-final-cta::before {height:2px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-featshots {margin-top:4px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-featshots::before {height:2px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-benefits {margin-top:4px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-benefits::before {height:2px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-final-cta {margin-top:4px!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-final-cta::before {height:2px!important;}
+}
+@media(prefers-reduced-motion:reduce) {
+ body main.pg-detail.gestion-rh-page > section.rh-featshots::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-benefits::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.gestion-rh-page > section.rh-final-cta::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-featshots::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-benefits::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.declaration-bancaire-page > section.db-final-cta::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-featshots::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-benefits::before {animation:none!important;opacity:.8!important;}
+ body main.pg-detail.genie-logiciel-page > section.gl-final-cta::before {animation:none!important;opacity:.8!important;}
+}
