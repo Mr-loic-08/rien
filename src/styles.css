@@ -11397,3 +11397,15 @@ body:has(main.angular-partners) .head-wrap .header .nav>li>button{color:#fff!imp
 body:has(main.angular-partners) .head-wrap .header .nav>li>a:hover,
 body:has(main.angular-partners) .head-wrap .header .nav>li>button:hover{color:#ffb783!important}
 body:has(main.angular-partners) .head-wrap .header .container{position:relative;z-index:2}
+
+
+/* V50 — Sous-pages Solutions : supprimer uniquement la vague blanche sous les héros.
+   Les héros, leurs images et les séparateurs des autres pages restent intacts. */
+body .pg.pg-detail.core-banking-page .pg-hero > .pg-hero-wave,
+body .pg.pg-detail.collecte-journaliere-page .pg-hero > .pg-hero-wave,
+body .pg.pg-detail.digital-mobile-page .pg-hero > .pg-hero-wave,
+body .pg.pg-detail.gestion-rh-page .pg-hero > .pg-hero-wave,
+body .pg.pg-detail.declaration-bancaire-page .pg-hero > .pg-hero-wave,
+body .pg.pg-detail.genie-logiciel-page .pg-hero > .pg-hero-wave {
+  display:none!important;
+}
