@@ -1,149 +1,82 @@
-<main class="pg pg-solutions">
-  <section class="pg-hero on-photo solutions-first-hero">
-    <div class="pg-hero-bg" aria-hidden="true">
-      <div class="solutions-video-poster"></div>
-      <span class="pg-hero-veil"></span>
-      <span class="pg-hero-mesh"></span>
+<main class="pg pg-solutions solutions-ref">
+  <section class="solutions-ref-hero" aria-label="Nos Solutions">
+    <div class="solutions-ref-hero-shade"></div>
+    <div class="solutions-ref-hero-content">
+      <nav class="solutions-ref-crumb"><a href="#accueil">{{l.t('Accueil')}}</a><span>›</span><span>{{l.t('Solutions')}}</span></nav>
+      <h1>{{l.t('Nos Solutions')}}</h1>
+      <h2>{{l.t('Des solutions innovantes et adaptées aux réalités africaines')}}</h2>
+      <p>{{l.t("I-TECH accompagne les institutions financières, les entreprises et les administrations avec des solutions performantes, sécurisées et évolutives.")}}</p>
+      <a class="solutions-ref-orange-btn" href="#solutions-ref-ecosystem">{{l.t('Découvrir nos solutions')}} <span>→</span></a>
     </div>
-
-    <div class="container">
-      <div class="crumbs">
-        <span class="crumb"><a href="#accueil">{{l.t('Accueil')}}</a><svg class="ic"><use href="#i-chev-r"></use></svg></span>
-        <span class="crumb"><em>{{l.t('Solutions')}}</em></span>
-      </div>
-
-      <div class="pg-hero-grid solo">
-        <div class="pg-hero-copy reveal visible">
-          <span class="pg-eyebrow"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Gamme ALPHA · Solutions I-TECH')}}</span>
-          <h1>{{l.t("Des solutions innovantes au service de l'accélération de votre transformation digitale")}}</h1>
-          <p>{{l.t("Découvrez la suite ALPHA et les solutions I-TECH : des outils performants dédiés aux banques, aux institutions de microfinance et aux entreprises en quête d'efficacité.")}}</p>
-          <div class="hero-actions">
-            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démonstration')}}</a>
-            <a href="#/contact" class="btn btn-glass">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pg-hero-wave" aria-hidden="true"></div>
   </section>
 
-  <!-- Solutions Étape 2 — statistiques V17.20.4 -->
-  <section class="ov-stats solutions-stats-fold reveal visible">
-    <div class="ov-stats-deco" aria-hidden="true"></div>
-    <div class="container">
-      <div class="ov-stats-row">
-        @for(s of stats; track s.label; let i=$index){
-          <div class="ov-stat" [style.transition-delay.ms]="i*90">
-            <span class="ov-stat-ic"><svg class="ic"><use [attr.href]="'#'+s.icon"></use></svg></span>
-            <b>{{s.value}}</b>
-            <span>{{l.t(s.label)}}</span>
-          </div>
+  <div class="solutions-ref-scene">
+    <section class="solutions-ref-impact" aria-label="Notre engagement">
+      <div class="solutions-ref-impact-heading">
+        <span class="solutions-ref-eyebrow">{{l.t('NOTRE ENGAGEMENT')}}</span>
+        <h2>{{l.t('Des solutions à fort impact')}}</h2>
+      </div>
+      <div class="solutions-ref-impact-grid">
+        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-shield"></use></svg><b>{{l.t('Sécurisées')}}</b><p>{{l.t('Conformité et protection des données')}}</p></div>
+        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-settings"></use></svg><b>{{l.t('Intégrées')}}</b><p>{{l.t('Une architecture complète et modulaire')}}</p></div>
+        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-chart"></use></svg><b>{{l.t('Performantes')}}</b><p>{{l.t('Optimisation des processus et productivité')}}</p></div>
+        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-users"></use></svg><b>{{l.t('Adaptées')}}</b><p>{{l.t('Conçues pour les réalités africaines')}}</p></div>
+      </div>
+    </section>
+
+    <div class="solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+    <section id="solutions-ref-ecosystem" class="solutions-ref-ecosystem">
+      <div class="solutions-ref-ecosystem-copy">
+        <span class="solutions-ref-eyebrow">{{l.t("NOS DOMAINES D'INTERVENTION")}}</span>
+        <h2>{{l.t('Un écosystème de solutions pour un avenir digital')}}</h2>
+        <p>{{l.t('Des solutions qui répondent aux besoins spécifiques des institutions financières et des entreprises.')}}</p>
+        <a class="solutions-ref-orange-btn" href="#solutions-ref-alpha">{{l.t('Voir toutes les solutions')}} <span>→</span></a>
+      </div>
+      <div class="solutions-ref-ecosystem-media" aria-hidden="true"></div>
+      <div class="solutions-ref-ecosystem-list">
+        <div><span>✦</span>{{l.t('Gamme complète et intégrée')}}</div>
+        <div><span>✦</span>{{l.t('Solutions évolutives')}}</div>
+        <div><span>✦</span>{{l.t('Conformité réglementaire')}}</div>
+        <div><span>✦</span>{{l.t('Support et accompagnement')}}</div>
+        <div><span>✦</span>{{l.t('Expertise locale et internationale')}}</div>
+      </div>
+    </section>
+
+    <div class="solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+    <section id="solutions-ref-alpha" class="solutions-ref-alpha">
+      <div class="solutions-ref-alpha-intro">
+        <span class="solutions-ref-eyebrow">{{l.t('NOTRE GAMME')}}</span>
+        <h2>ALPHA</h2>
+        <p>{{l.t('Des solutions spécialisées pour digitaliser et optimiser vos métiers.')}}</p>
+      </div>
+      <div class="solutions-ref-alpha-products">
+        @for(c of solutionCards; track c.key){
+          <a class="solutions-ref-alpha-product" [href]="'#/solutions/'+c.key">
+            <span class="solutions-ref-alpha-icon"><svg class="ic"><use [attr.href]="'#'+c.icon"></use></svg></span>
+            <small>ALPHA</small>
+            <b>{{l.t(c.name)}}</b>
+          </a>
         }
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Solutions Étape 3 — Écosystème V17.20.4 -->
-  <section class="eco solutions-eco-fold reveal visible">
-    <div class="container">
-      <h2 class="sec-title center">{{l.t(ecosystemTitle)}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
-      <div class="eco-grid">
-        <div class="eco-col">
-          @for(item of ecosystemLeft; track item.key){
-            <a class="eco-item tone-{{item.tone}}" [href]="'#/solutions/'+item.key">
-              <span class="eco-art" aria-hidden="true"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
-              <span class="eco-txt"><b>{{l.t(item.name)}}</b><span>{{l.t(item.desc)}}</span></span>
-              <svg class="ic"><use href="#i-chev-r"></use></svg>
-            </a>
-          }
-        </div>
-        <div class="eco-core">
-          <span class="eco-ring r1"></span><span class="eco-ring r2"></span>
-          <div class="eco-circle"><b>{{l.t(suiteTitle)}}</b><span>{{l.t(suiteText)}}</span></div>
-        </div>
-        <div class="eco-col">
-          @for(item of ecosystemRight; track item.key){
-            <a class="eco-item tone-{{item.tone}}" [href]="'#/solutions/'+item.key">
-              <span class="eco-art" aria-hidden="true"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
-              <span class="eco-txt"><b>{{l.t(item.name)}}</b><span>{{l.t(item.desc)}}</span></span>
-              <svg class="ic"><use href="#i-chev-r"></use></svg>
-            </a>
-          }
-        </div>
+    <div class="solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+    <section class="solutions-ref-targets">
+      <div class="solutions-ref-targets-intro">
+        <span class="solutions-ref-eyebrow">{{l.t('NOS SECTEURS CIBLES')}}</span>
+        <h2>{{l.t('Des solutions pour chaque secteur')}}</h2>
+        <p>{{l.t('Nous accompagnons les institutions financières, les entreprises et les administrations dans leur transformation digitale.')}}</p>
       </div>
-    </div>
-  </section>
-
-
-  <!-- Solutions Étape 4 — Nos solutions / Gamme ALPHA V17.20.4 -->
-  <section class="nossol sol-focus-section solutions-alpha-fold">
-    <div class="sol-focus-sticky">
-      <div class="container sol-focus-heading">
-        <span class="sec-kicker center">{{l.t('Gamme ALPHA')}}</span>
-        <h2 class="sec-title center">{{l.t(nosSolutions)}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
-        <p class="sol-intro" style="text-align:center;margin:14px auto 0">
-          {{l.t("Une suite logicielle complète pour digitaliser vos opérations, renforcer votre conformité et améliorer l'expérience client.")}}
-        </p>
+      <div class="solutions-ref-targets-cards">
+        <a href="#/cibles/microfinances"><span class="solutions-ref-target-icon">♟</span><span><b>{{l.t('Microfinances')}}</b><small>{{l.t('Solutions adaptées aux IMF et institutions de microfinance')}}</small></span><em>➜</em></a>
+        <a href="#/cibles/banques"><span class="solutions-ref-target-icon">▤</span><span><b>{{l.t('Banques')}}</b><small>{{l.t('Répondre aux exigences des banques commerciales')}}</small></span><em>➜</em></a>
+        <a href="#/cibles/grandes-entreprises"><span class="solutions-ref-target-icon">▣</span><span><b>{{l.t('Grandes Entreprises')}}</b><small>{{l.t('Des solutions sur mesure pour les grandes organisations')}}</small></span><em>➜</em></a>
       </div>
-
-      <div class="sol-focus-stage" [class.is-switching]="solutionMotion" [class.is-switching-next]="solutionMotion==='next'" [class.is-switching-prev]="solutionMotion==='prev'" aria-live="polite">
-        @for(c of solutionCards; track c.key; let i=$index){
-          <article class="sol-card tone-{{c.tone}} sol-focus-card"
-            [class.is-active]="i===solutionActive" [class.is-entering]="i===solutionActive"
-            [class.is-exiting]="i===solutionFrom && !!solutionMotion"
-            [class.is-past]="solutionDelta(i)<0" [class.is-future]="solutionDelta(i)>=0 && i!==solutionActive"
-            [style.--sol-delta]="solutionDelta(i)" [style.--sol-abs]="solutionAbs(i)"
-            [attr.aria-hidden]="solutionAbs(i)>2">
-            <span class="sol-media" [style.background-image]="'url('+c.img+')'" aria-hidden="true"></span>
-            <span class="sol-veil" aria-hidden="true"></span>
-            <div class="sol-card-top">
-              <span class="sol-art"><svg class="ic sol-art-svg"><use [attr.href]="'#'+c.icon"></use></svg></span>
-              <span class="sol-index">{{'0'+(i+1)}}</span>
-            </div>
-            @if(c.tagline){<span class="st-tagline">{{l.t(c.tagline)}}</span>}
-            <h4>{{l.t(c.name)}}</h4>
-            <p>{{l.t(c.description)}}</p>
-            @if(c.points.length){
-              <ul class="sol-points">
-                @for(point of c.points.slice(0,3); track point){
-                  <li><svg class="ic"><use href="#i-check"></use></svg>{{l.t(point)}}</li>
-                }
-              </ul>
-            }
-            <a [href]="'#/solutions/'+c.key" class="link sol-more">{{l.t('En savoir plus')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
-          </article>
-        }
-      </div>
-
-      <div class="container sol-focus-controls">
-        <div class="sol-story-nav">
-          <button class="ssn-btn" [attr.aria-label]="l.t('Précédent')" (click)="goSolution(solutionActive-1,'prev')"><svg class="ic"><use href="#i-chev-l"></use></svg></button>
-          <span class="ssn-count"><b>{{'0'+(solutionActive+1)}}</b> / {{'0'+solutionCards.length}}</span>
-          <button class="ssn-btn" [attr.aria-label]="l.t('Suivant')" (click)="goSolution(solutionActive+1,'next')"><svg class="ic"><use href="#i-chev-r"></use></svg></button>
-        </div>
-        <div class="sol-focus-progress" aria-hidden="true"><span [style.width.%]="((solutionActive+1)/solutionCards.length)*100"></span></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Solutions Étape 5 — CTA final V17.20.4 -->
-  <section class="ov-cta solutions-cta-fold reveal visible">
-    <div class="container">
-      <div class="ov-cta-panel">
-        <div class="ov-cta-copy">
-          <h2>{{l.t(ctaTitle)}}</h2>
-          <p>{{l.t(ctaText)}}</p>
-          <div class="cta-actions">
-            <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démonstration')}}</a>
-            <a href="#/contact" class="btn btn-ghost-w">{{l.t('Parler à un expert')}}</a>
-          </div>
-        </div>
-        <div class="ov-cta-photo">
-          <img [src]="ctaPhoto" [alt]="l.t('Échange avec nos experts')" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
+    </section>
+    <div class="solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+    <section class="solutions-ref-cta">
+      <h2>{{l.t(ctaTitle)}}</h2><p>{{l.t(ctaText)}}</p>
+      <a class="solutions-ref-orange-btn" href="#/contact/demo">{{l.t('Demander une démonstration')}} →</a>
+    </section>
+  </div>
 </main>
