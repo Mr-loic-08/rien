@@ -1,3 +1,6 @@
+import { SiteErrorComponent, DisplayState } from './shared/site-state/site-error';
+import { SiteStateService } from './shared/site-state/site-state.service';
+import { inject } from '@angular/core';
 import { CarrieresPageComponent } from './pages/entreprise/carrieres/carrieres';
 import { PartenairesPageComponent } from './pages/entreprise/partenaires/partenaires';
 import { ConfidentialitePageComponent } from './pages/contact/confidentialite/confidentialite';
@@ -31,10 +34,21 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent, CarrieresPageComponent, PartenairesPageComponent],
+  imports: [SiteErrorComponent, HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent, CarrieresPageComponent, PartenairesPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, OnDestroy {
+  private readonly siteState = inject(SiteStateService);
+  private unsubscribeState?: () => void;
+  offline = typeof navigator !== 'undefined' && !navigator.onLine;
+  unknownRoute = false;
+  serverError: '500' | '503' | null = null;
+  get displayedError(): DisplayState | null {
+    return this.offline ? 'offline' : (this.serverError || (this.unknownRoute ? '404' : null));
+  }
+  private readonly connectionChanged = () => { this.offline = !navigator.onLine; };
+  clearError() { this.siteState.setError(null); }
+
   // Transition globale pour la navigation par hash utilisée dans ce projet.
   readonly pageTransition = signal(false);
   private transitionTimer: ReturnType<typeof setTimeout> | undefined;
@@ -90,10 +104,28 @@ export class App implements OnInit, OnDestroy {
     this.isPrivacy=h==='#/contact/confidentialite';
     this.isCarrieres=h==='#/entreprise/carrieres';
     this.isPartenaires=h==='#/entreprise/partenaires';
+    const known = !h || h === '#' || h === '#/' || h === '#/accueil' || [
+      this.isSolutions,this.isCoreBanking,this.isCollecteJournaliere,this.isDigitalMobile,
+      this.isGestionRh,this.isDeclarationBancaire,this.isGenieLogiciel,this.isSecteurs,
+      this.isMicrofinances,this.isBanquesCommerciales,this.isGrandesEntreprises,
+      this.isRessources,this.isEntreprise,this.isApropos,this.isContact,this.isDemo,
+      this.isPrivacy,this.isCarrieres,this.isPartenaires
+    ].some(Boolean);
+    this.unknownRoute = !known;
+    this.clearError();
   };
-  ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onNavigation); }
+  ngOnInit(){
+    this.onHash();
+    this.unsubscribeState = this.siteState.subscribe(() => { this.serverError = this.siteState.error; });
+    window.addEventListener('hashchange',this.onNavigation);
+    window.addEventListener('online',this.connectionChanged);
+    window.addEventListener('offline',this.connectionChanged);
+  }
   ngOnDestroy(): void {
     window.removeEventListener('hashchange',this.onNavigation);
+    window.removeEventListener('online',this.connectionChanged);
+    window.removeEventListener('offline',this.connectionChanged);
+    this.unsubscribeState?.();
     if (this.transitionTimer) clearTimeout(this.transitionTimer);
   }
 }
