@@ -11230,3 +11230,85 @@ body .ent42 .ent42-hero-inner,body .ent42 .ent42-stats{position:relative;z-index
 body .ent42 .ent42-card:first-child>img{object-fit:contain;object-position:center;background:#080808;padding:14px 24px}
 @media(max-width:620px){body .ent42 .ent42-hero{background:#052b4c!important}body .ent42 .ent43-hero-overlay{background:linear-gradient(90deg,rgba(2,21,43,.94),rgba(2,28,52,.74))}}
 @media(prefers-reduced-motion:reduce){body .ent42 .ent43-hero-video{display:none}body .ent42 .ent42-hero{background:linear-gradient(90deg,rgba(2,21,43,.9),rgba(2,28,52,.7)),url('/images/entreprise/v42/hero.webp') center/cover no-repeat!important}}
+
+
+/* V44: À propos only; hero left intact */
+.angular-about .abv-body{--ab-navy:#062c4b;--ab-orange:#f26a21;background:#e8f5ff;color:#0a2d4d;overflow:hidden}
+.angular-about .abv-body .container{width:min(1180px,calc(100% - 52px));max-width:1180px;margin:auto}
+.angular-about .abv-section{position:relative;isolation:isolate;margin:5px 0 0!important;padding:36px 0!important;border-radius:36px!important;overflow:hidden}
+.angular-about .abv-section:not(.abv-ambition):after{content:"";position:absolute;bottom:0;left:8%;width:84%;height:2px;background:linear-gradient(90deg,transparent,#0b98e4,#f26a21,#0b98e4,transparent);animation:abv-line 8s ease-in-out infinite}
+@keyframes abv-line{0%,100%{opacity:.45;transform:scaleX(.95)}50%{opacity:.95;transform:scaleX(1)}}
+.angular-about .abv-light{background:linear-gradient(115deg,#dcefff,#f4faff)!important;color:#0b2e50}
+.angular-about .abv-dark{background:linear-gradient(115deg,#042642,#003761)!important;color:#fff}
+.angular-about .abv-two{display:grid;grid-template-columns:1.04fr 1fr;gap:36px;align-items:center}
+.angular-about .abv-eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.055em;margin-bottom:12px}
+.angular-about .abv-eyebrow:before{content:"";width:25px;height:3px;background:#f26a21;border-radius:4px}
+.angular-about .abv-body h2{font-size:clamp(26px,3vw,38px);line-height:1.14;font-weight:800;margin:0 0 14px}
+.angular-about .abv-body em{font-style:normal;color:#f26a21}
+.angular-about .abv-body p{font-size:14px;line-height:1.6;margin:0 0 13px}
+.angular-about .abv-photo{position:relative;margin:0;overflow:hidden;border-radius:26px;min-height:265px;box-shadow:0 12px 24px #07274720}
+.angular-about .abv-photo img{display:block;width:100%;height:330px;object-fit:cover}
+.angular-about .abv-photo figcaption{position:absolute;bottom:10px;right:10px;background:#062a4bdd;color:white;padding:6px 10px;border-radius:20px;font-size:10px}
+.angular-about .abv-outline,.angular-about .abv-primary{display:inline-flex;align-items:center;gap:15px;border:1px solid #f26a21;border-radius:30px;padding:10px 20px;font-size:12px;font-weight:700;color:#d85e15;text-decoration:none;background:transparent;cursor:pointer;transition:transform .25s ease,background .25s ease,color .25s ease}
+.angular-about .abv-outline:hover,.angular-about .abv-primary:hover{transform:translateY(-2px);background:#0b75b9;color:#fff;border-color:#0b75b9}
+.angular-about .abv-primary{background:#f26a21;color:#fff}
+.angular-about .abv-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:20px}
+.angular-about .abv-trio article{display:flex;align-items:flex-start;gap:14px;background:#ffffffd9;padding:17px;border-radius:15px;min-width:0;box-shadow:0 5px 15px #0a33500b}
+.angular-about .abv-trio .ic{flex:none;width:31px;height:31px;color:#f26a21;stroke:#f26a21}
+.angular-about .abv-trio article:hover .ic{color:#1377b6;stroke:#1377b6}
+.angular-about .abv-trio b{font-size:13px;display:block;margin-bottom:6px}
+.angular-about .abv-trio p{font-size:11px;margin:0}
+.angular-about .abv-timeline-section{padding:30px 0!important}
+.angular-about .abv-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+.angular-about .abv-timeline article{position:relative;padding:18px 12px;border:1px solid #6bafda60;border-radius:14px;background:#ffffff0b;min-width:0}
+.angular-about .abv-timeline strong{display:block;font-size:21px;color:#f26a21;margin-bottom:6px}
+.angular-about .abv-timeline b{display:block;font-size:12px;margin-bottom:6px}
+.angular-about .abv-timeline small{font-size:11px;color:#d2e8f7}
+.angular-about .abv-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+.angular-about .abv-heading p{max-width:650px;margin:0}
+.angular-about .abv-outline-on-dark{color:#fff;flex:none}
+.angular-about .abv-team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.angular-about .abv-member{border:0;text-align:left;padding:0;border-radius:13px;overflow:hidden;background:#f4faff;cursor:pointer;min-width:0;transition:transform .25s ease}
+.angular-about .abv-member:hover{transform:translateY(-5px)}
+.angular-about .abv-member-image{height:170px;overflow:hidden;background:linear-gradient(145deg,#0d4169,#2072a4);display:grid;place-items:center}
+.angular-about .abv-member-image img{width:100%;height:100%;object-fit:cover;display:block}
+.angular-about .abv-member-placeholder{color:#fff;font-weight:800;font-size:28px}
+.angular-about .abv-member-info{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;color:#0a2e50}
+.angular-about .abv-member-info b{font-size:12px;display:block}
+.angular-about .abv-member-info small{font-size:10px;display:block;margin-top:4px}
+.angular-about .abv-plus{width:25px;height:25px;flex:none;border-radius:50%;display:grid;place-items:center;background:#f26a21;color:#fff;font-size:20px}
+.angular-about .abv-member:hover .abv-plus{background:#137ac1}
+.angular-about .abv-reasons{min-height:280px}
+.angular-about .abv-reasons-content{position:relative;z-index:2}
+.angular-about .abv-reason-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;max-width:930px}
+.angular-about .abv-reason-grid article{min-width:0;border-radius:13px;background:#ffffffed;padding:13px 11px;box-shadow:0 6px 14px #09375913;transition:transform .25s ease}
+.angular-about .abv-reason-grid article:hover{transform:translateY(-4px)}
+.angular-about .abv-reason-grid .ic{width:27px;height:27px;display:block;color:#f26a21;stroke:#f26a21;margin-bottom:8px}
+.angular-about .abv-reason-grid article:hover .ic{color:#1479c0;stroke:#1479c0}
+.angular-about .abv-reason-grid b{display:block;font-size:11px;margin-bottom:5px}
+.angular-about .abv-reason-grid small{font-size:10px;line-height:1.35;display:block}
+.angular-about .abv-reason-image{position:absolute;inset:0 0 0 auto;width:34%;background-position:center;background-size:cover;opacity:.6;mask-image:linear-gradient(90deg,transparent,black 45%)}
+.angular-about .abv-values{background-size:cover!important;background-position:center!important}
+.angular-about .abv-values p{max-width:650px}
+.angular-about .abv-value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:880px;margin-top:23px}
+.angular-about .abv-value-grid article{display:flex;align-items:flex-start;gap:11px}
+.angular-about .abv-value-grid .ic{width:30px;height:30px;flex:none;color:#f26a21;stroke:#f26a21}
+.angular-about .abv-value-grid article:hover .ic{color:#2ba4eb;stroke:#2ba4eb}
+.angular-about .abv-value-grid b{font-size:12px;display:block}
+.angular-about .abv-value-grid small{font-size:10px;line-height:1.5;display:block;color:#d4e8f7}
+.angular-about .abv-ambition{background-size:cover!important;background-position:center!important;min-height:260px}
+.angular-about .abv-ambition .container>p{max-width:520px}
+.angular-about .abv-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.angular-about .abv-credits{padding:15px 0 23px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:#30506a}
+.angular-about .abv-credits small{font-size:10px;line-height:1.5}
+.angular-about .abv-credits a{font-size:10px;color:#176aab}
+@media(max-width:940px){.angular-about .abv-two{grid-template-columns:1fr}.angular-about .abv-trio{grid-template-columns:1fr 1fr}.angular-about .abv-timeline{grid-template-columns:repeat(3,1fr)}.angular-about .abv-reason-grid{grid-template-columns:repeat(3,1fr)}.angular-about .abv-reason-image{opacity:.22}}
+@media(max-width:620px){.angular-about .abv-body .container{width:calc(100% - 32px)}.angular-about .abv-section{padding:25px 0!important;border-radius:24px!important}.angular-about .abv-trio{grid-template-columns:1fr}.angular-about .abv-timeline{grid-template-columns:repeat(2,1fr)}.angular-about .abv-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.angular-about .abv-heading{display:block}.angular-about .abv-heading .abv-outline{margin-top:12px}.angular-about .abv-reason-grid{grid-template-columns:repeat(2,1fr)}.angular-about .abv-value-grid{grid-template-columns:1fr 1fr;gap:14px}.angular-about .abv-ambition{background-image:linear-gradient(90deg,#e7f4ffeb,#e7f4ffb5),url('https://commons.wikimedia.org/wiki/Special:FilePath/Place_Poste_Centrale_Yaound%C3%A9_1.jpg?width=1280')!important}}
+@media(prefers-reduced-motion:reduce){.angular-about .abv-section:after{animation:none!important}.angular-about .abv-member,.angular-about .abv-reason-grid article{transition:none!important}}
+
+/* V45 — Afficher les portraits entiers, sans recadrage ni déformation. */
+.angular-about .abv-member-image{height:230px;min-height:230px;overflow:hidden;background:#e7eef5;display:flex;align-items:center;justify-content:center}
+.angular-about .abv-member-image img{width:100%;height:100%;object-fit:contain!important;object-position:center center!important;display:block}
+.angular-about .abv-member{overflow:hidden}
+@media(max-width:620px){.angular-about .abv-member-image{height:190px;min-height:190px}}
+@media(max-width:380px){.angular-about .abv-member-image{height:165px;min-height:165px}}

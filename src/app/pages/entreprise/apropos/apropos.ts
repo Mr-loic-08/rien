@@ -3,12 +3,14 @@ import {LanguageService} from '../../../core/language.service';
 @Component({selector:'app-apropos-page',standalone:true,templateUrl:'./apropos.html',styleUrl:'./apropos.css'})
 export class AproposPageComponent {
  l=inject(LanguageService);
+ tr(fr:string,en:string){return this.l.lang()==='en'?en:fr;}
  mission='Accompagner les acteurs économiques dans leur transformation digitale grâce à des solutions fiables, innovantes et adaptées aux réalités africaines.';
  values=[
  {icon:'i-bulb',title:'Innovation',text:'Nous anticipons les évolutions du marché grâce à la recherche et au développement.'},
  {icon:'i-swap',title:'Flexibilité',text:'Nous adaptons nos solutions à chaque contexte et besoin spécifique de nos clients.'},
  {icon:'i-chart',title:'Dynamisme',text:"Nous favorisons l’amélioration continue et l’excellence opérationnelle."}
  ];
+ scrollTo(event:Event,id:string){event.preventDefault();document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
  showAllMembers=false;
  selectedMember: any=null;
  openMember(m:any){this.selectedMember=m;}
@@ -23,7 +25,6 @@ export class AproposPageComponent {
  {title:'V. ROLAND ',role:'Responsable département WEB & mobile',image:'/images/equipe/liro.webp',description:'Coordonne les projets web et mobile, de la conception à la livraison des solutions.'},
  {title:'M. IRANDE ',role:'Secrétariat et accueil',image:'/images/equipe/secretaire.webp',description:'Assure l’accueil, l’organisation administrative et la coordination des communications et rendez-vous.'}
  ];
- reasonImages=['images/about.jpg','images/solutions/hero-reunion.webp','images/entreprise/accueil-itech.webp','images/hero-3.jpg','images/hero-1.jpg'];
  reasons=[
  {icon:'i-users',title:'Expertise métier',text:"19 ans d'expérience au service de nos clients."},
  {icon:'i-bulb',title:'Innovation',text:'Des solutions modernes et évolutives.'},
