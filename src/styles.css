@@ -11427,3 +11427,28 @@ body a.btn:hover *,body button.btn:hover *,body a[class*="cta-btn"]:hover *,
 body a[class*="action-btn"]:hover *,body a[class*="hero-btn"]:hover *{color:inherit!important}
 body a.btn:focus-visible,body button.btn:focus-visible{outline:3px solid #1768b3;outline-offset:3px}
 @media(hover:none){body a.btn:hover,body button.btn:hover{box-shadow:none!important}}
+
+
+/* V55 — Heros bord a bord sous le header flottant.
+   Le header reste fixe; aucun changement de media ou de contenu. */
+:root{--itech-hero-header-space:clamp(88px,10vw,132px)}
+/* Garder le header au-dessus du media, y compris lors des transitions. */
+.head-wrap{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:1000!important}
+/* Les pages Angular ne doivent pas réserver une bande vide au-dessus du hero. */
+:where(.angular-about,.angular-ent,.angular-resources,.angular-contact,.angular-demo,.angular-partners,.bank-page-angular,.enterprise-page-angular) > :is(.pg-hero,.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero),
+:where(.angular-about,.angular-ent,.angular-resources,.angular-contact,.angular-demo,.angular-partners,.bank-page-angular,.enterprise-page-angular) :is(.pg-hero,.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero):first-child{
+ margin-top:0!important;
+}
+/* Tout hero photo commence en haut de son propre bloc et passe sous le menu fixe. */
+:is(.pg-hero.on-photo,.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero,.genie-hero){background-position:center center;background-size:cover}
+/* Zone de securite pour que les titres ne se glissent jamais derriere la navigation. */
+.pg-hero.on-photo .pg-hero-grid{padding-top:max(110px,var(--itech-hero-header-space))!important}
+:is(.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero,.genie-hero){padding-top:max(120px,var(--itech-hero-header-space))!important}
+/* Pas de fond blanc opaque sur la barre de navigation tant que la page est en haut. */
+.head-wrap:not(.scrolled):not(.solid) .header::before{opacity:0!important}
+.head-wrap:not(.scrolled):not(.solid) .header{color:#fff!important}
+@media(max-width:700px){
+ :root{--itech-hero-header-space:105px}
+ .pg-hero.on-photo .pg-hero-grid{padding-top:110px!important}
+ :is(.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero,.genie-hero){padding-top:120px!important}
+}
