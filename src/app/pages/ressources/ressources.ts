@@ -2,7 +2,8 @@ import {Component,inject} from '@angular/core';
 import {LanguageService} from '../../core/language.service';
 @Component({selector:'app-ressources-page',standalone:true,templateUrl:'./ressources.html'})
 export class RessourcesPageComponent {
- l=inject(LanguageService);active='Tous les articles';page=1;email='';subscribed=false;subscribe(){if(this.email.trim())this.subscribed=true;}
+ l=inject(LanguageService);
+ scrollTo(id:string){ document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'}); }active='Tous les articles';page=1;email='';subscribed=false;subscribe(){if(this.email.trim())this.subscribed=true;}
  categories=['Tous les articles'];
  heroImages=['https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900','https://images.pexels.com/photos/7691769/pexels-photo-7691769.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900','https://images.pexels.com/photos/19805885/pexels-photo-19805885.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'];
  articles=[

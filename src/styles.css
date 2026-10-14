@@ -11023,3 +11023,72 @@ body .enterprise-page-angular .gev-actions .btn-glass{background:rgba(2,25,48,.3
 @media(max-width:900px){body .enterprise-page-angular .gev-split,body .enterprise-page-angular .gev-platform{grid-template-columns:1fr}body .enterprise-page-angular .gev-platform .gev-image{order:-1}body .enterprise-page-angular .gev-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){body .enterprise-page-angular .gev-body .container{width:calc(100% - 32px)}body .enterprise-page-angular .gev-section{padding:25px 0!important;border-radius:23px!important}body .enterprise-page-angular .gev-three{grid-template-columns:repeat(2,minmax(0,1fr))}body .enterprise-page-angular .gev-image,body .enterprise-page-angular .gev-image img{min-height:205px}body .enterprise-page-angular .gev-security-cards{grid-template-columns:1fr;gap:13px}body .enterprise-page-angular .gev-cta{padding:30px 0!important}}
 @media(prefers-reduced-motion:reduce){body .enterprise-page-angular .gev-section:after{animation:none!important}body .enterprise-page-angular .gev-cards>*,body .enterprise-page-angular .gev-image img{transition:none!important}}
+
+/* V37 Ressources : scoped redesign, hero readability and subtle transitions */
+body .rsv-page{--rv-navy:#052c4c;--rv-orange:#f26a21;background:#052744;color:white;overflow:hidden}
+body .rsv-page .container{max-width:1180px;width:min(1180px,calc(100% - 48px));margin:auto}
+body .rsv-page .rsv-hero{position:relative;isolation:isolate;min-height:480px;display:flex;align-items:center;background:#052d4e url('/images/ressources/afrique-tech.webp') center/cover no-repeat!important;border-radius:0 0 42px 42px!important;overflow:hidden}
+body .rsv-page .rsv-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:brightness(.65) saturate(.95)}
+body .rsv-page .rsv-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,23,46,.97) 0%,rgba(2,29,53,.88) 42%,rgba(2,29,53,.54) 100%)}
+body .rsv-page .rsv-hero-content{padding:120px 0 90px;position:relative;z-index:1}
+body .rsv-page .rsv-hero h1{max-width:650px;font-size:clamp(38px,4.5vw,64px);line-height:1.1;font-weight:850;margin:0 0 16px;color:#fff!important}
+body .rsv-page .rsv-hero p{max-width:520px;font-size:16px;line-height:1.6;color:#fff!important;margin:0 0 24px}
+body .rsv-page em{font-style:normal;color:#f26a21}
+body .rsv-page .rsv-eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.06em;margin-bottom:12px}
+body .rsv-page .rsv-eyebrow:before{content:"";height:3px;width:24px;background:#f26a21;border-radius:5px}
+body .rsv-page .btn-primary{background:#f26a21!important;color:#fff!important;border-radius:30px!important}
+body .rsv-page .rsv-panel{position:relative;isolation:isolate;padding:36px 0!important;border-radius:36px!important;margin:5px 0 0!important;overflow:hidden}
+body .rsv-page .rsv-panel:not(.rsv-contact):after{content:"";position:absolute;bottom:0;left:6%;width:88%;height:3px;background:linear-gradient(90deg,transparent,#18a8e9 20%,#fa7930 50%,#18a8e9 80%,transparent);animation:rsvline 9s ease-in-out infinite;pointer-events:none}
+@keyframes rsvline{0%,100%{opacity:.45;transform:scaleX(.95)}50%{opacity:.95;transform:scaleX(1)}}
+body .rsv-page .rsv-light{background:linear-gradient(110deg,#d7ebfa,#f2f9ff)!important;color:#082d50}
+body .rsv-page .rsv-dark{background:linear-gradient(110deg,#052845,#00355e)!important;color:#fff}
+body .rsv-page .rsv-panel h2{font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.13;margin:0 0 12px}
+body .rsv-page .rsv-panel p{font-size:14px;line-height:1.6;max-width:650px;margin:0 0 18px}
+body .rsv-page .rsv-heading{position:relative;min-height:140px}
+body .rsv-page .rsv-heading>div:first-child{position:relative;z-index:1;max-width:690px}
+body .rsv-page .rsv-tech-photo{position:absolute;right:-2%;top:-36px;width:42%;height:200px;border-radius:0 0 0 28px;background:linear-gradient(90deg,#e2f1fb,rgba(226,241,251,.15)),url('/images/ressources/infrastructure.webp') center/cover no-repeat}
+body .rsv-page .rsv-grid{display:grid;gap:11px}
+body .rsv-page .rsv-six{grid-template-columns:repeat(6,minmax(0,1fr))}
+body .rsv-page .rsv-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+body .rsv-page .rsv-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+body .rsv-page .rsv-grid article,body .rsv-page .rsv-grid a{min-width:0;padding:14px 11px;border-radius:12px;background:rgba(255,255,255,.93);border:1px solid rgba(255,255,255,.95);color:#082b4d;text-decoration:none;box-shadow:0 5px 15px rgba(2,31,60,.08);transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease}
+body .rsv-page .rsv-grid article:hover,body .rsv-page .rsv-grid a:hover{transform:translateY(-4px);border-color:#4da6de;box-shadow:0 12px 22px rgba(2,33,63,.15)}
+body .rsv-page .rsv-grid .ic{display:block;width:27px;height:27px;margin-bottom:8px;color:#f26a21;stroke:#f26a21}
+body .rsv-page .rsv-grid article:hover .ic,body .rsv-page .rsv-grid a:hover .ic{color:#187cbd;stroke:#187cbd}
+body .rsv-page .rsv-grid b{display:block;font-size:12px;line-height:1.3;margin-bottom:5px}
+body .rsv-page .rsv-grid small{display:block;font-size:10px;line-height:1.4;color:#466783}
+body .rsv-page .rsv-split{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:34px}
+body .rsv-page .rsv-res-cards a{background:rgba(6,47,80,.54);color:#fff;border-color:rgba(121,194,236,.54);display:flex;gap:12px;align-items:flex-start}
+body .rsv-page .rsv-res-cards a:hover{background:rgba(13,91,141,.65)}
+body .rsv-page .rsv-res-cards small{color:#d1e5f2}
+body .rsv-page .rsv-res-cards .ic{flex:none}
+body .rsv-page .rsv-articles .res-filters{margin:15px 0}
+body .rsv-page .rsv-articles .res-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+body .rsv-page .rsv-articles .res-article{min-width:0;background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 8px 24px rgba(3,40,72,.12);color:#082b4a}
+body .rsv-page .rsv-articles .res-article .res-image{display:block;height:155px;overflow:hidden;position:relative}
+body .rsv-page .rsv-articles .res-article .res-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+body .rsv-page .rsv-articles .res-article:hover .res-image img{transform:scale(1.04)}
+body .rsv-page .rsv-articles .res-article-body{padding:15px}
+body .rsv-page .rsv-articles .res-article h2{font-size:17px;line-height:1.3;margin:8px 0}
+body .rsv-page .rsv-articles .res-article p{font-size:12px;line-height:1.5}
+body .rsv-page .rsv-tools{background:linear-gradient(90deg,rgba(2,31,57,.98),rgba(3,42,72,.91) 70%,rgba(3,42,72,.38)),url('/images/ressources/outils.webp') center/cover no-repeat!important}
+body .rsv-page .rsv-tools .rsv-four{max-width:890px}
+body .rsv-page .rsv-tools .rsv-four article{background:rgba(2,45,78,.56);color:#fff;border-color:rgba(121,193,237,.5)}
+body .rsv-page .rsv-tools .rsv-four small{color:#d1e6f2}
+body .rsv-page .rsv-contact{padding:47px 0 60px!important;background:linear-gradient(90deg,#e0f1fd 0%,rgba(226,241,253,.93) 49%,rgba(226,241,253,.1) 100%),url('/images/ressources/support.webp') right center/auto 100% no-repeat!important}
+body .rsv-page .rsv-contact p{max-width:570px}
+body .rsv-page .rsv-actions{display:flex;gap:12px;flex-wrap:wrap}
+body .rsv-page .rsv-actions .btn-glass{border:1px solid #f26a21!important;color:#0a2e50!important;border-radius:30px!important;background:rgba(255,255,255,.5)!important}
+@media(max-width:950px){body .rsv-page .rsv-six{grid-template-columns:repeat(3,minmax(0,1fr))}body .rsv-page .rsv-split{grid-template-columns:1fr}body .rsv-page .rsv-articles .res-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){body .rsv-page .container{width:calc(100% - 32px)}body .rsv-page .rsv-hero{min-height:490px}body .rsv-page .rsv-hero-content{padding:100px 0 60px}body .rsv-page .rsv-panel{border-radius:23px!important;padding:27px 0!important}body .rsv-page .rsv-six,body .rsv-page .rsv-four,body .rsv-page .rsv-two{grid-template-columns:repeat(2,minmax(0,1fr))}body .rsv-page .rsv-articles .res-list{grid-template-columns:1fr}body .rsv-page .rsv-tech-photo{opacity:.18;width:70%}body .rsv-page .rsv-contact{background:linear-gradient(90deg,rgba(226,241,253,.97),rgba(226,241,253,.87)),url('/images/ressources/support.webp') center/cover no-repeat!important}}
+@media(prefers-reduced-motion:reduce){body .rsv-page .rsv-panel:after{animation:none!important}body .rsv-page .rsv-grid>*{transition:none!important}}
+
+/* V39 : Hero Ressources plus compact et nouveau visuel africain, texte lisible */
+body .rsv-page .rsv-hero{min-height:355px!important;max-height:none!important;background:#041f3d url('/images/clients-tech-background.png') center 39%/cover no-repeat!important}
+body .rsv-page .rsv-hero-content{padding:94px 0 45px!important}
+body .rsv-page .rsv-hero-shade{background:linear-gradient(90deg,rgba(2,19,42,.88),rgba(2,22,45,.76) 48%,rgba(2,24,48,.2))!important}
+body .rsv-page .rsv-hero h1{font-size:clamp(30px,3.6vw,49px)!important;max-width:650px!important;margin-bottom:12px!important}
+body .rsv-page .rsv-hero p{font-size:14px!important;line-height:1.55!important;max-width:520px!important;margin-bottom:18px!important}
+body .rsv-page .rsv-panel{scroll-margin-top:88px}
+@media(max-width:600px){body .rsv-page .rsv-hero{min-height:355px!important}body .rsv-page .rsv-hero-content{padding:95px 0 38px!important}body .rsv-page .rsv-hero h1{font-size:clamp(28px,8vw,39px)!important}}
+@media(prefers-reduced-motion:reduce){html:has(.rsv-page){scroll-behavior:auto}}
