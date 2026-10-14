@@ -10771,3 +10771,151 @@ body main.pg-detail.genie-logiciel-page > section.gl-final-cta .sec-title {color
  body main.pg-detail.genie-logiciel-page > section.gl-benefits::before {animation:none!important;opacity:.8!important;}
  body main.pg-detail.genie-logiciel-page > section.gl-final-cta::before {animation:none!important;opacity:.8!important;}
 }
+
+/* V29 — Secteurs / Cibles : reproduction de la maquette validée, limitée à .sx-showcase */
+body main.sx-showcase{--sxnavy:#062a4c;--sxblue:#0d3b65;--sxorange:#f26a21;--sxice:#e7f3ff;background:#052c50!important;color:#0d2b4a!important;overflow:hidden!important;isolation:isolate}
+body main.sx-showcase>section{box-sizing:border-box!important;position:relative!important;margin:0!important;width:100%!important;max-width:none!important;min-height:0!important;overflow:hidden!important}
+body main.sx-showcase .container{width:min(100% - 72px,1320px)!important;max-width:1320px!important;margin-inline:auto!important}
+body main.sx-showcase h1,body main.sx-showcase h2{letter-spacing:-.035em!important;text-wrap:balance;font-weight:800!important;line-height:1.1!important}
+body main.sx-showcase em{font-style:normal!important;color:var(--sxorange)!important}
+body main.sx-showcase .sxv-kicker{display:inline-flex;align-items:center;gap:11px;font-size:12px;font-weight:800;letter-spacing:.075em;color:#0c5489}
+body main.sx-showcase .sxv-kicker:before{content:'';display:inline-block;width:24px;height:3px;border-radius:9px;background:var(--sxorange)}
+body main.sx-showcase .sxv-hero{min-height:540px!important;display:flex;align-items:center;background:#062b50!important;color:white!important;border-radius:0 0 40px 40px!important;z-index:1}
+body main.sx-showcase .sxv-hero-image{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,29,57,.98) 0%,rgba(4,32,60,.89) 35%,rgba(3,30,58,.18) 100%),url('/images/secteurs/secteurs-v29-hero.webp') center/cover no-repeat;transform:scale(1.02)}
+body main.sx-showcase .sxv-hero-inner{position:relative;z-index:1;padding:95px 0 105px!important}
+body main.sx-showcase .sxv-hero .sxv-kicker{color:#ffb783!important}
+body main.sx-showcase .sxv-hero h1{font-size:clamp(38px,4.7vw,66px)!important;color:white!important;margin:18px 0 15px!important;max-width:760px}
+body main.sx-showcase .sxv-hero p{font-size:clamp(15px,1.3vw,18px)!important;line-height:1.55!important;max-width:570px;color:#f2f7ff!important;margin:0 0 25px!important}
+body main.sx-showcase .sxv-hero .btn{border-radius:100px!important;padding:13px 25px!important;background:#f26a21!important;color:#fff!important;box-shadow:0 8px 20px rgba(0,0,0,.15)!important}
+body main.sx-showcase .sxv-sector{padding:37px 0!important;border-radius:40px!important;z-index:2}
+body main.sx-showcase .sxv-sector-light{background:linear-gradient(110deg,#d7ecff,#f0f7ff 55%,#d9edff)!important;color:#0d2b4a!important}
+body main.sx-showcase .sxv-sector-dark{background:radial-gradient(ellipse at 90% 5%,#0b467a,#06284a 70%)!important;color:#fff!important}
+body main.sx-showcase .sxv-sector-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(24px,4vw,65px);align-items:center}
+body main.sx-showcase .sxv-sector-copy{padding:12px 0!important}
+body main.sx-showcase .sxv-sector h2{font-size:clamp(28px,2.7vw,42px)!important;margin:13px 0 12px!important;color:inherit!important}
+body main.sx-showcase .sxv-sector p{font-size:clamp(14px,1.08vw,17px)!important;line-height:1.55!important;color:inherit!important;opacity:.92;margin:0 0 18px!important}
+body main.sx-showcase .sxv-sector-dark .sxv-kicker{color:#78c9ff!important}
+body main.sx-showcase .sxv-photo{position:relative;height:clamp(260px,25vw,370px);border-radius:28px;overflow:hidden;box-shadow:0 18px 34px rgba(2,29,56,.14)}
+body main.sx-showcase .sxv-photo img{width:100%!important;height:100%!important;object-fit:cover!important;display:block;transition:transform .65s ease}
+body main.sx-showcase .sxv-sector:hover .sxv-photo img{transform:scale(1.035)}
+body main.sx-showcase .sxv-photo-icon{position:absolute;right:18px;top:18px;width:60px;height:60px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,#ff9b47,#f26a21);box-shadow:0 8px 18px #ec6a2770;color:#fff}
+body main.sx-showcase .sxv-photo-icon .ic{width:30px;height:30px;color:#fff!important}
+body main.sx-showcase .sxv-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:17px 0 10px}
+body main.sx-showcase .sxv-features>div{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:15px 12px;border-radius:13px;background:rgba(255,255,255,.8);box-shadow:0 7px 17px #16476b17;border:1px solid #ffffffad;gap:5px}
+body main.sx-showcase .sxv-features .ic{width:27px;height:27px;color:#f26a21!important;margin-bottom:5px}
+body main.sx-showcase .sxv-features b{font-size:12px!important;line-height:1.25!important;color:#0c2d4c!important}
+body main.sx-showcase .sxv-features small{font-size:11px!important;line-height:1.35!important;color:#41607a!important}
+body main.sx-showcase .sxv-sector-dark .sxv-features>div{background:#07335a!important;border-color:#2a638d!important;box-shadow:none!important}
+body main.sx-showcase .sxv-sector-dark .sxv-features b{color:#fff!important}
+body main.sx-showcase .sxv-sector-dark .sxv-features small{color:#d6e8f7!important}
+body main.sx-showcase .sxv-more{display:inline-flex;align-items:center;gap:7px;font-weight:750;font-size:12px;text-decoration:none;color:#e9691d!important;margin-top:4px}
+body main.sx-showcase .sxv-more .ic{width:16px;height:16px}
+body main.sx-showcase .sxv-sector:after,body main.sx-showcase .sxv-stats:after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,#0799eb 0%,#42baff 32%,#ff802e 50%,#58c2ff 69%,#0571d6 100%);box-shadow:0 -2px 9px #f76b2873;pointer-events:none}
+body main.sx-showcase .sxv-stats{padding:48px 0 45px!important;background:linear-gradient(#052a4ce9,#052a4ce9),url('/images/secteurs/secteurs-v29-hero.webp') center/cover!important;color:white!important;text-align:center!important;border-radius:40px!important}
+body main.sx-showcase .sxv-stats-kicker{font-size:12px;color:#7fd0ff;letter-spacing:.07em}
+body main.sx-showcase .sxv-stats h2{font-size:clamp(25px,2.8vw,39px)!important;color:white!important;margin:10px 0 24px!important}
+body main.sx-showcase .sxv-stat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+body main.sx-showcase .sxv-stat{min-height:133px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;padding:14px 7px;border:1px solid #2d7db2;border-radius:12px;background:#06365c90}
+body main.sx-showcase .sxv-stat .ic{width:25px;height:25px;color:#ff802f!important}
+body main.sx-showcase .sxv-stat b{font-size:clamp(23px,2.2vw,33px);color:#fff!important;line-height:1.1}
+body main.sx-showcase .sxv-stat span{font-size:12px;color:#e3f2ff!important}
+body main.sx-showcase .sxv-cta{padding:66px 0 80px!important;min-height:295px!important;color:#fff!important;background:linear-gradient(90deg,#052a4df7 0%,#052a4de0 44%,#052a4d33 100%),url('/images/secteurs/secteurs-v29-cta.webp') center/cover!important}
+body main.sx-showcase .sxv-cta .sxv-kicker{color:#ffb47e!important}
+body main.sx-showcase .sxv-cta h2{font-size:clamp(30px,3vw,43px)!important;color:#fff!important;margin:13px 0!important}
+body main.sx-showcase .sxv-cta p{max-width:510px;font-size:16px!important;color:#f1f7ff!important;line-height:1.5!important}
+body main.sx-showcase .sxv-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+body main.sx-showcase .sxv-actions .btn{border-radius:50px!important;padding:12px 23px!important}
+body main.sx-showcase .sxv-actions .btn-primary{background:#f26a21!important;color:#fff!important}
+body main.sx-showcase .sxv-actions .btn-glass{border:1px solid #f26a21!important;background:#052a4d88!important;color:#fff!important}
+@media(min-width:901px){body main.sx-showcase .sxv-sector+ .sxv-sector{margin-top:0!important}}
+@media(max-width:900px){body main.sx-showcase .container{width:calc(100% - 40px)!important}body main.sx-showcase .sxv-sector-layout{gap:24px}body main.sx-showcase .sxv-photo{height:300px}body main.sx-showcase .sxv-features{gap:6px}body main.sx-showcase .sxv-features>div{padding:11px 8px}}
+@media(max-width:700px){body main.sx-showcase .container{width:calc(100% - 28px)!important}body main.sx-showcase .sxv-hero{min-height:480px!important;border-radius:0 0 24px 24px!important}body main.sx-showcase .sxv-hero-inner{padding:105px 0 70px!important}body main.sx-showcase .sxv-hero-image{background-position:60% center}body main.sx-showcase .sxv-hero h1{font-size:clamp(34px,9vw,46px)!important}body main.sx-showcase .sxv-sector{padding:26px 0!important;border-radius:24px!important}body main.sx-showcase .sxv-sector-layout{grid-template-columns:1fr;gap:18px}body main.sx-showcase .sxv-banks .sxv-photo{grid-row:1}body main.sx-showcase .sxv-photo{height:245px;border-radius:19px}body main.sx-showcase .sxv-sector h2{font-size:29px!important}body main.sx-showcase .sxv-features{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}body main.sx-showcase .sxv-features b{font-size:10px!important}body main.sx-showcase .sxv-features small{font-size:10px!important}body main.sx-showcase .sxv-stats{padding:35px 0!important;border-radius:24px!important}body main.sx-showcase .sxv-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}body main.sx-showcase .sxv-stat:last-child{grid-column:1/-1}body main.sx-showcase .sxv-stat{min-height:112px}body main.sx-showcase .sxv-cta{padding:44px 0 55px!important;background-position:65% center!important}}
+@media(prefers-reduced-motion:reduce){body main.sx-showcase .sxv-photo img{transition:none!important}}
+
+/* V30 — Secteurs : éviter les icônes doublées dans les photos issues de la maquette.
+   Les photographies contiennent déjà les badges orange. */
+body main.sx-showcase .sxv-photo-icon{display:none!important;}
+/* Séparateurs sobres : ligne continue et lueur glissante lente, sans flash ni pulsation. */
+body main.sx-showcase .sxv-sector::after,
+body main.sx-showcase .sxv-stats::after{
+  content:""!important;position:absolute!important;inset:auto 0 0!important;
+  width:100%!important;height:3px!important;display:block!important;
+  border:0!important;border-radius:0!important;z-index:5!important;
+  background:linear-gradient(100deg,#1d79b8 0%,#3299d1 29%,#f26a21 50%,#3299d1 71%,#1d79b8 100%)!important;
+  box-shadow:0 1px 5px rgba(15,81,130,.22)!important;
+  opacity:.9!important;pointer-events:none!important;
+  transform-origin:center!important;
+  animation:sxv-separator-reveal 1.3s ease-out both,sxv-separator-softglow 8s ease-in-out 1.3s infinite!important;
+}
+@keyframes sxv-separator-reveal{from{transform:scaleX(.12);opacity:.35}to{transform:scaleX(1);opacity:.9}}
+@keyframes sxv-separator-softglow{0%,100%{opacity:.78;filter:brightness(.92)}50%{opacity:1;filter:brightness(1.13)}}
+@media(max-width:700px){body main.sx-showcase .sxv-sector::after,body main.sx-showcase .sxv-stats::after{height:2px!important}}
+@media(prefers-reduced-motion:reduce){body main.sx-showcase .sxv-sector::after,body main.sx-showcase .sxv-stats::after{animation:none!important;opacity:.9!important;transform:none!important;filter:none!important}}
+
+
+/* V31 — Microfinances, reproduction de la maquette (scopée) */
+body .mfv-page{--mf-navy:#082846;--mf-orange:#f26a21;background:#061f37;color:#fff;overflow:hidden}
+body .mfv-page .container{width:min(1180px,calc(100% - 64px));max-width:1180px;margin:auto}
+body .mfv-page h1,body .mfv-page h2,body .mfv-page p{margin:0}
+body .mfv-page em,body .mfv-page h1 span{color:var(--mf-orange);font-style:normal}
+body .mfv-page .mfv-kicker{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:inherit;margin-bottom:16px}
+body .mfv-page .mfv-kicker:before{content:"";width:23px;height:3px;border-radius:4px;background:var(--mf-orange)}
+body .mfv-page .mfv-hero{min-height:520px;display:flex;align-items:center;position:relative;isolation:isolate;background:#092b4a url('/images/secteurs/mf-hero.webp') center 28%/cover no-repeat;border-radius:0 0 42px 42px!important}
+body .mfv-page .mfv-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,27,52,.96) 0%,rgba(3,31,55,.89) 36%,rgba(4,28,50,.18) 78%);border-radius:inherit}
+body .mfv-page .mfv-hero-content{padding:115px 0 90px}
+body .mfv-page .mfv-hero h1{font-size:clamp(44px,5vw,75px);font-weight:850;line-height:1.05;margin-bottom:9px}
+body .mfv-page .mfv-hero h2{font-size:clamp(19px,2.2vw,28px);line-height:1.25;max-width:510px;font-weight:650;margin-bottom:12px}
+body .mfv-page .mfv-hero p{max-width:530px;font-size:15px;line-height:1.6;margin-bottom:22px}
+body .mfv-page .mfv-hero .btn{background:#f26a21!important;color:#fff!important;border-radius:40px!important}
+body .mfv-page .mfv-sections{background:#052743}
+body .mfv-page .mfv-panel{position:relative;isolation:isolate;border-radius:38px!important;margin:5px 0 0!important;padding:35px 0!important;overflow:hidden;box-shadow:0 4px 0 rgba(3,25,45,.7)}
+body .mfv-page .mfv-panel:not(.mfv-cta):after{content:"";position:absolute;bottom:0;left:5%;width:90%;height:3px;background:linear-gradient(90deg,transparent,#079cde 20%,#ff792f 50%,#079cde 80%,transparent);opacity:.8;transform-origin:center;animation:mfv-line 9s ease-in-out infinite;pointer-events:none}
+@keyframes mfv-line{0%,100%{opacity:.45;transform:scaleX(.93)}50%{opacity:.95;transform:scaleX(1)}}
+body .mfv-page .mfv-light{background:linear-gradient(115deg,#d5eaf9,#f1f8ff 75%)!important;color:#0b2e50}
+body .mfv-page .mfv-dark{background:linear-gradient(120deg,#062746,#003761)!important;color:#fff}
+body .mfv-page .mfv-split{display:grid;grid-template-columns:1fr 1.08fr;align-items:center;gap:38px}
+body .mfv-page .mfv-visual{min-width:0;overflow:hidden;border-radius:30px;min-height:290px;box-shadow:0 10px 26px rgba(3,26,47,.15)}
+body .mfv-page .mfv-visual img{width:100%;height:100%;min-height:290px;max-height:380px;object-fit:cover;display:block;transition:transform .6s ease}
+body .mfv-page .mfv-visual:hover img{transform:scale(1.025)}
+body .mfv-page .mfv-copy h2{font-size:clamp(25px,2.8vw,38px);font-weight:800;line-height:1.13;margin-bottom:13px}
+body .mfv-page .mfv-copy p{font-size:14px;line-height:1.6;margin-bottom:19px;max-width:570px}
+body .mfv-page .mfv-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+body .mfv-page .mfv-mini-grid>div{background:rgba(255,255,255,.88);border:1px solid #fff;border-radius:12px;padding:14px 11px;box-shadow:0 6px 15px rgba(7,41,70,.09);min-width:0}
+body .mfv-page .mfv-mini-grid .ic,body .mfv-page .mfv-solution-grid .ic{width:27px;height:27px;color:#f26a21;stroke:#f26a21;margin-bottom:7px;display:block}
+body .mfv-page .mfv-mini-grid b,body .mfv-page .mfv-solution-grid b{display:block;font-size:11px;line-height:1.3;margin-bottom:5px}
+body .mfv-page .mfv-mini-grid small,body .mfv-page .mfv-solution-grid small{display:block;font-size:10px;line-height:1.4;color:#47627c}
+body .mfv-page .mfv-solutions .mfv-split{grid-template-columns:1.2fr .9fr}
+body .mfv-page .mfv-solution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+body .mfv-page .mfv-solution-grid a{min-width:0;border:1px solid rgba(105,186,234,.43);border-radius:10px;padding:12px 10px;color:#fff!important;background:rgba(1,38,70,.38);text-decoration:none;transition:background .25s ease,transform .25s ease}
+body .mfv-page .mfv-solution-grid a:hover{background:rgba(13,87,139,.62);transform:translateY(-3px)}
+body .mfv-page .mfv-solution-grid small{color:#c8e0f1}
+body .mfv-page .mfv-benefits .mfv-split{grid-template-columns:.9fr 1.2fr}
+body .mfv-page .mfv-benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+body .mfv-page .mfv-benefit-grid>div{padding:12px 9px}
+body .mfv-page .mfv-quote{padding:0!important}
+body .mfv-page .mfv-quote-inner{display:grid;grid-template-columns:1.3fr .7fr;min-height:230px;gap:20px;align-items:stretch}
+body .mfv-page .mfv-quote-copy{padding:35px 0}
+body .mfv-page .mfv-quote h2{font-size:clamp(25px,2.8vw,36px);margin-bottom:12px}
+body .mfv-page .mfv-quotes{font-size:75px;line-height:.65;color:#f26a21;display:block;margin-top:16px}
+body .mfv-page .mfv-quote blockquote{margin:0 0 12px 42px;font-size:15px;line-height:1.6;max-width:630px}
+body .mfv-page .mfv-quote small{display:block;margin-left:42px;color:#c7dbe9;font-size:11px}
+body .mfv-page .mfv-quote-photo{overflow:hidden}
+body .mfv-page .mfv-quote-photo img{width:100%;height:100%;min-height:230px;object-fit:cover;display:block}
+body .mfv-page .mfv-cta{padding:43px 0 55px!important;background:linear-gradient(90deg,rgba(2,30,57,.96),rgba(3,37,67,.81) 50%,rgba(4,34,60,.25)),url('/images/secteurs/mf-contact.webp') center/cover no-repeat!important}
+body .mfv-page .mfv-cta h2{font-size:clamp(28px,3vw,39px);margin-bottom:10px}
+body .mfv-page .mfv-cta p{max-width:480px;font-size:14px;line-height:1.6;margin-bottom:18px}
+body .mfv-page .mfv-actions{display:flex;flex-wrap:wrap;gap:12px}
+body .mfv-page .mfv-actions .btn{border-radius:28px!important}
+body .mfv-page .mfv-actions .btn-primary{background:#f26a21!important;color:white!important}
+body .mfv-page .mfv-actions .btn-glass{border:1px solid #f26a21!important;color:#fff!important;background:rgba(4,28,51,.36)!important}
+@media(max-width:900px){body .mfv-page .mfv-split{grid-template-columns:1fr!important;gap:22px}body .mfv-page .mfv-solutions .mfv-visual{order:-1}body .mfv-page .mfv-benefit-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){body .mfv-page .container{width:calc(100% - 32px)}body .mfv-page .mfv-hero{min-height:460px;background-position:60% center}body .mfv-page .mfv-hero:before{background:linear-gradient(90deg,rgba(3,27,52,.94),rgba(3,27,52,.63))}body .mfv-page .mfv-hero-content{padding:95px 0 60px}body .mfv-page .mfv-panel{padding:26px 0!important;border-radius:23px!important}body .mfv-page .mfv-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body .mfv-page .mfv-solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body .mfv-page .mfv-visual,body .mfv-page .mfv-visual img{min-height:210px}body .mfv-page .mfv-quote-inner{grid-template-columns:1fr}body .mfv-page .mfv-quote-copy{padding:25px 0 0}body .mfv-page .mfv-quote-photo img{height:200px;min-height:0}body .mfv-page .mfv-cta{padding:30px 0!important}}
+@media(prefers-reduced-motion:reduce){body .mfv-page .mfv-panel:after{animation:none!important}body .mfv-page .mfv-visual img,body .mfv-page .mfv-solution-grid a{transition:none!important}}
+
+/* V32 — Microfinances : icônes bleues au survol. */
+body .mfv-page .mfv-mini-grid>div,body .mfv-page .mfv-solution-grid a{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background .28s ease!important}
+body .mfv-page .mfv-mini-grid>div:hover{transform:translateY(-4px);border-color:#3e8ac5!important;box-shadow:0 13px 26px rgba(7,55,99,.16)!important}
+body .mfv-page .mfv-mini-grid>div:hover .ic,body .mfv-page .mfv-solution-grid a:hover .ic{color:#1976bd!important;stroke:#1976bd!important}
+body .mfv-page .mfv-solution-grid a:hover{border-color:#5ca9df!important;background:rgba(20,87,138,.52)!important}
+body .mfv-page .mfv-mini-grid>div:hover b{color:#0b5793!important}
+@media(prefers-reduced-motion:reduce){body .mfv-page .mfv-mini-grid>div,body .mfv-page .mfv-solution-grid a{transition:none!important}}
