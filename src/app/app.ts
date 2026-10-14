@@ -6,7 +6,7 @@ import { ContactPageComponent } from './pages/contact/contact';
 import { AproposPageComponent } from './pages/entreprise/apropos/apropos';
 import { EntreprisePageComponent } from './pages/entreprise/entreprise';
 import { RessourcesPageComponent } from './pages/ressources/ressources';
-import { OnInit, Component, OnDestroy } from '@angular/core';
+import { OnInit, Component, OnDestroy, signal } from '@angular/core';
 import { HeaderComponent } from './shared/header/header';
 import { HeroComponent } from './pages/home/hero/hero';
 import { HomeSolutionsComponent } from './pages/home/solutions/solutions';
@@ -35,6 +35,21 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, OnDestroy {
+  // Transition globale pour la navigation par hash utilisée dans ce projet.
+  readonly pageTransition = signal(false);
+  private transitionTimer: ReturnType<typeof setTimeout> | undefined;
+  private readonly onNavigation = () => {
+    this.onHash();
+    if (typeof window.matchMedia === 'function' &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (this.transitionTimer) clearTimeout(this.transitionTimer);
+    this.pageTransition.set(false);
+    // Relancer l'animation même lors de navigations rapides.
+    requestAnimationFrame(() => {
+      this.pageTransition.set(true);
+      this.transitionTimer = setTimeout(() => this.pageTransition.set(false), 720);
+    });
+  };
   isSolutions=false;
   isCoreBanking=false;
   isCollecteJournaliere=false;
@@ -76,8 +91,9 @@ export class App implements OnInit, OnDestroy {
     this.isCarrieres=h==='#/entreprise/carrieres';
     this.isPartenaires=h==='#/entreprise/partenaires';
   };
-  ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onHash); }
+  ngOnInit(){ this.onHash(); window.addEventListener('hashchange',this.onNavigation); }
   ngOnDestroy(): void {
-    window.removeEventListener('hashchange',this.onHash);
+    window.removeEventListener('hashchange',this.onNavigation);
+    if (this.transitionTimer) clearTimeout(this.transitionTimer);
   }
 }

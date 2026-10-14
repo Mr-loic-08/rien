@@ -134,3 +134,12 @@
 <app-footer></app-footer>
 
 }
+
+<!-- Transition globale entre les pages : aucune modification des composants internes. -->
+@if (pageTransition()) {
+  <div class="itech-page-transition" aria-hidden="true">
+    <span class="itech-page-transition__blue"></span>
+    <span class="itech-page-transition__orange"></span>
+    <span class="itech-page-transition__glow"></span>
+  </div>
+}

@@ -1,1 +1,53 @@
 :host{display:block}
+
+/* I-TECH : voile de navigation bleu marine et trait lumineux orange */
+.itech-page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+}
+.itech-page-transition__blue,
+.itech-page-transition__orange,
+.itech-page-transition__glow {
+  position: absolute;
+  display: block;
+  inset: 0;
+  pointer-events: none;
+}
+.itech-page-transition__blue {
+  background: linear-gradient(110deg, #071a31 0%, #0d2b4a 58%, #164a76 100%);
+  transform: translateX(-102%);
+  animation: itech-veil-sweep 680ms cubic-bezier(.7,0,.25,1) both;
+}
+.itech-page-transition__orange {
+  width: 6px;
+  inset: 0 auto 0 0;
+  background: linear-gradient(180deg, #ffad60, #f26a21 45%, #ff8b32);
+  box-shadow: 0 0 20px 5px rgba(242,106,33,.6);
+  transform: translateX(-30px);
+  animation: itech-line-sweep 680ms cubic-bezier(.7,0,.25,1) both;
+}
+.itech-page-transition__glow {
+  background: linear-gradient(90deg, transparent 40%, rgba(255,255,255,.07) 55%, transparent 70%);
+  transform: translateX(-100%);
+  animation: itech-veil-sweep 680ms cubic-bezier(.7,0,.25,1) both;
+}
+@keyframes itech-veil-sweep {
+  0% { transform: translateX(-102%); }
+  43% { transform: translateX(0); }
+  58% { transform: translateX(0); }
+  100% { transform: translateX(102%); }
+}
+@keyframes itech-line-sweep {
+  0% { left: -6px; transform: translateX(0); opacity: 0; }
+  8% { opacity: 1; }
+  43% { left: calc(100% - 6px); transform: translateX(0); }
+  58% { left: calc(100% - 6px); transform: translateX(0); }
+  100% { left: calc(200% + 6px); transform: translateX(0); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .itech-page-transition { display: none !important; }
+}

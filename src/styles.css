@@ -11409,3 +11409,21 @@ body .pg.pg-detail.declaration-bancaire-page .pg-hero > .pg-hero-wave,
 body .pg.pg-detail.genie-logiciel-page .pg-hero > .pg-hero-wave {
   display:none!important;
 }
+
+/* V51 — Cohérence des boutons : bleu au survol, sur toutes les pages. */
+:root{--itech-hover-blue:#1768b3}
+body a.btn:hover,body button.btn:hover,body .btn-primary:hover,body .btn-secondary:hover,
+body .btn-outline:hover,body .btn-orange:hover,body a[class*="cta-btn"]:hover,
+body button[class*="cta-btn"]:hover,body a[class*="action-btn"]:hover,
+body button[class*="action-btn"]:hover,body a[class*="hero-btn"]:hover,
+body button[class*="hero-btn"]:hover,body a[class*="outline-btn"]:hover,
+body button[class*="outline-btn"]:hover{
+  background:#1768b3!important;background-color:#1768b3!important;
+  border-color:#1768b3!important;color:#fff!important;
+  box-shadow:0 10px 25px rgba(23,104,179,.24)!important;
+  transition:background-color .25s ease,border-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease;
+}
+body a.btn:hover *,body button.btn:hover *,body a[class*="cta-btn"]:hover *,
+body a[class*="action-btn"]:hover *,body a[class*="hero-btn"]:hover *{color:inherit!important}
+body a.btn:focus-visible,body button.btn:focus-visible{outline:3px solid #1768b3;outline-offset:3px}
+@media(hover:none){body a.btn:hover,body button.btn:hover{box-shadow:none!important}}
