@@ -10919,3 +10919,107 @@ body .mfv-page .mfv-mini-grid>div:hover .ic,body .mfv-page .mfv-solution-grid a:
 body .mfv-page .mfv-solution-grid a:hover{border-color:#5ca9df!important;background:rgba(20,87,138,.52)!important}
 body .mfv-page .mfv-mini-grid>div:hover b{color:#0b5793!important}
 @media(prefers-reduced-motion:reduce){body .mfv-page .mfv-mini-grid>div,body .mfv-page .mfv-solution-grid a{transition:none!important}}
+
+
+/* V34 — Banques commerciales : le hero .sx-hero demeure strictement inchangé */
+body .bank-page-angular .bankv-body{--bk-orange:#f26a21;--bk-blue:#0b79bc;background:#062640;overflow:hidden}
+body .bank-page-angular .bankv-body .container{max-width:1180px;width:min(1180px,calc(100% - 48px));margin:auto}
+body .bank-page-angular .bankv-section{position:relative;isolation:isolate;margin:5px 0 0!important;padding:34px 0!important;border-radius:36px!important;overflow:hidden}
+body .bank-page-angular .bankv-section:not(.bankv-cta):after{content:"";position:absolute;bottom:0;left:7%;width:86%;height:3px;background:linear-gradient(90deg,transparent,#15a1dc 20%,#fa7629 50%,#15a1dc 80%,transparent);animation:bankv-glow 8s ease-in-out infinite;pointer-events:none}
+@keyframes bankv-glow{0%,100%{opacity:.45;transform:scaleX(.94)}50%{opacity:.95;transform:scaleX(1)}}
+body .bank-page-angular .bankv-light{background:linear-gradient(120deg,#d6ebfa,#f2f9ff)!important;color:#082b4b}
+body .bank-page-angular .bankv-dark{background:linear-gradient(115deg,#052642,#003660)!important;color:#fff}
+body .bank-page-angular .bankv-split{display:grid;grid-template-columns:1fr 1.08fr;gap:34px;align-items:center}
+body .bank-page-angular .bankv-platform .bankv-split{grid-template-columns:1.18fr .9fr}
+body .bank-page-angular .bankv-photo{min-width:0;border-radius:28px;overflow:hidden;min-height:265px;box-shadow:0 12px 28px rgba(2,26,50,.15)}
+body .bank-page-angular .bankv-photo img{width:100%;height:100%;max-height:340px;min-height:265px;object-fit:cover;display:block;transition:transform .5s ease}
+body .bank-page-angular .bankv-photo:hover img{transform:scale(1.03)}
+body .bank-page-angular .bankv-dashboard{background:linear-gradient(145deg,#073354,#1d668c);display:flex;align-items:center;padding:18px}
+body .bank-page-angular .bankv-dashboard img{object-fit:contain;max-height:330px;min-height:0;border-radius:10px}
+body .bank-page-angular .bankv-kicker{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.07em;margin-bottom:12px}
+body .bank-page-angular .bankv-kicker:before{content:"";height:3px;width:22px;border-radius:3px;background:#f26a21}
+body .bank-page-angular .bankv-copy h2,body .bank-page-angular .bankv-security h2,body .bank-page-angular .bankv-cta h2{font-size:clamp(25px,2.8vw,38px);font-weight:800;line-height:1.13;margin:0 0 12px}
+body .bank-page-angular .bankv-body em{font-style:normal;color:#f26a21}
+body .bank-page-angular .bankv-copy p,body .bank-page-angular .bankv-security p,body .bank-page-angular .bankv-cta p{font-size:14px;line-height:1.55;margin:0 0 17px;max-width:640px}
+body .bank-page-angular .bankv-cards{display:grid;gap:10px}
+body .bank-page-angular .bankv-cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+body .bank-page-angular .bankv-cards-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+body .bank-page-angular .bankv-cards article,body .bank-page-angular .bankv-cards a{min-width:0;padding:13px 10px;border-radius:11px;background:rgba(255,255,255,.9);color:#0a2d4d;text-decoration:none;border:1px solid rgba(255,255,255,.85);box-shadow:0 5px 15px rgba(2,35,65,.07);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease}
+body .bank-page-angular .bankv-cards article:hover,body .bank-page-angular .bankv-cards a:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(3,36,64,.15);border-color:#64b3df}
+body .bank-page-angular .bankv-cards .ic{display:block;width:27px;height:27px;margin-bottom:7px;color:#f26a21;stroke:#f26a21}
+body .bank-page-angular .bankv-cards article:hover .ic,body .bank-page-angular .bankv-cards a:hover .ic{color:#1679c2;stroke:#1679c2}
+body .bank-page-angular .bankv-cards b{display:block;font-size:11px;line-height:1.3;margin-bottom:5px}
+body .bank-page-angular .bankv-cards small{display:block;font-size:10px;line-height:1.4;color:#476781}
+body .bank-page-angular .bankv-feature-cards a{background:rgba(3,47,80,.48);color:#fff;border:1px solid rgba(101,174,218,.48);box-shadow:none}
+body .bank-page-angular .bankv-feature-cards a:hover{background:rgba(13,92,143,.6)}
+body .bank-page-angular .bankv-feature-cards small{color:#d3e6f3}
+body .bank-page-angular .bankv-security{background:linear-gradient(90deg,rgba(2,28,51,.98),rgba(3,41,72,.89) 62%,rgba(3,35,64,.7)),url('/images/core-banking-phone.jpg') center/cover no-repeat!important}
+body .bank-page-angular .bankv-security p{max-width:610px}
+body .bank-page-angular .bankv-security-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:850px;margin-top:22px}
+body .bank-page-angular .bankv-security-list>div{display:flex;align-items:flex-start;gap:12px}
+body .bank-page-angular .bankv-security-list .ic{flex:none;width:29px;height:29px;color:#f26a21;stroke:#f26a21;transition:color .25s ease,stroke .25s ease}
+body .bank-page-angular .bankv-security-list>div:hover .ic{color:#2ca7f1;stroke:#2ca7f1}
+body .bank-page-angular .bankv-security-list b{display:block;font-size:12px;margin-bottom:4px}
+body .bank-page-angular .bankv-security-list small{display:block;font-size:11px;line-height:1.45;color:#d4e6f4}
+body .bank-page-angular .bankv-cta{padding:43px 0 54px!important;background:linear-gradient(90deg,rgba(2,30,55,.96),rgba(3,39,68,.87) 65%,rgba(3,32,58,.68)),url('/images/solutions/hero-reunion.webp') center/cover no-repeat!important}
+body .bank-page-angular .bankv-cta p{max-width:540px}
+body .bank-page-angular .bankv-actions{display:flex;gap:12px;flex-wrap:wrap}
+body .bank-page-angular .bankv-actions .btn{border-radius:30px!important}
+body .bank-page-angular .bankv-actions .btn-primary{background:#f26a21!important;color:#fff!important}
+body .bank-page-angular .bankv-actions .btn-glass{background:rgba(0,29,56,.3)!important;color:#fff!important;border:1px solid #f26a21!important}
+@media(max-width:950px){body .bank-page-angular .bankv-split,body .bank-page-angular .bankv-platform .bankv-split{grid-template-columns:1fr}body .bank-page-angular .bankv-platform .bankv-photo{order:-1}body .bank-page-angular .bankv-cards-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){body .bank-page-angular .bankv-body .container{width:calc(100% - 32px)}body .bank-page-angular .bankv-section{border-radius:24px!important;padding:25px 0!important}body .bank-page-angular .bankv-cards-3{grid-template-columns:repeat(2,minmax(0,1fr))}body .bank-page-angular .bankv-security-list{grid-template-columns:1fr;gap:13px}body .bank-page-angular .bankv-photo,body .bank-page-angular .bankv-photo img{min-height:205px}body .bank-page-angular .bankv-cta{padding:32px 0!important}}
+@media(prefers-reduced-motion:reduce){body .bank-page-angular .bankv-section:after{animation:none!important}body .bank-page-angular .bankv-photo img,body .bank-page-angular .bankv-cards>*{transition:none!important}}
+
+
+/* V35 Grandes Entreprises — Hero : lisibilité sans masquer les commandes */
+body .enterprise-page-angular .sx-hero .sx-veil{background:linear-gradient(90deg,rgba(2,23,46,.95) 0%,rgba(2,26,51,.85) 44%,rgba(3,27,49,.55) 100%)!important}
+body .enterprise-page-angular .sx-hero .sx-copy{position:relative;z-index:3;text-shadow:0 2px 10px rgba(0,10,25,.32)}
+body .enterprise-page-angular .sx-hero .sx-copy h1,body .enterprise-page-angular .sx-hero .sx-copy p{color:#fff!important}
+body .enterprise-page-angular .sx-hero .sx-video{filter:brightness(.72) saturate(.82);object-fit:cover}
+body .enterprise-page-angular .gev-body{background:#042744;color:white;overflow:hidden}
+body .enterprise-page-angular .gev-body .container{max-width:1180px;width:min(1180px,calc(100% - 48px));margin:auto}
+body .enterprise-page-angular .gev-section{position:relative;isolation:isolate;padding:34px 0!important;border-radius:36px!important;margin:5px 0 0!important;overflow:hidden}
+body .enterprise-page-angular .gev-section:not(.gev-cta):after{content:"";position:absolute;bottom:0;left:7%;width:86%;height:3px;background:linear-gradient(90deg,transparent,#159ddd 20%,#ff7d32 50%,#159ddd 80%,transparent);animation:gev-line 9s ease-in-out infinite;pointer-events:none}
+@keyframes gev-line{0%,100%{opacity:.45;transform:scaleX(.94)}50%{opacity:.95;transform:scaleX(1)}}
+body .enterprise-page-angular .gev-light{background:linear-gradient(115deg,#d7ebfa,#f1f8ff)!important;color:#092c4d}
+body .enterprise-page-angular .gev-dark{background:linear-gradient(115deg,#042743,#003761)!important;color:#fff}
+body .enterprise-page-angular .gev-split{display:grid;grid-template-columns:1fr 1.08fr;align-items:center;gap:32px}
+body .enterprise-page-angular .gev-platform{grid-template-columns:1.2fr .9fr}
+body .enterprise-page-angular .gev-image{overflow:hidden;border-radius:28px;min-height:255px;box-shadow:0 12px 28px rgba(0,20,42,.14)}
+body .enterprise-page-angular .gev-image img{display:block;width:100%;height:100%;min-height:255px;max-height:355px;object-fit:cover;transition:transform .5s ease}
+body .enterprise-page-angular .gev-image:hover img{transform:scale(1.035)}
+body .enterprise-page-angular .gev-label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.06em;margin-bottom:12px}
+body .enterprise-page-angular .gev-label:before{content:"";width:23px;height:3px;background:#f26a21;border-radius:5px}
+body .enterprise-page-angular .gev-copy h2,body .enterprise-page-angular .gev-security h2,body .enterprise-page-angular .gev-cta h2{font-size:clamp(25px,2.9vw,38px);font-weight:800;line-height:1.13;margin:0 0 12px}
+body .enterprise-page-angular .gev-body em{color:#f26a21;font-style:normal}
+body .enterprise-page-angular .gev-copy p,body .enterprise-page-angular .gev-security p,body .enterprise-page-angular .gev-cta p{font-size:14px;line-height:1.55;margin:0 0 18px;max-width:620px}
+body .enterprise-page-angular .gev-cards{display:grid;gap:10px}
+body .enterprise-page-angular .gev-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+body .enterprise-page-angular .gev-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+body .enterprise-page-angular .gev-cards article,body .enterprise-page-angular .gev-cards a{min-width:0;background:rgba(255,255,255,.91);border:1px solid rgba(255,255,255,.95);border-radius:11px;padding:12px 10px;color:#082a49;text-decoration:none;box-shadow:0 6px 15px rgba(3,39,69,.07);transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}
+body .enterprise-page-angular .gev-cards article:hover,body .enterprise-page-angular .gev-cards a:hover{transform:translateY(-4px);border-color:#61a9db;box-shadow:0 12px 22px rgba(3,36,68,.16)}
+body .enterprise-page-angular .gev-cards .ic{display:block;width:27px;height:27px;margin-bottom:8px;color:#f26a21;stroke:#f26a21}
+body .enterprise-page-angular .gev-cards article:hover .ic,body .enterprise-page-angular .gev-cards a:hover .ic{color:#1178bd;stroke:#1178bd}
+body .enterprise-page-angular .gev-cards b{display:block;font-size:11px;line-height:1.3;margin-bottom:5px}
+body .enterprise-page-angular .gev-cards small{display:block;font-size:10px;line-height:1.4;color:#46627b}
+body .enterprise-page-angular .gev-services a{background:rgba(1,44,76,.4);border-color:rgba(103,184,226,.47);color:white}
+body .enterprise-page-angular .gev-services a:hover{background:rgba(13,86,138,.6)}
+body .enterprise-page-angular .gev-services small{color:#d3e5f4}
+body .enterprise-page-angular .gev-security{background:linear-gradient(90deg,rgba(2,26,49,.97),rgba(2,35,64,.89) 61%,rgba(2,33,60,.2)),url('/images/secteurs/grandes-entreprises/securite.webp') center/cover no-repeat!important}
+body .enterprise-page-angular .gev-security p{max-width:650px}
+body .enterprise-page-angular .gev-security-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:830px;margin-top:22px}
+body .enterprise-page-angular .gev-security-cards>div{display:flex;gap:12px;align-items:flex-start}
+body .enterprise-page-angular .gev-security-cards .ic{width:29px;height:29px;flex:none;color:#f26a21;stroke:#f26a21}
+body .enterprise-page-angular .gev-security-cards>div:hover .ic{color:#218bd0;stroke:#218bd0}
+body .enterprise-page-angular .gev-security-cards b{display:block;font-size:12px;margin-bottom:4px}
+body .enterprise-page-angular .gev-security-cards small{display:block;font-size:11px;line-height:1.4;color:#d6e8f4}
+body .enterprise-page-angular .gev-cta{padding:43px 0 54px!important;background:linear-gradient(90deg,rgba(3,28,52,.96),rgba(3,37,65,.86) 57%,rgba(3,33,59,.18)),url('/images/secteurs/grandes-entreprises/contact.webp') center/cover no-repeat!important}
+body .enterprise-page-angular .gev-cta p{max-width:560px}
+body .enterprise-page-angular .gev-actions{display:flex;flex-wrap:wrap;gap:12px}
+body .enterprise-page-angular .gev-actions .btn{border-radius:28px!important}
+body .enterprise-page-angular .gev-actions .btn-primary{background:#f26a21!important;color:#fff!important}
+body .enterprise-page-angular .gev-actions .btn-glass{background:rgba(2,25,48,.35)!important;color:#fff!important;border:1px solid #f26a21!important}
+@media(max-width:900px){body .enterprise-page-angular .gev-split,body .enterprise-page-angular .gev-platform{grid-template-columns:1fr}body .enterprise-page-angular .gev-platform .gev-image{order:-1}body .enterprise-page-angular .gev-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){body .enterprise-page-angular .gev-body .container{width:calc(100% - 32px)}body .enterprise-page-angular .gev-section{padding:25px 0!important;border-radius:23px!important}body .enterprise-page-angular .gev-three{grid-template-columns:repeat(2,minmax(0,1fr))}body .enterprise-page-angular .gev-image,body .enterprise-page-angular .gev-image img{min-height:205px}body .enterprise-page-angular .gev-security-cards{grid-template-columns:1fr;gap:13px}body .enterprise-page-angular .gev-cta{padding:30px 0!important}}
+@media(prefers-reduced-motion:reduce){body .enterprise-page-angular .gev-section:after{animation:none!important}body .enterprise-page-angular .gev-cards>*,body .enterprise-page-angular .gev-image img{transition:none!important}}

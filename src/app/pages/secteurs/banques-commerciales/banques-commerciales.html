@@ -22,129 +22,17 @@
   </div><div class="sx-cut" aria-hidden="true"></div>
  </section>
 
- <div class="sx-body">
-  <div class="sx-bodyfx" aria-hidden="true"><img class="sx-bodyfx-img" src="images/secteurs/banques.jpg" alt=""><div class="sx-bodyfx-veil"></div></div>
-  <section class="sx-issues bank-issues reveal visible" id="sx-enjeux">
-   <div class="container">
-    <span class="sec-kicker">{{l.t('Vos priorités')}}</span>
-    <h2 class="sec-title">{{l.t('Vos enjeux bancaires')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
-    <div class="sx-issues-grid">
-     @for(item of issues;track item.text;let i=$index){
-      <div class="sx-issue" [style.transition-delay.ms]="i*70">
-       <span class="sx-issue-ic"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
-       <span>{{l.t(item.text)}}</span>
-      </div>
-     }
-    </div>
-   </div>
-  </section>
-  <!-- BLOC 3 — Nos solutions recommandées / React RecommendedMapping -->
-  <section class="sx-recos mapping-section bank-mapping reveal visible" aria-labelledby="bank-mapping-title">
-    <div class="mapping-deco" aria-hidden="true">
-      <span class="mapping-chart"><i></i><i></i><i></i><i></i><svg class="ic"><use href="#i-arrow"></use></svg></span>
-      <span class="mapping-note">{{l.t('Plus de')}}<br><strong>{{l.t('performances')}}</strong><br>{{l.t('ensemble !')}}</span>
-    </div>
-    <div class="container mapping-container">
-      <header class="mapping-head">
-        <span class="mapping-kicker"><i></i>{{l.t('MAPPING BESOINS')}}<i></i></span>
-        <h2 id="bank-mapping-title">{{l.t('Nos solutions recommandées')}}</h2>
-        <p>{{l.t('Des solutions adaptées à chaque besoin pour accélérer')}}<br class="mapping-break">{{l.t(' votre performance financière.')}}</p>
-      </header>
-      <div class="mapping-column-labels" aria-hidden="true"><span>{{l.t('BESOIN')}}</span><span>{{l.t('SOLUTION')}}</span></div>
-      <div class="mapping-track" #mappingTrack (scroll)="onMappingScroll(mappingTrack)">
-        @for(item of mappings;track item.need;let i=$index){
-          <div class="mapping-slide">
-            <a [href]="item.href" [class]="'mapping-card mc-'+item.tone"
-               style="--mouse-x:50%;--mouse-y:50%"
-               (pointermove)="moveGlow($event)" (pointerleave)="resetGlow($event)">
-              <span class="mapping-number">0{{i+1}}</span>
-              <span class="mapping-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
-              <span class="mapping-copy mapping-need"><strong>{{l.t(item.need)}}</strong><small>{{l.t(item.needDescription)}}</small></span>
-              <span class="mapping-transform" aria-hidden="true"><i class="mapping-dashes"></i><i class="mapping-arrow"><svg class="ic"><use href="#i-arrow"></use></svg></i></span>
-              <span class="mapping-copy mapping-solution"><strong>{{l.t(item.solution)}}</strong><small>{{l.t(item.solutionDescription)}}</small></span>
-              <span class="mapping-visual" aria-hidden="true"><svg class="ic mapping-fallback-visual"><use [attr.href]="item.visual==='bank'?'#i-bank':item.visual==='phone'?'#i-phone':item.visual==='document'?'#i-book':'#i-card'"></use></svg></span>
-            </a>
-          </div>
-        }
-      </div>
-      <div class="mapping-assurance"><svg class="ic"><use href="#i-shield"></use></svg><span>{{l.t('Des solutions fiables pour un avenir plus solide.')}}</span></div>
-    </div>
-  </section>
-
-  <!-- BLOC 4 — Les bénéfices pour votre banque -->
-  <section class="sx-benefits bank-benefits reveal visible">
-    <div class="bank-benefits-bg" aria-hidden="true"></div>
-    <div class="container">
-      <h2 class="sec-title center light">{{l.t('Les bénéfices pour votre banque')}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
-      <div class="sx-ben-grid">
-        @for(b of benefits;track b.text;let i=$index){
-          <div class="sx-ben" [style.transition-delay.ms]="i*80">
-            <span class="sx-ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
-            <span>{{l.t(b.text)}}</span>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOC 5 — Architecture bancaire : référence React -->
-  <section class="sx-arch bank-arch reveal visible">
-    <div class="container">
-      <h2 class="sec-title center">{{l.t('Architecture bancaire')}}</h2><span class="itech-section-signature sig-pulse" aria-hidden="true"><i></i><b></b></span>
-      <div class="sx-flow">
-        @for(step of architecture;track step;let i=$index){
-          <div class="sx-step" [style.transition-delay.ms]="i*100">
-            <span class="sx-step-dot">
-              <svg class="ic"><use [attr.href]="i===0?'#i-users':i===architecture.length-1?'#i-chart':'#i-bank'"></use></svg>
-            </span>
-            <b>{{l.t(step)}}</b>
-            @if(i < architecture.length-1){
-              <span class="sx-flow-arrow"><svg class="ic"><use href="#i-arrow"></use></svg></span>
-            }
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOC 6 — Ils nous font confiance : référence React -->
-  <section class="sx-proofs bank-proofs reveal visible">
-    <div class="container">
-      <h2 class="sec-title center">{{l.t('Ils nous font confiance')}}</h2><span class="itech-section-signature sig-rail" aria-hidden="true"><i></i><b></b></span>
-      <div class="sx-proofs-grid">
-        @for(p of bankProofs;track p.title;let i=$index){
-          <div [class]="'sx-proof '+p.kind" [style.transition-delay.ms]="i*90">
-            @if(p.kind==='quote'){
-              <span class="sx-quote-mark">“</span>
-              <b>{{l.t(p.title)}}</b>
-              <p>« {{l.t(p.text)}} »</p>
-              @if(p.author){<em>— {{l.t(p.author)}}</em>}
-            } @else {
-              <span class="sx-proof-ic"><svg class="ic"><use href="#i-check"></use></svg></span>
-              <b>{{l.t(p.title)}}</b>
-              <span>{{l.t(p.text)}}</span>
-            }
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOC 7 — CTA final Banques Commerciales -->
-  <section class="sx-cta bank-final-cta reveal visible">
-    <div class="container">
-      <div class="sx-cta-panel toned">
-        <div>
-          <h2>{{l.t('Construisons ensemble votre banque digitale')}}</h2>
-          <p>{{l.t('Nos experts vous accompagnent à chaque étape de votre transformation.')}}</p>
-        </div>
-        <div class="cta-actions">
-          <a href="#/contact" class="btn btn-primary">{{l.t('Parler à un expert')}} <svg class="ic"><use href="#i-arrow"></use></svg></a>
-          <a href="#/secteurs" class="btn btn-ghost-w">{{l.t('Tous les secteurs')}}</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+ <div class="bankv-body">
+<section class="bankv-section bankv-light bankv-approach" id="sx-enjeux">
+ <div class="container bankv-split"><div class="bankv-photo"><img src="images/solutions/hero-reunion.webp" alt="Professionnels de la banque en réunion" loading="lazy"></div><div class="bankv-copy"><span class="bankv-kicker">{{l.t('NOTRE APPROCHE BANCAIRE')}}</span><h2>{{l.t('Comprendre vos enjeux pour')}} <em>{{l.t('mieux vous accompagner')}}</em></h2><p>{{l.t('Nous travaillons aux côtés des banques commerciales pour répondre à leurs défis opérationnels, réglementaires et stratégiques, en leur proposant des solutions sur mesure.')}}</p><div class="bankv-cards bankv-cards-3"><article><svg class="ic"><use href="#i-chart"></use></svg><b>{{l.t('Analyse des besoins')}}</b><small>{{l.t('Une approche centrée sur vos réalités terrain')}}</small></article><article><svg class="ic"><use href="#i-users"></use></svg><b>{{l.t('Solutions sur mesure')}}</b><small>{{l.t('Des outils adaptés à votre modèle')}}</small></article><article><svg class="ic"><use href="#i-check"></use></svg><b>{{l.t('Accompagnement continu')}}</b><small>{{l.t('Un suivi continu pour une adoption réussie')}}</small></article></div></div></div>
+</section>
+<section class="bankv-section bankv-dark bankv-platform">
+ <div class="container bankv-split"><div class="bankv-copy"><span class="bankv-kicker">{{l.t('UNE SOLUTION COMPLÈTE ET INTÉGRÉE')}}</span><h2>{{l.t('Une plateforme bancaire de')}} <em>{{l.t('nouvelle génération')}}</em></h2><p>{{l.t('Nos solutions couvrent l’ensemble de vos opérations bancaires, avec une architecture modulaire, sécurisée et évolutive, conforme aux standards de l’industrie financière.')}}</p><div class="bankv-cards bankv-cards-3 bankv-feature-cards"><a href="#/solutions/core-banking"><svg class="ic"><use href="#i-bank"></use></svg><b>Core Banking</b><small>{{l.t('Gestion complète des opérations')}}</small></a><a href="#/solutions/core-banking"><svg class="ic"><use href="#i-card"></use></svg><b>{{l.t('Monétique')}}</b><small>{{l.t('Cartes et paiements')}}</small></a><a href="#/solutions/digital-mobile"><svg class="ic"><use href="#i-phone"></use></svg><b>Digital Banking</b><small>Web, Mobile &amp; USSD</small></a><a href="#/solutions/declaration-bancaire"><svg class="ic"><use href="#i-chart"></use></svg><b>Reporting &amp; BI</b><small>{{l.t('Pilotage et analyses')}}</small></a><a href="#/solutions/declaration-bancaire"><svg class="ic"><use href="#i-shield"></use></svg><b>{{l.t('Conformité réglementaire')}}</b><small>{{l.t('BC, LCB-FT, etc.')}}</small></a><a href="#/solutions/core-banking"><svg class="ic"><use href="#i-lock"></use></svg><b>{{l.t('Sécurité et traçabilité')}}</b><small>{{l.t('Protection de vos données')}}</small></a></div></div><div class="bankv-photo bankv-dashboard"><img src="images/captures/alpha-core-banking.png" alt="Interface de la plateforme bancaire ALPHA" loading="lazy"></div></div>
+</section>
+<section class="bankv-section bankv-light bankv-benefits">
+ <div class="container bankv-split"><div class="bankv-photo"><img src="images/entreprise/accueil-itech.webp" alt="Équipe professionnelle I-TECH" loading="lazy"></div><div class="bankv-copy"><span class="bankv-kicker">{{l.t('VOS BÉNÉFICES BANCAIRES')}}</span><h2>{{l.t('Une meilleure performance pour')}} <em>{{l.t('votre banque')}}</em></h2><p>{{l.t('Nos solutions vous aident à optimiser vos opérations, à améliorer la satisfaction de vos clients et à renforcer votre position sur le marché.')}}</p><div class="bankv-cards bankv-cards-4"><article><svg class="ic"><use href="#i-chart"></use></svg><b>{{l.t('Efficacité opérationnelle')}}</b><small>{{l.t('Automatisation des processus clés')}}</small></article><article><svg class="ic"><use href="#i-users"></use></svg><b>{{l.t('Expérience client')}}</b><small>{{l.t('Des services bancaires plus simples et accessibles')}}</small></article><article><svg class="ic"><use href="#i-shield"></use></svg><b>{{l.t('Conformité renforcée')}}</b><small>{{l.t('Respect des exigences réglementaires')}}</small></article><article><svg class="ic"><use href="#i-chart"></use></svg><b>{{l.t('Croissance durable')}}</b><small>{{l.t('Un développement maîtrisé')}}</small></article></div></div></div>
+</section>
+<section class="bankv-section bankv-dark bankv-security"><div class="container"><span class="bankv-kicker">{{l.t('CONFORMITÉ, SÉCURITÉ ET FIABILITÉ')}}</span><h2>{{l.t('Des standards élevés pour une')}} <em>{{l.t('confiance durable')}}</em></h2><p>{{l.t('Nos solutions sont conçues pour répondre aux exigences des régulateurs et garantir la sécurité de vos opérations et de vos données.')}}</p><div class="bankv-security-list"><div><svg class="ic"><use href="#i-shield"></use></svg><span><b>{{l.t('Conformité réglementaire')}}</b><small>{{l.t('Respect des normes locales et internationales')}}</small></span></div><div><svg class="ic"><use href="#i-check"></use></svg><span><b>{{l.t('Haute disponibilité')}}</b><small>{{l.t('Une infrastructure fiable et résiliente')}}</small></span></div><div><svg class="ic"><use href="#i-lock"></use></svg><span><b>{{l.t('Protection des données')}}</b><small>{{l.t('Des mécanismes avancés de sécurité')}}</small></span></div></div></div></section>
+<section class="bankv-section bankv-dark bankv-cta"><div class="container"><span class="bankv-kicker">{{l.t('PRÊT À TRANSFORMER VOTRE BANQUE ?')}}</span><h2>{{l.t('Échangeons sur')}} <em>{{l.t('vos besoins')}}</em></h2><p>{{l.t('Nos experts vous accompagnent pour identifier les solutions les plus adaptées à votre banque.')}}</p><div class="bankv-actions"><a class="btn btn-primary" href="#/contact">{{l.t('Demander une démonstration')}} <svg class="ic"><use href="#i-arrow"></use></svg></a><a class="btn btn-glass" href="#/contact">{{l.t('Nous contacter')}}</a></div></div></section>
  </div>
 </main>

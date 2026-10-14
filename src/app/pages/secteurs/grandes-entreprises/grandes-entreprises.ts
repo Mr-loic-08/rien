@@ -7,7 +7,7 @@ import { LanguageService } from '../../../core/language.service';
 export class GrandesEntreprisesPageComponent implements OnInit,OnDestroy{
  readonly l=inject(LanguageService);
  readonly media={
-  video:{hd:'https://videos.pexels.com/video-files/5725951/5725951-uhd_3840_2160_30fps.mp4',poster:'https://images.pexels.com/videos/5725951/adult-business-businessman-businesswoman-5725951.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'},
+  video:{hd:'grandes-entreprises-afrique.mp4',poster:'images/secteurs/grandes-entreprises/approche.webp'},
   heroBg:[
    'https://images.pexels.com/photos/7793926/pexels-photo-7793926.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900',
    'https://images.pexels.com/photos/8547285/pexels-photo-8547285.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900',
