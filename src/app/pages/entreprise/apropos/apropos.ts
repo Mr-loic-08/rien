@@ -26,7 +26,7 @@ export class AproposPageComponent {
  {title:'M. IRANDE ',role:'Secrétariat et accueil',image:'/images/equipe/secretaire.webp',description:'Assure l’accueil, l’organisation administrative et la coordination des communications et rendez-vous.'}
  ];
  reasons=[
- {icon:'i-users',title:'Expertise métier',text:"19 ans d'expérience au service de nos clients."},
+ {icon:'i-users',title:'Expertise métier',text:"20+ ans d'expérience au service de nos clients."},
  {icon:'i-bulb',title:'Innovation',text:'Des solutions modernes et évolutives.'},
  {icon:'i-head',title:'Support local',text:'Une équipe disponible 24/7 pour vous accompagner.'},
  {icon:'i-shield',title:'Sécurité',text:'Protection maximale de vos données et opérations.'},

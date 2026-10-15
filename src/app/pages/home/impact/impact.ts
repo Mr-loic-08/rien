@@ -10,9 +10,9 @@ export class HomeImpactComponent implements AfterViewInit, OnDestroy {
   readonly items: ImpactItem[] = [
     { icon: 'i-cal', value: COMPANY_EXPERIENCE_PLUS, label: "Années d'expérience" },
     { icon: 'i-bank', value: '250+', label: 'Institutions accompagnées' },
-    { icon: 'i-globe', value: '10+', label: 'Pays en Afrique' },
-    { icon: 'i-users', value: '2,5M+', label: 'Utilisateurs finaux' },
-    { icon: 'i-swap', value: '200M+', label: 'Transactions par an' }
+    { icon: 'i-globe', value: 'CEMAC', label: '' },
+    { icon: 'i-users', value: '1,5M+', label: 'Utilisateurs finaux' },
+    { icon: 'i-swap', value: '100M+', label: 'Transactions par an' }
   ];
   @ViewChildren('card') cards!: QueryList<ElementRef<HTMLElement>>;
   private io?: IntersectionObserver;
@@ -30,13 +30,14 @@ export class HomeImpactComponent implements AfterViewInit, OnDestroy {
     }), { threshold: .35 });
     els.forEach(el => this.io?.observe(el));
   }
-  initial(raw: string): string { return '0' + (raw.match(/^[\d,.]+(.*)$/)?.[1] || ''); }
+  initial(raw: string): string { return /^[\d,.]/.test(raw) ? '0' + (raw.match(/^[\d,.]+(.*)$/)?.[1] || '') : raw; }
   private animate(el: HTMLElement, index: number): void {
     if (el.classList.contains('on')) return;
     el.classList.add('on');
     const valueEl = el.querySelector<HTMLElement>('[data-impact-value]');
     if (!valueEl) return;
     const raw = this.items[index].value, m = raw.match(/^([\d,.]+)(.*)$/);
+    if (!m) { valueEl.textContent = raw; return; }
     const target = Number((m?.[1] || '0').replace(',', '.')), suffix = m?.[2] || '', decimal = (m?.[1] || '').includes(',');
     const timer = window.setTimeout(() => {
       const start = performance.now();

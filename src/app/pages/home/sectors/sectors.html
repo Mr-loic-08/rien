@@ -16,13 +16,12 @@
     </div>
 
     <div class="sec-stage" [attr.data-animation-key]="animationKey">
-      <div class="sec-visual" [ngClass]="current.tone">
+      <div class="sec-visual itech-sector-photo" [ngClass]="current.tone" [style.--sector-photo]="'url(' + current.photo + ')'">
         <div class="sv-grid"></div>
         <div class="sv-glow"></div>
         <div class="sv-orbit"></div>
         <div class="sv-badge">
           <svg class="ic" aria-hidden="true"><use [attr.href]="'#' + current.icon"></use></svg>
-          <span>0{{ active + 1 }} / 03</span>
         </div>
         <h3 class="sv-title">{{ l.t(current.title) }}</h3>
       </div>
@@ -32,9 +31,9 @@
         <h4>{{ l.t(current.title) }}</h4>
         <p>{{ l.t(current.text) }}</p>
         <div class="sp-steps">
-          <div><b>01</b><span>{{ l.t('Diagnostic SI') }}</span></div>
-          <div><b>02</b><span>{{ l.t('Déploiement') }}</span></div>
-          <div><b>03</b><span>{{ l.t('Accompagnement') }}</span></div>
+          @for (highlight of current.highlights; track highlight) {
+            <div><span>{{ l.t(highlight) }}</span></div>
+          }
         </div>
         <a [href]="'#/secteurs/' + current.key" class="btn btn-primary">
           {{ l.t('En savoir plus') }}

@@ -43,9 +43,9 @@ export class SecteursPageComponent implements OnInit, OnDestroy {
 
 
   readonly stats = [
-    { icon:'i-cal', value:'19+', label:"Années d'expérience" },
+    { icon:'i-cal', value:'20+', label:"Années d'expérience" },
     { icon:'i-bank', value:'250+', label:'Institutions accompagnées' },
-    { icon:'i-globe', value:'10+', label:'Pays en Afrique' },
+    { icon:'i-globe', value: 'CEMAC', label: '' },
     { icon:'i-head', value:'24/7', label:'Support disponible' },
     { icon:'i-pin', value:'CEMAC', label:'Présence régionale' }
   ];

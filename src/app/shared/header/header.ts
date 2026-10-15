@@ -19,8 +19,8 @@ export class HeaderComponent{
     {icon:'s-genie',label:'GÉNIE LOGICIEL',href:'#/solutions/genie-logiciel'},
   ];
   secteurs: MenuItem[] = [
+    {icon:'i-bank',label:'Banques',href:'#/secteurs/banques-commerciales'},
     {icon:'i-microfinance',label:'Microfinances',href:'#/secteurs/microfinances'},
-    {icon:'i-bank',label:'Banques commerciales',href:'#/secteurs/banques-commerciales'},
     {icon:'i-corporate',label:'Grandes entreprises',href:'#/secteurs/grandes-entreprises'},
   ];
   entreprise: MenuItem[] = [

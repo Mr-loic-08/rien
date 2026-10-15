@@ -54,7 +54,6 @@
                         [class.sel]="feat===i"
                         (click)="setFeat(i)"
                         (mouseenter)="setFeat(i)">
-                  <span class="rh-feat-num">0{{i+1}}</span>
                   <span class="rh-feat-check">
                     <svg class="ic"><use href="#i-check"></use></svg>
                   </span>
@@ -90,7 +89,6 @@
       <div class="rh-ben-grid">
         @for(b of benefits; track b.text; let i=$index){
           <article class="rh-ben-item">
-            <span class="rh-ben-num">0{{i+1}}</span>
             <span class="rh-ben-icon">
               <svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg>
             </span>

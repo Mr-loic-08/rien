@@ -1,6 +1,14 @@
 import { Injectable, signal } from '@angular/core';
 export type Language = 'fr'|'en';
 const EN: Record<string,string> = {
+  'Services bancaires digitaux': 'Digital banking services',
+  'Sécurité des transactions': 'Transaction security',
+  'Suivi des opérations': 'Operations monitoring',
+  'Proximité avec les clients': 'Closer customer relationships',
+  'Automatisation des processus': 'Process automation',
+  'Intégration des outils métiers': 'Business tools integration',
+  'Pilotage des activités': 'Business performance monitoring',
+
   "Actualités et innovations": "News and innovations",
   "Adaptées": "Tailored",
   "Articles & publications": "Articles & publications",
@@ -162,7 +170,7 @@ const EN: Record<string,string> = {
   "Des atouts qui font": "Strengths that make",
   "la différence": "the difference",
   "Expertise reconnue": "Recognized expertise",
-  "Plus de 19 ans d’expérience dans le domaine des technologies financières.": "Over 19 years of experience in financial technology.",
+  "Plus de 20 ans d’expérience dans le domaine des technologies financières.": "Over 20 years of experience in financial technology.",
   "Des solutions adaptées à vos besoins et à votre environnement.": "Solutions adapted to your needs and environment.",
   "Sécurité et conformité": "Security and compliance",
   "Des solutions conformes aux normes internationales et aux exigences locales.": "Solutions that meet international standards and local requirements.",
@@ -322,7 +330,7 @@ const EN: Record<string,string> = {
   "Des indicateurs concrets qui reflètent notre accompagnement des institutions financières en Afrique.":'Concrete indicators that reflect our support for financial institutions across Africa.',
   "Années d'expérience":'Years of experience','Institutions accompagnées':'Institutions supported','Pays en Afrique':'Countries in Africa','Utilisateurs finaux':'End users','Transactions par an':'Transactions per year',
   'Nos clients':'Our clients','Ils nous font':'They put their','confiance':'trust in us',
-  'Des institutions financières, entreprises et organisations qui avancent avec nous depuis plus de 19 ans.':'Financial institutions, companies and organizations moving forward with us for over 19 years.',
+  'Des institutions financières, entreprises et organisations qui avancent avec nous depuis plus de 20 ans.':'Financial institutions, companies and organizations moving forward with us for over 20 years.',
   'Clients de confiance':'Trusted clients',
   'Pourquoi I-TECH':'Why I-TECH','Un partenaire technologique de confiance':'A trusted technology partner',
   'Cliquez sur une fenêtre pour découvrir chaque engagement.':'Click a window to discover each commitment.',
@@ -603,7 +611,7 @@ const EN: Record<string,string> = {
   "Tous les articles": "All articles",
   "Produits": "Products",
   "Projets": "Projects",
-  "19 ans d'innovation au service de la transformation digitale en Afrique Centrale.": "19 years of innovation supporting digital transformation in Central Africa.",
+  "20+ ans d'innovation au service de la transformation digitale en Afrique Centrale.": "20+ years of innovation supporting digital transformation in Central Africa.",
   "Aucune opportunité trouvée": "No opportunities found",
   "Candidature spontanée": "Unsolicited application",
   "Construisez votre avenir": "Build your future",

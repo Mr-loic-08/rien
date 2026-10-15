@@ -70,7 +70,6 @@
         <div class="core-arch-cards">
           @for(item of band.items; track item.name; let i=$index){
             <article class="core-arch-card core-arch-card-{{i+1}}" [style.--card-accent]="i<2 ? '#2f6bff' : '#f26722'">
-              <span class="core-arch-card-num">0{{i+1}}</span>
               <span class="core-arch-card-icon"><svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg></span>
               <div class="core-arch-card-copy">
                 <strong>{{l.t(item.name)}}</strong>
@@ -124,7 +123,6 @@
           <div class="ben-item" [style.transition-delay.ms]="i*90">
             <span class="ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
             <span class="ben-txt">{{l.t(b.text)}}</span>
-            <span class="ben-num">0{{i+1}}</span>
           </div>
         }
       </div>

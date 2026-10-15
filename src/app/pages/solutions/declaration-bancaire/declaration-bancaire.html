@@ -50,7 +50,6 @@
                         [class.sel]="feat===i"
                         (click)="setFeat(i)"
                         (mouseenter)="setFeat(i)">
-                  <span class="db-feat-num">0{{i+1}}</span>
                   <span class="db-feat-check">
                     <svg class="ic"><use href="#i-check"></use></svg>
                   </span>
@@ -140,7 +139,6 @@
       <div class="db-ben-grid">
         @for(b of benefits; track b.text; let i=$index){
           <article class="db-ben-item">
-            <span class="db-ben-num">0{{i+1}}</span>
             <span class="db-ben-icon">
               <svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg>
             </span>

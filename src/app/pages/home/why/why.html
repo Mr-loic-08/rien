@@ -9,7 +9,7 @@
    @for(i of items;track i.b;let idx=$index){
     <button type="button" class="p-win" (click)="show(idx)" [style.animation-delay.ms]="idx*70">
      <div class="pw-chrome"><span></span><span></span><span></span><em>{{l.t(i.b)}}</em></div>
-     <div class="pw-body"><div class="pw-ico"><svg class="ic"><use [attr.href]="'#'+i.icon"></use></svg></div>
+     <div class="pw-body"><span class="itech-why-card-photo" [style.background-image]="'url(' + whyPhotos[idx] + ')'" aria-hidden="true"></span><div class="pw-ico"><svg class="ic"><use [attr.href]="'#'+i.icon"></use></svg></div>
       <b>{{l.t(i.b)}}</b><span>{{l.t(i.s)}}</span><i class="pw-open">{{l.t('Ouvrir')}}</i></div>
     </button>
    }

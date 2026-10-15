@@ -5,6 +5,14 @@ type WhyItem={icon:string;b:string;s:string};
 @Component({selector:'app-home-why',standalone:true,templateUrl:'./why.html'})
 export class HomeWhyComponent{
  readonly l=inject(LanguageService);
+ readonly whyPhotos = [
+  'images/ressources/equipe.webp',
+  'images/ressources/support.webp',
+  'images/ressources/banque.webp',
+  'images/ressources/infrastructure.webp',
+  'images/ressources/cloud.webp',
+  'images/ressources/afrique-tech.webp'
+ ];
  open:number|null=null;
  readonly items:WhyItem[]=[
   {icon:'i-users',b:'Expertise métier',s:'Une connaissance approfondie des métiers financiers.'},

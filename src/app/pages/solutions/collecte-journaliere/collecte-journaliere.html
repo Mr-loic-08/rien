@@ -59,7 +59,6 @@
       <div class="collect-band-flow">
         @for(item of band.items; track item.name; let i=$index){
           <article class="collect-band-card" [style.--delay]="(i*90)+'ms'">
-            <span class="collect-band-num">0{{i+1}}</span>
             <span class="collect-band-icon">
               <svg class="ic"><use [attr.href]="'#'+item.icon"></use></svg>
             </span>
@@ -85,7 +84,6 @@
               <li>
                 <button type="button" class="feat-chip" [class.sel]="feat===i"
                         (click)="setFeat(i)" (mouseenter)="setFeat(i)">
-                  <span class="feat-num">0{{i+1}}</span>
                   <span class="feat-chk"><svg class="ic"><use href="#i-check"></use></svg></span>
                   <span class="feat-txt">{{l.t(f.title)}}</span>
                 </button>
@@ -143,7 +141,6 @@
           <div class="ben-item" [style.transition-delay.ms]="i*90">
             <span class="ben-ic"><svg class="ic"><use [attr.href]="'#'+b.icon"></use></svg></span>
             <span class="ben-txt">{{l.t(b.text)}}</span>
-            <span class="ben-num">0{{i+1}}</span>
           </div>
         }
       </div>

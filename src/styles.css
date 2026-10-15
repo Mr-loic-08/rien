@@ -11452,3 +11452,73 @@ body a.btn:focus-visible,body button.btn:focus-visible{outline:3px solid #1768b3
  .pg-hero.on-photo .pg-hero-grid{padding-top:110px!important}
  :is(.sx-hero,.ent-hero,.ent-detail-hero,.resources-hero,.ct-hero,.dm-hero,.genie-hero){padding-top:120px!important}
 }
+
+
+/* V56 — Accueil : variété visuelle des expertises et photos des secteurs */
+#secteurs .itech-sector-photo {
+  isolation:isolate;
+  background-image:linear-gradient(180deg,rgba(5,24,47,.10) 0%,rgba(5,24,47,.40) 50%,rgba(5,24,47,.88) 100%),var(--sector-photo) !important;
+  background-size:cover !important;
+  background-position:center !important;
+  transition:background-image .3s ease;
+}
+#secteurs .itech-sector-photo .sv-title {text-shadow:0 2px 16px rgba(0,0,0,.8);}
+#secteurs .itech-sector-photo .sv-grid {opacity:.12;}
+.why-fold .p-win .pw-body {position:relative;isolation:isolate;min-height:215px;overflow:hidden;}
+.why-fold .p-win .itech-why-card-photo {
+  position:absolute;inset:0;z-index:-2;
+  background-size:cover;background-position:center;
+  opacity:.50;filter:saturate(.85);
+  transition:transform .45s ease,opacity .35s ease;
+}
+.why-fold .p-win .pw-body::before {
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,26,48,.72),rgba(6,26,48,.96));
+}
+.why-fold .p-win:hover .itech-why-card-photo,
+.why-fold .p-win:focus-visible .itech-why-card-photo {transform:scale(1.07);opacity:.75;}
+.why-fold .p-win .pw-body b,.why-fold .p-win .pw-body span:not(.itech-why-card-photo),
+.why-fold .p-win .pw-body i {position:relative;color:#fff;}
+@media(prefers-reduced-motion:reduce){.why-fold .p-win .itech-why-card-photo{transition:none}}
+
+/* V60 - Remarque 5 : CTA de l'accueil sans photographie de fond.
+   Règles limitées au composant Accueil pour ne pas affecter les autres CTA. */
+body app-home-cta > section.cta.home-final-cta.cta-fold,
+body app-home-cta > section.cta.home-final-cta.cta-fold::before,
+body app-home-cta > section.cta.home-final-cta.cta-fold::after {
+  background-image: none !important;
+}
+body app-home-cta > section.cta.home-final-cta.cta-fold {
+  background: linear-gradient(120deg,#082945 0%,#0d3555 55%,#0b2c4c 100%) !important;
+}
+
+
+/* V61 — Accueil : remarque 7, section Nos clients sans compteur, fond uniforme lisible. */
+body app-home-clients > section.clients-showcase#nos-clients {
+  background:linear-gradient(125deg,#092744 0%,#103b60 52%,#0a2d4c 100%)!important;
+  background-image:linear-gradient(125deg,#092744 0%,#103b60 52%,#0a2d4c 100%)!important;
+  color:#fff!important;
+}
+body app-home-clients > section.clients-showcase#nos-clients .clients-photo-bg {
+  display:none!important;
+}
+body app-home-clients > section.clients-showcase#nos-clients::before {
+  background:radial-gradient(ellipse at 80% 20%,rgba(242,106,33,.10),transparent 55%)!important;
+}
+body app-home-clients > section.clients-showcase#nos-clients .clients-showcase-head h2,
+body app-home-clients > section.clients-showcase#nos-clients .clients-showcase-head p {
+  color:#fff!important;text-shadow:none!important;
+}
+/* V61 — Pourquoi I-TECH : même fond que le CTA final, sans modifier ses cartes. */
+body app-home-why > section.partner.why-fold {
+  background:linear-gradient(120deg,#082945 0%,#0d3555 55%,#0b2c4c 100%)!important;
+  background-image:linear-gradient(120deg,#082945 0%,#0d3555 55%,#0b2c4c 100%)!important;
+}
+
+/* V63 — decorative step numbers removed, content and layout preserved */
+.pg-detail.core-banking-page .acc-item button::before{content:none!important;display:none!important}
+.pg-detail.core-banking-page .acc-item button{padding-left:20px!important}
+.mf-page-angular .mapping-number{display:none!important}
+.mf-page-angular .mapping-card{padding-left:20px!important}
+.sectors .sp-steps div{display:flex;align-items:center;min-height:68px;padding:16px!important;border-left:3px solid #f26a21}
+.sectors .sp-steps span{font-size:13px!important;line-height:1.4!important}
