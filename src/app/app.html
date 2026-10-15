@@ -14,6 +14,7 @@
         <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
         <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" /></symbol>
         <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></symbol>
+        <symbol id="i-ussd" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 5h4M10 19h4M9 9h6M9 12h4M9 15h6"/></symbol>
         <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" /><path d="M11 18h2" /></symbol>
         <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></symbol>
         <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></symbol>
@@ -86,9 +87,13 @@
 <app-header></app-header>
 <app-secteurs-page></app-secteurs-page>
 <app-footer></app-footer>
-}@else if(isGenieLogiciel){
+}@else if(isAlphaMonetique){
 <app-header></app-header>
-<app-genie-logiciel-page></app-genie-logiciel-page>
+<app-alpha-monetique-page></app-alpha-monetique-page>
+<app-footer></app-footer>
+}@else if(isUssd){
+<app-header></app-header>
+<app-ussd-page></app-ussd-page>
 <app-footer></app-footer>
 }@else if(isDeclarationBancaire){
 <app-header></app-header>

@@ -26,7 +26,8 @@ import { CollecteJournalierePageComponent } from './pages/solutions/collecte-jou
 import { DigitalMobilePageComponent } from './pages/solutions/digital-mobile/digital-mobile';
 import { GestionRhPageComponent } from './pages/solutions/gestion-rh/gestion-rh';
 import { DeclarationBancairePageComponent } from './pages/solutions/declaration-bancaire/declaration-bancaire';
-import { GenieLogicielPageComponent } from './pages/solutions/genie-logiciel/genie-logiciel';
+import { AlphaMonetiquePageComponent } from './pages/solutions/alpha-monetique/alpha-monetique';
+import { UssdPageComponent } from './pages/solutions/ussd/ussd';
 import { SecteursPageComponent } from './pages/secteurs/secteurs';
 import { MicrofinancesPageComponent } from './pages/secteurs/microfinances/microfinances';
 import { BanquesCommercialesPageComponent } from './pages/secteurs/banques-commerciales/banques-commerciales';
@@ -34,7 +35,7 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
 
 @Component({
   selector: 'app-root', standalone: true,
-  imports: [SiteErrorComponent, HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, GenieLogicielPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent, CarrieresPageComponent, PartenairesPageComponent],
+  imports: [SiteErrorComponent, HeaderComponent, HeroComponent, HomeSolutionsComponent, HomeSectorsComponent, HomeImpactComponent, HomeTrustComponent, HomeClientsComponent, HomeWhyComponent, HomeCtaComponent, FooterComponent, SolutionsPageComponent, CoreBankingPageComponent, CollecteJournalierePageComponent, DigitalMobilePageComponent, GestionRhPageComponent, DeclarationBancairePageComponent, AlphaMonetiquePageComponent, UssdPageComponent, SecteursPageComponent, MicrofinancesPageComponent, BanquesCommercialesPageComponent, GrandesEntreprisesPageComponent, RessourcesPageComponent, EntreprisePageComponent, AproposPageComponent, ContactPageComponent, DemoPageComponent, ConfidentialitePageComponent, CarrieresPageComponent, PartenairesPageComponent],
   templateUrl: './app.html', styleUrl: './app.css'
 })
 export class App implements OnInit, OnDestroy {
@@ -70,7 +71,8 @@ export class App implements OnInit, OnDestroy {
   isDigitalMobile=false;
   isGestionRh=false;
   isDeclarationBancaire=false;
-  isGenieLogiciel=false;
+  isAlphaMonetique=false;
+  isUssd=false;
   isSecteurs=false;
   isMicrofinances=false;
   isBanquesCommerciales=false;
@@ -91,7 +93,8 @@ export class App implements OnInit, OnDestroy {
     this.isDigitalMobile=h==='#/solutions/digital-mobile';
     this.isGestionRh=h==='#/solutions/gestion-rh';
     this.isDeclarationBancaire=h==='#/solutions/declaration-bancaire';
-    this.isGenieLogiciel=h==='#/solutions/genie-logiciel';
+    this.isAlphaMonetique=h==='#/solutions/alpha-monetique';
+    this.isUssd=h==='#/solutions/ussd';
     this.isSecteurs=h==='#/secteurs';
     this.isMicrofinances=h==='#/secteurs/microfinances';
     this.isBanquesCommerciales=h==='#/secteurs/banques-commerciales';
@@ -106,7 +109,7 @@ export class App implements OnInit, OnDestroy {
     this.isPartenaires=h==='#/entreprise/partenaires';
     const known = !h || h === '#' || h === '#/' || h === '#/accueil' || [
       this.isSolutions,this.isCoreBanking,this.isCollecteJournaliere,this.isDigitalMobile,
-      this.isGestionRh,this.isDeclarationBancaire,this.isGenieLogiciel,this.isSecteurs,
+      this.isGestionRh,this.isDeclarationBancaire,this.isAlphaMonetique,this.isUssd,this.isSecteurs,
       this.isMicrofinances,this.isBanquesCommerciales,this.isGrandesEntreprises,
       this.isRessources,this.isEntreprise,this.isApropos,this.isContact,this.isDemo,
       this.isPrivacy,this.isCarrieres,this.isPartenaires

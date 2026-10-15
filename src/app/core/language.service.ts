@@ -1,6 +1,20 @@
 import { Injectable, signal } from '@angular/core';
 export type Language = 'fr'|'en';
 const EN: Record<string,string> = {
+  'ALPHA Monétique': 'ALPHA Card Payments',
+  'Une solution de la gamme ALPHA': 'A solution from the ALPHA range',
+  'Découvrez ALPHA Monétique et échangez avec nos équipes pour en savoir plus.': 'Discover ALPHA Card Payments and contact our team to learn more.',
+  'La présentation détaillée des fonctionnalités sera publiée après validation par l’équipe I-TECH.': 'Detailed features will be published after validation by the I-TECH team.',
+  'Contactez I-TECH pour en savoir plus sur ALPHA Monétique.': 'Contact I-TECH to learn more about ALPHA Card Payments.',
+  'Une solution de la gamme I-TECH': 'An I-TECH solution',
+  'Découvrez la solution USSD et contactez nos équipes pour obtenir les informations détaillées.': 'Discover the USSD solution and contact our team for detailed information.',
+  'Les fonctionnalités et les informations techniques de cette solution sont en cours de validation par I-TECH.': 'Features and technical details for this solution are being validated by I-TECH.',
+  'Contactez I-TECH pour en savoir plus sur USSD.': 'Contact I-TECH to learn more about USSD.',
+  'Présentation de la solution': 'Solution overview',
+  'Informations sur demande': 'Information on request',
+  'Solution ALPHA Monétique': 'ALPHA Card Payments solution',
+  'Solution USSD': 'USSD solution',
+
   'Services bancaires digitaux': 'Digital banking services',
   'Sécurité des transactions': 'Transaction security',
   'Suivi des opérations': 'Operations monitoring',

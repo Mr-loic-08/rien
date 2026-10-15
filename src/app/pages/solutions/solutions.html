@@ -18,7 +18,7 @@
       </div>
       <div class="solutions-ref-impact-grid">
         <div class="solutions-ref-feature"><svg class="ic"><use href="#i-shield"></use></svg><b>{{l.t('Sécurisées')}}</b><p>{{l.t('Conformité et protection des données')}}</p></div>
-        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-settings"></use></svg><b>{{l.t('Intégrées')}}</b><p>{{l.t('Une architecture complète et modulaire')}}</p></div>
+        <div class="solutions-ref-feature"><svg class="ic"><use href="#i-layers"></use></svg><b>{{l.t('Intégrées')}}</b><p>{{l.t('Une architecture complète et modulaire')}}</p></div>
         <div class="solutions-ref-feature"><svg class="ic"><use href="#i-chart"></use></svg><b>{{l.t('Performantes')}}</b><p>{{l.t('Optimisation des processus et productivité')}}</p></div>
         <div class="solutions-ref-feature"><svg class="ic"><use href="#i-users"></use></svg><b>{{l.t('Adaptées')}}</b><p>{{l.t('Conçues pour les réalités africaines')}}</p></div>
       </div>
@@ -45,15 +45,13 @@
     <div class="solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
     <section id="solutions-ref-alpha" class="solutions-ref-alpha">
       <div class="solutions-ref-alpha-intro">
-        <span class="solutions-ref-eyebrow">{{l.t('NOTRE GAMME')}}</span>
-        <h2>ALPHA</h2>
+        <div class="solutions-ref-alpha-title"><span class="solutions-ref-eyebrow">{{l.t('NOTRE GAMME')}}</span><h2>ALPHA</h2></div>
         <p>{{l.t('Des solutions spécialisées pour digitaliser et optimiser vos métiers.')}}</p>
       </div>
       <div class="solutions-ref-alpha-products">
         @for(c of solutionCards; track c.key){
           <a class="solutions-ref-alpha-product" [href]="'#/solutions/'+c.key">
             <span class="solutions-ref-alpha-icon"><svg class="ic"><use [attr.href]="'#'+c.icon"></use></svg></span>
-            <small>ALPHA</small>
             <b>{{l.t(c.name)}}</b>
           </a>
         }

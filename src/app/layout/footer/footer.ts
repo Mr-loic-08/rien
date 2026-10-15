@@ -17,7 +17,7 @@ export class FooterComponent implements AfterViewInit{
  readonly solutions=[
   ['s-core','CORE BANKING','#/solutions/core-banking'],['s-collecte','COLLECTE JOURNALIÈRE','#/solutions/collecte-journaliere'],
   ['s-mobile','DIGITAL & MOBILE','#/solutions/digital-mobile'],['s-rh','GESTION RH','#/solutions/gestion-rh'],
-  ['s-decl','DÉCLARATION BANCAIRE','#/solutions/declaration-bancaire'],['s-genie','GÉNIE LOGICIEL','#/solutions/genie-logiciel']
+  ['s-decl','DÉCLARATION BANCAIRE','#/solutions/declaration-bancaire'],['s-genie','ALPHA MONÉTIQUE','#/solutions/alpha-monetique'],['s-mobile','USSD','#/solutions/ussd']
  ];
  readonly sectors=[['i-microfinance','Microfinances','#/secteurs/microfinances'],['i-bank','Banques commerciales','#/secteurs/banques-commerciales'],['i-corporate','Grandes entreprises','#/secteurs/grandes-entreprises']];
  readonly company=[['i-info','À propos','#/entreprise/apropos'],['i-briefcase','Carrières','#/entreprise/carrieres'],['i-handshake','Partenaires','#/entreprise/partenaires'],['i-office',"L'Entreprise",'#/entreprise']];

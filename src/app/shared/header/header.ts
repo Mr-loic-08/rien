@@ -16,7 +16,8 @@ export class HeaderComponent{
     {icon:'s-mobile',label:'DIGITAL & MOBILE',href:'#/solutions/digital-mobile'},
     {icon:'s-rh',label:'GESTION RH',href:'#/solutions/gestion-rh'},
     {icon:'s-decl',label:'DÉCLARATION BANCAIRE',href:'#/solutions/declaration-bancaire'},
-    {icon:'s-genie',label:'GÉNIE LOGICIEL',href:'#/solutions/genie-logiciel'},
+    {icon:'s-genie',label:'ALPHA MONÉTIQUE',href:'#/solutions/alpha-monetique'},
+    {icon:'s-mobile',label:'USSD',href:'#/solutions/ussd'},
   ];
   secteurs: MenuItem[] = [
     {icon:'i-bank',label:'Banques',href:'#/secteurs/banques-commerciales'},

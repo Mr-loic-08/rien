@@ -11522,3 +11522,154 @@ body app-home-why > section.partner.why-fold {
 .mf-page-angular .mapping-card{padding-left:20px!important}
 .sectors .sp-steps div{display:flex;align-items:center;min-height:68px;padding:16px!important;border-left:3px solid #f26a21}
 .sectors .sp-steps span{font-size:13px!important;line-height:1.4!important}
+
+/* V64 — nouvelles pages solutions, sans données produit non validées */
+.it-new-solution .pg-hero {min-height: min(76vh, 680px);background:linear-gradient(125deg,#061a33,#0d2b4a 55%,#153f69)}
+.it-new-solution .pg-hero .hero-bg-tint {background:linear-gradient(120deg,#061a33cc,#0d2b4a88)}
+.it-new-solution-content {background:#edf3f8;padding:clamp(55px,7vw,110px) 0;border-radius:44px 44px 0 0;margin-top:-30px;position:relative}
+.it-new-solution-panel {max-width:900px;margin:auto;padding:clamp(24px,5vw,64px);border-radius:30px;background:white;box-shadow:0 16px 50px #0d2b4a18}
+.it-new-solution-panel h2 {color:#0d2b4a;margin-bottom:20px}
+.it-new-solution-panel p {line-height:1.8;margin-bottom:28px;color:#334b62}
+
+/* V65 — Solutions : signature typographique ALPHA sans doublons dans les cartes. */
+body .solutions-ref .solutions-ref-alpha-intro h2 {
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+  font-size: clamp(2.25rem, 4.2vw, 3.65rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.12 !important;
+  color: #f26a21 !important;
+  margin: .12em 0 .25em !important;
+  text-transform: uppercase;
+}
+body .solutions-ref .solutions-ref-alpha-product b {
+  display: block;
+  font-size: clamp(.82rem, 1vw, 1rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .005em;
+}
+body .solutions-ref .solutions-ref-alpha-product {
+  gap: .65rem;
+}
+@media (max-width: 700px) {
+  body .solutions-ref .solutions-ref-alpha-intro h2 { letter-spacing: .055em !important; }
+}
+
+/* V66 — Solutions: composition alignée, pictogrammes cohérents et raccord Hero. */
+body .solutions-ref .solutions-ref-alpha-title {display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+body .solutions-ref .solutions-ref-alpha-title .solutions-ref-eyebrow {margin:0!important;line-height:1.15!important;white-space:nowrap}
+body .solutions-ref .solutions-ref-alpha-title h2 {margin:0!important;line-height:1.05!important}
+body .solutions-ref .solutions-ref-alpha-products {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;align-items:stretch!important}
+body .solutions-ref .solutions-ref-alpha-product {box-sizing:border-box;min-height:118px!important;padding:14px 9px!important;border:1px solid #c7dcec!important;border-radius:16px!important;gap:8px!important;justify-content:flex-start!important;transition:transform .25s,box-shadow .25s!important}
+body .solutions-ref .solutions-ref-alpha-icon {width:48px!important;height:48px!important;flex:none!important;margin:0 auto!important;display:grid!important;place-items:center!important}
+body .solutions-ref .solutions-ref-alpha-icon svg {width:36px!important;height:36px!important;display:block!important}
+body .solutions-ref .solutions-ref-alpha-product b {min-height:2.8em!important;display:flex!important;align-items:center!important;justify-content:center!important}
+body .solutions-ref .solutions-ref-alpha-product[href$="/ussd"] {grid-column:2 / span 2;justify-self:center;width:min(100%,240px)}
+body .solutions-ref .solutions-ref-impact-grid .solutions-ref-feature svg {width:36px!important;height:36px!important;flex:none!important}
+body .solutions-ref .solutions-ref-impact-grid .solutions-ref-feature {align-items:center!important;text-align:center!important}
+body .solutions-ref .solutions-ref-scene {margin-top:-1px!important;padding-top:0!important}
+body .solutions-ref .solutions-ref-scene > section.solutions-ref-impact {margin-top:0!important}
+body .solutions-ref .solutions-ref-hero::after {display:none!important}
+/* Accueil : grille équilibrée, dernière carte USSD centrée. */
+body app-home-solutions .sol-grid {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(12px,2vw,24px)!important}
+body app-home-solutions .sol-card:last-child {grid-column:2;min-width:0}
+body app-home-solutions .sol-card-top {display:flex;align-items:center;justify-content:center;min-height:76px!important}
+body app-home-solutions .sol-art {display:grid!important;place-items:center!important;flex:none!important}
+body app-home-solutions .sol-art-svg {width:38px!important;height:38px!important;display:block!important}
+@media(max-width:850px){
+ body .solutions-ref .solutions-ref-alpha {grid-template-columns:1fr!important}
+ body .solutions-ref .solutions-ref-alpha-products {grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ body .solutions-ref .solutions-ref-alpha-product[href$="/ussd"] {grid-column:2 / span 1;width:100%}
+ body app-home-solutions .sol-grid {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body app-home-solutions .sol-card:last-child {grid-column:1 / -1;justify-self:center;width:min(100%,400px)}
+}
+@media(max-width:560px){
+ body .solutions-ref .solutions-ref-alpha-products {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body .solutions-ref .solutions-ref-alpha-product[href$="/ussd"] {grid-column:1 / -1;width:min(100%,210px)}
+ body .solutions-ref .solutions-ref-alpha-title {gap:8px}
+ body .solutions-ref .solutions-ref-alpha-icon {height:44px!important;width:44px!important}
+ body .solutions-ref .solutions-ref-alpha-icon svg {height:32px!important;width:32px!important}
+}
+
+
+/* V67 — Gamme ALPHA compacte : grille régulière 3 + 3 + 1. */
+@media (min-width: 851px) {
+  body .solutions-ref .solutions-ref-alpha {
+    grid-template-columns: minmax(180px, 215px) minmax(0, 1fr) !important;
+    gap: clamp(18px, 2.8vw, 38px) !important;
+    padding: 18px clamp(22px, 4vw, 64px) !important;
+    min-height: 0 !important;
+    align-items: center !important;
+  }
+  body .solutions-ref .solutions-ref-alpha-products {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    max-width: 760px !important;
+    width: 100% !important;
+    justify-self: center !important;
+  }
+  body .solutions-ref .solutions-ref-alpha-product[href$="/ussd"] {
+    grid-column: 2 !important;
+    width: 100% !important;
+    justify-self: stretch !important;
+  }
+}
+body .solutions-ref .solutions-ref-alpha-product {
+  min-height: 94px !important;
+  padding: 10px 12px !important;
+  gap: 5px !important;
+  justify-content: center !important;
+  border-radius: 13px !important;
+}
+body .solutions-ref .solutions-ref-alpha-icon {
+  width: 36px !important;
+  height: 36px !important;
+}
+body .solutions-ref .solutions-ref-alpha-icon svg {
+  width: 29px !important;
+  height: 29px !important;
+}
+body .solutions-ref .solutions-ref-alpha-product b {
+  min-height: 2.4em !important;
+  line-height: 1.2 !important;
+  font-size: clamp(.78rem, .88vw, .94rem) !important;
+}
+body .solutions-ref .solutions-ref-alpha-intro h2 {
+  margin-bottom: 7px !important;
+}
+@media (min-width: 561px) and (max-width: 850px) {
+  body .solutions-ref .solutions-ref-alpha {padding: 18px 24px !important;gap: 16px !important;}
+  body .solutions-ref .solutions-ref-alpha-products {gap: 10px !important;}
+}
+@media (max-width: 560px) {
+  body .solutions-ref .solutions-ref-alpha {padding: 18px 14px !important;gap: 15px !important;}
+  body .solutions-ref .solutions-ref-alpha-products {gap: 9px !important;}
+  body .solutions-ref .solutions-ref-alpha-product[href$="/ussd"] {grid-column: 1 / -1 !important;max-width: 190px !important;justify-self: center !important;}
+}
+
+/* V68 — Page Solutions : raccord sans bande vide entre le Hero et Notre engagement. */
+body .solutions-ref .solutions-ref-hero {
+  margin-bottom:0!important;
+  border-bottom-left-radius:0!important;
+  border-bottom-right-radius:0!important;
+}
+body .solutions-ref .solutions-ref-scene {
+  margin-top:-18px!important;
+  padding-top:0!important;
+  position:relative!important;
+  z-index:2!important;
+}
+body .solutions-ref .solutions-ref-scene > section.solutions-ref-impact {
+  margin-top:0!important;
+  border-top-left-radius:30px!important;
+  border-top-right-radius:30px!important;
+}
+body .solutions-ref .solutions-ref-scene::after {top:0!important;}
+@media(max-width:700px){
+  body .solutions-ref .solutions-ref-scene {margin-top:-12px!important;}
+  body .solutions-ref .solutions-ref-scene > section.solutions-ref-impact {
+    border-top-left-radius:20px!important;
+    border-top-right-radius:20px!important;
+  }
+}
