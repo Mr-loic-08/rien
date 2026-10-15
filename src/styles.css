@@ -12813,3 +12813,38 @@ body:has(.angular-partners) .pg.angular-partners{width:100%;max-width:none;margi
 .angular-partners .pv48-inst{padding-top:100px!important}
 .angular-partners>.entv-native-divider.solutions-ref-divider{margin:0!important}
 @media(max-width:720px){.angular-partners .pv108-hero{min-height:640px!important;padding:110px 0 75px!important}.angular-partners .pv108-hero .pv108-hero-photo{background-position:60% center!important}.angular-partners .pv108-hero .ent-detail-veil{background:linear-gradient(90deg,rgba(4,27,52,.98),rgba(4,27,52,.78))!important}.angular-partners .pv108-hero-description{font-size:14px!important}.angular-partners .pv108-intro{padding:62px 0!important}.angular-partners .pv108-intro p{font-size:15px!important}}
+
+
+/* V109 — Contact & Support / Contact-Démo : séparateurs validés, sans retoucher les blocs. */
+.angular-contact, .angular-demo {overflow-x:clip}
+.angular-contact>.entv-native-divider.solutions-ref-divider,
+.angular-demo>.entv-native-divider.solutions-ref-divider{
+ position:relative!important;display:block!important;isolation:isolate;
+ width:100%!important;height:58px!important;min-height:58px!important;
+ margin:0!important;padding:0!important;border:0!important;
+ background:#052b4a!important;overflow:hidden!important;z-index:4;
+}
+.angular-contact>.entv-native-divider.solutions-ref-divider::before,
+.angular-demo>.entv-native-divider.solutions-ref-divider::before{
+ content:"";position:absolute;top:50%;left:0;right:0;height:2px;
+ background:linear-gradient(90deg,transparent,rgba(114,186,235,.58),rgba(255,255,255,.4),rgba(242,106,33,.6),transparent);
+ transform:translateY(-50%);
+}
+.angular-contact>.entv-native-divider .solutions-ref-divider-beam,
+.angular-demo>.entv-native-divider .solutions-ref-divider-beam{
+ position:absolute;top:calc(50% - 5px);left:4%;width:22%;height:10px;border-radius:99px;
+ background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);
+ filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+.angular-contact>.entv-native-divider .solutions-ref-divider-core,
+.angular-demo>.entv-native-divider .solutions-ref-divider-core{
+ position:absolute;top:calc(50% - 4px);left:4%;width:8px;height:8px;border-radius:50%;
+ background:#ff9a46;box-shadow:0 0 12px 4px rgba(242,106,33,.65),0 0 25px rgba(255,255,255,.45);
+ animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ .angular-contact>.entv-native-divider .solutions-ref-divider-beam,
+ .angular-contact>.entv-native-divider .solutions-ref-divider-core,
+ .angular-demo>.entv-native-divider .solutions-ref-divider-beam,
+ .angular-demo>.entv-native-divider .solutions-ref-divider-core{animation:none!important}
+}
