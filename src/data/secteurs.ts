@@ -91,7 +91,7 @@ export const SECTEURS: Secteur[] = [
       { icon: "i-conf", text: "Conformité COBAC" },
     ],
     recos: [
-      { besoin: "Gestion EMF", solution: "Alpha Microfinance", solKey: "core-banking" },
+      { besoin: "Gestion EMF", solution: "ALPHA Bank / Microfinance", solKey: "core-banking" },
       { besoin: "Collecte", solution: "I-Collect", solKey: "collecte-journaliere" },
       { besoin: "Mobile", solution: "Alpha Mobile Banking", solKey: "digital-mobile" },
       { besoin: "Reporting", solution: "Déclaration Bancaire", solKey: "declaration-bancaire" },
@@ -118,8 +118,8 @@ export const SECTEURS: Secteur[] = [
   },
   {
     key: "banques-commerciales",
-    label: "Banques",
-    short: "Banques",
+    label: "Banques Commerciales",
+    short: "Banques Commerciales",
     tagline: "Accélérez la transformation digitale de votre banque",
     intro:
       "Des solutions robustes pour moderniser les opérations bancaires, les paiements et les services digitaux.",
@@ -150,7 +150,7 @@ export const SECTEURS: Secteur[] = [
       { icon: "i-link", text: "Intégration API" },
     ],
     recos: [
-      { besoin: "ALPHA Platform", solution: "Alpha Bank", solKey: "core-banking" },
+      { besoin: "ALPHA Platform", solution: "ALPHA Bank / Microfinance", solKey: "core-banking" },
       { besoin: "Paiements", solution: "Alpha Monétique", solKey: "core-banking" },
       { besoin: "Digital", solution: "Alpha Mobile Banking", solKey: "digital-mobile" },
       { besoin: "Déclarations", solution: "Déclaration Bancaire", solKey: "declaration-bancaire" },

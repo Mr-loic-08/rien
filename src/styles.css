@@ -12848,3 +12848,27 @@ body:has(.angular-partners) .pg.angular-partners{width:100%;max-width:none;margi
  .angular-demo>.entv-native-divider .solutions-ref-divider-beam,
  .angular-demo>.entv-native-divider .solutions-ref-divider-core{animation:none!important}
 }
+
+
+/* V112 — Harmonisation transversale des bannières intérieures (sans modifier l'accueil). */
+@media (min-width: 769px) {
+  body main.pg > section:is(.ent42-hero,.ent-detail-hero,.ct-hero,.dm-hero,.resources-hero,.sx-hero,.mfv-hero,.sxv-hero,.solutions-ref-hero,.pg-hero):first-of-type {
+    min-height: 520px !important;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  body main.pg > section:is(.ent42-hero,.ent-detail-hero,.ct-hero,.dm-hero,.resources-hero,.sx-hero,.mfv-hero,.sxv-hero,.solutions-ref-hero,.pg-hero):first-of-type {
+    min-height: 400px !important;
+    box-sizing: border-box;
+  }
+}
+/* Hover bleu marine renforcé ; les boutons orange conservent leur couleur initiale. */
+body :is(a,button).btn:hover,
+body :is(a,button).button:hover,
+body :is(a,button).cta-button:hover {
+  background-color: #073054 !important;
+  border-color: #073054 !important;
+  color: #fff !important;
+  transition: background-color .25s ease,border-color .25s ease,color .25s ease;
+}

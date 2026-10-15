@@ -83,8 +83,7 @@ export const EXPERTS = [
 ];
 
 export const INTERESTS = [
-  "Alpha Bank",
-  "Alpha Microfinance",
+  "ALPHA Bank / Microfinance",
   "Alpha Mobile Banking",
   "Alpha Monétique",
   "Alpha Comptabilité",

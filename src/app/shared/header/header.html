@@ -47,7 +47,7 @@
       </li>
       <li class="drop-end" (mouseenter)="open.set('Contact')" (mouseleave)="open.set(null)" [class.open]="open()==='Contact'">
         <a href="#/contact"><svg class="ic nav-section-ic"><use href="#i-head"></use></svg>{{l.t('Contact & Support')}}<svg class="ic chev"><use href="#i-chev-r"></use></svg></a>
-        <div class="dropdown"><a *ngFor="let it of contact" [href]="it.href"><svg class="ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
+        <div class="dropdown"><a *ngFor="let it of contact" [href]="it.href" [attr.target]="it.href.startsWith('https://') ? '_blank' : null" [attr.rel]="it.href.startsWith('https://') ? 'noopener noreferrer' : null"><svg class="ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
       </li>
     </ul>
     <a href="#/contact/demo" class="btn btn-primary">{{l.t('Demander une démo')}}</a>
@@ -69,7 +69,7 @@
   <div class="m-item"><a href="#/ressources" (click)="closeMobile()"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-news"></use></svg>{{l.t('Ressources')}}</span></a></div>
   <div class="m-item">
     <button type="button" [class.open]="sub()==='Contact'" (click)="toggleSub('Contact')"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-head"></use></svg>{{l.t('Contact & Support')}}</span><svg class="ic"><use href="#i-chev-r"></use></svg></button>
-    <div class="m-sub" [class.open]="sub()==='Contact'"><a href="#/contact" class="m-all" (click)="closeMobile()">{{l.t('Contact & Support')}}</a><a *ngFor="let it of contact" [href]="it.href" class="has-art" (click)="closeMobile()"><svg class="ic m-art-ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
+    <div class="m-sub" [class.open]="sub()==='Contact'"><a href="#/contact" class="m-all" (click)="closeMobile()">{{l.t('Contact & Support')}}</a><a *ngFor="let it of contact" [href]="it.href" [attr.target]="it.href.startsWith('https://') ? '_blank' : null" [attr.rel]="it.href.startsWith('https://') ? 'noopener noreferrer' : null" class="has-art" (click)="closeMobile()"><svg class="ic m-art-ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
   </div>
   <div class="m-language-row"><span>Language</span><button type="button" class="language-toggle mobile language-energy-toggle" (click)="toggleLang()"><span [class.active]="l.lang()==='fr'">FR</span><i>/</i><span [class.active]="l.lang()==='en'">EN</span></button></div>
   <div class="m-cta"><a href="#/contact/demo" class="btn btn-primary" style="width:100%;justify-content:center" (click)="closeMobile()">{{l.t('Demander une démo')}}</a></div>

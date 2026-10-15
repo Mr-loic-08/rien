@@ -7,7 +7,7 @@ export class DemoPageComponent{
  sent=false; sending=false; error=false; faqOpen:number|null=0; sector=''; interests:string[]=[];
  countries=['Cameroun','Gabon','Congo','Tchad','République Centrafricaine','Guinée Équatoriale',"Côte d’Ivoire",'Sénégal','RD Congo','Autre'];
  sectors=['Microfinance','Banques commerciales','Grandes entreprises','Autre'];
- solutions=['Alpha Bank','Alpha Microfinance','Alpha Mobile Banking','Alpha Monétique','Alpha Comptabilité','Alpha RH','I-Collect','Déclaration Bancaire'];
+ solutions=['ALPHA Bank / Microfinance','Alpha Mobile Banking','Alpha Monétique','Alpha Comptabilité','Alpha RH','I-Collect','Déclaration Bancaire'];
  faqs=[
  {q:'Combien coûte une solution I-TECH ?',a:"Le coût dépend de la solution choisie, du nombre d'agences et d'utilisateurs, ainsi que des modules activés. Nous vous remettons un devis personnalisé après un premier échange."},
  {q:'Combien de temps dure un projet ?',a:'Un déploiement standard dure entre 6 et 16 semaines selon le périmètre, la reprise des données et les intégrations à réaliser.'},

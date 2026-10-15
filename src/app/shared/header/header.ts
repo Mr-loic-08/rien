@@ -11,7 +11,7 @@ export class HeaderComponent{
   scrolled=signal(false); menuOpen=signal(false); open=signal<string|null>(null); sub=signal<string|null>(null); progress=signal(0);
 
   solutions: MenuItem[] = [
-    {icon:'s-core',label:'CORE BANKING',href:'#/solutions/core-banking'},
+    {icon:'s-core',label:'ALPHA Platform',href:'#/solutions/core-banking'},
     {icon:'s-collecte',label:'COLLECTE JOURNALIÈRE',href:'#/solutions/collecte-journaliere'},
     {icon:'s-mobile',label:'DIGITAL & MOBILE',href:'#/solutions/digital-mobile'},
     {icon:'s-rh',label:'GESTION RH',href:'#/solutions/gestion-rh'},
@@ -31,7 +31,7 @@ export class HeaderComponent{
   ];
   contact: MenuItem[] = [
     {icon:'i-demo',label:'Contact / Démo',href:'#/contact/demo'},
-    {icon:'i-life',label:'Support Client',href:'#/contact'},
+    {icon:'i-life',label:'Support Client',href:'https://wa.me/237696613946?text=Bonjour%2C%20je%20contacte%20le%20support%20client%20d%E2%80%99I-TECH%20SARL.%20J%E2%80%99ai%20besoin%20d%E2%80%99assistance.'},
     {icon:'i-shield',label:'Politique de confidentialité',href:'#/contact/confidentialite'},
   ];
   menus: MenuDef[] = [
