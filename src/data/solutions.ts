@@ -198,7 +198,6 @@ export const SOLUTIONS: Solution[] = [
       { title: "Historique des opérations" },
       { title: "Géolocalisation des agences" },
       { title: "Notifications push & SMS" },
-      { title: "Authentification forte" },
     ],
     benefitsTitle: "Les bénéfices pour votre institution",
     benefits: [
