@@ -322,7 +322,7 @@ const EN: Record<string,string> = {
   "Croissance durable": "Sustainable growth",
   "Un développement maîtrisé": "Controlled development",
   "ILS NOUS FONT CONFIANCE": "THEY TRUST US",
-  "Témoignage d’un client": "Client testimonial",
+  "Avis d’un client": "Client review",
   "Grâce aux solutions I-TECH, nous avons pu digitaliser l’ensemble de nos opérations et améliorer significativement la qualité de service offerte à nos membres.": "Thanks to I-TECH solutions, we have digitized all our operations and significantly improved the quality of service provided to our members.",
   "Texte illustratif de la maquette — témoignage à valider avant publication": "Illustrative mockup text — testimonial must be verified before publication",
   "PRÊT À TRANSFORMER VOTRE INSTITUTION ?": "READY TO TRANSFORM YOUR INSTITUTION?",

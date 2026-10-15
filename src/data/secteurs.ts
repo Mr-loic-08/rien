@@ -118,8 +118,8 @@ export const SECTEURS: Secteur[] = [
   },
   {
     key: "banques-commerciales",
-    label: "Banques Commerciales",
-    short: "Banques Commerciales",
+    label: "Banques",
+    short: "Banques",
     tagline: "Accélérez la transformation digitale de votre banque",
     intro:
       "Des solutions robustes pour moderniser les opérations bancaires, les paiements et les services digitaux.",

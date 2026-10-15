@@ -28,7 +28,7 @@ export class SecteursPageComponent implements OnInit, OnDestroy {
 
   readonly sectors:SectorCard[]=[
     {key:'microfinances',label:'Microfinances',tone:'green',icon:'i-users',
-      cardImg:'images/secteurs/microfinances.jpg',
+      cardImg:'images/secteurs/microfinances-fintech.png',
       photoFallback:'https://images.pexels.com/photos/8872369/pexels-photo-8872369.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800',
       cardDesc:'Gestion des opérations, conformité COBAC, collecte terrain et digitalisation.'},
     {key:'banques-commerciales',label:'Banques Commerciales',tone:'blue',icon:'i-bank',

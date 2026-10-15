@@ -6,6 +6,17 @@ import { LanguageService } from '../../../core/language.service';
 })
 export class MicrofinancesPageComponent implements OnInit,OnDestroy{
  readonly l=inject(LanguageService);
+ readonly testimonials = [
+  {quote:'Grâce aux solutions I-TECH, nous avons pu digitaliser l’ensemble de nos opérations et améliorer significativement la qualité de service offerte à nos membres.',image:'images/secteurs/mf-avis-1-v97.png'},
+  {quote:'Exemple d’avis client à remplacer après validation : simplification du suivi des opérations et des membres.',image:'images/secteurs/mf-avis-2-v97.png'},
+  {quote:'Exemple d’avis client à remplacer après validation : meilleur accès aux informations pour les équipes.',image:'images/secteurs/mf-avis-3-v97.png'},
+  {quote:'Exemple d’avis client à remplacer après validation : accompagnement dans la transformation digitale.',image:'images/secteurs/mf-avis-4-v97.png'}
+ ];
+ testimonialIndex=0;
+ private testimonialTimer: ReturnType<typeof setInterval> | undefined;
+ showTestimonial(index:number){this.testimonialIndex=(index+this.testimonials.length)%this.testimonials.length;this.restartTestimonials()}
+ private restartTestimonials(){if(this.testimonialTimer)clearInterval(this.testimonialTimer);this.testimonialTimer=setInterval(()=>{this.testimonialIndex=(this.testimonialIndex+1)%this.testimonials.length},3500)}
+
  readonly media={
   video:{hd:'https://videos.pexels.com/video-files/37080143/15708451_3840_2160_60fps.mp4',poster:'https://images.pexels.com/videos/37080143/counting-money-lagos-market-marina-market-market-woman-37080143.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'},
   heroBg:[
@@ -44,8 +55,8 @@ export class MicrofinancesPageComponent implements OnInit,OnDestroy{
  onMappingScroll(el:HTMLElement){let best=0,d=Infinity,c=el.scrollLeft+el.clientWidth/2;Array.from(el.children).forEach((x,i)=>{const e=x as HTMLElement,n=Math.abs(e.offsetLeft+e.offsetWidth/2-c);if(n<d){d=n;best=i}});this.mappingActive=best}
 
  img=0; progress=0; videoOk=true; active=0; private raf=0; private started=0; readonly duration=6000;
- ngOnInit(){this.startProgress()}
- ngOnDestroy(){cancelAnimationFrame(this.raf)}
+ ngOnInit(){this.startProgress();this.restartTestimonials()}
+ ngOnDestroy(){cancelAnimationFrame(this.raf);if(this.testimonialTimer)clearInterval(this.testimonialTimer)}
  go(i:number){this.img=((i%3)+3)%3;this.progress=0;this.startProgress()}
  videoError(){this.videoOk=false}
  scrollToCard(i:number,el:HTMLElement){this.active=i; const card=el.children.item(i) as HTMLElement|null; card?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}

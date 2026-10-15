@@ -10860,7 +10860,7 @@ body .mfv-page h1,body .mfv-page h2,body .mfv-page p{margin:0}
 body .mfv-page em,body .mfv-page h1 span{color:var(--mf-orange);font-style:normal}
 body .mfv-page .mfv-kicker{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:inherit;margin-bottom:16px}
 body .mfv-page .mfv-kicker:before{content:"";width:23px;height:3px;border-radius:4px;background:var(--mf-orange)}
-body .mfv-page .mfv-hero{min-height:520px;display:flex;align-items:center;position:relative;isolation:isolate;background:#092b4a url('/images/secteurs/mf-hero.webp') center 28%/cover no-repeat;border-radius:0 0 42px 42px!important}
+body .mfv-page .mfv-hero{min-height:520px;display:flex;align-items:center;position:relative;isolation:isolate;background:#092b4a url('/images/secteurs/microfinances-fintech.png') center 28%/cover no-repeat;border-radius:0 0 42px 42px!important}
 body .mfv-page .mfv-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,27,52,.96) 0%,rgba(3,31,55,.89) 36%,rgba(4,28,50,.18) 78%);border-radius:inherit}
 body .mfv-page .mfv-hero-content{padding:115px 0 90px}
 body .mfv-page .mfv-hero h1{font-size:clamp(44px,5vw,75px);font-weight:850;line-height:1.05;margin-bottom:9px}
@@ -12518,4 +12518,213 @@ body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .rh-b
 body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .rh-ben-text {
   color:#f7fbff!important;
   -webkit-text-fill-color:#f7fbff!important;
+}
+
+
+/* V92 — Déclaration Bancaire : thème et séparateurs validés sur Solutions / Digital V89. */
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref{
+ position:relative!important;isolation:isolate!important;
+ background:linear-gradient(120deg,rgba(3,19,37,.80),rgba(9,37,64,.68) 48%,rgba(3,18,35,.83)),url('/images/ressources/banque.webp') center / cover fixed no-repeat!important;
+ color:#f7fbff!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-featshots,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-benefits,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-final-cta{
+ position:relative!important;box-sizing:border-box!important;margin:0!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ background:linear-gradient(135deg,rgba(9,39,68,.78),rgba(5,26,47,.68))!important;
+ color:#f7fbff!important;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-featshots::before,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-benefits::before,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-final-cta::before,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-featshots::after,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-benefits::after,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-final-cta::after{
+ content:none!important;display:none!important;animation:none!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-featshots > .container,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-benefits > .container,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-final-cta > .container{
+ width:min(100% - 48px,1200px)!important;max-width:1200px!important;
+ margin-inline:auto!important;box-sizing:border-box!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-featshots .sec-title,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-benefits .sec-title,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-final-cta h2,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-final-cta p{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+ text-shadow:0 2px 12px rgba(0,13,28,.48)!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-feat-chip,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-ben-item,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-final-inner{
+ background:linear-gradient(135deg,rgba(23,68,103,.75),rgba(6,30,52,.76))!important;
+ border:1px solid rgba(162,210,240,.24)!important;color:#f7fbff!important;
+ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+ box-shadow:0 12px 30px rgba(0,12,27,.14)!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-feat-chip:hover,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-feat-chip.sel,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-ben-item:hover{
+ background:rgba(23,76,112,.87)!important;border-color:rgba(242,106,33,.72)!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-feat-text,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-ben-text,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-final-kicker{
+ color:#f7fbff!important;-webkit-text-fill-color:#f7fbff!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-ben-icon,
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-feat-check{color:#f26a21!important;}
+/* Préserver les écrans clairs du mockup : ils représentent l'interface logicielle. */
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref .db-report-window{color:#0d2b4a;}
+/* Séparateur natif de Solutions, identique à celui validé en V89. */
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider{
+ position:relative!important;display:block!important;width:100%!important;
+ max-width:none!important;height:26px!important;margin:0!important;padding:0!important;
+ background:rgba(5,29,52,.90)!important;z-index:3!important;border:0!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider::before{
+ content:""!important;display:block!important;position:absolute!important;
+ left:4%!important;right:4%!important;top:12px!important;height:2px!important;
+ background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent)!important;
+ box-shadow:0 0 11px rgba(242,106,33,.34)!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider .solutions-ref-divider-beam{
+ animation:solutions-ref-light-sweep 5.6s ease-in-out infinite!important;
+}
+body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider .solutions-ref-divider-core{
+ animation:solutions-ref-core-pulse 3.4s ease-in-out infinite!important;
+}
+@media(max-width:700px){
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref{background-attachment:scroll!important;}
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-featshots > .container,
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-benefits > .container,
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > section.db-final-cta > .container{width:calc(100% - 28px)!important;}
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider{height:19px!important;}
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider::before{top:9px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider .solutions-ref-divider-beam,
+ body main.pg.pg-detail.declaration-bancaire-page.solutions-ref > .db-native-divider .solutions-ref-divider-core{animation:none!important;}
+}
+
+/* V93 — ALPHA Monétique: même séparateur natif que Solutions/V89 */
+.alpha-monetique-page{--alpha-bg:url('/images/ressources/banque.webp');position:relative;isolation:isolate;background:#071d35!important;color:#fff}
+.alpha-monetique-page::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(4,20,40,.78),rgba(5,23,44,.63)),var(--alpha-bg) center/cover fixed no-repeat}
+.alpha-monetique-page .alpha-monetique-hero{background:linear-gradient(120deg,rgba(5,23,44,.68),rgba(8,34,63,.58))!important;border-radius:0!important;margin:0!important;min-height:clamp(430px,65vh,640px)}
+.alpha-monetique-page .alpha-monetique-hero .hero-bg{background:var(--alpha-bg) center/cover no-repeat;opacity:.38}
+.alpha-monetique-page .alpha-monetique-hero .hero-bg-tint{background:linear-gradient(90deg,rgba(3,18,38,.94),rgba(6,31,58,.65))}
+.alpha-monetique-page .alpha-monetique-section{padding:clamp(68px,8vw,112px) 0;background:rgba(7,30,55,.55)!important;border:0!important;border-radius:0!important;margin:0!important}
+.alpha-monetique-page .alpha-monetique-contact{background:rgba(7,30,55,.68)!important}
+.alpha-monetique-page .alpha-monetique-section>.container{width:min(100% - 36px,1180px);margin-inline:auto}
+.alpha-monetique-page .alpha-monetique-glass{max-width:960px;margin:0 auto;padding:clamp(26px,5vw,62px);background:rgba(9,40,72,.79);border:1px solid rgba(170,208,240,.25);border-radius:30px;box-shadow:0 18px 60px rgba(0,8,24,.25);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);text-align:center}
+.alpha-monetique-page .alpha-monetique-glass h2{color:#fff!important;font-size:clamp(1.8rem,3.3vw,2.7rem);line-height:1.2;margin:12px 0 20px}
+.alpha-monetique-page .alpha-monetique-glass p{color:#e7f0fa!important;line-height:1.8;max-width:740px;margin:0 auto 28px}
+.alpha-monetique-page .alpha-monetique-kicker{color:#ff9a54;letter-spacing:.14em;font-weight:700;font-size:.8rem;text-transform:uppercase}
+.alpha-monetique-page>.solutions-ref-divider.alpha-monetique-divider{display:block!important;position:relative!important;width:min(100%,1312px)!important;height:26px!important;margin:0 auto!important;background:transparent!important;z-index:5!important;overflow:visible!important}
+.alpha-monetique-page>.solutions-ref-divider.alpha-monetique-divider::before{content:"";position:absolute;left:4%;right:4%;top:12px;height:2px;background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent);box-shadow:0 0 11px rgba(242,106,33,.34)}
+.alpha-monetique-page>.solutions-ref-divider .solutions-ref-divider-beam{position:absolute;top:9px;left:4%;width:22%;height:8px;border-radius:99px;background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite}
+.alpha-monetique-page>.solutions-ref-divider .solutions-ref-divider-core{position:absolute;left:50%;top:8px;width:11px;height:11px;border-radius:50%;transform:translateX(-50%) rotate(45deg);border:1px solid rgba(255,190,111,.85);background:#f68a32;box-shadow:0 0 0 4px rgba(255,133,39,.12),0 0 16px rgba(255,136,40,.65);animation:solutions-ref-core-pulse 3.4s ease-in-out infinite}
+@media(max-width:767px){.alpha-monetique-page::before{background-attachment:scroll}.alpha-monetique-page .alpha-monetique-glass{border-radius:22px}.alpha-monetique-page .alpha-monetique-section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){.alpha-monetique-page .solutions-ref-divider-beam,.alpha-monetique-page .solutions-ref-divider-core{animation:none!important}}
+
+/* V94 — Microfinances : séparateurs natifs de Solutions (V89), sans changement de fonds ni de mise en page. */
+body main.mfv-page .mfv-sections > .mfv-panel:not(.mfv-cta)::after{content:none!important;animation:none!important;}
+body main.mfv-page .mfv-sections > .mfv-native-divider.solutions-ref-divider{
+  display:block!important;position:relative!important;isolation:isolate;
+  width:min(100%,1312px)!important;height:26px!important;margin:0 auto!important;
+  padding:0!important;background:transparent!important;overflow:visible!important;z-index:5!important;
+}
+body main.mfv-page .mfv-native-divider::before{
+  content:"";position:absolute;left:4%;right:4%;top:12px;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent);
+  box-shadow:0 0 11px rgba(242,106,33,.34);
+}
+body main.mfv-page .mfv-native-divider .solutions-ref-divider-beam{
+  display:block;position:absolute;top:9px;left:4%;width:22%;height:8px;border-radius:99px;
+  background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);
+  filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+body main.mfv-page .mfv-native-divider .solutions-ref-divider-core{
+  display:block;position:absolute;left:50%;top:8px;width:11px;height:11px;border-radius:50%;
+  transform:translateX(-50%) rotate(45deg);border:1px solid rgba(255,190,111,.85);
+  background:#f68a32;box-shadow:0 0 0 4px rgba(255,133,39,.12),0 0 16px rgba(255,136,40,.65);
+  animation:solutions-ref-core-pulse 3.4s ease-in-out infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ body main.mfv-page .mfv-native-divider .solutions-ref-divider-beam,
+ body main.mfv-page .mfv-native-divider .solutions-ref-divider-core{animation:none!important;}
+}
+
+/* V97 Microfinances — avis défilants, sans modification des fonds de page */
+body .mfv-page .mfv-quote-carousel{overflow:hidden}
+body .mfv-page .mfv-quote-slide{min-height:165px;animation:mfv-quote-reveal .55s ease both}
+body .mfv-page .mfv-quote-photo img{transition:opacity .35s ease}
+body .mfv-page .mfv-quote-controls{display:flex;align-items:center;gap:12px;margin:20px 0 0 42px}
+body .mfv-page .mfv-quote-dot{appearance:none;border:1px solid rgba(255,255,255,.55);border-radius:20px;width:11px;height:11px;background:rgba(255,255,255,.25);cursor:pointer;padding:0;transition:width .25s,background .25s}
+body .mfv-page .mfv-quote-dot.is-active{width:32px;background:#f26a21;border-color:#f26a21}
+body .mfv-page .mfv-quote-dot:focus-visible{outline:2px solid white;outline-offset:4px}
+body .mfv-page .mfv-quote-count{color:#c7dbe9;font-size:12px;margin-left:8px}
+@keyframes mfv-quote-reveal{from{opacity:.2;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){body .mfv-page .mfv-quote-slide{min-height:190px}body .mfv-page .mfv-quote-controls{margin-left:15px}}
+@media(prefers-reduced-motion:reduce){body .mfv-page .mfv-quote-slide{animation:none}}
+
+/* V100 — Banques : séparateurs natifs de Solutions, sans retoucher les sections. */
+body main.bank-page-angular .bankv-body > .bankv-native-divider.solutions-ref-divider{
+ display:block!important;position:relative!important;isolation:isolate;
+ width:min(100%,1312px)!important;height:26px!important;margin:0 auto!important;
+ padding:0!important;background:transparent!important;overflow:visible!important;z-index:5!important;
+}
+body main.bank-page-angular .bankv-native-divider::before{
+ content:"";position:absolute;left:4%;right:4%;top:12px;height:2px;
+ background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent);
+ box-shadow:0 0 11px rgba(242,106,33,.34);
+}
+body main.bank-page-angular .bankv-native-divider .solutions-ref-divider-beam{
+ display:block;position:absolute;top:9px;left:4%;width:22%;height:8px;border-radius:99px;
+ background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);
+ filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+body main.bank-page-angular .bankv-native-divider .solutions-ref-divider-core{
+ display:block;position:absolute;left:50%;top:8px;width:11px;height:11px;border-radius:50%;
+ transform:translateX(-50%) rotate(45deg);border:1px solid rgba(255,190,111,.85);
+ background:#f68a32;box-shadow:0 0 0 4px rgba(255,133,39,.12),0 0 16px rgba(255,136,40,.65);
+ animation:solutions-ref-core-pulse 3.4s ease-in-out infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ body main.bank-page-angular .bankv-native-divider .solutions-ref-divider-beam,
+ body main.bank-page-angular .bankv-native-divider .solutions-ref-divider-core{animation:none!important;}
+}
+
+/* V101 — Hero Banques sans captures */
+body main.bank-page-angular .sx-hero .sx-grid{grid-template-columns:minmax(0,1fr)!important}
+body main.bank-page-angular .sx-hero .sx-copy{max-width:800px}
+
+/* V102 — Grandes Entreprises : séparateurs natifs Solutions ; sans changement des fonds. */
+body main.enterprise-page-angular .sx-hero .sx-grid{grid-template-columns:minmax(0,1fr)!important}
+body main.enterprise-page-angular .sx-hero .sx-copy{max-width:800px}
+body main.enterprise-page-angular .gev-body > .gev-native-divider.solutions-ref-divider{
+ display:block!important;position:relative!important;isolation:isolate;width:min(100%,1312px)!important;
+ height:26px!important;margin:0 auto!important;padding:0!important;background:transparent!important;overflow:visible!important;z-index:5!important;
+}
+body main.enterprise-page-angular .gev-native-divider::before{
+ content:"";position:absolute;left:4%;right:4%;top:12px;height:2px;
+ background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent);
+ box-shadow:0 0 11px rgba(242,106,33,.34);
+}
+body main.enterprise-page-angular .gev-native-divider .solutions-ref-divider-beam{
+ display:block;position:absolute;top:9px;left:4%;width:22%;height:8px;border-radius:99px;
+ background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);
+ filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+body main.enterprise-page-angular .gev-native-divider .solutions-ref-divider-core{
+ display:block;position:absolute;left:50%;top:8px;width:11px;height:11px;border-radius:50%;
+ transform:translateX(-50%) rotate(45deg);border:1px solid rgba(255,190,111,.85);
+ background:#f68a32;box-shadow:0 0 0 4px rgba(255,133,39,.12),0 0 16px rgba(255,136,40,.65);
+ animation:solutions-ref-core-pulse 3.4s ease-in-out infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ body main.enterprise-page-angular .gev-native-divider .solutions-ref-divider-beam,
+ body main.enterprise-page-angular .gev-native-divider .solutions-ref-divider-core{animation:none!important}
 }
