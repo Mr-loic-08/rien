@@ -23,7 +23,7 @@
               }
             </ul>
           }
-          <a [href]="'#/solutions/'+c.key" class="link sol-more">
+          <a [href]="c.key === 'core-banking' ? '#/solutions/core-banking' : '#/solutions/'+c.key" class="link sol-more">
             {{l.t('En savoir plus')}} <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg>
           </a>
         </article>

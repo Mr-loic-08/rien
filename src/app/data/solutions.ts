@@ -64,8 +64,8 @@ export interface Solution {
 export const SOLUTIONS: Solution[] = [
   {
     key: "core-banking",
-    label: "Core Banking",
-    name: "Core Banking",
+    label: "ALPHA Platform",
+    name: "ALPHA Platform",
     tagline: "La plateforme bancaire qui centralise toutes vos opérations.",
     description:
       "Centralisez toutes vos opérations bancaires sur une plateforme fiable et évolutive.",

@@ -55,6 +55,12 @@ export class App implements OnInit, OnDestroy {
   private transitionTimer: ReturnType<typeof setTimeout> | undefined;
   private readonly onNavigation = () => {
     this.onHash();
+    // Chaque changement de page (#/...) repart immédiatement en haut.
+    // Les ancres internes (#res-...) gardent leur comportement de défilement.
+    if (window.location.hash.startsWith('#/')) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
+    }
     if (typeof window.matchMedia === 'function' &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     if (this.transitionTimer) clearTimeout(this.transitionTimer);

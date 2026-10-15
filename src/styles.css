@@ -12906,3 +12906,17 @@ body main.angular-resources > .entv-native-divider .solutions-ref-divider-core{
  body main.angular-resources > .entv-native-divider .solutions-ref-divider-beam,
  body main.angular-resources > .entv-native-divider .solutions-ref-divider-core{animation:none!important}
 }
+
+/* V119 — Actualités : masquer les coins clairs derrière les blocs arrondis.
+   Ne modifie ni les fonds internes des sections, ni les images, ni les séparateurs. */
+body main.angular-resources.resources-page.rsv-page {
+  background: #052b4a !important;
+  overflow-x: clip;
+}
+body main.angular-resources.resources-page.rsv-page > .rsv-panel {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+body main.angular-resources.resources-page.rsv-page > .entv-native-divider.solutions-ref-divider {
+  margin: 0 !important;
+}
