@@ -1,7 +1,32 @@
-<main class="pg enterprise-detail angular-partners"><section class="ent-detail-hero partner-detail-hero"><div class="ent-detail-photo" style="background-image:url('https://images.pexels.com/photos/7979601/pexels-photo-7979601.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=900')"></div><div class="ent-detail-veil"></div><div class="container"><nav class="ent-crumb"><a href="#/">{{l.t('Accueil')}}</a> / <a href="#/entreprise">{{l.t("L'Entreprise")}}</a> / {{l.t('Partenaires')}}</nav><div class="ent-detail-copy"><span class="ent-kicker"><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Partenaires')}}</span><h1>{{l.t('Nos partenaires')}}</h1><p>{{l.t('Des collaborations solides pour des solutions performantes et durables.')}}</p></div></div></section>
+<main class="pg enterprise-detail angular-partners"><section class="ent-detail-hero partner-detail-hero pv108-hero">
+  <div class="ent-detail-photo pv108-hero-photo" role="img" aria-label="Poignée de main entre partenaires, réseau technologique africain"></div>
+  <div class="ent-detail-veil"></div>
+  <div class="container pv108-hero-container">
+    <nav class="ent-crumb"><a href="#/">{{l.t('Accueil')}}</a> <span>›</span> <a href="#/entreprise">{{l.t("L'Entreprise")}}</a> <span>›</span></nav>
+    <div class="ent-detail-copy pv108-hero-copy">
+      <h1>{{l.t('Nos partenaires')}}</h1>
+      <p class="pv108-hero-lead">{{l.t('Des collaborations solides pour des solutions performantes et durables.')}}</p>
+      <span class="pv108-orange-rule" aria-hidden="true"></span>
+      <p class="pv108-hero-description">{{l.t('Nous collaborons avec des éditeurs et fournisseurs de technologies de premier plan.')}} {{l.t('Nous travaillons avec des organisations et institutions pour promouvoir l’innovation et la croissance.')}}</p>
+      <a href="#partenaires-technologiques" class="pv108-hero-cta">{{l.t('Découvrir nos partenaires')}} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
 
-<section class="pv48-intro"><div class="container pv48-intro-layout"><div class="pv48-intro-copy"><span class="pv48-eyebrow">{{l.t('Écosystème')}}</span><h2>Des collaborations au service de <em>l’innovation</em></h2><p>{{l.t('Nous collaborons avec des éditeurs et fournisseurs de technologies de premier plan.')}}</p><p>{{l.t('Nous travaillons avec des organisations et institutions pour promouvoir l’innovation et la croissance.')}}</p><div class="pv48-intro-pills"><span><svg class="ic"><use href="#i-layers"></use></svg>{{l.t('Partenaires technologiques')}}</span><span><svg class="ic"><use href="#i-shield"></use></svg>{{l.t('Partenaires institutionnels')}}</span></div></div><div class="pv48-intro-image" role="img" aria-label="Architecture et innovation"><div class="pv48-image-label"><span class="pv48-label-dot"></span>I-TECH <strong>·</strong> {{l.t('Écosystème')}}</div></div></div><div class="pv48-overlap" aria-hidden="true"></div></section>
-<section class="pv48-directory pv48-tech"><div class="container"><div class="pv48-heading"><div><span class="pv48-eyebrow">01 — {{l.t('Écosystème')}}</span><h2>{{l.t('Partenaires technologiques')}}</h2><p>{{l.t('Nous collaborons avec des éditeurs et fournisseurs de technologies de premier plan.')}}</p></div><div class="pv48-heading-art" aria-hidden="true"><svg class="ic"><use href="#i-layers"></use></svg></div></div><div class="pv48-tech-grid">@for(p of tech;track p.name){<div class="pv48-tech-card"><div class="pv48-card-mark" aria-hidden="true">{{p.name.slice(0,1)}}</div><div class="pv48-card-body"><strong>{{p.name}}</strong>@if(p.suffix){<span>{{p.suffix}}</span>}</div><span class="pv48-card-line" aria-hidden="true"></span></div>}</div></div></section>
+<div class="entv-native-divider solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+<section class="pv48-intro pv108-intro">
+ <div class="container pv108-intro-content">
+  <span class="pv48-eyebrow">{{l.t('Écosystème')}}</span>
+  <h2>{{l.t('Des partenaires de confiance')}}</h2>
+  <span class="pv108-intro-rule" aria-hidden="true"></span>
+  <p>{{l.t('Nous collaborons avec des éditeurs et fournisseurs de technologies de premier plan.')}}</p>
+  <p>{{l.t('Nous travaillons avec des organisations et institutions pour promouvoir l’innovation et la croissance.')}}</p>
+ </div>
+</section>
+<div class="entv-native-divider solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+<section id="partenaires-technologiques" class="pv48-directory pv48-tech"><div class="container"><div class="pv48-heading"><div><span class="pv48-eyebrow">01 — {{l.t('Écosystème')}}</span><h2>{{l.t('Partenaires technologiques')}}</h2><p>{{l.t('Nous collaborons avec des éditeurs et fournisseurs de technologies de premier plan.')}}</p></div><div class="pv48-heading-art" aria-hidden="true"><svg class="ic"><use href="#i-layers"></use></svg></div></div><div class="pv48-tech-grid">@for(p of tech;track p.name){<div class="pv48-tech-card"><div class="pv48-card-mark" aria-hidden="true">{{p.name.slice(0,1)}}</div><div class="pv48-card-body"><strong>{{p.name}}</strong>@if(p.suffix){<span>{{p.suffix}}</span>}</div><span class="pv48-card-line" aria-hidden="true"></span></div>}</div></div></section>
+<div class="entv-native-divider solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
 <section class="pv48-directory pv48-inst"><div class="container"><div class="pv48-inst-layout"><div class="pv48-inst-copy"><span class="pv48-eyebrow">02 — {{l.t('Coopération')}}</span><h2>{{l.t('Partenaires institutionnels')}}</h2><p>{{l.t('Nous travaillons avec des organisations et institutions pour promouvoir l’innovation et la croissance.')}}</p><div class="pv48-inst-photo" role="img" aria-label="Architecture contemporaine"></div></div><div class="pv48-inst-grid">@for(p of institutions;track p){<div class="pv48-inst-card"><span class="pv48-inst-symbol" aria-hidden="true"><svg class="ic"><use href="#i-layers"></use></svg></span><strong>{{p}}</strong><span class="pv48-inst-accent" aria-hidden="true"></span></div>}</div></div></div></section>
+<div class="entv-native-divider solutions-ref-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
 <section class="pv48-join"><div class="container pv48-join-inner"><div class="pv48-join-content"><span class="pv48-eyebrow">{{l.t('Construisons ensemble')}}</span><h2>{{l.t('Devenez partenaire')}}</h2><p>{{l.t('Vous souhaitez collaborer avec I-TECH ? Construisons ensemble des solutions innovantes et créons de la valeur pour nos clients.')}}</p><a href="#/contact" class="pv48-cta">{{l.t('Nous contacter')}} <svg class="ic"><use href="#i-arrow"></use></svg></a></div></div></section>
 </main>
