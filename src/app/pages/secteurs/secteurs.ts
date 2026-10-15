@@ -34,7 +34,7 @@ export class SecteursPageComponent implements OnInit, OnDestroy {
     {key:'banques-commerciales',label:'Banques Commerciales',tone:'blue',icon:'i-bank',
       cardImg:'images/secteurs/banques.jpg',
       photoFallback:'https://images.pexels.com/photos/33719774/pexels-photo-33719774.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800',
-      cardDesc:'Core Banking, monétique, digital banking et intégration.'},
+      cardDesc:'ALPHA Platform, monétique, digital banking et intégration.'},
     {key:'grandes-entreprises',label:'Grandes Entreprises',tone:'purple',icon:'i-chart',
       cardImg:'images/secteurs/grandes-entreprises.jpg',
       photoFallback:'https://images.pexels.com/photos/5233311/pexels-photo-5233311.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800',

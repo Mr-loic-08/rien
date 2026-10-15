@@ -22,7 +22,7 @@ export class MicrofinancesPageComponent implements OnInit,OnDestroy{
  ];
 
  readonly mappings=[
-  {tone:'blue',icon:'s-core',need:'Core Banking',needDescription:'Une plateforme centralisée pour une gestion bancaire complète et sécurisée.',solution:'Alpha Bank',solutionDescription:'La solution au cœur de votre banque.',href:'#/solutions/core-banking',visual:'bank'},
+  {tone:'blue',icon:'s-core',need:'ALPHA Platform',needDescription:'Une plateforme centralisée pour une gestion bancaire complète et sécurisée.',solution:'Alpha Bank',solutionDescription:'La solution au cœur de votre banque.',href:'#/solutions/core-banking',visual:'bank'},
   {tone:'green',icon:'s-collecte',need:'Paiements',needDescription:'Des paiements rapides, sûrs et adaptés à tous vos canaux.',solution:'Alpha Monétique',solutionDescription:'La fluidité de vos transactions.',href:'#/solutions/core-banking',visual:'card'},
   {tone:'purple',icon:'s-mobile',need:'Digital',needDescription:'Des services digitaux innovants pour une meilleure expérience client.',solution:'Alpha Mobile Banking',solutionDescription:'Votre banque, partout et à tout moment.',href:'#/solutions/digital-mobile',visual:'phone'},
   {tone:'orange',icon:'s-decl',need:'Déclarations',needDescription:'Une gestion simplifiée et conforme de vos déclarations réglementaires.',solution:'Déclaration Bancaire',solutionDescription:'Conformité et sérénité.',href:'#/solutions/declaration-bancaire',visual:'document'}

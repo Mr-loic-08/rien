@@ -14,7 +14,7 @@ export class BanquesCommercialesPageComponent implements OnInit,OnDestroy{
    'https://images.pexels.com/photos/19107852/pexels-photo-19107852.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'
   ]
  };
- readonly architecture=['Clients','Mobile Banking','Core Banking','Monétique','Reporting'];
+ readonly architecture=['Clients','Mobile Banking','ALPHA Platform','Monétique','Reporting'];
  readonly bankProofs=[
   {kind:'project',title:'Migration bancaire',text:'Modernisation du SI bancaire'},
   {kind:'project',title:'Déploiement monétique',text:'Mise en place de la plateforme monétique'},
@@ -22,7 +22,7 @@ export class BanquesCommercialesPageComponent implements OnInit,OnDestroy{
  ];
 
  readonly mappings=[
-  {tone:'blue',icon:'i-bank',need:'Core Banking',needDescription:'Une plateforme centralisée pour une gestion bancaire complète et sécurisée.',solution:'Alpha Bank',solutionDescription:'La solution au cœur de votre banque.',href:'#/solutions/core-banking',visual:'bank'},
+  {tone:'blue',icon:'i-bank',need:'ALPHA Platform',needDescription:'Une plateforme centralisée pour une gestion bancaire complète et sécurisée.',solution:'Alpha Bank',solutionDescription:'La solution au cœur de votre banque.',href:'#/solutions/core-banking',visual:'bank'},
   {tone:'green',icon:'i-card',need:'Paiements',needDescription:'Des paiements rapides, sûrs et adaptés à tous vos canaux.',solution:'Alpha Monétique',solutionDescription:'La fluidité de vos transactions.',href:'#/solutions/core-banking',visual:'card'},
   {tone:'purple',icon:'i-phone',need:'Digital',needDescription:'Des services digitaux innovants pour une meilleure expérience client.',solution:'Alpha Mobile Banking',solutionDescription:'Votre banque, partout et à tout moment.',href:'#/solutions/digital-mobile',visual:'phone'},
   {tone:'orange',icon:'i-book',need:'Déclarations',needDescription:'Une gestion simplifiée et conforme de vos déclarations réglementaires.',solution:'Déclaration Bancaire',solutionDescription:'Conformité et sérénité.',href:'#/solutions/declaration-bancaire',visual:'document'}
@@ -40,7 +40,7 @@ export class BanquesCommercialesPageComponent implements OnInit,OnDestroy{
  resetGlow(ev:PointerEvent){const e=ev.currentTarget as HTMLElement;e.style.setProperty('--mouse-x','50%');e.style.setProperty('--mouse-y','50%')}
 
  readonly issues=[
-  {icon:'i-bank',text:'Core Banking'},
+  {icon:'i-bank',text:'ALPHA Platform'},
   {icon:'i-card',text:'Monétique'},
   {icon:'i-phone',text:'Digital Banking'},
   {icon:'i-chart',text:'Reporting réglementaire'},

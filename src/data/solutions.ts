@@ -64,8 +64,8 @@ export interface Solution {
 export const SOLUTIONS: Solution[] = [
   {
     key: "core-banking",
-    label: "Core Banking",
-    name: "Core Banking",
+    label: "ALPHA Platform",
+    name: "ALPHA Platform",
     tagline: "La plateforme bancaire qui centralise toutes vos opérations.",
     description:
       "Centralisez toutes vos opérations bancaires sur une plateforme fiable et évolutive.",
@@ -84,8 +84,8 @@ export const SOLUTIONS: Solution[] = [
       title: "Une architecture complète et intégrée",
       style: "cards",
       items: [
-        { icon: "i-bank", name: "Alpha Bank", desc: "Gestion bancaire complète" },
-        { icon: "i-users", name: "Alpha Microfinance", desc: "Solutions adaptées aux EMF" },
+        { icon: "i-bank", name: "ALPHA Bank / Microfinance", desc: "Gestion bancaire et microfinance" },
+        { icon: "i-users", name: "ALPHA Web Admin", desc: "Interface d’administration web" },
         { icon: "i-chart", name: "Alpha Comptabilité", desc: "Comptabilité intégrée et reporting" },
         { icon: "i-card", name: "Alpha Monétique", desc: "Émission de cartes et transactions" },
       ],
@@ -141,7 +141,7 @@ export const SOLUTIONS: Solution[] = [
     },
     accordion: false,
     features: [
-      { title: "Gestion des collecteurs et tournées" },
+      { title: "Gestion des collecteurs" },
       { title: "Encaissements sécurisés (POS & Mobile)" },
       { title: "Reçus électroniques instantanés" },
       { title: "Suivi en temps réel des activités" },
@@ -307,7 +307,7 @@ export const SOLUTIONS: Solution[] = [
     features: [
       { title: "Applications Web" },
       { title: "Applications Mobiles" },
-      { title: "Core Banking" },
+      { title: "ALPHA Platform" },
       { title: "API & Intégrations" },
       { title: "Gestion Documentaire" },
       { title: "Solutions Sur Mesure" },

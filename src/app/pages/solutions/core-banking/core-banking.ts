@@ -14,7 +14,18 @@ export class CoreBankingPageComponent implements OnInit, AfterViewInit, OnDestro
   acc=0;
   readonly features=this.sol.features;
   readonly benefits=this.sol.benefits;
-  readonly band=this.sol.band!;
+  // Présentation des quatre modules de l’architecture ALPHA.
+  // Le composant utilise explicitement les nouvelles cartes, même si une ancienne
+  // version des données SOLUTIONS a été conservée lors d’une mise à jour partielle.
+  readonly band = {
+    ...this.sol.band!,
+    items: [
+      { icon: 'i-bank', name: 'ALPHA Bank / Microfinance', desc: 'Gestion bancaire et microfinance' },
+      { icon: 'i-users', name: 'ALPHA Web Admin', desc: 'Interface d’administration web' },
+      { icon: 'i-chart', name: 'Alpha Comptabilité', desc: 'Comptabilité intégrée et reporting' },
+      { icon: 'i-card', name: 'Alpha Monétique', desc: 'Émission de cartes et transactions' },
+    ],
+  };
   @ViewChild('architecture') architecture?: ElementRef<HTMLElement>;
   private archObserver?: IntersectionObserver;
   private cardCleanups: Array<()=>void>=[];

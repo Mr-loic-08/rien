@@ -1,6 +1,11 @@
 import { Injectable, signal } from '@angular/core';
 export type Language = 'fr'|'en';
 const EN: Record<string,string> = {
+  'ALPHA Platform': 'ALPHA Platform',
+  'ALPHA Bank / Microfinance': 'ALPHA Bank / Microfinance',
+  'Gestion bancaire et microfinance': 'Banking and microfinance management',
+  'ALPHA Web Admin': 'ALPHA Web Admin',
+  'Interface d’administration web': 'Web administration interface',
   'ALPHA Monétique': 'ALPHA Card Payments',
   'Une solution de la gamme ALPHA': 'A solution from the ALPHA range',
   'Découvrez ALPHA Monétique et échangez avec nos équipes pour en savoir plus.': 'Discover ALPHA Card Payments and contact our team to learn more.',

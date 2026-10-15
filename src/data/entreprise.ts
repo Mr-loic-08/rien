@@ -49,7 +49,7 @@ export const ABOUT = {
   heroText: `${COMPANY_EXPERIENCE_TEXT} d'innovation au service de la transformation digitale en Afrique Centrale.`,
   timeline: [
     { year: "2007", title: "Création de l'entreprise", text: "I-TECH SARL" },
-    { year: "2012", title: "Lancement de la suite ALPHA", text: "Core Banking" },
+    { year: "2012", title: "Lancement de la suite ALPHA", text: "ALPHA Platform" },
     { year: "2016", title: "Expansion régionale", text: "La zone CEMAC" },
     { year: "2020", title: "Plus de 250 institutions", text: "institutions accompagnées" },
     { year: "Aujourd'hui", title: "Leader des solutions", text: "technologiques pour les institutions financières" },

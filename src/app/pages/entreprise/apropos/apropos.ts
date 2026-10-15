@@ -17,7 +17,7 @@ export class AproposPageComponent {
  closeMember(){this.selectedMember=null;}
  team=[
  {title:'Direction générale',role:'Directeur général',image:'',description:'Assure la direction stratégique de I-TECH, coordonne les activités de l’entreprise et veille à la qualité des relations avec les clients et partenaires.'},
- {title:'M. Stephane',role:'Responsable du département Core Banking',image:'/images/equipe/stephane.webp',description:'Pilote les activités Core Banking et coordonne les solutions destinées à la gestion des opérations bancaires et de microfinance.'},
+ {title:'M. Stephane',role:'Responsable du département ALPHA Platform',image:'/images/equipe/stephane.webp',description:'Pilote les activités ALPHA Platform et coordonne les solutions destinées à la gestion des opérations bancaires et de microfinance.'},
  {title:'F. Gervais',role:'Responsable monétique',image:'/images/equipe/gervais.webp',description:'Supervise les projets monétiques et les solutions associées aux moyens de paiement et aux transactions électroniques.'},
  {title:'D. DERECK',role:'Développeur .NET',image:'/images/equipe/dante.webp',description:'Conçoit et maintient des applications .NET, en veillant à la qualité et à la fiabilité du code.'},
  {title:'M. Wilfried',role:'Développeur Mobile',image:'/images/equipe/wilfried.webp',description:'Développe des applications mobiles adaptées aux usages et aux besoins des clients.'},
@@ -34,7 +34,7 @@ export class AproposPageComponent {
  ];
  timeline=[
  {year:'2007',title:"Création de l’entreprise",text:'I-TECH SARL'},
- {year:'2012',title:'Lancement de la suite ALPHA',text:'Core Banking'},
+ {year:'2012',title:'Lancement de la suite ALPHA',text:'ALPHA Platform'},
  {year:'2016',title:'Expansion régionale',text:'La zone CEMAC'},
  {year:'2020',title:'Plus de 250 institutions',text:'institutions accompagnées'},
  {year:"Aujourd’hui",title:'Leader des solutions',text:'technologiques pour les institutions financières'}
