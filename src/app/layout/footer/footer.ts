@@ -21,5 +21,5 @@ export class FooterComponent implements AfterViewInit{
  ];
  readonly sectors=[['i-bank','Banques','#/secteurs/banques-commerciales'],['i-microfinance','Microfinances','#/secteurs/microfinances'],['i-corporate','Grandes entreprises','#/secteurs/grandes-entreprises']];
  readonly company=[['i-info','À propos','#/entreprise/apropos'],['i-briefcase','Carrières','#/entreprise/carrieres'],['i-handshake','Partenaires','#/entreprise/partenaires'],['i-office',"L'Entreprise",'#/entreprise']];
- readonly resources=[['i-news','Blog','#/ressources'],['i-book','Centre de ressources','#/ressources'],['i-docs','Documentations','#/ressources'],['i-video','Webinaires','#/ressources']];
+ readonly resources=[['i-news','Actualités','#/ressources'],['i-book','Centre de ressources','#/ressources'],['i-docs','Documentations','#/ressources'],['i-video','Webinaires','#/ressources']];
 }

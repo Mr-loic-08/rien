@@ -40,7 +40,7 @@
         <a [href]="m.href" [class.active]="isActive(m.href)" (click)="navigateTop($event,m.href)"><svg class="ic nav-section-ic"><use [attr.href]="'#'+m.icon"></use></svg>{{l.t(m.label)}}<svg class="ic chev"><use href="#i-chev-r"></use></svg></a>
         <div class="dropdown"><a *ngFor="let it of m.items" [href]="it.href"><svg class="ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
       </li>
-      <li><a href="#/ressources"><svg class="ic nav-section-ic"><use href="#i-news"></use></svg>{{l.t('Ressources')}}</a></li>
+      <li><a href="#/ressources"><svg class="ic nav-section-ic"><use href="#i-news"></use></svg>{{l.t('Actualités')}}</a></li>
       <li (mouseenter)="open.set('Entreprise')" (mouseleave)="open.set(null)" [class.open]="open()==='Entreprise'">
         <a href="#/entreprise"><svg class="ic nav-section-ic"><use href="#i-company"></use></svg>{{l.t("L'Entreprise")}}<svg class="ic chev"><use href="#i-chev-r"></use></svg></a>
         <div class="dropdown"><a *ngFor="let it of entreprise" [href]="it.href"><svg class="ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
@@ -66,7 +66,7 @@
     <button type="button" [class.open]="sub()==='Entreprise'" (click)="toggleSub('Entreprise')"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-company"></use></svg>{{l.t("L'Entreprise")}}</span><svg class="ic"><use href="#i-chev-r"></use></svg></button>
     <div class="m-sub" [class.open]="sub()==='Entreprise'"><a href="#/entreprise" class="m-all" (click)="closeMobile()">{{l.t("L'Entreprise")}}</a><a *ngFor="let it of entreprise" [href]="it.href" class="has-art" (click)="closeMobile()"><svg class="ic m-art-ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>
   </div>
-  <div class="m-item"><a href="#/ressources" (click)="closeMobile()"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-news"></use></svg>{{l.t('Ressources')}}</span></a></div>
+  <div class="m-item"><a href="#/ressources" (click)="closeMobile()"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-news"></use></svg>{{l.t('Actualités')}}</span></a></div>
   <div class="m-item">
     <button type="button" [class.open]="sub()==='Contact'" (click)="toggleSub('Contact')"><span class="m-menu-label"><svg class="ic menu-brand-ic"><use href="#i-head"></use></svg>{{l.t('Contact & Support')}}</span><svg class="ic"><use href="#i-chev-r"></use></svg></button>
     <div class="m-sub" [class.open]="sub()==='Contact'"><a href="#/contact" class="m-all" (click)="closeMobile()">{{l.t('Contact & Support')}}</a><a *ngFor="let it of contact" [href]="it.href" [attr.target]="it.href.startsWith('https://') ? '_blank' : null" [attr.rel]="it.href.startsWith('https://') ? 'noopener noreferrer' : null" class="has-art" (click)="closeMobile()"><svg class="ic m-art-ic"><use [attr.href]="'#'+it.icon"></use></svg>{{l.t(it.label)}}</a></div>

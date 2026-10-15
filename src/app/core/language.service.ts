@@ -89,6 +89,8 @@ const EN: Record<string,string> = {
   "Supports et documents types": "Resources and document templates",
   "Sécurisées": "Secure",
   "TECHNOLOGIES & RESSOURCES": "TECHNOLOGIES & RESOURCES",
+  "Explorer les actualités": "Explore the news",
+  "ACTUALITÉS": "NEWS",
   "Tous droits réservés.": "All rights reserved.",
   "Tous les contrats": "All contract types",
   "Toutes les localisations": "All locations",
