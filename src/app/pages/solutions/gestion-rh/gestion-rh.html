@@ -1,4 +1,4 @@
-<main class="pg pg-detail gestion-rh-page">
+<main class="pg pg-detail gestion-rh-page solutions-ref">
   <section class="pg-hero detail on-photo gestion-rh-hero">
     <div class="hero-bg" aria-hidden="true">
       @for(img of sol.heroBg; track img; let i=$index){
@@ -40,6 +40,8 @@
   </section>
 
   <!-- Gestion RH Étape 2 — Fonctionnalités + Captures, structure V17.20.4 -->
+  <div class="solutions-ref-divider rh-native-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+
   <section class="rh-featshots reveal visible">
     <div class="container">
       <div class="rh-featshots-grid">
@@ -70,11 +72,6 @@
           <figure class="itech-real-capture">
             <img src="/images/captures/alpha-paie-rh.jpg" alt="Présentation du logiciel ALPHA Paie et RH d’I-TECH" loading="lazy" decoding="async">
           </figure>
-
-          <a href="#" class="link rh-shots-more" (click)="$event.preventDefault()">
-            {{l.t('Voir plus de captures')}}
-            <svg class="ic"><use href="#i-arrow"></use></svg>
-          </a>
         </div>
       </div>
     </div>
@@ -82,6 +79,8 @@
 
 
   <!-- Gestion RH Étape 3 — Bénéfices -->
+  <div class="solutions-ref-divider rh-native-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+
   <section class="rh-benefits reveal visible">
     <div class="container">
       <h2 class="sec-title center">{{l.t(sol.benefitsTitle)}}</h2><span class="itech-section-signature sig-pulse" aria-hidden="true"><i></i><b></b></span>
@@ -101,6 +100,8 @@
 
 
   <!-- Gestion RH Étape 4 — CTA final -->
+  <div class="solutions-ref-divider rh-native-divider" aria-hidden="true"><span class="solutions-ref-divider-beam"></span><span class="solutions-ref-divider-core"></span></div>
+
   <section class="rh-final-cta reveal visible">
     <div class="container">
       <div class="rh-final-inner">

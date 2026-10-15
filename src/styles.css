@@ -12416,3 +12416,106 @@ body main.pg.pg-detail.digital-mobile-page > .digital-native-divider {
    width:calc(100% - 28px)!important;
  }
 }
+
+
+/* V90 — Gestion RH : même système visuel et mêmes séparateurs que Solutions / Digital V89. */
+body main.pg-detail.gestion-rh-page.solutions-ref{
+ isolation:isolate!important;position:relative!important;
+ background:linear-gradient(115deg,rgba(3,18,35,.78),rgba(8,36,61,.63) 48%,rgba(3,19,36,.84)),url('/images/ressources/equipe.webp') center / cover fixed no-repeat!important;
+}
+body main.pg-detail.gestion-rh-page > section.rh-featshots,
+body main.pg-detail.gestion-rh-page > section.rh-benefits,
+body main.pg-detail.gestion-rh-page > section.rh-final-cta{
+ position:relative!important;box-sizing:border-box!important;
+ margin:0!important;border:0!important;border-radius:0!important;
+ background:linear-gradient(130deg,rgba(9,38,66,.79),rgba(5,25,46,.66))!important;
+ backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+ box-shadow:none!important;color:#f7fbff!important;
+}
+/* Neutralise les anciennes bandes et faisceaux injectés sur les sections RH. */
+body main.pg-detail.gestion-rh-page > section.rh-featshots::before,
+body main.pg-detail.gestion-rh-page > section.rh-benefits::before,
+body main.pg-detail.gestion-rh-page > section.rh-final-cta::before{
+ content:none!important;display:none!important;animation:none!important;
+}
+body main.pg-detail.gestion-rh-page > section.rh-featshots::after,
+body main.pg-detail.gestion-rh-page > section.rh-benefits::after,
+body main.pg-detail.gestion-rh-page > section.rh-final-cta::after{content:none!important;display:none!important;}
+body main.pg-detail.gestion-rh-page .rh-featshots .container,
+body main.pg-detail.gestion-rh-page .rh-benefits .container,
+body main.pg-detail.gestion-rh-page .rh-final-cta .container{
+ width:min(100% - 48px,1200px)!important;max-width:1200px!important;
+ margin-inline:auto!important;box-sizing:border-box!important;
+}
+body main.pg-detail.gestion-rh-page .rh-featshots .sec-title,
+body main.pg-detail.gestion-rh-page .rh-benefits .sec-title,
+body main.pg-detail.gestion-rh-page .rh-final-cta h2,
+body main.pg-detail.gestion-rh-page .rh-final-cta p{color:#f7fbff!important;}
+body main.pg-detail.gestion-rh-page .rh-feat-chip,
+body main.pg-detail.gestion-rh-page .rh-ben-item,
+body main.pg-detail.gestion-rh-page .rh-final-inner{
+ background:linear-gradient(135deg,rgba(22,66,102,.72),rgba(6,28,50,.72))!important;
+ color:#f7fbff!important;border:1px solid rgba(164,210,240,.23)!important;
+ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+ box-shadow:0 12px 30px rgba(0,12,27,.15)!important;
+}
+body main.pg-detail.gestion-rh-page .rh-feat-chip:hover,
+body main.pg-detail.gestion-rh-page .rh-feat-chip.sel,
+body main.pg-detail.gestion-rh-page .rh-ben-item:hover{
+ background:rgba(24,75,110,.85)!important;border-color:rgba(242,106,33,.7)!important;
+}
+body main.pg-detail.gestion-rh-page .rh-feat-text,
+body main.pg-detail.gestion-rh-page .rh-ben-text,
+body main.pg-detail.gestion-rh-page .rh-final-kicker{color:#f7fbff!important;}
+body main.pg-detail.gestion-rh-page .rh-ben-icon{color:#f26a21!important;}
+/* Réemploi exact de l'animation native de Solutions, sans nouvelle keyframe. */
+body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider{
+ position:relative!important;display:block!important;width:100%!important;
+ max-width:none!important;height:26px!important;margin:0!important;
+ background:rgba(5,29,52,.9)!important;z-index:3!important;
+}
+body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider::before{
+ content:""!important;display:block!important;position:absolute!important;
+ left:4%!important;right:4%!important;top:12px!important;height:2px!important;
+ background:linear-gradient(90deg,transparent,rgba(80,163,217,.72) 17%,#ff842d 50%,rgba(80,163,217,.72) 83%,transparent)!important;
+ box-shadow:0 0 11px rgba(242,106,33,.34)!important;
+}
+body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider .solutions-ref-divider-beam{
+ animation:solutions-ref-light-sweep 5.6s ease-in-out infinite!important;
+}
+body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider .solutions-ref-divider-core{
+ animation:solutions-ref-core-pulse 3.4s ease-in-out infinite!important;
+}
+@media(max-width:700px){
+ body main.pg-detail.gestion-rh-page .rh-featshots .container,
+ body main.pg-detail.gestion-rh-page .rh-benefits .container,
+ body main.pg-detail.gestion-rh-page .rh-final-cta .container{width:calc(100% - 28px)!important;}
+ body main.pg-detail.gestion-rh-page.solutions-ref{background-attachment:scroll!important;}
+ body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider{height:19px!important;}
+ body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider::before{top:9px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider .solutions-ref-divider-beam,
+ body main.pg-detail.gestion-rh-page.solutions-ref > .rh-native-divider .solutions-ref-divider-core{animation:none!important;}
+}
+
+/* V91 — Gestion RH : contraste du titre Bénéfices et suppression des anciens fonds clairs. */
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits {
+  background:linear-gradient(135deg,rgba(6,27,48,.86),rgba(12,49,78,.76))!important;
+  color:#f7fbff!important;
+}
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits h2.sec-title.center,
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .sec-title,
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .container > h2 {
+  color:#fff!important;
+  opacity:1!important;
+  text-shadow:0 2px 14px rgba(0,12,30,.85)!important;
+  -webkit-text-fill-color:#fff!important;
+  background:none!important;
+  filter:none!important;
+}
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .rh-ben-item,
+body main.pg.pg-detail.gestion-rh-page.solutions-ref > section.rh-benefits .rh-ben-text {
+  color:#f7fbff!important;
+  -webkit-text-fill-color:#f7fbff!important;
+}
