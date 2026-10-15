@@ -181,3 +181,37 @@
 .angular-about .ent-reasons .ent-reason-row:hover img{transform:scale(1.045)!important}
 @media(max-width:650px){.angular-about .ent-reasons{width:calc(100% - 20px)!important;padding:38px 12px!important}.angular-about .ent-reasons .ent-reason-grid>.ent-reason-row,.angular-about .ent-reasons .ent-reason-grid>.ent-reason-row:nth-child(even){grid-template-columns:minmax(105px,37%) 1fr!important;gap:12px!important;padding:7px!important;border-radius:17px!important}.angular-about .ent-reasons .ent-reason-row:nth-child(even) .ent-reason-photo{grid-column:2!important}.angular-about .ent-reasons .ent-reason-row:nth-child(even) .ent-reason-content{grid-column:1!important;padding-left:8px!important}.angular-about .ent-reasons .ent-reason-photo{height:125px!important;border-radius:12px!important}.angular-about .ent-reasons .ent-reason-content{padding:5px 5px 5px 0!important}.angular-about .ent-reasons .ent-reason-content h3{font-size:1rem!important}.angular-about .ent-reasons .ent-reason-content p{font-size:.85rem!important;line-height:1.42!important}}
 @media(prefers-reduced-motion:reduce){.angular-about .ent-reasons .ent-reason-row,.angular-about .ent-reasons .ent-reason-photo img{transition:none!important}}
+
+/* V105 — À propos : séparateurs validés sur la page mère Solutions. */
+.angular-about .abv-body > .entv-native-divider.solutions-ref-divider {
+ position:relative!important;display:block!important;isolation:isolate;
+ width:100%!important;height:58px!important;min-height:58px!important;
+ margin:0!important;padding:0!important;border:0!important;
+ background:#052b4a!important;overflow:hidden!important;z-index:4;
+}
+.angular-about .abv-body > .entv-native-divider::before {
+ content:"";position:absolute;top:50%;left:0;right:0;height:2px;
+ background:linear-gradient(90deg,transparent,rgba(114,186,235,.58),rgba(255,255,255,.4),rgba(242,106,33,.6),transparent);
+ transform:translateY(-50%);
+}
+.angular-about .abv-body > .entv-native-divider .solutions-ref-divider-beam {
+ position:absolute;top:calc(50% - 5px);left:4%;width:22%;height:10px;border-radius:99px;
+ background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);
+ filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+.angular-about .abv-body > .entv-native-divider .solutions-ref-divider-core {
+ position:absolute;top:calc(50% - 4px);left:4%;width:8px;height:8px;border-radius:50%;
+ background:#ff9a46;box-shadow:0 0 12px 4px rgba(242,106,33,.65),0 0 25px rgba(255,255,255,.45);
+ animation:solutions-ref-light-sweep 5.6s ease-in-out infinite;
+}
+@media(prefers-reduced-motion:reduce){
+ .angular-about .abv-body > .entv-native-divider .solutions-ref-divider-beam,
+ .angular-about .abv-body > .entv-native-divider .solutions-ref-divider-core {animation:none!important}
+}
+
+/* V106 : masquer les fins liserés clairs sur les bords des sections À propos. */
+.angular-about{background:#052b4a!important;overflow-x:clip!important}
+.angular-about .abv-body{background:#052b4a!important;width:100%!important;margin-inline:0!important;overflow-x:clip!important}
+.angular-about .abv-body>.abv-section{width:100%!important;max-width:none!important;margin-inline:0!important}
+.angular-about .abv-body>.entv-native-divider{width:100%!important;margin-inline:0!important}
+.angular-about .abv-body>.abv-credits{background:#052b4a!important}

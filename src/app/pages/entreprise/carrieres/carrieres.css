@@ -91,3 +91,11 @@
 .angular-careers .career-search{border-radius:18px}
 .angular-careers .career-filters{padding:18px;border:1px solid #dae6f3;border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(13,43,74,.045)}
 @media(max-width:650px){.angular-careers .career-intro,.angular-careers .career-jobs,.angular-careers .career-reasons{margin:14px 10px;border-radius:24px}.angular-careers .career-cta{margin:14px 10px 26px;border-radius:24px}.angular-careers .career-cta .container{flex-direction:column;align-items:flex-start}}
+
+/* V106 : Carrières — séparateur lumineux validé sur Solutions (V89). */
+.angular-careers{background:#052b4a;overflow-x:clip}
+.angular-careers>.entv-native-divider.solutions-ref-divider{position:relative!important;display:block!important;isolation:isolate;width:100%!important;height:58px!important;min-height:58px!important;margin:0!important;padding:0!important;border:0!important;background:#052b4a!important;overflow:hidden!important;z-index:4}
+.angular-careers>.entv-native-divider.solutions-ref-divider::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(114,186,235,.58),rgba(255,255,255,.4),rgba(242,106,33,.6),transparent);transform:translateY(-50%)}
+.angular-careers>.entv-native-divider .solutions-ref-divider-beam{position:absolute;top:calc(50% - 5px);left:4%;width:22%;height:10px;border-radius:99px;background:linear-gradient(90deg,transparent,rgba(255,155,74,.16),rgba(255,150,61,.88),rgba(255,255,255,.9),transparent);filter:blur(2px);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite}
+.angular-careers>.entv-native-divider .solutions-ref-divider-core{position:absolute;top:calc(50% - 4px);left:4%;width:8px;height:8px;border-radius:50%;background:#ff9a46;box-shadow:0 0 12px 4px rgba(242,106,33,.65),0 0 25px rgba(255,255,255,.45);animation:solutions-ref-light-sweep 5.6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.angular-careers>.entv-native-divider .solutions-ref-divider-beam,.angular-careers>.entv-native-divider .solutions-ref-divider-core{animation:none!important}}
