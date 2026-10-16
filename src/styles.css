@@ -12920,3 +12920,20 @@ body main.angular-resources.resources-page.rsv-page > .rsv-panel {
 body main.angular-resources.resources-page.rsv-page > .entv-native-divider.solutions-ref-divider {
   margin: 0 !important;
 }
+
+
+/* V121 — capture réelle I-COLLECT : image PNG entière, sans recadrage ni mockup. */
+body .collecte-journaliere-page .collecte-featshots .collecte-real-screenshot {
+  display:block; width:100%; max-width:100%; margin:18px 0 0;
+  padding:0; overflow:hidden; border-radius:12px;
+  background:#fff; border:1px solid rgba(148,163,184,.25);
+  box-shadow:0 18px 45px rgba(2,20,40,.24);
+}
+body .collecte-journaliere-page .collecte-featshots .collecte-real-screenshot img {
+  display:block; width:100%; height:auto; max-width:100%;
+  object-fit:contain; object-position:center;
+  border:0; margin:0; padding:0;
+}
+@media (max-width:768px) {
+  body .collecte-journaliere-page .collecte-featshots .collecte-real-screenshot {border-radius:8px}
+}
