@@ -41,13 +41,12 @@ import { GrandesEntreprisesPageComponent } from './pages/secteurs/grandes-entrep
 export class App implements OnInit, OnDestroy {
   private readonly siteState = inject(SiteStateService);
   private unsubscribeState?: () => void;
-  offline = typeof navigator !== 'undefined' && !navigator.onLine;
+  // Le statut Internet ne conditionne pas l'affichage du site servi par localhost.
   unknownRoute = false;
   serverError: '500' | '503' | null = null;
   get displayedError(): DisplayState | null {
-    return this.offline ? 'offline' : (this.serverError || (this.unknownRoute ? '404' : null));
+    return this.serverError || (this.unknownRoute ? '404' : null);
   }
-  private readonly connectionChanged = () => { this.offline = !navigator.onLine; };
   clearError() { this.siteState.setError(null); }
 
   // Transition globale pour la navigation par hash utilisée dans ce projet.
@@ -127,13 +126,9 @@ export class App implements OnInit, OnDestroy {
     this.onHash();
     this.unsubscribeState = this.siteState.subscribe(() => { this.serverError = this.siteState.error; });
     window.addEventListener('hashchange',this.onNavigation);
-    window.addEventListener('online',this.connectionChanged);
-    window.addEventListener('offline',this.connectionChanged);
   }
   ngOnDestroy(): void {
     window.removeEventListener('hashchange',this.onNavigation);
-    window.removeEventListener('online',this.connectionChanged);
-    window.removeEventListener('offline',this.connectionChanged);
     this.unsubscribeState?.();
     if (this.transitionTimer) clearTimeout(this.transitionTimer);
   }
