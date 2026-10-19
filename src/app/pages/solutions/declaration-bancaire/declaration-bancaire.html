@@ -65,62 +65,25 @@
         <div class="db-shots">
           <h2 class="sec-title left">{{l.t("Captures d’écran")}}</h2><span class="itech-section-signature sig-twin" aria-hidden="true"><i></i><b></b></span>
 
-          <div class="db-report-card">
-            <div class="db-report-window">
-              <div class="db-report-topbar">
-                <div class="db-report-brand">
-                  <span class="db-report-mark"></span>
-                  <b>ALPHA REPORTING</b>
-                </div>
-                <span class="db-report-user"></span>
-              </div>
-
-              <div class="db-report-body">
-                <aside class="db-report-side">
-                  <i class="active"></i><i></i><i></i><i></i><i></i>
-                </aside>
-
-                <div class="db-report-main">
-                  <div class="db-report-heading">
-                    <div>
-                      <small>{{l.t('Reporting réglementaire')}}</small>
-                      <strong>{{l.t('Déclarations COBAC')}}</strong>
-                    </div>
-                    <span class="db-status">{{l.t('Conforme')}}</span>
-                  </div>
-
-                  <div class="db-report-stats">
-                    <article>
-                      <small>{{l.t('Déclarations')}}</small>
-                      <b>24</b>
-                    </article>
-                    <article>
-                      <small>{{l.t('Validées')}}</small>
-                      <b>21</b>
-                    </article>
-                    <article>
-                      <small>{{l.t('À contrôler')}}</small>
-                      <b>03</b>
-                    </article>
-                  </div>
-
-                  <div class="db-report-content">
-                    <div class="db-report-table">
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="db-report-chart">
-                      <i style="height:38%"></i>
-                      <i style="height:58%"></i>
-                      <i style="height:47%"></i>
-                      <i style="height:76%"></i>
-                      <i style="height:64%"></i>
-                      <i style="height:88%"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="db-report-card db-real-shot-card">
+            <button type="button" class="db-real-shot-trigger"
+                    (click)="openGallery(0)"
+                    [attr.aria-label]="l.t('Agrandir la capture de Déclaration Bancaire')">
+              <img class="db-real-shot-preview"
+                   [src]="galleryImages[0].src"
+                   [alt]="l.t(galleryImages[0].title)"
+                   loading="lazy">
+              <span class="db-real-shot-overlay">
+                <span class="db-real-shot-zoom"><svg class="ic"><use href="#i-search"></use></svg></span>
+                <strong>{{l.t('Aperçu de l’application')}}</strong>
+                <small>{{l.t('Cliquez pour agrandir')}}</small>
+              </span>
+            </button>
           </div>
+          <button type="button" class="btn btn-primary db-shots-more" (click)="openGallery(0)">
+            {{l.t('Voir plus de captures')}}
+            <svg class="ic"><use href="#i-arrow"></use></svg>
+          </button>
         </div>
 
       </div>
@@ -172,4 +135,34 @@
     </div>
   </section>
 
+
+  @if(galleryOpen){
+    <div class="db-gallery-backdrop" role="dialog" aria-modal="true"
+         [attr.aria-label]="l.t('Galerie des captures de Déclaration Bancaire')"
+         (click)="closeGallery()" (keydown.escape)="closeGallery()">
+      <div class="db-gallery-dialog" (click)="$event.stopPropagation()">
+        <div class="db-gallery-header">
+          <div class="db-gallery-heading">
+            <span class="db-gallery-kicker">ALPHA REPORTING</span>
+            <h2>{{l.t(galleryImages[galleryIndex].title)}}</h2>
+            <small>{{galleryIndex + 1}} / {{galleryImages.length}}</small>
+          </div>
+          <button type="button" class="db-gallery-close" (click)="closeGallery()" [attr.aria-label]="l.t('Fermer la galerie')">×</button>
+        </div>
+        <div class="db-gallery-viewer">
+          <button type="button" class="db-gallery-arrow db-gallery-prev" (click)="previousImage()" [attr.aria-label]="l.t('Capture précédente')">‹</button>
+          <img class="db-gallery-full-image" [src]="galleryImages[galleryIndex].src" [alt]="l.t(galleryImages[galleryIndex].title)">
+          <button type="button" class="db-gallery-arrow db-gallery-next" (click)="nextImage()" [attr.aria-label]="l.t('Capture suivante')">›</button>
+        </div>
+        <div class="db-gallery-thumbnails" aria-label="Captures disponibles">
+          @for(image of galleryImages; track image.src; let i=$index){
+            <button type="button" class="db-gallery-thumb" [class.active]="i===galleryIndex"
+                    (click)="openGallery(i)" [attr.aria-label]="l.t(image.title)">
+              <img [src]="image.src" [alt]="l.t(image.title)">
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  }
 </main>

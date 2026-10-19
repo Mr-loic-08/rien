@@ -12937,3 +12937,34 @@ body .collecte-journaliere-page .collecte-featshots .collecte-real-screenshot im
 @media (max-width:768px) {
   body .collecte-journaliere-page .collecte-featshots .collecte-real-screenshot {border-radius:8px}
 }
+
+
+/* ===== Galerie interactive — Déclaration Bancaire ===== */
+.declaration-bancaire-page .db-real-shot-card{padding:0;overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 24px 55px rgba(13,43,74,.16)}
+.declaration-bancaire-page .db-real-shot-trigger{position:relative;display:block;width:100%;padding:0;border:0;background:#071a2c;cursor:zoom-in;overflow:hidden;border-radius:inherit;min-height:220px}
+.declaration-bancaire-page .db-real-shot-preview{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;transition:transform .45s ease}
+.declaration-bancaire-page .db-real-shot-trigger:hover .db-real-shot-preview{transform:scale(1.025)}
+.declaration-bancaire-page .db-real-shot-overlay{position:absolute;inset:auto 0 0;display:flex;flex-direction:column;align-items:center;gap:5px;padding:28px 16px 18px;color:#fff;background:linear-gradient(transparent,rgba(5,18,31,.88));opacity:0;transition:opacity .25s ease}
+.declaration-bancaire-page .db-real-shot-trigger:hover .db-real-shot-overlay,.declaration-bancaire-page .db-real-shot-trigger:focus-visible .db-real-shot-overlay{opacity:1}
+.declaration-bancaire-page .db-real-shot-zoom{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#f26a21;color:#fff}
+.declaration-bancaire-page .db-shots-more{margin-top:18px;cursor:pointer}
+.db-gallery-backdrop{position:fixed;z-index:10000;inset:0;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(3,13,24,.86);backdrop-filter:blur(10px);animation:dbGalleryFade .18s ease both}
+.db-gallery-dialog{width:min(1100px,100%);max-height:calc(100vh - 44px);overflow:auto;background:linear-gradient(145deg,#0d2b4a,#071a2c);color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.5);padding:20px}
+.db-gallery-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:14px}
+.db-gallery-kicker{display:block;color:#ff8a4c;font-size:11px;font-weight:800;letter-spacing:.16em}
+.db-gallery-heading h2{font-size:clamp(18px,2.5vw,25px);line-height:1.25;margin:5px 0;color:#fff}
+.db-gallery-heading small{color:#c3d2e0;font-size:12px}
+.db-gallery-close{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:#fff;font-size:30px;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
+.db-gallery-close:hover{background:#f26a21;transform:rotate(90deg)}
+.db-gallery-viewer{position:relative;display:flex;align-items:center;justify-content:center;min-height:220px;background:#04111e;border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden}
+.db-gallery-full-image{display:block;max-width:100%;width:auto;height:auto;max-height:min(62vh,680px);object-fit:contain;margin:auto}
+.db-gallery-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:54px;border:1px solid rgba(255,255,255,.3);border-radius:12px;background:rgba(7,26,44,.82);color:#fff;font-size:38px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s}
+.db-gallery-arrow:hover{background:#f26a21;border-color:#f26a21}
+.db-gallery-prev{left:12px}.db-gallery-next{right:12px}
+.db-gallery-thumbnails{display:flex;gap:10px;overflow-x:auto;padding:14px 2px 2px}
+.db-gallery-thumb{flex:0 0 108px;height:68px;padding:3px;border:2px solid transparent;border-radius:9px;background:#071a2c;cursor:pointer;opacity:.7;transition:opacity .2s,border-color .2s,transform .2s}
+.db-gallery-thumb img{width:100%;height:100%;object-fit:contain}
+.db-gallery-thumb:hover{opacity:1;transform:translateY(-2px)}
+.db-gallery-thumb.active{opacity:1;border-color:#f26a21;box-shadow:0 0 0 2px rgba(242,106,33,.18)}
+@keyframes dbGalleryFade{from{opacity:0}to{opacity:1}}
+@media(max-width:640px){.db-gallery-backdrop{padding:10px}.db-gallery-dialog{padding:12px;border-radius:17px;max-height:calc(100vh - 20px)}.db-gallery-viewer{min-height:170px}.db-gallery-full-image{max-height:54vh}.db-gallery-arrow{width:34px;height:44px;font-size:30px}.db-gallery-prev{left:6px}.db-gallery-next{right:6px}.db-gallery-thumb{flex-basis:84px;height:56px}.declaration-bancaire-page .db-real-shot-overlay{opacity:1}}
